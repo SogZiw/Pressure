@@ -34,7 +34,7 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         setDrawMarkers(true)
         legend.isEnabled = false
         // xAxis
-        xAxis.textColor = -16777216
+        xAxis.textColor = ContextCompat.getColor(context, R.color.color_34405a)
         xAxis.position = XAxis.XAxisPosition.BOTTOM
         xAxis.setDrawGridLines(false)
         xAxis.setDrawAxisLine(false)
@@ -51,6 +51,9 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         axisLeft.zeroLineWidth = Utils.convertDpToPixel(2F)
         axisLeft.setGridDashedLine(DashPathEffect(floatArrayOf(5F, 5F), 0F))
         axisRight.isEnabled = false
+        // add marker
+        marker = TopMarker(context).apply { chartView = this@MaxMinChart }
+        resetTracking()
     }
 
     override fun getPressureData(): PressureData? {

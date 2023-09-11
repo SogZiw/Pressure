@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemMarker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_black_r27"
+    android:fontFamily="sans-serif-medium"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="13dp"
+    android:paddingVertical="10dp"
+    android:singleLine="true"
+    android:textColor="@color/white"
+    android:textSize="12sp"
+    tools:ignore="MissingDefaultResource"
+    tools:text="Marker" />
