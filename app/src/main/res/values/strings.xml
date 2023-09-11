@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BloodPressure</string>
+    <string name="daily_task">Daily Task</string>
+    <string name="history">History</string>
+    <string name="info">Information</string>
+    <string name="set">Settings</string>
 </resources>

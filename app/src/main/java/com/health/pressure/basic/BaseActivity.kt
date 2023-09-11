@@ -23,6 +23,11 @@ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activity = this
         binding = DataBindingUtil.setContentView(this, layoutId)
+        initView()
+        initData()
     }
+
+    open fun initView() = Unit
+    open fun initData() = Unit
 
 }
