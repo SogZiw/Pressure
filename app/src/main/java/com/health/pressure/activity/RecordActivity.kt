@@ -22,11 +22,9 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .setMaxTime(System.currentTimeMillis())
                 .setDisplayType(DateTimeConfig.YEAR, DateTimeConfig.MONTH, DateTimeConfig.DAY, DateTimeConfig.HOUR, DateTimeConfig.MIN)
                 .setOnChoose(text = getString(R.string.sure)) { milliseconds ->
-
+                    binding.tvTime.text = milliseconds.formatTime()
                 }
-                .setOnCancel(text = getString(R.string.cancel)) {
-
-                }
+                .setOnCancel(text = getString(R.string.cancel))
                 .build().show()
         }
         binding.tvTime.text = System.currentTimeMillis().formatTime()
