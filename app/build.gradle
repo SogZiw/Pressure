@@ -64,4 +64,6 @@ dependencies {
     ksp "androidx.room:room-compiler:$room_version"
     // MPAndroidChart https://github.com/PhilJay/MPAndroidChart
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    // https://github.com/loper7/DateTimePicker
+    implementation 'com.github.loperSeven:DateTimePicker:0.6.3'
 }

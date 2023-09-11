@@ -4,4 +4,5 @@
     <string name="history">History</string>
     <string name="info">Information</string>
     <string name="set">Settings</string>
+    <string name="set_datetime">Set datetime</string>
 </resources>
