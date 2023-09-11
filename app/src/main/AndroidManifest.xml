@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.health.pressure">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".PressureApp"
         android:allowBackup="true"
@@ -17,7 +19,6 @@
 
         <activity
             android:name=".activity.SplashActivity"
-            android:configChanges="orientation"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -31,7 +32,6 @@
 
         <activity
             android:name=".activity.MainActivity"
-            android:configChanges="orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
