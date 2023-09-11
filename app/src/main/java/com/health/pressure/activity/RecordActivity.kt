@@ -9,6 +9,8 @@ import com.loper7.date_time_picker.dialog.CardDatePickerDialog
 
 class RecordActivity : BaseActivity<ActivityRecordBinding>() {
 
+    private var currentTime = System.currentTimeMillis()
+
     override val layoutId: Int get() = R.layout.activity_record
 
     override fun initView() {
@@ -20,8 +22,10 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .showDateLabel(false)
                 .setWrapSelectorWheel(false)
                 .setMaxTime(System.currentTimeMillis())
+                .setDefaultTime(currentTime)
                 .setDisplayType(DateTimeConfig.YEAR, DateTimeConfig.MONTH, DateTimeConfig.DAY, DateTimeConfig.HOUR, DateTimeConfig.MIN)
                 .setOnChoose(text = getString(R.string.sure)) { milliseconds ->
+                    currentTime = milliseconds
                     binding.tvTime.text = milliseconds.formatTime()
                 }
                 .setOnCancel(text = getString(R.string.cancel))
