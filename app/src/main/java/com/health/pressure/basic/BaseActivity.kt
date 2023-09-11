@@ -16,12 +16,12 @@ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         window.fullScreenMode()
+        autoDensity()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity = this
-        autoDensity()
         binding = DataBindingUtil.setContentView(this, layoutId)
     }
 
