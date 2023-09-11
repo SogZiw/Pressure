@@ -20,10 +20,10 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .setWrapSelectorWheel(false)
                 .setMaxTime(System.currentTimeMillis())
                 .setDisplayType(DateTimeConfig.YEAR, DateTimeConfig.MONTH, DateTimeConfig.DAY, DateTimeConfig.HOUR, DateTimeConfig.MIN)
-                .setOnChoose(text = "Sure") { millisecond ->
+                .setOnChoose(text = getString(R.string.sure)) { milliseconds ->
 
                 }
-                .setOnCancel(text = "Cancel") {
+                .setOnCancel(text = getString(R.string.cancel)) {
 
                 }
                 .build().show()

@@ -5,4 +5,6 @@
     <string name="info">Information</string>
     <string name="set">Settings</string>
     <string name="set_datetime">Set datetime</string>
+    <string name="sure">Sure</string>
+    <string name="cancel">Cancel</string>
 </resources>
