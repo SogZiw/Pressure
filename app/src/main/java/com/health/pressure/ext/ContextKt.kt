@@ -24,7 +24,8 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
     navigationBarColor = Color.TRANSPARENT
     WindowCompat.setDecorFitsSystemWindows(this, false)
     ViewCompat.setOnApplyWindowInsetsListener(decorView) { _, insets ->
-        decorView.setPadding(0, 0, 0, insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom)
+        decorView.setPadding(0, insets.getInsets(WindowInsetsCompat.Type.systemBars()).top,
+            0, insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom)
         insets
     }
 }

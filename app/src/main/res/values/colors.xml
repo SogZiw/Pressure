@@ -5,4 +5,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_e8e8f0">#E8E8F0</color>
     <color name="color_34405a">#34405A</color>
+    <color name="color_background">#F8F8FA</color>
 </resources>

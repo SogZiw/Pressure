@@ -3,6 +3,7 @@ package com.health.pressure.activity
 import com.health.pressure.R
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.databinding.ActivityRecordBinding
+import com.health.pressure.ext.formatTime
 import com.loper7.date_time_picker.DateTimeConfig
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
 
@@ -28,6 +29,7 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 }
                 .build().show()
         }
+        binding.tvTime.text = System.currentTimeMillis().formatTime()
     }
 
 }
