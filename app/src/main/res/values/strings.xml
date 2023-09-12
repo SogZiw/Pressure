@@ -8,4 +8,7 @@
     <string name="sure">Sure</string>
     <string name="cancel">Cancel</string>
     <string name="new_record">New record</string>
+    <string name="sys">Systolic</string>
+    <string name="dia">Diastolic</string>
+    <string name="mmhg">/mmHg</string>
 </resources>

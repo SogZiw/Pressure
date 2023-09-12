@@ -40,11 +40,17 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .build().show()
         }
         binding.tvTime.text = System.currentTimeMillis().formatTime()
-        binding.wheel.adapter = object : WheelView.Adapter() {
+        binding.sysWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
             override fun getItem(position: Int): String = wheelData[position]
         }
-        binding.wheel.addOnItemSelectedListener { _, index -> }
+        binding.diaWheel.adapter = object : WheelView.Adapter() {
+            override fun getItemCount(): Int = wheelData.size
+            override fun getItem(position: Int): String = wheelData[position]
+        }
+        binding.sysWheel.addOnItemSelectedListener { _, index -> }
+        binding.sysWheel.currentItem = 119 - 20
+        binding.diaWheel.currentItem = 79 - 20
     }
 
 }
