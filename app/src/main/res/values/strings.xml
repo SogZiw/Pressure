@@ -21,6 +21,6 @@
     <string name="text_hypertension_stage_1_content">SYS 130–139 or DIA 80–89</string>
     <string name="text_hypertension_stage_2">Hypertension-stage 2</string>
     <string name="text_hypertension_stage_2_content">SYS 140–180 or DIA 90–120</string>
-    <string name="text_hypertensive">Hypertensive</string>
+    <string name="text_hypertensive">Hypertensive crisis</string>
     <string name="text_hypertensive_content">SYS &gt; 180 or DIA &gt; 120</string>
 </resources>
