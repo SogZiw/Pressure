@@ -2,6 +2,7 @@ package com.health.pressure.activity
 
 import com.health.pressure.R
 import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.widget.wheel.WheelView
 import com.health.pressure.databinding.ActivityRecordBinding
 import com.health.pressure.ext.formatTime
 import com.loper7.date_time_picker.DateTimeConfig
@@ -10,6 +11,13 @@ import com.loper7.date_time_picker.dialog.CardDatePickerDialog
 class RecordActivity : BaseActivity<ActivityRecordBinding>() {
 
     private var currentTime = System.currentTimeMillis()
+    private val wheelData by lazy {
+        val list = mutableListOf<String>()
+        for (i in 20..300) {
+            list.add(i.toString())
+        }
+        list
+    }
 
     override val layoutId: Int get() = R.layout.activity_record
 
@@ -32,6 +40,11 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .build().show()
         }
         binding.tvTime.text = System.currentTimeMillis().formatTime()
+        binding.wheel.adapter = object : WheelView.Adapter() {
+            override fun getItemCount(): Int = wheelData.size
+            override fun getItem(position: Int): String = wheelData[position]
+        }
+        binding.wheel.addOnItemSelectedListener { _, index -> }
     }
 
 }
