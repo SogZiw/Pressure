@@ -11,4 +11,16 @@
     <string name="sys">Systolic</string>
     <string name="dia">Diastolic</string>
     <string name="mmhg">/mmHg</string>
+    <string name="text_hypotension">Hypotension</string>
+    <string name="text_hypotension_content">SYS &lt; 90 or DIA &lt; 60</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 and DIA 60–79</string>
+    <string name="text_elevated">Elevated</string>
+    <string name="text_elevated_content">SYS 120–129 and DIA 60–79</string>
+    <string name="text_hypertension_stage_1">Hypertension-stage 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 or DIA 80–89</string>
+    <string name="text_hypertension_stage_2">Hypertension-stage 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 or DIA 90–120</string>
+    <string name="text_hypertensive">Hypertensive</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 or DIA &gt; 120</string>
 </resources>
