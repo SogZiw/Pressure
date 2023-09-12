@@ -115,7 +115,7 @@
             <com.health.pressure.basic.widget.wheel.WheelView
                 android:id="@+id/sysWheel"
                 android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="7dp"
                 android:background="@drawable/bg_ebebf2_gradient"
@@ -176,7 +176,7 @@
             <com.health.pressure.basic.widget.wheel.WheelView
                 android:id="@+id/diaWheel"
                 android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="7dp"
                 android:background="@drawable/bg_ebebf2_gradient"
