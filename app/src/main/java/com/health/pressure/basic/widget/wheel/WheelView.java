@@ -535,7 +535,8 @@ public final class WheelView extends ViewGroup {
 
         @Override
         protected void drawItem(@NonNull Canvas c, @NonNull Rect itemRect, int alpha, @NonNull String item) {
-            textPaint.setFakeBoldText(true);
+            textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+            textPaint.setStrokeWidth(3f);
             textPaint.setColor(wheelParams.textColor);
             textPaint.setAlpha(alpha);
             textPaint.setTextSize(dp2px(20));
@@ -544,7 +545,8 @@ public final class WheelView extends ViewGroup {
 
         @Override
         protected void drawCenterItem(@NonNull Canvas c, @NonNull Rect itemRect, int alpha, @NonNull String item) {
-            textPaint.setFakeBoldText(true);
+            textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+            textPaint.setStrokeWidth(3f);
             textPaint.setColor(wheelParams.textCenterColor);
             textPaint.setAlpha(alpha);
             textPaint.setTextSize(dp2px(25));
