@@ -205,20 +205,93 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutSlider"
             android:layout_width="320dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="127dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_white_r20"
+            android:paddingBottom="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layoutWheel">
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_normal"
+                android:textColor="@color/color_55d147"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/stateContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:text="@string/text_normal_content"
+                android:textColor="@color/color_55d147"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/state" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/stateExtra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/text_normal_extra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stateContent" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stateExtra"
+                app:srcCompat="@drawable/ic_slider_bg" />
+
+            <View
+                android:id="@+id/tinySlider"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:background="@drawable/bg_white_r16"
+                android:elevation="3dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivColor"
+                app:layout_constraintEnd_toEndOf="@+id/ivColor"
+                app:layout_constraintHorizontal_bias="0.24"
+                app:layout_constraintStart_toStartOf="@+id/ivColor"
+                app:layout_constraintTop_toTopOf="@+id/ivColor" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnSave"
+            android:layout_width="149dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/btn_00c5a8_r12"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSlider" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
