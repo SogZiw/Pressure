@@ -22,6 +22,9 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
     override val layoutId: Int get() = R.layout.activity_record
 
     override fun initView() {
+        binding.btnSave.setOnClickListener {
+            
+        }
         binding.btnTime.setOnClickListener {
             CardDatePickerDialog.builder(this)
                 .setTitle(getString(R.string.set_datetime))
