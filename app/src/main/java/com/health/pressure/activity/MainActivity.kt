@@ -15,7 +15,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         fun iniViewPager() {
             binding.viewPager.run {
-                val fragments = listOf(HistoryFrag(), SetFrag(), SetFrag(), SetFrag())
+                val fragments = listOf(HistoryFrag(), SetFrag())
                 isUserInputEnabled = false
                 offscreenPageLimit = fragments.size
                 adapter = object : FragmentStateAdapter(supportFragmentManager, lifecycle) {
@@ -30,10 +30,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             itemIconTintList = null
             setOnItemSelectedListener {
                 when (it.itemId) {
-                    R.id.tab_task -> binding.viewPager.setCurrentItem(0, false)
-                    R.id.tab_history -> binding.viewPager.setCurrentItem(1, false)
-                    R.id.tab_info -> binding.viewPager.setCurrentItem(2, false)
-                    R.id.tab_set -> binding.viewPager.setCurrentItem(3, false)
+                    R.id.tab_history -> binding.viewPager.setCurrentItem(0, false)
+                    R.id.tab_set -> binding.viewPager.setCurrentItem(1, false)
                 }
                 return@setOnItemSelectedListener true
             }

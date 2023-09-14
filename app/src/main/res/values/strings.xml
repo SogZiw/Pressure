@@ -34,4 +34,9 @@
     <string name="error_tips_extra">The entered data may be incorrect, please check and re-enter the correct value</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="range1">Within 24 hours</string>
+    <string name="range2">This week</string>
+    <string name="range3">Last 7 days</string>
+    <string name="range4">This month</string>
+    <string name="range5">Last month</string>
 </resources>
