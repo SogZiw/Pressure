@@ -11,6 +11,8 @@ import com.health.pressure.dao.Pressure
 import com.health.pressure.dao.PressureState
 import com.health.pressure.databinding.ActivityRecordBinding
 import com.health.pressure.ext.formatTime
+import com.health.pressure.ext.stringValue
+import com.health.pressure.ext.toast
 import com.health.pressure.wheelData
 import com.loper7.date_time_picker.DateTimeConfig
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
@@ -27,7 +29,46 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
 
     override fun initView() {
         binding.btnSave.setOnClickListener {
+            val sys = wheelData.getOrNull(binding.sysWheel.currentItem)?.toIntOrNull()
+            val dia = wheelData.getOrNull(binding.diaWheel.currentItem)?.toIntOrNull()
+            if (null == sys || null == dia) {
+                R.string.error_tips_extra.toast()
+                return@setOnClickListener
+            }
+            if (dia >= sys) {
+                R.string.error_tips.toast()
+                return@setOnClickListener
+            }
 
+            fun addNew() {
+                val data = Pressure(sys = sys, dia = dia, record_time = datetime, format_time = datetime.formatTime())
+                DataManager.insertData(data)
+                finish()
+            }
+
+
+            if (isAdd.not() && null != data) {
+                data?.run {
+                    this.sys = sys
+                    this.dia = dia
+                    this.record_time = datetime
+                    this.format_time = datetime.formatTime()
+                }
+                data?.let { DataManager.updateData(it) }
+                finish()
+            } else {
+                val sameOrNull = DataManager.sameOrNull(datetime.formatTime())
+                if (null == sameOrNull) addNew()
+                else {
+                    DataManager.updateData(sameOrNull.also {
+                        it.sys = sys
+                        it.dia = dia
+                        it.record_time = datetime
+                        it.format_time = datetime.formatTime()
+                    })
+                    finish()
+                }
+            }
         }
         binding.btnDelete.setOnClickListener {
             data?.let { pressure ->
@@ -52,7 +93,6 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 .setOnCancel(text = getString(R.string.cancel))
                 .build().show()
         }
-        binding.tvTime.text = System.currentTimeMillis().formatTime()
         binding.sysWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
             override fun getItem(position: Int): String = wheelData[position]
@@ -95,8 +135,12 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
     }
 
     override fun initData() {
-        binding.sysWheel.currentItem = 119 - 20
-        binding.diaWheel.currentItem = 79 - 20
+        binding.title.text = if (isAdd) R.string.new_record.stringValue else R.string.edit_record.stringValue
+        datetime = data?.record_time ?: System.currentTimeMillis()
+        binding.tvTime.text = data?.format_time ?: datetime.formatTime()
+        binding.sysWheel.currentItem = (data?.sys ?: 119) - 20
+        binding.diaWheel.currentItem = (data?.dia ?: 79) - 20
+        changeState(data?.state ?: PressureState.Normal)
     }
 
 }

@@ -21,3 +21,5 @@ val Int.colorValue: Int
             Color.GRAY
         }
     }
+
+fun Int.toast() = this.stringValue.toast()
