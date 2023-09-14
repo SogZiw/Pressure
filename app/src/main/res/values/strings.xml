@@ -8,7 +8,7 @@
     <string name="sure">Sure</string>
     <string name="cancel">Cancel</string>
     <string name="new_record">New record</string>
-    <string name="sys">Systolic</string>
+    <string name="sys">c</string>
     <string name="dia">Diastolic</string>
     <string name="mmhg">/mmHg</string>
     <string name="text_hypotension">Hypotension</string>
@@ -29,6 +29,7 @@
     <string name="text_hypertensive">Hypertensive crisis</string>
     <string name="text_hypertensive_content">SYS &gt; 180 or DIA &gt; 120</string>
     <string name="text_hypertensive_extra">Seek medical advice promptly, develop an appropriate treatment plan</string>
+    <string name="error_tips">Systolic must be larger than Diastolic</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
 </resources>
