@@ -30,4 +30,5 @@
     <string name="text_hypertensive_content">SYS &gt; 180 or DIA &gt; 120</string>
     <string name="text_hypertensive_extra">Seek medical advice promptly, develop an appropriate treatment plan</string>
     <string name="save">Save</string>
+    <string name="delete">Delete</string>
 </resources>
