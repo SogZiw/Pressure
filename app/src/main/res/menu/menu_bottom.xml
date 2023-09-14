@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/range1"
+        android:title="@string/range1" />
+    <item
+        android:id="@+id/range2"
+        android:title="@string/range2" />
+    <item
+        android:id="@+id/range3"
+        android:title="@string/range3" />
+    <item
+        android:id="@+id/range4"
+        android:title="@string/range4" />
+    <item
+        android:id="@+id/range5"
+        android:title="@string/range5" />
+</menu>
