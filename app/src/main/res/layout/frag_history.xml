@@ -45,5 +45,117 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/beat"
+            android:layout_width="180dp"
+            android:layout_height="214dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeRange"
+            app:srcCompat="@drawable/ic_mask" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutSys"
+            android:layout_width="99dp"
+            android:layout_height="125dp"
+            android:background="@drawable/bg_white_r20"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/beat"
+            app:layout_constraintTop_toTopOf="@+id/beat">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sys"
+                android:textColor="#242F40"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="sans-serif-black"
+                android:text="0"
+                android:textColor="#0498E9"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_mmhg"
+                android:textColor="#959CAD"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutDia"
+            android:layout_width="99dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_white_r20"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/beat"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSys">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/dia"
+                android:textColor="#242F40"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="sans-serif-black"
+                android:text="0"
+                android:textColor="#0498E9"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_mmhg"
+                android:textColor="#959CAD"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/btn_00c5a8_r12"
+            android:gravity="center"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="9dp"
+            android:text="@string/add_new_record"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/beat"
+            app:layout_constraintStart_toStartOf="@id/beat"
+            app:layout_constraintTop_toBottomOf="@+id/beat" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
