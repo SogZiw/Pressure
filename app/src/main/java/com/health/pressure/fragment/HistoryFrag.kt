@@ -2,14 +2,11 @@ package com.health.pressure.fragment
 
 import DataManager
 import android.content.Intent
-import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
 import com.health.pressure.activity.RecordActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.ext.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
 
@@ -33,17 +30,19 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        initRangeData(R.id.range1)
+    }
+
     private fun initRangeData(id: Int) {
 
         fun calculate(start: Long, end: Long) {
-            lifecycleScope.launch(Dispatchers.IO) {
-                val datas = DataManager.getPressures(start, end)
+            DataManager.getPressures(start, end).observe(viewLifecycleOwner) { datas ->
                 val sys = datas.map { it.sys }.average()
                 val dia = datas.map { it.dia }.average()
-                launch(Dispatchers.Main) {
-                    binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
-                    binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
-                }
+                binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
+                binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
             }
         }
 

@@ -2,6 +2,7 @@ package com.health.pressure.dao
 
 import androidx.annotation.Keep
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Keep
 @Dao
@@ -16,12 +17,12 @@ interface ManageDao {
     fun deleteData(vararg data: Pressure)
 
     @Query("SELECT * FROM pressure_table")
-    fun getAllPressures(): List<Pressure>
+    fun getAllPressures(): Flow<List<Pressure>>
 
     @Query("SELECT * FROM pressure_table WHERE format_time = :time LIMIT 1")
-    fun sameOrNull(time: String): Pressure?
+    fun sameOrNull(time: String): Flow<Pressure?>
 
     @Query("SELECT * FROM pressure_table WHERE record_time BETWEEN :start AND :end")
-    fun getPressures(start: Long, end: Long): List<Pressure>
+    fun getPressures(start: Long, end: Long): Flow<List<Pressure>>
 
 }

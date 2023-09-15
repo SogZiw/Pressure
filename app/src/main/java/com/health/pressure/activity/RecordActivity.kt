@@ -46,7 +46,6 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 finish()
             }
 
-
             if (isAdd.not() && null != data) {
                 data?.run {
                     this.sys = sys
@@ -57,16 +56,17 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
                 data?.let { DataManager.updateData(it) }
                 finish()
             } else {
-                val sameOrNull = DataManager.sameOrNull(datetime.formatTime())
-                if (null == sameOrNull) addNew()
-                else {
-                    DataManager.updateData(sameOrNull.also {
-                        it.sys = sys
-                        it.dia = dia
-                        it.record_time = datetime
-                        it.format_time = datetime.formatTime()
-                    })
-                    finish()
+                DataManager.sameOrNull(datetime.formatTime()).observe(this) { oldData ->
+                    if (null == oldData) addNew()
+                    else {
+                        DataManager.updateData(oldData.also {
+                            it.sys = sys
+                            it.dia = dia
+                            it.record_time = datetime
+                            it.format_time = datetime.formatTime()
+                        })
+                        finish()
+                    }
                 }
             }
         }

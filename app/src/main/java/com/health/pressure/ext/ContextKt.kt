@@ -6,6 +6,10 @@ import android.view.Window
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 
 fun Context.autoDensity() {
     resources.displayMetrics.run {
@@ -30,3 +34,4 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
     }
 }
 
+val dataScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
