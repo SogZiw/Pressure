@@ -3,6 +3,17 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
     id 'com.google.devtools.ksp'
+    id 'stringfog'
+}
+
+import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
+
+stringfog {
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    enable true
+    fogPackages = ['com.health.pressure']
+    kg new RandomKeyGenerator()
+    mode bytes
 }
 
 android {
