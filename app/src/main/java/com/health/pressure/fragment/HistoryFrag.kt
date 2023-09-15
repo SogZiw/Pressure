@@ -8,6 +8,7 @@ import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.ext.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 
 class HistoryFrag : BaseFrag<FragHistoryBinding>() {
@@ -35,7 +36,8 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 val sys = datas.map { it.sys }.average()
                 val dia = datas.map { it.sys }.average()
                 launch(Dispatchers.Main) {
-
+                    binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
+                    binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
                 }
             }
         }
