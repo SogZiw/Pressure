@@ -78,7 +78,6 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             }
             val dataSet = PressureDataSet(chartData, "Pressure").apply {
                 axisDependency = YAxis.AxisDependency.LEFT
-                setDrawIcons(false)
                 setDrawValues(true)
                 isHighlightEnabled = true
                 valueTextColor = R.color.color_34405a.colorValue
