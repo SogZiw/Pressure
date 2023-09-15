@@ -76,9 +76,9 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 binding.chart.clear()
                 return@observe
             }
-            val dataSet = PressureDataSet(chartData, "BPChart").apply {
-                setDrawIcons(false)
+            val dataSet = PressureDataSet(chartData, "Pressure").apply {
                 axisDependency = YAxis.AxisDependency.LEFT
+                setDrawIcons(false)
                 setDrawValues(true)
                 isHighlightEnabled = true
                 highLightColor = Color.TRANSPARENT

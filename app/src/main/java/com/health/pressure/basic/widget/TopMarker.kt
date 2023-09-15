@@ -9,6 +9,7 @@ import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.utils.MPPointF
 import com.github.mikephil.charting.utils.Utils
 import com.health.pressure.R
+import com.health.pressure.basic.widget.data.PressureEntry
 
 class TopMarker(context: Context) : MarkerView(context, R.layout.item_marker_view) {
 
@@ -16,7 +17,7 @@ class TopMarker(context: Context) : MarkerView(context, R.layout.item_marker_vie
 
     @SuppressLint("SetTextI18n")
     override fun refreshContent(e: Entry, highlight: Highlight) {
-        textView.text = "This is test"
+        textView.text = (e as? PressureEntry)?.pressure?.state?.stateName ?: ""
         super.refreshContent(e, highlight)
     }
 
