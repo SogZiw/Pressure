@@ -66,7 +66,7 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
             mBodyBuffers[3] = low * phaseY;
 
             trans.pointValuesToPixel(mBodyBuffers);
-            mRenderPaint.setColor(null == e.getPressureData() ? Color.BLACK : e.getPressureData().getState().getStateColor());
+            mRenderPaint.setColor(e.getPressure().getState().getStateColor());
             mRenderPaint.setStyle(Paint.Style.FILL);
 
             float ra = Utils.convertDpToPixel(5f);

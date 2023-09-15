@@ -2,57 +2,19 @@ package com.health.pressure.basic.widget.data
 
 import com.github.mikephil.charting.data.Entry
 import com.health.pressure.dao.Pressure
-import kotlin.math.abs
 
-class PressureEntry : Entry {
+class PressureEntry(x: Float, max: Int, min: Int, val pressure: Pressure) : Entry(x, (max + min) / 2f) {
 
-    private var mHigh = 0
-    private var mLow = 0
-    var pressureData: Pressure? = null
-
-    /**
-     * @param x The value on the x-axis
-     */
-    constructor(x: Float, max: Int, min: Int, pressure: Pressure) : super(x, (max + min) / 2f) {
-        mHigh = max
-        mLow = min
-        this.pressureData = pressure
-    }
-
-    /**
-     * Constructor.
-     *
-     * @param x    The value on the x-axis
-     * @param data Spot for additional data this Entry represents
-     */
-    constructor(x: Float, max: Int, min: Int, data: Any?) : super(x, (max + min) / 2f, data) {
-        mHigh = max
-        mLow = min
-    }
-
-    val range: Float get() = abs(mHigh - mLow).toFloat()
+    private var mHigh = max
+    private var mLow = min
 
     override fun copy(): PressureEntry {
-        return PressureEntry(x, mHigh, mLow, data)
+        return PressureEntry(x, mHigh, mLow, pressure)
     }
 
-    /**
-     * Returns the upper shadows highest value.
-     */
-    val high: Float
-        get() = mHigh.toFloat()
+    val high: Int
+        get() = mHigh
 
-    fun setHigh(max: Int) {
-        mHigh = max
-    }
-
-    /**
-     * Returns the lower shadows lowest value.
-     */
-    val low: Float
-        get() = mLow.toFloat()
-
-    fun setLow(min: Int) {
-        mLow = min
-    }
+    val low: Int
+        get() = mLow
 }
