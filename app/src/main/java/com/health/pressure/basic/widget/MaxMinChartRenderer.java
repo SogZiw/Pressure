@@ -2,7 +2,6 @@
 package com.health.pressure.basic.widget;
 
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 
 import com.github.mikephil.charting.animation.ChartAnimator;
@@ -95,9 +94,10 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
                 // apply the text-styling defined by the DataSet
                 applyValueTextStyle(dataSet);
                 mXBounds.set(mChart, dataSet);
-                float[] positions = new PressureTransformer(mViewPortHandler).generateTransformedValuesPressure(
+                Transformer trans = mChart.getTransformer(dataSet.getAxisDependency());
+                float[] positions = ((PressureTransformer) trans).generateTransformedValuesPressure(
                         dataSet, mAnimator.getPhaseX(), mAnimator.getPhaseY(), mXBounds.min, mXBounds.max);
-                float yOffset = Utils.convertDpToPixel(5f);
+                float yOffset = Utils.convertDpToPixel(10f);
 
                 for (int j = 0; j < positions.length; j += 2) {
                     float x = positions[j];
@@ -105,6 +105,30 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
                     if (!mViewPortHandler.isInBoundsRight(x)) break;
                     if (!mViewPortHandler.isInBoundsLeft(x) || !mViewPortHandler.isInBoundsY(y)) continue;
                     PressureEntry entry = dataSet.getEntryForIndex(j / 2 + mXBounds.min);
+
+                    try {
+                        int curIndexForEntry = (int) entry.getX();
+                        String curY = entry.getPressure().getFormat_time().substring(0, 4);
+                        if (0 == curIndexForEntry) {
+                            drawValue(c,
+                                    curY,
+                                    x,
+                                    yOffset,
+                                    dataSet.getValueTextColor());
+                        } else {
+                            int lastIndexForEntry = (int) entry.getX() - 1;
+                            String lastY = dataSet.getEntryForIndex(lastIndexForEntry).getPressure().getFormat_time().substring(0, 4);
+                            if (!curY.equals(lastY)) {
+                                drawValue(c,
+                                        curY,
+                                        x,
+                                        yOffset,
+                                        dataSet.getValueTextColor());
+                            }
+                        }
+                    } catch (Exception ignored) {
+
+                    }
                 }
             }
         }
@@ -132,14 +156,14 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
                     String.valueOf(e.getHigh()),
                     (float) pixHigh.x,
                     (float) pixHigh.y - yOffset,
-                    Color.BLACK);
+                    dataSet.getValueTextColor());
 
             MPPointD pixLow = mChart.getTransformer(dataSet.getAxisDependency()).getPixelForValues(e.getX(), lowValue);
             drawValue(c,
                     String.valueOf(e.getLow()),
                     (float) pixLow.x,
                     (float) pixLow.y + 2 * yOffset,
-                    Color.BLACK);
+                    dataSet.getValueTextColor());
         }
     }
 }

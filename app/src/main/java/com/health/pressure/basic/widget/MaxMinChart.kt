@@ -6,11 +6,14 @@ import android.graphics.DashPathEffect
 import android.util.AttributeSet
 import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.renderer.XAxisRenderer
+import com.github.mikephil.charting.renderer.YAxisRenderer
 import com.github.mikephil.charting.utils.Utils
 import com.health.pressure.R
 import com.health.pressure.basic.widget.data.DateXFormatter
 import com.health.pressure.basic.widget.data.PressureData
 import com.health.pressure.basic.widget.data.PressureDataProvider
+import com.health.pressure.basic.widget.data.PressureTransformer
 import com.health.pressure.ext.colorValue
 
 class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
@@ -22,6 +25,11 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
     override fun init() {
         super.init()
         mRenderer = MaxMinChartRenderer(this, mAnimator, mViewPortHandler)
+        mLeftAxisTransformer = PressureTransformer(mViewPortHandler)
+        mRightAxisTransformer = PressureTransformer(mViewPortHandler)
+        mAxisRendererLeft = YAxisRenderer(mViewPortHandler, mAxisLeft, mLeftAxisTransformer)
+        mAxisRendererRight = YAxisRenderer(mViewPortHandler, mAxisRight, mRightAxisTransformer)
+        mXAxisRenderer = XAxisRenderer(mViewPortHandler, mXAxis, mLeftAxisTransformer)
         val lineColor = R.color.color_e8e8f0.colorValue
         val textColor = R.color.color_34405a.colorValue
         xAxis.spaceMin = 0.5f

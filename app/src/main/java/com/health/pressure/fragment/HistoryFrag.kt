@@ -81,6 +81,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 setDrawIcons(false)
                 setDrawValues(true)
                 isHighlightEnabled = true
+                valueTextColor = R.color.color_34405a.colorValue
                 highLightColor = Color.TRANSPARENT
                 setBarSpace(0.2f)
             }
