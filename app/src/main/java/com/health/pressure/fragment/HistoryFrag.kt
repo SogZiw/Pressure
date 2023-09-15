@@ -1,8 +1,10 @@
 package com.health.pressure.fragment
 
 import DataManager
+import android.content.Intent
 import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
+import com.health.pressure.activity.RecordActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.ext.*
@@ -22,6 +24,9 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 initRangeData(id)
             }
         }
+        binding.btnAdd.setOnClickListener {
+            startActivity(Intent(activity, RecordActivity::class.java))
+        }
     }
 
     override fun initData() {
@@ -34,7 +39,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             lifecycleScope.launch(Dispatchers.IO) {
                 val datas = DataManager.getPressures(start, end)
                 val sys = datas.map { it.sys }.average()
-                val dia = datas.map { it.sys }.average()
+                val dia = datas.map { it.dia }.average()
                 launch(Dispatchers.Main) {
                     binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
                     binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"

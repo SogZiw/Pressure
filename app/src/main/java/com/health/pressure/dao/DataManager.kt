@@ -6,7 +6,7 @@ import com.health.pressure.mApp
 
 object DataManager {
 
-    private val database by lazy { Room.databaseBuilder(mApp, PressureDatabase::class.java, "pressure_database").build() }
+    private val database by lazy { Room.databaseBuilder(mApp, PressureDatabase::class.java, "pressure_database").allowMainThreadQueries().build() }
     private val manageDao by lazy { database.manageDao() }
 
     @WorkerThread
