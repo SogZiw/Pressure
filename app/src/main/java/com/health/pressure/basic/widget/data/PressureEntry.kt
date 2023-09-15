@@ -1,19 +1,22 @@
 package com.health.pressure.basic.widget.data
 
 import com.github.mikephil.charting.data.Entry
+import com.health.pressure.dao.Pressure
 import kotlin.math.abs
 
 class PressureEntry : Entry {
 
     private var mHigh = 0
     private var mLow = 0
+    var pressureData: Pressure? = null
 
     /**
      * @param x The value on the x-axis
      */
-    constructor(x: Float, max: Int, min: Int) : super(x, (max + min) / 2f) {
+    constructor(x: Float, max: Int, min: Int, pressure: Pressure) : super(x, (max + min) / 2f) {
         mHigh = max
         mLow = min
+        this.pressureData = pressure
     }
 
     /**

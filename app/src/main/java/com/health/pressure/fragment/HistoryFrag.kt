@@ -70,7 +70,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             datas.sortBy { it.record_time }
             val chartData = mutableListOf<PressureEntry>()
             datas.forEachIndexed { index, pressure ->
-                chartData.add(PressureEntry(index.toFloat(), pressure.sys, pressure.dia))
+                chartData.add(PressureEntry(index.toFloat(), pressure.sys, pressure.dia, pressure))
             }
             if (chartData.isEmpty()) {
                 binding.chart.clear()
@@ -85,6 +85,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 setBarSpace(0.2f)
             }
             binding.chart.isDoubleTapToZoomEnabled = false
+            binding.chart.isScaleYEnabled = false
             binding.chart.data = PressureData(dataSet)
             binding.chart.invalidate()
             binding.chart.setVisibleXRange(0f, 6f)
