@@ -32,6 +32,7 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         setScaleEnabled(false)
         setDrawGridBackground(false)
         setDrawMarkers(true)
+        isDoubleTapToZoomEnabled = false
         legend.isEnabled = false
         // xAxis
         xAxis.textColor = ContextCompat.getColor(context, R.color.color_34405a)

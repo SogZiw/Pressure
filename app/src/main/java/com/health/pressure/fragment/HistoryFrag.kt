@@ -2,10 +2,16 @@ package com.health.pressure.fragment
 
 import DataManager
 import android.content.Intent
+import android.graphics.Color
+import com.github.mikephil.charting.components.YAxis
 import com.health.pressure.R
 import com.health.pressure.activity.RecordActivity
 import com.health.pressure.basic.BaseFrag
+import com.health.pressure.basic.widget.data.PressureData
+import com.health.pressure.basic.widget.data.PressureDataSet
+import com.health.pressure.basic.widget.data.PressureEntry
 import com.health.pressure.databinding.FragHistoryBinding
+import com.health.pressure.datas
 import com.health.pressure.ext.*
 import kotlin.math.roundToInt
 
@@ -33,6 +39,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
     override fun onResume() {
         super.onResume()
         initRangeData(R.id.range1)
+        refreshChart()
     }
 
     private fun initRangeData(id: Int) {
@@ -53,6 +60,35 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             R.id.range4 -> calculate(thisMonthStartTime, currentTimeMills)
             R.id.range5 -> calculate(lastMonthStartTime, lastMonthEndTime)
             else -> Unit
+        }
+    }
+
+    private fun refreshChart() {
+        DataManager.getAllPressures().observe(this) { list ->
+            datas.clear()
+            datas.addAll(list)
+            datas.sortBy { it.record_time }
+            val chartData = mutableListOf<PressureEntry>()
+            datas.forEachIndexed { index, pressure ->
+                chartData.add(PressureEntry(index.toFloat(), pressure.sys, pressure.dia))
+            }
+            if (chartData.isEmpty()) {
+                binding.chart.clear()
+                return@observe
+            }
+            val dataSet = PressureDataSet(chartData, "BPChart").apply {
+                setDrawIcons(false)
+                axisDependency = YAxis.AxisDependency.LEFT
+                setDrawValues(true)
+                isHighlightEnabled = true
+                highLightColor = Color.TRANSPARENT
+                setBarSpace(0.2f)
+            }
+            binding.chart.isDoubleTapToZoomEnabled = false
+            binding.chart.data = PressureData(dataSet)
+            binding.chart.invalidate()
+            binding.chart.setVisibleXRange(0f, 6f)
+            binding.chart.moveViewToX(chartData.lastOrNull()?.x ?: 0f)
         }
     }
 

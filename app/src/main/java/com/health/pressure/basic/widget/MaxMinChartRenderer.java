@@ -50,7 +50,7 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
         float phaseY = mAnimator.getPhaseY();
         float barSpace = dataSet.getBarSpace();
         mXBounds.set(mChart, dataSet);
-        mRenderPaint.setStrokeWidth(dataSet.getLineWidth());
+        mRenderPaint.setStrokeWidth(3f);
         // draw the body
         for (int j = mXBounds.min; j <= mXBounds.range + mXBounds.min; j++) {
             // get the entry

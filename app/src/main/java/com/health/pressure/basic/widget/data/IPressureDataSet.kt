@@ -4,5 +4,4 @@ import com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarD
 
 interface IPressureDataSet : ILineScatterCandleRadarDataSet<PressureEntry?> {
     val barSpace: Float
-    val lineWidth: Float
 }

@@ -1,5 +1,7 @@
 package com.health.pressure
 
+import com.health.pressure.dao.Pressure
+
 lateinit var mApp: PressureApp
 
 val wheelData by lazy {
@@ -9,3 +11,5 @@ val wheelData by lazy {
     }
     list
 }
+
+val datas = mutableListOf<Pressure>()
