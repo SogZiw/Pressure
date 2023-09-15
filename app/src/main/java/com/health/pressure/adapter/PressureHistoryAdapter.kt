@@ -10,7 +10,6 @@ import com.health.pressure.databinding.ItemPressureBinding
 class PressureHistoryAdapter(private val context: Context, private val data: MutableList<Pressure>, private val onClick: (Pressure) -> Unit = {}) :
     RecyclerView.Adapter<PressureHistoryAdapter.ViewHolder>() {
 
-
     class ViewHolder(val binding: ItemPressureBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
