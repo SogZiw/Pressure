@@ -37,6 +37,9 @@
         <activity
             android:name=".activity.RecordActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HistoryActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>

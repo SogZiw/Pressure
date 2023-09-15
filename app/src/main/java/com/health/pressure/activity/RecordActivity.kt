@@ -10,6 +10,7 @@ import com.health.pressure.basic.widget.wheel.WheelView
 import com.health.pressure.dao.Pressure
 import com.health.pressure.dao.PressureState
 import com.health.pressure.databinding.ActivityRecordBinding
+import com.health.pressure.datas
 import com.health.pressure.ext.formatTime
 import com.health.pressure.ext.stringValue
 import com.health.pressure.ext.toast
@@ -73,6 +74,9 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
         binding.btnDelete.setOnClickListener {
             data?.let { pressure ->
                 DataManager.deleteData(pressure)
+                runCatching {
+                    datas.remove(pressure)
+                }
             }
             finish()
         }
