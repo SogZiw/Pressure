@@ -8,6 +8,7 @@ import com.github.mikephil.charting.charts.BarLineChartBase
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.utils.Utils
 import com.health.pressure.R
+import com.health.pressure.basic.widget.data.DateXFormatter
 import com.health.pressure.basic.widget.data.PressureData
 import com.health.pressure.basic.widget.data.PressureDataProvider
 import com.health.pressure.ext.colorValue
@@ -36,6 +37,7 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         isDoubleTapToZoomEnabled = false
         legend.isEnabled = false
         // xAxis
+        xAxis.valueFormatter = DateXFormatter()
         xAxis.textColor = textColor
         xAxis.position = XAxis.XAxisPosition.BOTTOM
         xAxis.setDrawGridLines(false)
