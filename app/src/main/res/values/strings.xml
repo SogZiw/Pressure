@@ -43,4 +43,6 @@
     <string name="time_range">Time range</string>
     <string name="add_new_record">+ New Record</string>
     <string name="more_history">More History</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="user_agreement">User Agreement</string>
 </resources>

@@ -8,4 +8,13 @@ class SetFrag : BaseFrag<FragSetBinding>() {
 
     override val layoutId: Int get() = R.layout.frag_set
 
+    override fun initView() {
+        binding.btnPrivacy.setOnClickListener {
+
+        }
+        binding.btnUserAgreement.setOnClickListener {
+
+        }
+    }
+
 }
