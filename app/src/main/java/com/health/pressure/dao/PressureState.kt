@@ -10,6 +10,7 @@ sealed class PressureState {
     abstract val stateColor: Int
     abstract val stateContent: String
     abstract val stateExtra: String
+    abstract val beatIcon: Int
     abstract val sliderBis: Float
 
     object Hypotension : PressureState() {
@@ -17,6 +18,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_0599eb.colorValue
         override val stateContent: String get() = R.string.text_hypotension_content.stringValue
         override val stateExtra: String get() = R.string.text_hypotension_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_blue
         override val sliderBis: Float = 0.065F
     }
 
@@ -25,6 +27,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_55d147.colorValue
         override val stateContent: String get() = R.string.text_normal_content.stringValue
         override val stateExtra: String get() = R.string.text_normal_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_green
         override val sliderBis: Float = 0.24F
     }
 
@@ -33,6 +36,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_fed236.colorValue
         override val stateContent: String get() = R.string.text_elevated_content.stringValue
         override val stateExtra: String get() = R.string.text_elevated_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_yellow
         override val sliderBis: Float = 0.415F
     }
 
@@ -41,6 +45,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_ffb968.colorValue
         override val stateContent: String get() = R.string.text_hypertension_stage_1_content.stringValue
         override val stateExtra: String get() = R.string.text_hypertension_stage_1_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_orange
         override val sliderBis: Float = 0.59F
     }
 
@@ -49,6 +54,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_ff8767.colorValue
         override val stateContent: String get() = R.string.text_hypertension_stage_2_content.stringValue
         override val stateExtra: String get() = R.string.text_hypertension_stage_2_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_light_red
         override val sliderBis: Float = 0.765F
     }
 
@@ -57,6 +63,7 @@ sealed class PressureState {
         override val stateColor: Int get() = R.color.color_fd5f55.colorValue
         override val stateContent: String get() = R.string.text_hypertensive_content.stringValue
         override val stateExtra: String get() = R.string.text_hypertensive_extra.stringValue
+        override val beatIcon: Int get() = R.drawable.ic_beat_red
         override val sliderBis: Float = 0.94F
     }
 
