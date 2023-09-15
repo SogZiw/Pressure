@@ -19,6 +19,7 @@
 
         <activity
             android:name=".activity.SplashActivity"
+            android:configChanges="orientation|screenSize|uiMode"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -31,14 +32,21 @@
 
         <activity
             android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|uiMode"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".activity.RecordActivity"
+            android:configChanges="orientation|screenSize|uiMode"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.HistoryActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebviewActivity"
+            android:configChanges="orientation|screenSize|uiMode"
             android:screenOrientation="portrait" />
 
 
