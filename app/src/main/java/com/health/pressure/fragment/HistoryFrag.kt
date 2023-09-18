@@ -19,11 +19,13 @@ import kotlin.math.roundToInt
 
 class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
+    private var defaultRangeId = R.id.range1
     override val layoutId: Int get() = R.layout.frag_history
 
     override fun initView() {
         binding.timeRange.setOnClickListener {
             showBottomMenu { title, id ->
+                defaultRangeId = id
                 binding.timeRange.text = title
                 initRangeData(id)
             }
@@ -42,11 +44,11 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
     override fun onResume() {
         super.onResume()
-        initRangeData(R.id.range1)
+        initRangeData()
         refreshChart()
     }
 
-    private fun initRangeData(id: Int) {
+    private fun initRangeData(id: Int = defaultRangeId) {
 
         fun calculate(start: Long, end: Long) {
             DataManager.getPressures(start, end).observe(viewLifecycleOwner) { datas ->
