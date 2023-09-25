@@ -4,12 +4,6 @@ import com.health.pressure.dao.Pressure
 
 lateinit var mApp: PressureApp
 
-val wheelData by lazy {
-    val list = mutableListOf<String>()
-    for (i in 20..300) {
-        list.add(i.toString())
-    }
-    list
-}
+val wheelData by lazy { (20..300).toMutableList() }
 
 val datas = mutableListOf<Pressure>()
