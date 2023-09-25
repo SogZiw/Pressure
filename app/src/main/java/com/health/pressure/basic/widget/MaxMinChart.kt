@@ -52,10 +52,12 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         xAxis.setDrawAxisLine(false)
         xAxis.axisLineColor = lineColor
         xAxis.gridColor = lineColor
+        xAxis.textSize = 10f
         // axisLeft
         axisLeft.textColor = textColor
         axisLeft.setLabelCount(5, true)
         axisLeft.setDrawGridLines(true)
+        axisLeft.textSize = 10f
         axisLeft.spaceBottom = 20f
         axisLeft.spaceTop = 35f
         axisLeft.zeroLineColor = lineColor
