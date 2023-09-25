@@ -1,6 +1,6 @@
 package com.health.pressure.fragment
 
-import DataManager
+import com.health.pressure.dao.DataManager
 import android.content.Intent
 import android.graphics.Color
 import com.github.mikephil.charting.components.YAxis
@@ -15,7 +15,6 @@ import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.*
 import kotlin.math.roundToInt
-
 
 class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 

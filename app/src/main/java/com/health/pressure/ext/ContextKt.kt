@@ -1,15 +1,20 @@
 package com.health.pressure.ext
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ClickableSpan
+import android.view.View
 import android.view.Window
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
+import com.health.pressure.Constants
+import com.health.pressure.R
+import com.health.pressure.activity.WebviewActivity
 
 fun Context.autoDensity() {
     resources.displayMetrics.run {
@@ -34,4 +39,26 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
     }
 }
 
-val dataScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
+inline fun <reified Cls : Activity> Context.goNext(function: Intent.() -> Unit = {}) {
+    startActivity(Intent(this, Cls::class.java).apply(function))
+}
+
+inline fun <reified Cls : Activity> Context.goNextAutoFinish(function: Intent.() -> Unit = {}) {
+    startActivity(Intent(this, Cls::class.java).apply(function))
+    (this as? Activity)?.finish()
+}
+
+fun Activity.buildAgreement(): SpannableStringBuilder {
+    return SpannableStringBuilder()
+        .append(R.string.privacy_policy.stringValue, object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }
+            }
+        }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        .append(" & ")
+        .append(R.string.user_agreement.stringValue, object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.USER_AGREE) }
+            }
+        }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+}

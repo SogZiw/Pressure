@@ -1,9 +1,11 @@
 package com.health.pressure.fragment
 
+import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.databinding.FragSetBinding
+import com.health.pressure.ext.goNext
 
 class SetFrag : BaseFrag<FragSetBinding>() {
 
@@ -11,10 +13,10 @@ class SetFrag : BaseFrag<FragSetBinding>() {
 
     override fun initView() {
         binding.btnPrivacy.setOnClickListener {
-            WebviewActivity.goWebView(activity, "https;//www.baidu.com")
+            activity.goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }
         }
         binding.btnUserAgreement.setOnClickListener {
-            WebviewActivity.goWebView(activity, "https;//www.baidu.com")
+            activity.goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.USER_AGREE) }
         }
     }
 

@@ -1,7 +1,7 @@
+package com.health.pressure.dao
+
 import androidx.lifecycle.asLiveData
 import androidx.room.Room
-import com.health.pressure.dao.Pressure
-import com.health.pressure.dao.PressureDatabase
 import com.health.pressure.mApp
 
 object DataManager {

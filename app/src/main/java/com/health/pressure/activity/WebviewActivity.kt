@@ -6,6 +6,7 @@ import android.content.Intent
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.databinding.ActivityWebviewBinding
@@ -15,14 +16,14 @@ class WebviewActivity : BaseActivity<ActivityWebviewBinding>() {
     companion object {
         fun goWebView(context: Context, webUrl: String) {
             context.startActivity(Intent(context, WebviewActivity::class.java).apply {
-                putExtra("webview_url", webUrl)
+                putExtra(Constants.WEBVIEW_URL, webUrl)
             })
         }
     }
 
     override val layoutId: Int get() = R.layout.activity_webview
 
-    private val webUrl by lazy { intent?.getStringExtra("webview_url") }
+    private val webUrl by lazy { intent?.getStringExtra(Constants.WEBVIEW_URL) }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun initView() {
