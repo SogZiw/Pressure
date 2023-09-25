@@ -1,13 +1,13 @@
 package com.health.pressure.activity
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.activity.viewModels
 import com.health.pressure.R
 import com.health.pressure.activity.model.SpalshVM
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
+import com.health.pressure.ext.goNextAutoFinish
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
@@ -21,8 +21,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         }
         binding.agreement.text = buildAgreement()
         viewModel.startAnim {
-            startActivity(Intent(activity, MainActivity::class.java))
-            finish()
+            goNextAutoFinish<MainActivity>()
         }
     }
 }
