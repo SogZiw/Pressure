@@ -30,8 +30,8 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
 
     override fun initView() {
         binding.btnSave.setOnClickListener {
-            val sys = wheelData.getOrNull(binding.sysWheel.currentItem)?.toIntOrNull()
-            val dia = wheelData.getOrNull(binding.diaWheel.currentItem)?.toIntOrNull()
+            val sys = wheelData.getOrNull(binding.sysWheel.currentItem)
+            val dia = wheelData.getOrNull(binding.diaWheel.currentItem)
             if (null == sys || null == dia) {
                 R.string.error_tips_extra.toast()
                 return@setOnClickListener
@@ -99,11 +99,11 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
         }
         binding.sysWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
-            override fun getItem(position: Int): String = wheelData[position]
+            override fun getItem(position: Int): String = wheelData[position].toString()
         }
         binding.diaWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
-            override fun getItem(position: Int): String = wheelData[position]
+            override fun getItem(position: Int): String = wheelData[position].toString()
         }
         binding.sysWheel.addOnItemSelectedListener { _, _ -> formatState() }
         binding.diaWheel.addOnItemSelectedListener { _, _ -> formatState() }
@@ -111,8 +111,8 @@ class RecordActivity : BaseActivity<ActivityRecordBinding>() {
     }
 
     private fun formatState() {
-        val sys = wheelData.getOrNull(binding.sysWheel.currentItem)?.toIntOrNull()
-        val dia = wheelData.getOrNull(binding.diaWheel.currentItem)?.toIntOrNull()
+        val sys = wheelData.getOrNull(binding.sysWheel.currentItem)
+        val dia = wheelData.getOrNull(binding.diaWheel.currentItem)
         if (sys != null && dia != null) {
             val dataset = Pressure(sys = sys, dia = dia, record_time = datetime, format_time = datetime.formatTime())
             changeState(dataset.state)
