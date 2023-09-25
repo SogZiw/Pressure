@@ -10,7 +10,7 @@ import com.health.pressure.basic.BaseActivity
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
 import com.health.pressure.ext.firstLaunch
-import com.health.pressure.ext.goNextAutoFinish
+import com.health.pressure.ext.goNextPage
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
@@ -22,9 +22,10 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         viewModel.progress.observe(this) {
             binding.progress.progress = it
         }
+        binding.checkbox.setOnCheckedChangeListener { _, isChecked -> binding.btnStart.isEnabled = isChecked }
         binding.btnStart.setOnClickListener {
             firstLaunch = false
-            goNextAutoFinish<MainActivity>()
+            goNextPage<MainActivity>(true)
         }
         if (firstLaunch) {
             binding.agreement.movementMethod = LinkMovementMethod.getInstance()
@@ -35,7 +36,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
             binding.first.isVisible = false
             binding.reload.isVisible = true
             viewModel.startAnim {
-                goNextAutoFinish<MainActivity>()
+                goNextPage<MainActivity>(true)
             }
         }
     }

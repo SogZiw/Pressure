@@ -39,26 +39,22 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
     }
 }
 
-inline fun <reified Cls : Activity> Context.goNext(function: Intent.() -> Unit = {}) {
+inline fun <reified Cls : Activity> Context.goNextPage(autoFinish: Boolean = false, function: Intent.() -> Unit = {}) {
     startActivity(Intent(this, Cls::class.java).apply(function))
-}
-
-inline fun <reified Cls : Activity> Context.goNextAutoFinish(function: Intent.() -> Unit = {}) {
-    startActivity(Intent(this, Cls::class.java).apply(function))
-    (this as? Activity)?.finish()
+    if (autoFinish) (this as? Activity)?.finish()
 }
 
 fun Activity.buildAgreement(): SpannableStringBuilder {
     return SpannableStringBuilder()
         .append(R.string.privacy_policy.stringValue, object : ClickableSpan() {
             override fun onClick(widget: View) {
-                goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }
+                goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }
             }
         }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         .append(" & ")
         .append(R.string.user_agreement.stringValue, object : ClickableSpan() {
             override fun onClick(widget: View) {
-                goNext<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.USER_AGREE) }
+                goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.USER_AGREE) }
             }
         }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 }
