@@ -1,7 +1,5 @@
 package com.health.pressure.fragment
 
-import com.health.pressure.dao.DataManager
-import android.content.Intent
 import android.graphics.Color
 import com.github.mikephil.charting.components.YAxis
 import com.health.pressure.R
@@ -11,6 +9,7 @@ import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.widget.data.PressureData
 import com.health.pressure.basic.widget.data.PressureDataSet
 import com.health.pressure.basic.widget.data.PressureEntry
+import com.health.pressure.dao.DataManager
 import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.*
@@ -30,10 +29,10 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             }
         }
         binding.btnAdd.setOnClickListener {
-            startActivity(Intent(activity, RecordActivity::class.java))
+            activity.goNextPage<RecordActivity>()
         }
         binding.btnGoHis.setOnClickListener {
-            startActivity(Intent(activity, HistoryActivity::class.java))
+            activity.goNextPage<HistoryActivity>()
         }
     }
 

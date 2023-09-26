@@ -1,12 +1,12 @@
 package com.health.pressure.activity
 
-import com.health.pressure.dao.DataManager
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.widget.wheel.WheelView
+import com.health.pressure.dao.DataManager
 import com.health.pressure.dao.Pressure
 import com.health.pressure.dao.PressureState
 import com.health.pressure.databinding.ActivityRecordBinding
@@ -21,7 +21,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @Suppress("DEPRECATION")
-class RecordActivity : BaseActivity<ActivityRecordBinding>() {
+class RecordActivity : LifeActivity<ActivityRecordBinding>() {
 
     private var datetime = System.currentTimeMillis()
     override val layoutId: Int get() = R.layout.activity_record

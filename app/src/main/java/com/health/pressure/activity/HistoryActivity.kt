@@ -3,11 +3,11 @@ package com.health.pressure.activity
 import android.content.Intent
 import com.health.pressure.R
 import com.health.pressure.adapter.PressureHistoryAdapter
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.databinding.ActivityHistoryBinding
 import com.health.pressure.datas
 
-class HistoryActivity : BaseActivity<ActivityHistoryBinding>() {
+class HistoryActivity : LifeActivity<ActivityHistoryBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_history
 

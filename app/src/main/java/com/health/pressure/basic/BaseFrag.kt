@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -16,13 +15,13 @@ import com.kennyc.bottomsheet.BottomSheetMenuDialogFragment
 
 abstract class BaseFrag<B : ViewDataBinding> : Fragment() {
 
-    lateinit var activity: AppCompatActivity
+    lateinit var activity: BaseActivity<*>
     lateinit var binding: B
     abstract val layoutId: Int
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is AppCompatActivity) {
+        if (context is BaseActivity<*>) {
             activity = context
         }
     }

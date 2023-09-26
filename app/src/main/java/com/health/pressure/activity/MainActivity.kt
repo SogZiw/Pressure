@@ -2,12 +2,12 @@ package com.health.pressure.activity
 
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.health.pressure.R
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.databinding.ActivityMainBinding
 import com.health.pressure.fragment.HistoryFrag
 import com.health.pressure.fragment.SetFrag
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : LifeActivity<ActivityMainBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_main
 

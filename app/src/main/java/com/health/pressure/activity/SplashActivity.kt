@@ -6,14 +6,14 @@ import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import com.health.pressure.R
 import com.health.pressure.activity.model.SpalshVM
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
 
 @SuppressLint("CustomSplashScreen")
-class SplashActivity : BaseActivity<ActivitySplashBinding>() {
+class SplashActivity : LifeActivity<ActivitySplashBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SpalshVM>()
