@@ -2,6 +2,7 @@ package com.health.pressure.basic.ad
 
 import android.app.Activity
 import android.content.Context
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.ad.admob.FullScreenAd
 import com.health.pressure.mApp
@@ -27,6 +28,8 @@ class AdContainer(val loc: AdLocation) {
         isLoadingAd = true
         AdLoader(context, this).start()
     }
+
+    fun canShowFullScreenAd(activity: LifeActivity<*>): Boolean = ads.isNotEmpty() && activity.resumed
 
     fun showFullScreenAd(activity: Activity, onClose: () -> Unit) {
         if (ads.isEmpty()) {

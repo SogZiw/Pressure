@@ -65,7 +65,7 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
         if (null != baseAct) {
             baseAct.lifecycleScope.launch {
                 while (!baseAct.resumed) delay(300L)
-
+                close.invoke()
             }
         } else close.invoke()
     }
