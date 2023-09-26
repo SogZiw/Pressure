@@ -4,6 +4,8 @@ plugins {
     id 'kotlin-parcelize'
     id 'com.google.devtools.ksp'
     id 'stringfog'
+    //id 'com.google.gms.google-services'
+    //id 'com.google.firebase.crashlytics'
 }
 
 import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
@@ -87,4 +89,9 @@ dependencies {
     implementation 'com.github.loperSeven:DateTimePicker:0.6.3'
     // https://github.com/Kennyc1012/BottomSheetMenu
     implementation "com.github.Kennyc1012:BottomSheetMenu:4.3.2"
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-config-ktx"
+    //implementation "com.google.firebase:firebase-crashlytics-ktx"
 }
