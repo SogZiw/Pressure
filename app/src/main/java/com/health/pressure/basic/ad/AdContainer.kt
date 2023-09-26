@@ -24,10 +24,18 @@ class AdContainer(val loc: AdLocation) {
     fun loadAd(context: Context = mApp) {
         if (data.isEmpty()) return
         if (AdInstance.isOverMax()) return
+        judgeOverload()
         if (ads.isNotEmpty()) return
         if (isLoadingAd) return
         isLoadingAd = true
         AdLoader(context, this).start()
+    }
+
+    private fun judgeOverload() {
+        if (ads.isNotEmpty()) {
+            val item = ads.firstOrNull() ?: return
+            if (item.isOverload) ads.remove(item)
+        }
     }
 
     fun canShowFullScreenAd(activity: LifeActivity<*>): Boolean = ads.isNotEmpty() && activity.resumed
