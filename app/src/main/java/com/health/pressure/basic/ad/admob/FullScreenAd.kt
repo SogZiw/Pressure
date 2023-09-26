@@ -11,6 +11,7 @@ import com.google.android.gms.ads.appopen.AppOpenAd
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.AdItem
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.onLoaded
@@ -38,8 +39,8 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
             object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() = onAdClose(activity, onClose)
                 override fun onAdFailedToShowFullScreenContent(e: AdError) = onAdClose(activity, onClose)
-                override fun onAdClicked() = Unit
-                override fun onAdShowedFullScreenContent() = Unit
+                override fun onAdClicked() = AdInstance.addClickCount()
+                override fun onAdShowedFullScreenContent() = AdInstance.addShowCount()
             }
         }
 

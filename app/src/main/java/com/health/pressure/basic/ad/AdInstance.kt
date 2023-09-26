@@ -1,6 +1,7 @@
 package com.health.pressure.basic.ad
 
 import com.health.pressure.Constants
+import com.health.pressure.ext.*
 import org.json.JSONObject
 
 object AdInstance {
@@ -38,4 +39,30 @@ object AdInstance {
         clickMax = jsonObj.optInt("jakh")
         openAd.initData(formatItem(jsonObj, AdLocation.OPEN.placeName))
     }
+
+    fun addShowCount() {
+        runCatching {
+            if (adShowTime.isToday.not()) {
+                adShowTime = System.currentTimeMillis()
+                adShowCount = 1
+            } else adShowCount++
+        }
+    }
+
+    fun addClickCount() {
+        runCatching {
+            if (adClickTime.isToday.not()) {
+                adClickTime = System.currentTimeMillis()
+                adClickCount = 1
+            } else adClickCount++
+        }
+    }
+
+    fun isOverMax(): Boolean {
+        if (0 == showMax) return false
+        val overShow = if (adShowTime.isToday) adShowCount >= showMax else false
+        val overClick = if (adClickTime.isToday) adClickCount >= clickMax else false
+        return overShow || overClick
+    }
+
 }

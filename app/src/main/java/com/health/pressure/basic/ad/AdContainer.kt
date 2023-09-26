@@ -23,6 +23,7 @@ class AdContainer(val loc: AdLocation) {
 
     fun loadAd(context: Context = mApp) {
         if (data.isEmpty()) return
+        if (AdInstance.isOverMax()) return
         if (ads.isNotEmpty()) return
         if (isLoadingAd) return
         isLoadingAd = true
