@@ -48,6 +48,10 @@
             android:name=".activity.WebviewActivity"
             android:configChanges="orientation|screenSize|uiMode"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GuideActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

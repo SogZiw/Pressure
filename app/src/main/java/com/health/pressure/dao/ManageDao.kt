@@ -1,10 +1,8 @@
 package com.health.pressure.dao
 
-import androidx.annotation.Keep
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
-@Keep
 @Dao
 interface ManageDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

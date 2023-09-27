@@ -29,7 +29,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         binding.checkbox.setOnCheckedChangeListener { _, isChecked -> binding.btnStart.isEnabled = isChecked }
         binding.btnStart.setOnClickListener {
             firstLaunch = false
-            goNextPage<MainActivity>(true)
+            goNextPage<GuideActivity>(true)
         }
         AdInstance.openAd.loadAd(activity)
         viewModel.startAnim(onUpdateValue = {
