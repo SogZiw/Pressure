@@ -5,6 +5,8 @@ import com.health.pressure.R
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.databinding.ActivityMainBinding
 import com.health.pressure.fragment.HistoryFrag
+import com.health.pressure.fragment.HomeFrag
+import com.health.pressure.fragment.InfoFrag
 import com.health.pressure.fragment.SetFrag
 
 class MainActivity : LifeActivity<ActivityMainBinding>() {
@@ -15,7 +17,7 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
 
         fun iniViewPager() {
             binding.viewPager.run {
-                val fragments = listOf(HistoryFrag(), SetFrag())
+                val fragments = listOf(HomeFrag(), HistoryFrag(), InfoFrag(), SetFrag())
                 isUserInputEnabled = false
                 offscreenPageLimit = fragments.size
                 adapter = object : FragmentStateAdapter(supportFragmentManager, lifecycle) {
@@ -30,8 +32,10 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
             itemIconTintList = null
             setOnItemSelectedListener {
                 when (it.itemId) {
-                    R.id.tab_history -> binding.viewPager.setCurrentItem(0, false)
-                    R.id.tab_set -> binding.viewPager.setCurrentItem(1, false)
+                    R.id.tab_home -> binding.viewPager.setCurrentItem(0, false)
+                    R.id.tab_history -> binding.viewPager.setCurrentItem(1, false)
+                    R.id.tab_info -> binding.viewPager.setCurrentItem(2, false)
+                    R.id.tab_set -> binding.viewPager.setCurrentItem(3, false)
                 }
                 return@setOnItemSelectedListener true
             }

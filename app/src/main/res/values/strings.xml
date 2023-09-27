@@ -2,9 +2,8 @@
     <string name="app_name">BloodPressure</string>
     <string name="mmhg" translatable="false">/mmHg</string>
     <string name="_mmhg" translatable="false">mmHg</string>
-    <string name="daily_task">Daily Task</string>
     <string name="history">History</string>
-    <string name="info">Information</string>
+    <string name="info">Info</string>
     <string name="set">Settings</string>
     <string name="set_datetime">Set datetime</string>
     <string name="sure">Sure</string>
@@ -55,6 +54,7 @@
     <string name="third_main_desc">Blood pressure record</string>
     <string name="third_sec_desc">Capture blood pressure data succinctly, gaining a comprehensive understanding of your health pulse.</string>
     <string name="skip">skip</string>
+    <string name="home">Home</string>
 
 
 </resources>
