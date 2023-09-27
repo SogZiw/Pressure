@@ -58,6 +58,14 @@ class AdContainer(val loc: AdLocation) {
         loadAd(activity)
     }
 
+    fun nativeLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {
+        if (ads.isNotEmpty()) onLoad.invoke(true)
+        else {
+            onAdLoaded = onLoad
+            loadAd(context)
+        }
+    }
+
     fun showNativeAd(context: Context, parent: ViewGroup, callback: (BaseAd) -> Unit) {
         if (ads.isEmpty()) return
         when (val baseAd = ads.removeFirstOrNull()) {

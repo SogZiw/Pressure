@@ -24,9 +24,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.progress.progress = it
         }
         viewModel.showAd.observe(this) {
-            AdInstance.openAd.showFullScreenAd(activity) {
-                goNextPage<MainActivity>(true)
-            }
+            AdInstance.openAd.showFullScreenAd(activity) { goNext() }
         }
         binding.checkbox.setOnCheckedChangeListener { _, isChecked -> binding.btnStart.isEnabled = isChecked }
         binding.btnStart.setOnClickListener {
@@ -34,19 +32,19 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             goNextPage<MainActivity>(true)
         }
         AdInstance.openAd.loadAd(activity)
+        viewModel.startAnim(onUpdateValue = {
+            if (AdInstance.openAd.canShowFullScreenAd(this)) {
+                viewModel.maxAnim { viewModel.showAd.postValue(true) }
+            }
+        }, onEnd = { goNext() })
+    }
+
+    private fun goNext() {
         if (firstLaunch) {
             binding.agreement.movementMethod = LinkMovementMethod.getInstance()
             binding.agreement.text = buildAgreement()
             binding.first.isVisible = true
             binding.reload.isVisible = false
-        } else {
-            binding.first.isVisible = false
-            binding.reload.isVisible = true
-            viewModel.startAnim(onUpdateValue = {
-                if (AdInstance.openAd.canShowFullScreenAd(this)) {
-                    viewModel.maxAnim { viewModel.showAd.postValue(true) }
-                }
-            }, onEnd = { goNextPage<MainActivity>(true) })
-        }
+        } else goNextPage<MainActivity>(true)
     }
 }

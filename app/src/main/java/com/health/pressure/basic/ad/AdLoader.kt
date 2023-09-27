@@ -1,6 +1,7 @@
 package com.health.pressure.basic.ad
 
 import android.content.Context
+import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.FullScreen
 import com.health.pressure.ext.logcat
 
@@ -17,6 +18,7 @@ class AdLoader(private val context: Context, private val container: AdContainer)
         }
         val baseAd = when (item.type) {
             "int", "op" -> FullScreen(container.loc, item)
+            "nat" -> AdmobNative(container.loc, item)
             else -> null
         }
         if (null == baseAd) {
@@ -31,9 +33,9 @@ class AdLoader(private val context: Context, private val container: AdContainer)
                     onAdLoaded.invoke(true)
                     isLoadingAd = false
                 }
-                "${container.loc.placeName} InterstitialAd - ${item.id} load success".logcat()
+                "${container.loc.placeName} ${item.type} - ${item.id} load success".logcat()
             } else {
-                "${container.loc.placeName} InterstitialAd - ${item.id} load failed:$msg".logcat()
+                "${container.loc.placeName} ${item.type} - ${item.id} load failed:$msg".logcat()
                 (this + 1).load()
             }
         }

@@ -23,7 +23,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
     private val adRequest get() = AdRequest.Builder().build()
 
     override fun loadAd(context: Context, onLoaded: onLoaded) {
-        "${adLoc.placeName} NativeAd - ${item.id} start load ad".logcat()
+        "${adLoc.placeName} ${item.type} - ${item.id} start load ad".logcat()
         AdLoader.Builder(context, item.id).apply {
             forNativeAd { ad ->
                 native = ad
@@ -55,7 +55,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
         parent.removeAllViews()
         parent.addView(binding.root)
         AdInstance.addShow()
-        "${adLoc.placeName} - ${item.id} show success".logcat()
+        "${adLoc.placeName} ${item.type} - ${item.id} show success".logcat()
     }
 
     override fun destroy() {

@@ -129,16 +129,14 @@
             android:id="@+id/reload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="layoutIT,progress"
-            tools:visibility="gone" />
+            app:constraint_referenced_ids="layoutIT,progress" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            app:constraint_referenced_ids="logo,appName,btnStart,layoutAgreement"
-            tools:visibility="visible" />
+            app:constraint_referenced_ids="logo,appName,btnStart,layoutAgreement" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
