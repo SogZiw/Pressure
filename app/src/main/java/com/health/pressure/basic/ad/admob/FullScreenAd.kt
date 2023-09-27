@@ -62,10 +62,10 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
     }
 
     private fun onAdClose(activity: Activity, close: () -> Unit = {}) {
-        val baseAct = activity as? LifeActivity<*>
-        if (null != baseAct) {
-            baseAct.lifecycleScope.launch {
-                while (!baseAct.resumed) delay(300L)
+        val life = activity as? LifeActivity<*>
+        if (null != life) {
+            life.lifecycleScope.launch {
+                while (!life.resumed) delay(300L)
                 close.invoke()
             }
         } else close.invoke()
