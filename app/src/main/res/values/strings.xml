@@ -54,6 +54,7 @@
     <string name="second_sec_desc">Anticipate the future of your health by mastering blood pressure trends through insightful tracking.</string>
     <string name="third_main_desc">Blood pressure record</string>
     <string name="third_sec_desc">Capture blood pressure data succinctly, gaining a comprehensive understanding of your health pulse.</string>
+    <string name="skip">skip</string>
 
 
 </resources>

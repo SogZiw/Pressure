@@ -26,6 +26,9 @@ class GuideActivity : BaseActivity<ActivityGuideBinding>() {
             binding.list.scrollToPosition(nextIndex)
             guideIndex.postValue(nextIndex)
         }
+        binding.btnSkip.setOnClickListener {
+            goNextPage<MainActivity>(true)
+        }
         guideIndex.observe(this) {
             when (it) {
                 1 -> {
