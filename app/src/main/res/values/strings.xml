@@ -55,6 +55,8 @@
     <string name="third_sec_desc">Capture blood pressure data succinctly, gaining a comprehensive understanding of your health pulse.</string>
     <string name="skip">skip</string>
     <string name="home">Home</string>
+    <string name="record_blood_pressure">Record Blood Pressure</string>
+    <string name="monitor_health">Monitor your health with ease</string>
 
 
 </resources>
