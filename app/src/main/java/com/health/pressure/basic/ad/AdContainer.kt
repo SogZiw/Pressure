@@ -2,9 +2,11 @@ package com.health.pressure.basic.ad
 
 import android.app.Activity
 import android.content.Context
+import android.view.ViewGroup
 import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.BaseAd
-import com.health.pressure.basic.ad.admob.FullScreenAd
+import com.health.pressure.basic.ad.admob.FullScreen
 import com.health.pressure.mApp
 
 class AdContainer(val loc: AdLocation) {
@@ -45,18 +47,28 @@ class AdContainer(val loc: AdLocation) {
             onClose.invoke()
             return
         }
-        val baseAd = ads.removeFirstOrNull()
-        if (null == baseAd) {
-            onClose.invoke()
-            return
-        }
-        when (baseAd) {
-            is FullScreenAd -> {
-                baseAd.showAd(activity, onClose)
+        when (val baseAd = ads.removeFirstOrNull()) {
+            is FullScreen -> baseAd.showAd(activity, onClose)
+            else -> {
+                onClose.invoke()
+                return
             }
         }
         onAdLoaded = {}
         loadAd(activity)
+    }
+
+    fun showNativeAd(context: Context, parent: ViewGroup, callback: (BaseAd) -> Unit) {
+        if (ads.isEmpty()) return
+        when (val baseAd = ads.removeFirstOrNull()) {
+            is AdmobNative -> {
+                baseAd.show(context, parent)
+                callback.invoke(baseAd)
+            }
+            else -> Unit
+        }
+        onAdLoaded = {}
+        loadAd(context)
     }
 
 }

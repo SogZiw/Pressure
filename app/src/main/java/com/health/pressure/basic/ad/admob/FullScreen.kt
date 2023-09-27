@@ -19,14 +19,12 @@ import com.health.pressure.ext.logcat
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item) {
+data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item) {
 
     private var ad: Any? = null
     private val adRequest get() = AdRequest.Builder().build()
 
-
     override fun loadAd(context: Context, onLoaded: onLoaded) {
-        "${adLoc.placeName} InterstitialAd - ${item.id} start load ad".logcat()
         when (item.type) {
             "op" -> openLoader(context, onLoaded)
             "int" -> interstitialLoader(context, onLoaded)
@@ -38,9 +36,16 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
         val admobCallback by lazy {
             object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() = onAdClose(activity, onClose)
-                override fun onAdFailedToShowFullScreenContent(e: AdError) = onAdClose(activity, onClose)
-                override fun onAdClicked() = AdInstance.addClickCount()
-                override fun onAdShowedFullScreenContent() = AdInstance.addShowCount()
+                override fun onAdFailedToShowFullScreenContent(e: AdError) = run {
+                    onAdClose(activity, onClose)
+                    "${adLoc.placeName} - ${item.id} show failed:${e.message}".logcat()
+                }
+
+                override fun onAdClicked() = AdInstance.addClick()
+                override fun onAdShowedFullScreenContent() = run {
+                    AdInstance.addShow()
+                    "${adLoc.placeName} - ${item.id} show success".logcat()
+                }
             }
         }
 
@@ -73,6 +78,7 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
 
     @Suppress("DEPRECATION")
     private fun openLoader(context: Context, onLoaded: onLoaded) {
+        "${adLoc.placeName} AppOpenAd - ${item.id} start load ad".logcat()
         AppOpenAd.load(context, item.id, adRequest, AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, object : AppOpenAd.AppOpenAdLoadCallback() {
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(openAd: AppOpenAd) = kotlin.run {
@@ -83,6 +89,7 @@ data class FullScreenAd(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc,
     }
 
     private fun interstitialLoader(context: Context, onLoaded: onLoaded) {
+        "${adLoc.placeName} InterstitialAd - ${item.id} start load ad".logcat()
         InterstitialAd.load(context, item.id, adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(interstitialAd: InterstitialAd) = kotlin.run {

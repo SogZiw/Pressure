@@ -1,7 +1,7 @@
 package com.health.pressure.basic.ad
 
 import android.content.Context
-import com.health.pressure.basic.ad.admob.FullScreenAd
+import com.health.pressure.basic.ad.admob.FullScreen
 import com.health.pressure.ext.logcat
 
 class AdLoader(private val context: Context, private val container: AdContainer) {
@@ -16,7 +16,7 @@ class AdLoader(private val context: Context, private val container: AdContainer)
             return
         }
         val baseAd = when (item.type) {
-            "int", "op" -> FullScreenAd(container.loc, item)
+            "int", "op" -> FullScreen(container.loc, item)
             else -> null
         }
         if (null == baseAd) {

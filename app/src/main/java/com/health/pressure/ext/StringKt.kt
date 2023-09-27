@@ -3,7 +3,7 @@ package com.health.pressure.ext
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
-import com.health.pressure.BuildConfig
+import com.health.pressure.isDebug
 import com.health.pressure.mApp
 
 fun String.toast() {
@@ -13,6 +13,6 @@ fun String.toast() {
 }
 
 fun String?.logcat() {
-    if (BuildConfig.DEBUG.not()) return
+    if (!isDebug) return
     Log.e("Pressure", this ?: "string is null or empty")
 }

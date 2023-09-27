@@ -40,7 +40,7 @@ object AdInstance {
         openAd.initData(formatItem(jsonObj, AdLocation.OPEN.placeName))
     }
 
-    fun addShowCount() {
+    fun addShow() {
         runCatching {
             if (adShowTime.isToday.not()) {
                 adShowTime = System.currentTimeMillis()
@@ -49,7 +49,7 @@ object AdInstance {
         }
     }
 
-    fun addClickCount() {
+    fun addClick() {
         runCatching {
             if (adClickTime.isToday.not()) {
                 adClickTime = System.currentTimeMillis()
