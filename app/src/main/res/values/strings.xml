@@ -58,5 +58,81 @@
     <string name="record_blood_pressure">Record Blood Pressure</string>
     <string name="monitor_health">Monitor your health with ease</string>
 
+    <string name="info_1_q">What is blood pressure?</string>
+    <string name="info_1">Blood pressure is the force of blood pushing against the walls of arteries. With each heartbeat, blood is pumped into the arteries. Blood pressure is highest when the heart beats and pumps blood, known as systolic pressure. When your heart is at rest between beats, your blood pressure decreases. This is called diastolic pressure.
+Your blood pressure reading is represented by these two numbers. Typically, the systolic value is higher than or comes before the diastolic value. For example, 120/80 means a systolic pressure of 120 and a diastolic pressure of 80.</string>
+    <string name="info_2_q">How is high blood pressure diagnosed?</string>
+    <string name="info_2">High blood pressure usually has no symptoms. Therefore, the only way to determine whether you have this condition is by getting regular blood pressure checks from your healthcare provider. Your provider will use a gauge, a stethoscope or electronic sensor, and a blood pressure cuff. Before making a diagnosis, he or she will take two or more readings at separate appointments.</string>
+    <string name="info_3_q">Types of Hypertension</string>
+    <string name="info_3">There are two main types of high blood pressure: primary (essential) hypertension and secondary hypertension.
+Primary or essential hypertension is the most common type of high blood pressure. For most people with this type of blood pressure, it gradually increases as they age.
+Secondary hypertension is caused by another medical condition or the use of certain medications. It usually improves after treating the underlying condition or discontinuing the medications that are causing it.</string>
+    <string name="info_4_q">Why Should I Be Concerned About Hypertension?</string>
+    <string name="info_4">When your blood pressure remains consistently high over time, it forces your heart to work harder to pump blood, leading to potential serious health problems such as heart attacks, strokes, heart failure, and kidney failure.</string>
+    <string name="info_5_q">How Can I Prevent Hypertension?</string>
+    <string name="info_5">Healthy Diet: To help control blood pressure, you should limit your intake of sodium (salt) and increase your dietary potassium. Eating low-fat foods and including plenty of fruits, vegetables, and whole grains is also important. The DASH (Dietary Approaches to Stop Hypertension) eating plan is an example of a diet plan that can help lower blood pressure.
+Regular Exercise: Physical activity can help you maintain a healthy weight and lower blood pressure. Aim for at least 2 and a half hours of moderate-intensity aerobic exercise per week, or 1 hour and 15 minutes of high-intensity aerobic exercise. Aerobic exercises, such as brisk walking, involve any activity that raises your heart rate and requires more oxygen than usual.
+Maintain a Healthy Weight: Being overweight or obese increases the risk of high blood pressure. Keeping a healthy weight can help you control hypertension and reduce the risk of other health issues.
+Limit Alcohol Intake: Excessive alcohol consumption can lead to elevated blood pressure. It also adds extra calories, which can contribute to weight gain. Men should not exceed two drinks per day, and women should not exceed one drink per day.
+Don\'t Smoke: Smoking raises blood pressure and increases the risk of heart disease and stroke. If you don\'t smoke, don\'t start. If you smoke, seek help from your healthcare provider to find the best methods for quitting.
+Manage Stress: Learning how to relax and manage stress can improve your emotional and physical well-being and lower high blood pressure. Stress management techniques include exercise, listening to music, focusing on calming or peaceful activities, and meditation.</string>
+    <string name="info_6_q">What Is Gestational Hypertension?</string>
+    <string name="info_6">Pregnancy-induced hypertension refers to elevated blood pressure that occurs during pregnancy. It typically begins after 20 weeks of pregnancy. You usually don\'t experience any other symptoms. In many cases, it won\'t harm you or your baby and will resolve within 12 weeks after delivery. However, it does increase your risk of future hypertension. Sometimes, it can be severe and may lead to low birth weight or preterm birth. Some women with pregnancy-induced hypertension may indeed develop preeclampsia.
+Chronic hypertension refers to high blood pressure that is present before or before the 20th week of pregnancy. Some women may have had this condition long before pregnancy, but it\'s only discovered during prenatal blood pressure checks. Sometimes, chronic hypertension can also lead to preeclampsia.
+Preeclampsia is characterized by a sudden rise in blood pressure after 20 weeks of pregnancy. It usually occurs in the last three months of pregnancy. In very rare cases, symptoms may not appear until after delivery, which is known as postpartum preeclampsia. Preeclampsia also includes signs of organ damage, such as liver or kidney involvement. These symptoms may include the presence of protein in the urine and very high blood pressure. Preeclampsia can be very serious for both you and your baby, even life-threatening.</string>
+    <string name="info_7_q">Who Is at Risk for Pre-eclampsia?</string>
+    <string name="info_7">You are at risk of developing preeclampsia if you have:
 
+- Pre-existing chronic hypertension or chronic kidney disease before pregnancy
+- Had high blood pressure or preeclampsia in a previous pregnancy
+- Obesity
+- Aged over 40
+- Expecting multiple babies (twins, triplets, etc.)
+- African American ethnicity
+- A family history of preeclampsia
+- Certain health conditions, such as diabetes, lupus, or a tendency for blood clot formation (a condition that increases the risk of blood clots)
+- Undergoing in vitro fertilization, egg donation, or donor insemination</string>
+    <string name="info_8_q">What Problems Does Pre-eclampsia Cause?</string>
+    <string name="info_8">Preeclampsia can lead to various complications, including:
+
+- Placental abruption: Separation of the placenta from the uterine wall before delivery
+- Fetal growth restriction: Inadequate supply of nutrients and oxygen to the fetus, resulting in poor growth
+- Premature birth: Delivering the baby before 37 weeks of pregnancy
+- Low birth weight baby: The baby is born with a lower weight than expected for their gestational age
+- Stillbirth: The loss of the baby before birth
+- Damage to organs and blood systems, including the kidneys, liver, brain, and other organs
+- Increased risk of heart disease for the mother
+- Eclampsia: A severe condition that can occur when preeclampsia affects the brain, leading to seizures or coma
+- HELLP syndrome: A rare but serious condition involving damage to the liver and blood cells in women with preeclampsia or eclampsia</string>
+    <string name="info_9_q">What Are the Symptoms of Pre-eclampsia?</string>
+    <string name="info_9">Preeclampsia can manifest with the following symptoms:
+
+- High blood pressure
+- Excessive protein in urine (known as proteinuria)
+- Swelling of the face and hands. Swelling in the feet might occur as well, but it\'s common in many pregnancies and might not necessarily indicate a problem.
+- Persistent headache
+- Vision disturbances, such as blurry vision or seeing spots
+- Pain in the upper right abdomen
+- Shortness of breath</string>
+    <string name="info_10_q">How Is Pre-eclampsia Diagnosed?</string>
+    <string name="info_10">Your healthcare provider will check your blood pressure and urine during each prenatal visit. If your blood pressure reading is high (140/90 or higher), especially after the 20th week of pregnancy, your provider may want to conduct further tests. These tests might include blood tests and other laboratory examinations to look for excessive protein in your urine and other symptoms.</string>
+    <string name="info_11_q">Treatment Options for Pre-eclampsia</string>
+    <string name="info_11">Delivery typically can cure preeclampsia. When making treatment decisions, your provider considers several factors, including the severity of the condition, how far along you are in your pregnancy, and the potential risks to you and your baby:
+
+1. If you are beyond 37 weeks of pregnancy, your provider may consider inducing labor or performing a cesarean section.
+
+2. If you are less than 37 weeks pregnant, your healthcare provider will closely monitor both you and your baby. This may involve blood and urine tests for you. Monitoring for the baby often includes ultrasounds, fetal heart rate monitoring, and assessing the baby\'s growth. You may need medications to control your blood pressure and prevent seizures. Some women might receive steroid injections to help the baby\'s lungs mature more quickly. If preeclampsia is severe, your provider might recommend delivering the baby earlier.
+
+In most cases, these symptoms will typically resolve within six weeks after delivery. In rare cases, symptoms might not resolve or could appear after delivery (postpartum preeclampsia). This can be very serious and requires immediate treatment.</string>
+    <string name="info_12_q">DASH Diet Plan</string>
+    <string name="info_12">DASH stands for Dietary Approaches to Stop Hypertension. It is a diet plan based on research sponsored by the National Heart, Lung, and Blood Institute (NHLBI). The studies indicate that DASH can lower high blood pressure and improve cholesterol levels, thereby reducing the risk of heart disease.
+
+The DASH diet plan includes the following principles:
+
+1. Emphasize vegetables, fruits, and whole grains.
+2. Include low-fat or fat-free dairy products, fish, poultry, legumes, nuts, and vegetable oils.
+3. Limit foods high in saturated fat. These foods include fatty meats, full-fat dairy products, and tropical oils like coconut oil, palm kernel oil, and palm oil.
+4. Restrict sugary beverages and sweets.
+
+In addition to following the DASH diet, other lifestyle changes can also help lower blood pressure. These include maintaining a healthy weight, engaging in regular exercise, and avoiding smoking.</string>
 </resources>
