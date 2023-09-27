@@ -3,6 +3,7 @@ package com.health.pressure.dao
 import androidx.lifecycle.asLiveData
 import androidx.room.Room
 import com.health.pressure.mApp
+import kotlinx.coroutines.flow.distinctUntilChanged
 
 object DataManager {
 
@@ -22,10 +23,10 @@ object DataManager {
         manageDao.deleteData(*data)
     }
 
-    fun getAllPressures() = manageDao.getAllPressures().asLiveData()
+    fun getAllPressures() = manageDao.getAllPressures().distinctUntilChanged().asLiveData()
 
-    fun sameOrNull(time: String) = manageDao.sameOrNull(time).asLiveData()
+    fun sameOrNull(time: String) = manageDao.sameOrNull(time)
 
-    fun getPressures(start: Long, end: Long) = manageDao.getPressures(start, end).asLiveData()
+    fun getPressures(start: Long, end: Long) = manageDao.getPressures(start, end)
 
 }

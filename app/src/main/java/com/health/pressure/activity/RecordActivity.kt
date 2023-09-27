@@ -57,7 +57,8 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
                 data?.let { DataManager.updateData(it) }
                 finish()
             } else {
-                DataManager.sameOrNull(datetime.formatTime()).observe(this) { oldData ->
+                lifecycleScope.launch(Dispatchers.IO) {
+                    val oldData = DataManager.sameOrNull(datetime.formatTime())
                     if (null == oldData) addNew()
                     else {
                         DataManager.updateData(oldData.also {

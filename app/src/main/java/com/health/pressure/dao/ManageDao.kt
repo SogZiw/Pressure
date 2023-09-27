@@ -20,9 +20,9 @@ interface ManageDao {
     fun getAllPressures(): Flow<List<Pressure>>
 
     @Query("SELECT * FROM pressure_table WHERE format_time = :time LIMIT 1")
-    fun sameOrNull(time: String): Flow<Pressure?>
+    fun sameOrNull(time: String): Pressure?
 
     @Query("SELECT * FROM pressure_table WHERE record_time BETWEEN :start AND :end")
-    fun getPressures(start: Long, end: Long): Flow<List<Pressure>>
+    fun getPressures(start: Long, end: Long): List<Pressure>
 
 }

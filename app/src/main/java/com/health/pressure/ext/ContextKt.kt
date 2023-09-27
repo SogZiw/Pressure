@@ -15,6 +15,11 @@ import androidx.core.view.WindowInsetsCompat
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.WebviewActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 fun Context.autoDensity() {
     resources.displayMetrics.run {
@@ -43,6 +48,8 @@ inline fun <reified Cls : Activity> Context.goNextPage(autoFinish: Boolean = fal
     startActivity(Intent(this, Cls::class.java).apply(function))
     if (autoFinish) (this as? Activity)?.finish()
 }
+
+fun <T> Flow<T>.launchIn(scope: CoroutineScope): Job = scope.launch { collect() }
 
 fun Activity.buildAgreement(): SpannableStringBuilder {
     return SpannableStringBuilder()

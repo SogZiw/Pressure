@@ -1,6 +1,7 @@
 package com.health.pressure.fragment
 
 import android.graphics.Color
+import androidx.lifecycle.lifecycleScope
 import com.github.mikephil.charting.components.YAxis
 import com.health.pressure.R
 import com.health.pressure.activity.HistoryActivity
@@ -13,12 +14,16 @@ import com.health.pressure.dao.DataManager
 import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
 class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
     private var defaultRangeId = R.id.range1
     override val layoutId: Int get() = R.layout.frag_history
+    private val charData = DataManager.getAllPressures()
 
     override fun initView() {
         binding.timeRange.setOnClickListener {
@@ -34,6 +39,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
         binding.btnGoHis.setOnClickListener {
             activity.goNextPage<HistoryActivity>()
         }
+        refreshChart()
     }
 
     override fun initData() {
@@ -43,17 +49,20 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
     override fun onResume() {
         super.onResume()
         initRangeData()
-        refreshChart()
     }
 
     private fun initRangeData(id: Int = defaultRangeId) {
 
         fun calculate(start: Long, end: Long) {
-            DataManager.getPressures(start, end).observe(viewLifecycleOwner) { datas ->
-                val sys = datas.map { it.sys }.average()
-                val dia = datas.map { it.dia }.average()
-                binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
-                binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
+            lifecycleScope.launch(Dispatchers.IO) {
+                DataManager.getPressures(start, end).let { datas ->
+                    val sys = datas.map { it.sys }.average()
+                    val dia = datas.map { it.dia }.average()
+                    withContext(Dispatchers.Main) {
+                        binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
+                        binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
+                    }
+                }
             }
         }
 
@@ -68,7 +77,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
     }
 
     private fun refreshChart() {
-        DataManager.getAllPressures().observe(this) { list ->
+        charData.observe(this) { list ->
             datas.clear()
             datas.addAll(list)
             datas.sortBy { it.record_time }
