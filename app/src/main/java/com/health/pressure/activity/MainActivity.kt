@@ -1,7 +1,9 @@
 package com.health.pressure.activity
 
+import androidx.activity.viewModels
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.health.pressure.R
+import com.health.pressure.activity.model.MainVM
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.databinding.ActivityMainBinding
 import com.health.pressure.fragment.HistoryFrag
@@ -11,9 +13,14 @@ import com.health.pressure.fragment.SetFrag
 
 class MainActivity : LifeActivity<ActivityMainBinding>() {
 
+    private val viewModel by viewModels<MainVM>()
     override val layoutId: Int get() = R.layout.activity_main
 
     override fun initView() {
+        viewModel.changeTab.observe(this) {
+            binding.bottomBar.menu.getItem(it).isChecked = true
+            binding.viewPager.setCurrentItem(it, false)
+        }
 
         fun iniViewPager() {
             binding.viewPager.run {
