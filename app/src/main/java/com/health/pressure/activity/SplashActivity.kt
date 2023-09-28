@@ -19,7 +19,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SplashVM>()
 
-    override fun initData() {
+    override fun initView() {
         viewModel.progress.observe(this) {
             binding.progress.progress = it
         }
@@ -31,12 +31,20 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             firstLaunch = false
             goNextPage<GuideActivity>(true)
         }
-        AdInstance.openAd.loadAd(activity)
+        loadAd()
+    }
+
+    override fun initData() {
         viewModel.startAnim(onUpdateValue = {
             if (AdInstance.openAd.canShowFullScreenAd(this)) {
                 viewModel.maxAnim { viewModel.showAd.postValue(true) }
             }
         }, onEnd = { goNext() })
+    }
+
+    private fun loadAd() {
+        AdInstance.openAd.loadAd(activity)
+        AdInstance.saveAd.loadAd(activity)
     }
 
     private fun goNext() {

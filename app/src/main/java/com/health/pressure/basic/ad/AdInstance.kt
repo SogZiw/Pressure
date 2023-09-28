@@ -10,6 +10,7 @@ object AdInstance {
     var clickMax = 0
 
     val openAd = AdContainer(AdLocation.OPEN)
+    val saveAd = AdContainer(AdLocation.SAVE)
 
     fun init(json: String = Constants.AD_JSON) {
 
@@ -38,6 +39,7 @@ object AdInstance {
         showMax = jsonObj.optInt("hskkhs")
         clickMax = jsonObj.optInt("jakh")
         openAd.initData(formatItem(jsonObj, AdLocation.OPEN.placeName))
+        saveAd.initData(formatItem(jsonObj, AdLocation.SAVE.placeName))
     }
 
     fun addShow() {
