@@ -5,6 +5,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
 import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.widget.wheel.WheelView
 import com.health.pressure.dao.DataManager
 import com.health.pressure.dao.Pressure
@@ -44,7 +45,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
             fun addNew() {
                 val data = Pressure(sys = sys, dia = dia, record_time = datetime, format_time = datetime.formatTime())
                 DataManager.insertData(data)
-                finish()
+                showAdAndFinish()
             }
 
             if (isAdd.not() && null != data) {
@@ -55,7 +56,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
                     this.format_time = datetime.formatTime()
                 }
                 data?.let { DataManager.updateData(it) }
-                finish()
+                showAdAndFinish()
             } else {
                 lifecycleScope.launch(Dispatchers.IO) {
                     val oldData = DataManager.sameOrNull(datetime.formatTime())
@@ -67,7 +68,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
                             it.record_time = datetime
                             it.format_time = datetime.formatTime()
                         })
-                        finish()
+                        showAdAndFinish()
                     }
                 }
             }
@@ -79,7 +80,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
                     datas.remove(pressure)
                 }
             }
-            finish()
+            showAdAndFinish()
         }
         binding.btnTime.setOnClickListener {
             CardDatePickerDialog.builder(this)
@@ -109,6 +110,13 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         binding.sysWheel.addOnItemSelectedListener { _, _ -> formatState() }
         binding.diaWheel.addOnItemSelectedListener { _, _ -> formatState() }
         binding.btnDelete.isVisible = !isAdd
+        AdInstance.saveAd.loadAd(activity)
+    }
+
+    private fun showAdAndFinish() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            AdInstance.saveAd.showFullScreenAd(activity) { finish() }
+        }
     }
 
     private fun formatState() {
