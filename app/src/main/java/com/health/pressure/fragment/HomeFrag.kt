@@ -2,12 +2,14 @@ package com.health.pressure.fragment
 
 import androidx.fragment.app.activityViewModels
 import com.health.pressure.R
+import com.health.pressure.activity.InfoDetailActivity
 import com.health.pressure.activity.model.MainVM
 import com.health.pressure.adapter.InfoAdapter
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.InfoData
 import com.health.pressure.databinding.FragHomeBinding
 import com.health.pressure.ext.formatTime
+import com.health.pressure.ext.goNextPage
 
 class HomeFrag : BaseFrag<FragHomeBinding>() {
 
@@ -20,7 +22,9 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
 
     override fun initData() {
         val adapter = InfoAdapter(activity, InfoData.values().toMutableList().subList(0, 5)) {
-
+            activity.goNextPage<InfoDetailActivity> {
+                putExtra("InfoData", it)
+            }
         }
         binding.list.itemAnimator = null
         binding.list.adapter = adapter

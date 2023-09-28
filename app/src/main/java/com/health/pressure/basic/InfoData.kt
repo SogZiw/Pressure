@@ -1,7 +1,9 @@
 package com.health.pressure.basic
 
+import com.google.errorprone.annotations.Keep
 import com.health.pressure.R
 
+@Keep
 enum class InfoData(val question: Int, val desc: Int, val source: String, val img: Int) {
     Q1(R.string.info_1_q, R.string.info_1, "https://medlineplus.gov/highbloodpressure.html", R.drawable.ic_info_1),
     Q2(R.string.info_2_q, R.string.info_2, "https://medlineplus.gov/highbloodpressure.html", R.drawable.ic_info_2),

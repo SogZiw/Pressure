@@ -4,6 +4,7 @@
     package="com.health.pressure">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
     <application
         android:name=".PressureApp"
@@ -50,6 +51,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.GuideActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InfoDetailActivity"
             android:configChanges="orientation|screenSize|uiMode"
             android:screenOrientation="portrait" />
 
