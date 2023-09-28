@@ -32,7 +32,10 @@ class RemoteConf {
 
     private fun adConf() {
         val json = remoteConfig["tracker_ad_config"].asString()
-        if (json.isBlank()) return
+        if (json.isBlank()) {
+            AdInstance.init()
+            return
+        }
         AdInstance.init(json)
     }
 
