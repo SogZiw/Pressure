@@ -45,10 +45,9 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
         adapter = SelectLocalAdapter(this, datas)
         binding.list.run {
             isScrollbarFadingEnabled = false
-            scrollBarFadeDuration = 0
             itemAnimator = null
-            adapter = adapter
         }
+        binding.list.adapter = adapter
     }
 
 
