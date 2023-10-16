@@ -34,7 +34,6 @@
             android:background="@drawable/bg_white_r24"
             android:clipToPadding="false"
             android:elevation="5dp"
-            android:overScrollMode="always"
             android:paddingVertical="20dp"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
