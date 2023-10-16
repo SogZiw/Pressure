@@ -3,6 +3,7 @@ package com.health.pressure.ext
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.text.Spannable
 import android.text.SpannableStringBuilder
@@ -20,6 +21,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import java.util.*
 
 fun Context.autoDensity() {
     resources.displayMetrics.run {
@@ -64,4 +66,10 @@ fun Activity.buildAgreement(): SpannableStringBuilder {
                 goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.USER_AGREE) }
             }
         }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+}
+
+fun Context.updateLocalConf(local: Locale): Context {
+    val config = Configuration(resources.configuration).apply { setLocale(local) }
+    resources.updateConfiguration(config, resources.displayMetrics)
+    return createConfigurationContext(config)
 }
