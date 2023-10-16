@@ -295,11 +295,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnSave"
-            android:layout_width="149dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:background="@drawable/btn_00c5a8_r12"
             android:gravity="center"
+            android:paddingHorizontal="38dp"
+            android:paddingVertical="11dp"
             android:text="@string/save"
             android:textColor="@color/white"
             android:textSize="18sp"

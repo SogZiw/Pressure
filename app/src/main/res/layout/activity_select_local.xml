@@ -35,5 +35,23 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnSure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/btn_00c5a8_r12"
+            android:gravity="center"
+            android:paddingHorizontal="38dp"
+            android:paddingVertical="11dp"
+            android:text="@string/sure"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
