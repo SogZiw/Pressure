@@ -68,8 +68,8 @@ fun Activity.buildAgreement(): SpannableStringBuilder {
         }, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 }
 
-fun Context.updateLocalConf(local: Locale): Context {
-    val config = Configuration(resources.configuration).apply { setLocale(local) }
+fun Context.updateLocalConf(lang: String): Context {
+    val config = Configuration(resources.configuration).apply { setLocale(Locale(lang)) }
     resources.updateConfiguration(config, resources.displayMetrics)
     return createConfigurationContext(config)
 }

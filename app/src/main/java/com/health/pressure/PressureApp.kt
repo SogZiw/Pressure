@@ -2,6 +2,7 @@ package com.health.pressure
 
 import android.app.Application
 import com.google.android.gms.ads.MobileAds
+import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.RemoteConf
 import com.tencent.mmkv.MMKV
 
@@ -13,5 +14,6 @@ class PressureApp : Application() {
         MMKV.initialize(this)
         MobileAds.initialize(this)
         RemoteConf().init()
+        registerActivityLifecycleCallbacks(AppLife)
     }
 }

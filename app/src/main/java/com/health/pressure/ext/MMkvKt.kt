@@ -42,7 +42,7 @@ var adClickCount: Int
         mmkv.encode(AD_CLICK_COUNT, value)
     }
 
-var defaultLocalLang: String
+var defLang: String
     get() = mmkv.decodeString(DEFAULT_LOCAL_LANG, null) ?: LocalState.English.languageCode
     set(value) {
         mmkv.encode(DEFAULT_LOCAL_LANG, value)

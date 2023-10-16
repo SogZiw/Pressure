@@ -7,7 +7,7 @@ import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.basic.bean.LocalState
 import com.health.pressure.databinding.ActivitySelectLocalBinding
-import com.health.pressure.ext.defaultLocalLang
+import com.health.pressure.ext.defLang
 import com.health.pressure.ext.goNextPage
 
 class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
@@ -34,7 +34,7 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
 
     override fun initView() {
         binding.btnSure.setOnClickListener {
-            defaultLocalLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
+            defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             goNextPage<GuideActivity>(true)
         }
     }
