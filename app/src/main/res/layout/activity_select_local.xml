@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -31,9 +32,14 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="27dp"
             android:background="@drawable/bg_white_r24"
+            android:clipToPadding="false"
             android:elevation="5dp"
+            android:overScrollMode="always"
+            android:paddingVertical="20dp"
+            android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:listitem="@layout/item_local" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnSure"
