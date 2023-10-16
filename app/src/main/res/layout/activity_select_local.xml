@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:background="@drawable/btn_00c5a8_r12"
+            android:enabled="false"
             android:gravity="center"
             android:paddingHorizontal="38dp"
             android:paddingVertical="11dp"

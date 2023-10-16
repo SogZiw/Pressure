@@ -9,7 +9,7 @@ import com.health.pressure.R
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.databinding.ItemLocalBinding
 
-class SelectLocalAdapter(private val context: Context, private val datas: MutableList<LocalSelection>) :
+class SelectLocalAdapter(private val context: Context, private val datas: MutableList<LocalSelection>, private val onClick: () -> Unit = {}) :
     RecyclerView.Adapter<SelectLocalAdapter.ViewHolder>() {
 
     var lastPos = 0
@@ -35,6 +35,7 @@ class SelectLocalAdapter(private val context: Context, private val datas: Mutabl
             notifyItemChanged(lastPos)
             notifyItemChanged(curPos)
             lastPos = holder.adapterPosition
+            onClick.invoke()
         }
     }
 
