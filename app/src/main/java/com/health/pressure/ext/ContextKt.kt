@@ -1,14 +1,17 @@
 package com.health.pressure.ext
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
+import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ClickableSpan
 import android.view.View
+import android.view.ViewGroup
 import android.view.Window
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -16,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.WebviewActivity
+import com.health.pressure.databinding.DialogRateBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
@@ -46,6 +50,8 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
     }
 }
 
+fun Context.dp2px(num: Int) = resources.displayMetrics.density * num
+
 inline fun <reified Cls : Activity> Context.goNextPage(autoFinish: Boolean = false, function: Intent.() -> Unit = {}) {
     startActivity(Intent(this, Cls::class.java).apply(function))
     if (autoFinish) (this as? Activity)?.finish()
@@ -72,4 +78,28 @@ fun Context.updateLocalConf(lang: String): Context {
     val config = Configuration(resources.configuration).apply { setLocale(Locale(lang)) }
     resources.updateConfiguration(config, resources.displayMetrics)
     return createConfigurationContext(config)
+}
+
+fun Context.rate() {
+    runCatching {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")).apply {
+            setPackage("com.android.vending")
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        })
+    }
+}
+
+fun Activity.createRateDialog() {
+    val binding = DialogRateBinding.inflate(layoutInflater, window.decorView as ViewGroup, false)
+    val dialog = AlertDialog.Builder(this)
+        .setView(binding.root)
+        .setCancelable(true)
+        .create()
+    binding.btnRate.setOnClickListener {
+        dialog.dismiss()
+        rate()
+    }
+    binding.root.corner(20)
+    dialog.window?.decorView?.background = null
+    dialog.show()
 }
