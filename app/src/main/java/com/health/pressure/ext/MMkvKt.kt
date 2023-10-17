@@ -6,11 +6,18 @@ import com.tencent.mmkv.MMKV
 private val mmkv by lazy { MMKV.defaultMMKV() }
 
 private const val FIRST_LAUNCH = "firstLaunch"
+private const val FIRST_GUIDE = "firstGuide"
 private const val AD_SHOW_TIME = "adShowTime"
 private const val AD_CLICK_TIME = "adClickTime"
 private const val AD_SHOW_COUNT = "adShowCount"
 private const val AD_CLICK_COUNT = "adClickCount"
 private const val DEFAULT_LOCAL_LANG = "default_local_lang"
+
+var firstGuide: Boolean
+    get() = mmkv.decodeBool(FIRST_GUIDE, true)
+    set(value) {
+        mmkv.encode(FIRST_GUIDE, value)
+    }
 
 var firstLaunch: Boolean
     get() = mmkv.decodeBool(FIRST_LAUNCH, true)
