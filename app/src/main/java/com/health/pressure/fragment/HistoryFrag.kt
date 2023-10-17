@@ -15,6 +15,7 @@ import com.health.pressure.databinding.FragHistoryBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.*
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
@@ -52,6 +53,17 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
     override fun onResume() {
         super.onResume()
         initRangeData()
+        showRateIfCan()
+    }
+
+    private fun showRateIfCan() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            delay(1000L)
+            if (showRate && !rateShowTime.isDoubleDay) {
+                rateShowTime = System.currentTimeMillis()
+                activity.createRateDialog { showRate = false }
+            }
+        }
     }
 
     private fun initRangeData(id: Int = defaultRangeId) {

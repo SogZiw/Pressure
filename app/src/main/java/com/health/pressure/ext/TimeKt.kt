@@ -17,6 +17,12 @@ val Long.isToday: Boolean
         return this >= wee && this < wee + 86400000
     }
 
+val Long.isDoubleDay: Boolean
+    get() {
+        val wee = todayStartTime
+        return this >= wee && this < (wee + 2 * 86400000)
+    }
+
 val todayStartTime: Long
     get() {
         return Calendar.getInstance().apply {

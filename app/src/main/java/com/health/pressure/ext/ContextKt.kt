@@ -89,7 +89,7 @@ fun Context.rate() {
     }
 }
 
-fun Activity.createRateDialog() {
+fun Activity.createRateDialog(onRate: () -> Unit) {
     val binding = DialogRateBinding.inflate(layoutInflater, window.decorView as ViewGroup, false)
     val dialog = AlertDialog.Builder(this)
         .setView(binding.root)
@@ -97,6 +97,7 @@ fun Activity.createRateDialog() {
         .create()
     binding.btnRate.setOnClickListener {
         dialog.dismiss()
+        onRate.invoke()
         rate()
     }
     binding.root.corner(20)

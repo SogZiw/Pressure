@@ -7,7 +7,9 @@ private val mmkv by lazy { MMKV.defaultMMKV() }
 
 private const val FIRST_LAUNCH = "firstLaunch"
 private const val FIRST_GUIDE = "firstGuide"
+private const val SHOW_RATE = "showRate"
 private const val AD_SHOW_TIME = "adShowTime"
+private const val RATE_SHOW_TIME = "rateShowTime"
 private const val AD_CLICK_TIME = "adClickTime"
 private const val AD_SHOW_COUNT = "adShowCount"
 private const val AD_CLICK_COUNT = "adClickCount"
@@ -23,6 +25,18 @@ var firstLaunch: Boolean
     get() = mmkv.decodeBool(FIRST_LAUNCH, true)
     set(value) {
         mmkv.encode(FIRST_LAUNCH, value)
+    }
+
+var showRate: Boolean
+    get() = mmkv.decodeBool(SHOW_RATE, true)
+    set(value) {
+        mmkv.encode(SHOW_RATE, value)
+    }
+
+var rateShowTime: Long
+    get() = mmkv.decodeLong(RATE_SHOW_TIME, 0L)
+    set(value) {
+        mmkv.encode(RATE_SHOW_TIME, value)
     }
 
 var adShowTime: Long
