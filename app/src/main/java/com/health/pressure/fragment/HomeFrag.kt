@@ -17,7 +17,7 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
     override val layoutId: Int get() = R.layout.frag_home
 
     override fun initView() {
-        binding.layoutRecord.setOnClickListener { viewModel.changeTab.postValue(1) }
+        binding.viewRecord.root.setOnClickListener { viewModel.changeTab.postValue(1) }
     }
 
     override fun initData() {

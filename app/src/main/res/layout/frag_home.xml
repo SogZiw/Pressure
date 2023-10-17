@@ -11,96 +11,78 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:elevation="5dp"
-            android:paddingVertical="16dp"
-            android:paddingStart="18sp"
-            android:textColor="#112041"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlSymmetry" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="23dp"
+                android:background="@color/white"
+                android:elevation="5dp"
+                android:paddingVertical="16dp"
+                android:paddingStart="18sp"
+                android:textColor="#112041"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <include
+                android:id="@+id/viewRecord"
+                layout="@layout/view_record" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="15dp"
+                android:background="#FFEEEEF7" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_info" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutRecord"
             android:layout_width="match_parent"
-            android:layout_height="118dp"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="23dp"
-            android:background="@drawable/bg_5f5f77_r18"
-            app:layout_constraintTop_toBottomOf="@+id/title">
+            android:layout_height="match_parent"
+            android:background="#30000000"
+            android:elevation="5dp">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/recordIcon"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_home_icon" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/recordTitle"
-                android:layout_width="0dp"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="70dp"
-                android:text="@string/record_blood_pressure"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/recordIcon"
-                app:layout_constraintTop_toTopOf="@+id/recordIcon" />
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="70dp"
-                android:text="@string/monitor_health"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/recordIcon"
-                app:layout_constraintTop_toBottomOf="@+id/recordTitle" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="23dp"
+                    android:paddingVertical="16dp"
+                    android:paddingStart="18sp"
+                    android:textColor="#112041"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_arrow_right_white" />
+                <include layout="@layout/view_record_f" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="15dp"
-            android:background="#FFEEEEF7"
-            app:layout_constraintTop_toBottomOf="@+id/layoutRecord" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:clipToPadding="false"
-            android:paddingTop="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/line"
-            tools:listitem="@layout/item_info" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
