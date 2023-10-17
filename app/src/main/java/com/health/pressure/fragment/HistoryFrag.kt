@@ -34,7 +34,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             }
         }
         binding.beat.setOnClickListener {
-            activity.createRateDialog()
+            activity.goNextPage<RecordActivity>()
         }
         binding.btnAdd.setOnClickListener {
             activity.goNextPage<RecordActivity>()
