@@ -3,6 +3,7 @@ package com.health.pressure.fragment
 import androidx.fragment.app.activityViewModels
 import com.health.pressure.R
 import com.health.pressure.activity.InfoDetailActivity
+import com.health.pressure.activity.RecordActivity
 import com.health.pressure.activity.model.MainVM
 import com.health.pressure.adapter.InfoAdapter
 import com.health.pressure.basic.BaseFrag
@@ -17,7 +18,10 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
     override val layoutId: Int get() = R.layout.frag_home
 
     override fun initView() {
-        binding.viewRecord.root.setOnClickListener { viewModel.changeTab.postValue(1) }
+        binding.viewRecord.root.setOnClickListener {
+            viewModel.changeTab.postValue(1)
+            activity.goNextPage<RecordActivity>()
+        }
     }
 
     override fun initData() {
