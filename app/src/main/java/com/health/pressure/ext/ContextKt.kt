@@ -104,3 +104,23 @@ fun Activity.createRateDialog(onRate: () -> Unit) {
     dialog.window?.decorView?.background = null
     dialog.show()
 }
+
+fun Context.createCommonDialog(
+    msg: String,
+    positive: String = R.string.sure.stringValue,
+    negative: String = R.string.cancel.stringValue,
+    onPositive: () -> Unit = {},
+    onNegative: () -> Unit = {},
+) {
+    val dialog = AlertDialog.Builder(this)
+        .setCancelable(true)
+        .setMessage(msg)
+        .setPositiveButton(positive) { _, _ ->
+            onPositive.invoke()
+        }
+        .setNegativeButton(negative) { _, _ ->
+            onNegative.invoke()
+        }
+        .create()
+    dialog.show()
+}

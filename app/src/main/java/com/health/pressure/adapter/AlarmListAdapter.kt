@@ -1,5 +1,6 @@
 package com.health.pressure.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class AlarmListAdapter(
         return ViewHolder(ItemSetAlarmBinding.inflate(LayoutInflater.from(context), parent, false))
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = datas[position]
         holder.binding.run {

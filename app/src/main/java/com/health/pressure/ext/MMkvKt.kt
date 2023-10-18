@@ -1,5 +1,8 @@
 package com.health.pressure.ext
 
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.health.pressure.basic.bean.AlarmItem
 import com.health.pressure.basic.bean.LocalState
 import com.tencent.mmkv.MMKV
 
@@ -14,6 +17,7 @@ private const val AD_CLICK_TIME = "adClickTime"
 private const val AD_SHOW_COUNT = "adShowCount"
 private const val AD_CLICK_COUNT = "adClickCount"
 private const val DEFAULT_LOCAL_LANG = "default_local_lang"
+private const val ALARM_INFO = "alarmInfo"
 
 var firstGuide: Boolean
     get() = mmkv.decodeBool(FIRST_GUIDE, true)
@@ -67,4 +71,15 @@ var defLang: String
     get() = mmkv.decodeString(DEFAULT_LOCAL_LANG, null) ?: LocalState.English.languageCode
     set(value) {
         mmkv.encode(DEFAULT_LOCAL_LANG, value)
+    }
+
+var alarmInfo: MutableList<AlarmItem>
+    get() {
+        val str = mmkv.decodeString(ALARM_INFO, null)
+        if (str.isNullOrBlank()) return mutableListOf()
+        val type = object : TypeToken<List<AlarmItem>>() {}.type
+        return Gson().fromJson<List<AlarmItem>>(str, type).toMutableList()
+    }
+    set(value) {
+        mmkv.encode(ALARM_INFO, Gson().toJson(value))
     }

@@ -74,6 +74,7 @@ dependencies {
     def coroutines_ver = "1.7.3"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutines_ver}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_ver}"
+    implementation 'com.google.code.gson:gson:2.10.1'
     // StringFog
     implementation 'com.github.megatronking.stringfog:xor:4.0.1'
     // MMKV https://github.com/Tencent/MMKV

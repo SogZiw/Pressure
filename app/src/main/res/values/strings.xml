@@ -7,6 +7,7 @@
     <string name="set">Settings</string>
     <string name="set_datetime">Set datetime</string>
     <string name="sure">Sure</string>
+    <string name="add">Add</string>
     <string name="cancel">Cancel</string>
     <string name="new_record">New record</string>
     <string name="edit_record">Edit record</string>
@@ -142,4 +143,6 @@ In addition to following the DASH diet, other lifestyle changes can also help lo
     <string name="rate_desc">Support us by give 5 star and write your review</string>
     <string name="rate_now">Rate now</string>
     <string name="set_alarm">Set alarm</string>
+    <string name="plz_set_alarm">Please set alarm</string>
+    <string name="sure_to_del">Are you sure you want to delete?</string>
 </resources>
