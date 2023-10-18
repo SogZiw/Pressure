@@ -37,7 +37,6 @@ class AlarmListAdapter(
             itemSwitch.setOnCheckedChangeListener { _, isChecked ->
                 if (item.isOpen != isChecked) {
                     item.isOpen = isChecked
-                    notifyItemChanged(position)
                     onChangeOpen.invoke(item)
                 }
             }
