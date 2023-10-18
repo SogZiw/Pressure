@@ -31,15 +31,15 @@ class AlarmListAdapter(
             itemDel.setOnClickListener {
                 onDel.invoke(item)
             }
-            itemEdit.setOnClickListener {
-                onEdit.invoke(item)
-            }
             itemSwitch.setOnCheckedChangeListener { _, isChecked ->
                 if (item.isOpen != isChecked) {
                     item.isOpen = isChecked
                     onChangeOpen.invoke(item)
                 }
             }
+        }
+        holder.itemView.setOnClickListener {
+            onEdit.invoke(item)
         }
     }
 
