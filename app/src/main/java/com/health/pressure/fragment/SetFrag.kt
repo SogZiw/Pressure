@@ -3,6 +3,7 @@ package com.health.pressure.fragment
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.AlarmActivity
+import com.health.pressure.activity.SelectLocalActivity
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.databinding.FragSetBinding
@@ -13,6 +14,11 @@ class SetFrag : BaseFrag<FragSetBinding>() {
     override val layoutId: Int get() = R.layout.frag_set
 
     override fun initView() {
+        binding.btnLang.setOnClickListener {
+            activity.goNextPage<SelectLocalActivity> {
+                putExtra("fromSet", true)
+            }
+        }
         binding.btnPrivacy.setOnClickListener {
             activity.goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }
         }

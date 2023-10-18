@@ -31,6 +31,7 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
             LocalState.Arabic
         )
     }
+    private val fromSet by lazy { intent?.getBooleanExtra("fromSet", false) ?: false }
 
     override fun initView() {
         binding.btnSure.setOnClickListener {

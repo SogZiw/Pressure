@@ -146,4 +146,5 @@ In addition to following the DASH diet, other lifestyle changes can also help lo
     <string name="plz_set_alarm">Please set alarm</string>
     <string name="sure_to_del">Are you sure you want to delete?</string>
     <string name="change_alarm">Change alarm</string>
+    <string name="language">Language</string>
 </resources>
