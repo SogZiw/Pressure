@@ -7,6 +7,6 @@ import kotlinx.parcelize.Parcelize
 @Keep
 @Parcelize
 data class AlarmItem(
-    val timeFormat: String,
+    var timeFormat: String,
     var isOpen: Boolean = true,
 ) : Parcelable

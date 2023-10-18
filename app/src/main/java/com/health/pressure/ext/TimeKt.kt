@@ -4,8 +4,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 private const val defaultPattern = "yyyy-MM-dd HH:mm"
+const val hhmmPattern = "HH:mm"
 
-fun Long.formatTime(pattern: String = defaultPattern): String = SimpleDateFormat(pattern, Locale.getDefault()).format(this)
+fun Long.formatTime(pattern: String = defaultPattern): String = SimpleDateFormat(pattern, Locale.ENGLISH).format(this)
 
 val currentTimeMills: Long get() = System.currentTimeMillis()
 val last24HoursTime: Long get() = currentTimeMills - 24 * 60 * 60000L

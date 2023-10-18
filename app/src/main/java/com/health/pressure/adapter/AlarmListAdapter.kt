@@ -10,9 +10,10 @@ import com.health.pressure.databinding.ItemSetAlarmBinding
 
 class AlarmListAdapter(
     private val context: Context,
-    private val datas: MutableList<AlarmItem>,
+    val datas: MutableList<AlarmItem>,
     private val onDel: (AlarmItem) -> Unit = {},
     private val onEdit: (AlarmItem) -> Unit = {},
+    private val onChangeOpen: (AlarmItem) -> Unit = {},
 ) : RecyclerView.Adapter<AlarmListAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: ItemSetAlarmBinding) : RecyclerView.ViewHolder(binding.root)
@@ -37,6 +38,7 @@ class AlarmListAdapter(
                 if (item.isOpen != isChecked) {
                     item.isOpen = isChecked
                     notifyItemChanged(position)
+                    onChangeOpen.invoke(item)
                 }
             }
         }
