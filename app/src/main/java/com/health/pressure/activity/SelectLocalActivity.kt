@@ -36,7 +36,7 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
     override fun initView() {
         binding.btnSure.setOnClickListener {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
-            goNextPage<GuideActivity>(true)
+            if (fromSet) onBackPressedDispatcher.onBackPressed() else goNextPage<GuideActivity>(true)
         }
     }
 
