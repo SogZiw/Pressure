@@ -12,7 +12,7 @@ fun String.toast() {
     }.show()
 }
 
-fun String?.logcat() {
+fun String?.logcat(tag: String = "Pressure") {
     if (!isDebug) return
-    Log.e("Pressure", this ?: "string is null or empty")
+    Log.e(tag, this ?: "string is null or empty")
 }

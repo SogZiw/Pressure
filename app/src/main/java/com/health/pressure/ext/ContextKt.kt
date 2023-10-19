@@ -1,11 +1,15 @@
 package com.health.pressure.ext
 
 import android.app.Activity
+import android.app.ActivityManager
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.net.Uri
+import android.os.Build
+import android.os.Process
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ClickableSpan
@@ -47,6 +51,22 @@ fun Window.fullScreenMode(isLight: Boolean = true) {
         decorView.setPadding(0, insets.getInsets(WindowInsetsCompat.Type.systemBars()).top,
             0, insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom)
         insets
+    }
+}
+
+fun Application.isMain(): Boolean {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) Application.getProcessName() == packageName else isMainProcess()
+}
+
+private fun Application.isMainProcess(): Boolean {
+    try {
+        val am = getSystemService(Application.ACTIVITY_SERVICE) as ActivityManager
+        val infos = am.runningAppProcesses
+        if (infos.isNullOrEmpty()) return false
+        val pid = Process.myPid()
+        return infos.any { it.pid == pid && it.processName == packageName }
+    } catch (e: Exception) {
+        return false
     }
 }
 
