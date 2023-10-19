@@ -6,7 +6,15 @@ data class AdItem(
     val type: String,
     val priority: Int,
     val overload: Int,
-)
+) {
+    fun getTypeFormat(): String {
+        return when (type) {
+            "op" -> "open"
+            "nat" -> "native"
+            else -> "interstitial"
+        }
+    }
+}
 
 enum class AdLocation(val placeName: String) {
     OPEN("tk_open"),

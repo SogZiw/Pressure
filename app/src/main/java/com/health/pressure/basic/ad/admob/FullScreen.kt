@@ -83,6 +83,7 @@ data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, i
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(openAd: AppOpenAd) = kotlin.run {
                 ad = openAd
+                openAd.setOnPaidEventListener { onAdRevenue(it, openAd.responseInfo) }
                 onLoaded.invoke(true, "")
             }
         })
@@ -94,6 +95,7 @@ data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, i
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(interstitialAd: InterstitialAd) = kotlin.run {
                 ad = interstitialAd
+                interstitialAd.setOnPaidEventListener { onAdRevenue(it, interstitialAd.responseInfo) }
                 onLoaded.invoke(true, "")
             }
         })

@@ -27,6 +27,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
         AdLoader.Builder(context, item.id).apply {
             forNativeAd { ad ->
                 native = ad
+                ad.setOnPaidEventListener { onAdRevenue(it, ad.responseInfo) }
                 onLoaded.invoke(true, "")
             }
             withAdListener(object : AdListener() {
