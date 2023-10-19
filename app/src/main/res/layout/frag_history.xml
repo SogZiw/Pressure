@@ -20,7 +20,7 @@
             android:elevation="5dp"
             android:paddingVertical="16dp"
             android:paddingStart="18sp"
-            android:text="@string/history"
+            android:text="@string/record"
             android:textColor="#112041"
             android:textSize="20sp"
             android:textStyle="bold"

@@ -2,7 +2,7 @@
     <string name="app_name">BloodPressure</string>
     <string name="mmhg" translatable="false">/mmHg</string>
     <string name="_mmhg" translatable="false">mmHg</string>
-    <string name="history">History</string>
+    <string name="record">Record</string>
     <string name="info">Info</string>
     <string name="set">Settings</string>
     <string name="set_datetime">Set datetime</string>
