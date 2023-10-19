@@ -109,6 +109,13 @@ var adTracker: Boolean
         mmkv.encode("adTracker", value)
     }
 
+// true is white user
+var isCkEnable: Boolean
+    get() = mmkv.decodeBool("isCkEnable", false)
+    set(value) {
+        mmkv.encode("isCkEnable", value)
+    }
+
 val installId: String
     get() {
         var str = mmkv.decodeString(INSTALL_ID, null) ?: ""

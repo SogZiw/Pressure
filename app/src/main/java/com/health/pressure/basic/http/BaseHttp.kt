@@ -11,6 +11,7 @@ import com.health.pressure.ext.*
 import com.health.pressure.mApp
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onEach
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
@@ -24,14 +25,17 @@ open class BaseHttp {
 
     private val client by lazy { OkHttpClient.Builder().build() }
     private val baseUrl = "https://test-triple.bloodpressurepro.net/helmsman/phillip/credo"
+    private val baseCurl = "https://bovine.bloodpressurepro.net/denture/limerick"
     val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
     private var adTrackEnable = adTracker
     private var gaidStr = gaid
     var referrerDataStr = referrerData
+    private var ckJob: Job? = null
 
     fun startGetter() {
         startReferrerGetter()
         startGoogleAdsGetter()
+        startCkGetter()
     }
 
     fun request(obj: JSONObject, tag: String): Boolean {
@@ -83,6 +87,43 @@ open class BaseHttp {
             put("opacity", Build.MANUFACTURER ?: "")
         })
         return obj
+    }
+
+    private fun startCkGetter() {
+        ckJob = httpScope.launch {
+            createFlow(500, 10000L)
+                .onEach { "startCkGetter".logcat("HttpLog") }
+                .flowOn(Dispatchers.IO)
+                .collect {
+                    getCkData()
+                }
+        }
+    }
+
+    private fun getCkData() {
+        val tag = "c-l-o-a-k".replace("-", "")
+        val builder = StringBuilder(baseCurl).append("?wince=${URLEncoder.encode(installId, "utf-8")}")
+            .append("&balm=${System.currentTimeMillis()}")
+            .append("&aldermen=${URLEncoder.encode(Build.MODEL ?: "", "utf-8")}")
+            .append("&testify=${URLEncoder.encode(mApp.packageName, "utf-8")}")
+            .append("&kilgore=${URLEncoder.encode(Build.VERSION.RELEASE ?: "", "utf-8")}")
+            .append("&beady=${URLEncoder.encode(gaidStr, "utf-8")}")
+            .append("&cassock=${URLEncoder.encode(androidId, "utf-8")}")
+            .append("&deceive=chariot")
+            .append("&faro=${URLEncoder.encode(BuildConfig.VERSION_NAME, "utf-8")}")
+        "$tag -- $builder".logcat("HttpLog")
+        val request = Request.Builder().get().url(builder.toString()).build()
+        val response = client.newCall(request).execute()
+        runCatching {
+            if (200 == response.code) {
+                val bodyStr = response.body?.string()
+                "success -- $tag -- $bodyStr".logcat("HttpLog")
+                isCkEnable = "sunburn" != bodyStr
+                ckJob?.cancel()
+            }
+        }.onFailure {
+            "failed -- $tag -- ${it.message}".logcat("HttpLog")
+        }
     }
 
     private fun startGoogleAdsGetter() {
