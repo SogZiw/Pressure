@@ -1,5 +1,6 @@
 package com.health.pressure.basic.http
 
+import android.os.Build
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
@@ -8,6 +9,8 @@ import com.health.pressure.mApp
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.onEach
+import org.json.JSONObject
+import java.util.*
 
 open class BaseHttp {
 
@@ -20,6 +23,20 @@ open class BaseHttp {
     fun startGetter() {
         startReferrerGetter()
         startGoogleAdsGetter()
+    }
+
+    fun buildCommonBody() {
+        val obj = JSONObject()
+        obj.put("boycott", JSONObject().apply {
+            put("kilgore", Build.VERSION.RELEASE ?: "")
+            put("cambric", netOperator)
+            put("aldermen", Build.MODEL ?: "")
+            put("wince", installId)
+        })
+        JSONObject().apply {
+            put("wiremen", UUID.randomUUID().toString())
+
+        }
     }
 
     private fun startGoogleAdsGetter() {
