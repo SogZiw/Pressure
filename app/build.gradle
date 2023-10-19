@@ -100,4 +100,10 @@ dependencies {
     implementation 'com.google.ads.mediation:pangle:5.4.1.1.0'
     implementation "com.android.installreferrer:installreferrer:2.2"
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    //okhttp
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.11.0"))
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 }

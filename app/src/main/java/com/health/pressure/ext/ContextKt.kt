@@ -72,6 +72,22 @@ private fun Application.isMainProcess(): Boolean {
 
 fun Context.dp2px(num: Int) = resources.displayMetrics.density * num
 
+@Suppress("DEPRECATION")
+val Context.firstInstallTime: Long
+    get() = try {
+        packageManager.getPackageInfo(packageName, 0).firstInstallTime
+    } catch (e: Exception) {
+        0L
+    }
+
+@Suppress("DEPRECATION")
+val Context.lastUpdateTime: Long
+    get() = try {
+        packageManager.getPackageInfo(packageName, 0).lastUpdateTime
+    } catch (e: Exception) {
+        0L
+    }
+
 inline fun <reified Cls : Activity> Context.goNextPage(autoFinish: Boolean = false, function: Intent.() -> Unit = {}) {
     startActivity(Intent(this, Cls::class.java).apply(function))
     if (autoFinish) (this as? Activity)?.finish()

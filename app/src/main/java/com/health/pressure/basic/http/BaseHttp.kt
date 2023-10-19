@@ -1,8 +1,10 @@
 package com.health.pressure.basic.http
 
 import android.os.Build
+import android.webkit.WebSettings
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
+import com.android.installreferrer.api.ReferrerDetails
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.health.pressure.BuildConfig
 import com.health.pressure.ext.*
@@ -10,13 +12,19 @@ import com.health.pressure.mApp
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.onEach
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
+import java.net.URLEncoder
 import java.util.*
 
 open class BaseHttp {
 
+    private val client by lazy { OkHttpClient.Builder().build() }
     private val baseUrl = "https://test-triple.bloodpressurepro.net/helmsman/phillip/credo"
-    private val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
+    val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
     var gaidStr = gaid
     var adTrackEnable = adTracker
     var referrerDataStr = referrerData
@@ -24,6 +32,27 @@ open class BaseHttp {
     fun startGetter() {
         startReferrerGetter()
         startGoogleAdsGetter()
+    }
+
+    fun request(obj: JSONObject, tag: String): Boolean {
+        fun buildCommonRequest(obj: JSONObject): Request {
+            val body = obj.toString()
+            body.logcat("HttpLog")
+            return Request.Builder()
+                .addHeader("esprit", Locale.getDefault().country ?: "")
+                .post(body.toRequestBody("application/json".toMediaTypeOrNull()))
+                .url("$baseUrl?${URLEncoder.encode(androidId, "utf-8")}&ablate=${URLEncoder.encode(Build.BRAND ?: "", "utf-8")}")
+                .build()
+        }
+
+        val response = client.newCall(buildCommonRequest(obj)).execute()
+        runCatching {
+            return if (200 == response.code) {
+                "$tag -- ${response.body}".logcat("HttpLog")
+                true
+            } else false
+        }
+        return false
     }
 
     fun buildCommonBody(): JSONObject {
@@ -90,6 +119,7 @@ open class BaseHttp {
                                         InstallReferrerClient.InstallReferrerResponse.OK -> {
                                             referrerDataStr = referrerClient.installReferrer?.installReferrer ?: ""
                                             if (referrerDataStr.isNotBlank()) referrerData = referrerDataStr
+                                            install(referrerClient.installReferrer)
                                         }
                                         else -> Unit
                                     }
@@ -101,6 +131,27 @@ open class BaseHttp {
                         })
                     }
                 }
+        }
+    }
+
+    private fun install(details: ReferrerDetails?) {
+        httpScope.launch {
+            val jsonObj = buildCommonBody()
+            jsonObj.put("pivotal", JSONObject().apply {
+                put("leper", "build/${Build.ID}")
+                put("seat", details?.installReferrer ?: "")
+                put("lummox", details?.installVersion ?: "")
+                put("wise", WebSettings.getDefaultUserAgent(mApp) ?: "")
+                put("gleason", if (adTrackEnable) "parmesan" else "concave")
+                put("scabious", details?.referrerClickTimestampSeconds ?: 0L)
+                put("incense", details?.installBeginTimestampSeconds ?: 0L)
+                put("hadnt", details?.referrerClickTimestampServerSeconds ?: 0L)
+                put("bacillus", details?.installBeginTimestampServerSeconds ?: 0L)
+                put("tasty", details?.googlePlayInstantParam ?: false)
+                put("down", mApp.firstInstallTime)
+                put("grebe", mApp.lastUpdateTime)
+            })
+            request(jsonObj, "i-n-s-t-a-l-l".replace("-", ""))
         }
     }
 

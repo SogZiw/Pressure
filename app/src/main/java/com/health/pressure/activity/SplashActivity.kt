@@ -8,6 +8,7 @@ import com.health.pressure.R
 import com.health.pressure.activity.model.SplashVM
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
 import com.health.pressure.ext.firstLaunch
@@ -40,6 +41,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
                 viewModel.maxAnim { viewModel.showAd.postValue(true) }
             }
         }, onEnd = { goNext() })
+        EventPost.session()
     }
 
     private fun loadAd() {
