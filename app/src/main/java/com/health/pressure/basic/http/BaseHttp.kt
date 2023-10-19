@@ -106,7 +106,7 @@ open class BaseHttp {
     private fun startReferrerGetter() {
         httpScope.launch {
             if (referrerDataStr.isNotBlank()) return@launch
-            createFlow(1000, 10000L)
+            createFlow(1000, 20000L)
                 .filter { referrerDataStr.isBlank() }
                 .onEach { "startReferrerGetter".logcat("HttpLog") }
                 .collect {
