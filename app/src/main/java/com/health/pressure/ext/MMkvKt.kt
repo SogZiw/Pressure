@@ -1,10 +1,16 @@
 package com.health.pressure.ext
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.provider.Settings
+import android.telephony.TelephonyManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.health.pressure.basic.bean.AlarmItem
 import com.health.pressure.basic.bean.LocalState
+import com.health.pressure.mApp
 import com.tencent.mmkv.MMKV
+import java.util.*
 
 private val mmkv by lazy { MMKV.defaultMMKV() }
 
@@ -18,6 +24,7 @@ private const val AD_SHOW_COUNT = "adShowCount"
 private const val AD_CLICK_COUNT = "adClickCount"
 private const val DEFAULT_LOCAL_LANG = "default_local_lang"
 private const val ALARM_INFO = "alarmInfo"
+private const val INSTALL_ID = "install_id"
 
 var firstGuide: Boolean
     get() = mmkv.decodeBool(FIRST_GUIDE, true)
@@ -83,3 +90,40 @@ var alarmInfo: MutableList<AlarmItem>
     set(value) {
         mmkv.encode(ALARM_INFO, Gson().toJson(value))
     }
+
+var referrerData: String
+    get() = mmkv.decodeString("referrerData", null) ?: ""
+    set(value) {
+        mmkv.encode("referrerData", value)
+    }
+
+var gaid: String
+    get() = mmkv.decodeString("gaid", null) ?: ""
+    set(value) {
+        mmkv.encode("gaid", value)
+    }
+
+var adTracker: Boolean
+    get() = mmkv.decodeBool("adTracker", false)
+    set(value) {
+        mmkv.encode("adTracker", value)
+    }
+
+val installId: String
+    get() {
+        var str = mmkv.decodeString(INSTALL_ID, null) ?: ""
+        if (str.isBlank()) str = androidId.ifBlank { UUID.randomUUID().toString().replace("-", "") }
+        mmkv.encode(INSTALL_ID, str)
+        return str
+    }
+
+val androidId: String
+    @SuppressLint("HardwareIds")
+    get() {
+        val id = Settings.Secure.getString(mApp.contentResolver, Settings.Secure.ANDROID_ID)
+        return if ("9774d56d682e549c" == id) "" else id ?: ""
+    }
+
+val timeZone: Int get() = TimeZone.getDefault().rawOffset / 3600000
+
+val netOperator: String get() = (mApp.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager)?.networkOperator ?: ""
