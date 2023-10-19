@@ -4,6 +4,7 @@ import android.os.Build
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.health.pressure.BuildConfig
 import com.health.pressure.ext.*
 import com.health.pressure.mApp
 import kotlinx.coroutines.*
@@ -25,7 +26,7 @@ open class BaseHttp {
         startGoogleAdsGetter()
     }
 
-    fun buildCommonBody() {
+    fun buildCommonBody(): JSONObject {
         val obj = JSONObject()
         obj.put("boycott", JSONObject().apply {
             put("kilgore", Build.VERSION.RELEASE ?: "")
@@ -33,10 +34,26 @@ open class BaseHttp {
             put("aldermen", Build.MODEL ?: "")
             put("wince", installId)
         })
-        JSONObject().apply {
+        obj.put("usual", JSONObject().apply {
             put("wiremen", UUID.randomUUID().toString())
-
-        }
+            put("prosody", UUID.randomUUID().toString())
+            put("beady", gaidStr)
+            put("deceive", "chariot")
+            put("faro", BuildConfig.VERSION_NAME)
+            put("billet", timeZone)
+            put("startle", Locale.getDefault().toString())
+        })
+        obj.put("pbs", JSONObject().apply {
+            put("ablate", Build.BRAND ?: "")
+            put("esprit", Locale.getDefault().country)
+            put("cassock", androidId)
+            put("testify", mApp.packageName)
+            put("balm", System.currentTimeMillis())
+        })
+        obj.put("gustav", JSONObject().apply {
+            put("opacity", Build.MANUFACTURER ?: "")
+        })
+        return obj
     }
 
     private fun startGoogleAdsGetter() {
