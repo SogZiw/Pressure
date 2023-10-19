@@ -49,6 +49,8 @@ open class BaseHttp {
                 "success -- $tag -- ${response.body?.string()}".logcat("HttpLog")
                 true
             } else false
+        }.onFailure {
+            "failed -- $tag -- ${it.message}".logcat("HttpLog")
         }
         return false
     }
