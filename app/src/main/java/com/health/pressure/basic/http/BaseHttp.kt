@@ -36,11 +36,9 @@ open class BaseHttp {
 
     fun request(obj: JSONObject, tag: String): Boolean {
         fun buildCommonRequest(obj: JSONObject): Request {
-            val body = obj.toString()
-            body.logcat("HttpLog")
             return Request.Builder()
                 .addHeader("esprit", Locale.getDefault().country ?: "")
-                .post(body.toRequestBody("application/json".toMediaTypeOrNull()))
+                .post(obj.toString().toRequestBody("application/json".toMediaTypeOrNull()))
                 .url("$baseUrl?${URLEncoder.encode(androidId, "utf-8")}&ablate=${URLEncoder.encode(Build.BRAND ?: "", "utf-8")}")
                 .build()
         }
@@ -48,7 +46,7 @@ open class BaseHttp {
         val response = client.newCall(buildCommonRequest(obj)).execute()
         runCatching {
             return if (200 == response.code) {
-                "$tag -- ${response.body}".logcat("HttpLog")
+                "success -- $tag -- ${response.body?.string()}".logcat("HttpLog")
                 true
             } else false
         }
