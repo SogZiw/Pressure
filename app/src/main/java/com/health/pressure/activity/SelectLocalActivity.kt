@@ -43,7 +43,16 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
     @SuppressLint("NotifyDataSetChanged")
     override fun initData() {
         val datas = locals.map { LocalSelection(it) }.toMutableList()
+        var lastPos = 0
+        if (fromSet) datas.onEachIndexed { index, local ->
+            if (local.localState.languageCode == defLang) {
+                local.selected = true
+                lastPos = index
+                binding.btnSure.isEnabled = true
+            }
+        }
         adapter = SelectLocalAdapter(this, datas) { binding.btnSure.isEnabled = true }
+        adapter.lastPos = lastPos
         binding.list.run {
             isScrollbarFadingEnabled = false
             itemAnimator = null
