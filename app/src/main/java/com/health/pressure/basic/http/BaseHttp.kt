@@ -25,8 +25,8 @@ open class BaseHttp {
     private val client by lazy { OkHttpClient.Builder().build() }
     private val baseUrl = "https://test-triple.bloodpressurepro.net/helmsman/phillip/credo"
     val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
+    private var adTrackEnable = adTracker
     var gaidStr = gaid
-    var adTrackEnable = adTracker
     var referrerDataStr = referrerData
 
     fun startGetter() {
