@@ -24,4 +24,14 @@ object EventPost : BaseHttp() {
         }
     }
 
+    fun event(key: String, params: HashMap<String, Any?>) {
+        httpScope.launch {
+            val jsonObj = buildCommonBody().apply {
+                put("ghana", key)
+                params.onEach { put("custom_${it.key}", it.value) }
+            }
+            request(jsonObj, "e-v-e-n-t".replace("-", ""))
+        }
+    }
+
 }
