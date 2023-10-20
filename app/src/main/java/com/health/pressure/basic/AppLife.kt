@@ -17,6 +17,8 @@ object AppLife : ActivityLifecycleCallbacks {
     private var startAmounts = 0
     private var hotStart = false
 
+    fun foreground(): Boolean = startAmounts > 0
+
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         synchronized(activitys) { activitys.add(activity) }
     }
