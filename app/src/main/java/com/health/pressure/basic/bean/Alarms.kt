@@ -18,6 +18,7 @@ data class ClockItem(
     val first: Int,
     val max: Int,
     val interval: Int,
+    var lastShow: Long = 0L,
 )
 
 sealed class ClockType {
