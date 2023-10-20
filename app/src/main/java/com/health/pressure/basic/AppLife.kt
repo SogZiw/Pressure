@@ -45,7 +45,9 @@ object AppLife : ActivityLifecycleCallbacks {
                 activityJob = CoroutineScope(Dispatchers.IO + SupervisorJob()).launch {
                     delay(5000)
                     hotStart = true
-                    activitys.onEach { if (it is SplashActivity || it is AdActivity) it.finish() }
+                    activitys.iterator().forEach {
+                        if (it is SplashActivity || it is AdActivity) it.finish()
+                    }
                 }
             }
         }
