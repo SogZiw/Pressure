@@ -1,0 +1,163 @@
+<resources>
+    <string name="record">記錄</string>
+    <string name="info">訊息</string>
+    <string name="set">設定</string>
+    <string name="set_datetime">設定日期時間</string>
+    <string name="sure">當然</string>
+    <string name="add">加</string>
+    <string name="cancel">取消</string>
+    <string name="new_record">新記錄</string>
+    <string name="edit_record">編輯記錄</string>
+    <string name="sys">收縮壓</string>
+    <string name="dia">舒張壓</string>
+    <string name="text_hypotension">低血壓</string>
+    <string name="text_hypotension_content">SYS &lt; 90 或 DIA &lt; 60</string>
+    <string name="text_hypotension_extra">保持水分，定期運動</string>
+    <string name="text_normal">正常</string>
+    <string name="text_normal_content">SYS 90–119 與 DIA 60–79</string>
+    <string name="text_normal_extra">保持健康的生活方式</string>
+    <string name="text_elevated">升高</string>
+    <string name="text_elevated_content">SYS 120–129 與 DIA 60–79</string>
+    <string name="text_elevated_extra">注意飲食，減少鹽攝取</string>
+    <string name="text_hypertension_stage_1">高血壓1期</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 或 DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">改善生活方式，定期鍛煉，控制飲食</string>
+    <string name="text_hypertension_stage_2">高血壓2期</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 或 DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">諮詢醫生，可能需要藥物治療</string>
+    <string name="text_hypertensive">高血壓危象</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 或 DIA &gt; 120 </string>
+    <string name="text_hypertensive_extra">及時就醫，制定合適的治療方案</string>
+    <string name="error_tips">收縮壓必須大於舒張壓</string>
+    <string name="error_tips_extra">輸入的資料可能不正確，請檢查並重新輸入正確的值</string>
+    <string name="save">保存</string>
+    <string name="delete">刪除</string>
+    <string name="range1">24小時內</string>
+    <string name="range2">本週</string>
+    <string name="range3">過去 7 天</string>
+    <string name="range4">本月</string>
+    <string name="range5">上個月</string>
+    <string name="time_range">時間範圍</string>
+    <string name="add_new_record">+新記錄</string>
+    <string name="more_history">更多歷史記錄</string>
+    <string name="privacy_policy">隱私權政策</string>
+    <string name="user_agreement">使用者協議</string>
+    <string name="start">開始</string>
+    <string name="next">下一個</string>
+    <string name="start_record">開始記錄</string>
+    <string name="first_main_desc">心臟守護者</string>
+    <string name="first_sec_desc">輕鬆記錄和維護您的心臟健康，開始您的心臟健康之旅。</string>
+    <string name="second_main_desc">健康預測</string>
+    <string name="second_sec_desc">透過富有洞察力的追蹤掌握血壓趨勢，預測您健康的未來。</string>
+    <string name="third_main_desc">血壓記錄</string>
+    <string name="third_sec_desc">簡潔採集血壓數據，全面了解您的健康脈搏。</string>
+    <string name="skip">跳過</string>
+    <string name="home">首頁</string>
+    <string name="record_blood_pressure">記錄血壓</string>
+    <string name="monitor_health">輕鬆監控您的健康狀況</string>
+
+    <string name="info_1_q">什麼是血壓？</string>
+    <string name="info_1">血壓是血液推壓動脈壁的力量。 每次心跳，血液就會被抽入動脈。 當心臟跳動和泵血時血壓最高，稱為收縮壓。 當您的心臟在兩次跳動之間處於休息狀態時，您的血壓會下降。 這稱為舒張壓。
+您的血壓讀數由這兩個數字表示。 通常，收縮壓值高於或早於舒張壓值。 例如，120/80表示收縮壓為120，舒張壓為80。</string>
+    <string name="info_2_q">如何診斷高血壓？</string>
+    <string name="info_2">高血壓通常沒有任何症狀。 因此，確定您是否患有這種疾病的唯一方法是定期向您的醫療保健提供者進行血壓檢查。 您的提供者將使用測量儀、聽診器或電子感測器以及血壓袖帶。 在做出診斷之前，他或她將在單獨的預約中進行兩次或多次讀數.</string>
+    <string name="info_3_q">高血壓的類型</string>
+    <string name="info_3">高血壓有兩種主要類型：原發性（原發性）高血壓和繼發性高血壓。
+原發性或原發性高血壓是最常見的高血壓類型。 對於大多數患有此類血壓的人來說，隨著年齡的增長，血壓會逐漸升高。
+繼發性高血壓是由另一種疾病或使用某些藥物引起的。 在治療潛在病症或停止使用引起該病症的藥物後，它通常會有所改善。</string>
+    <string name="info_4_q">我為什麼應該關注高血壓？</string>
+    <string name="info_4">當您的血壓隨著時間的推移持續居高不下時，它會迫使您的心臟更加努力地泵血，從而導致潛在的嚴重健康問題，例如心臟病發作、中風、心臟衰竭和腎衰竭。  </string>
+    <string name="info_5_q">如何預防高血壓？</string>
+    <string name="info_5">健康飲食：為了幫助控制血壓，您應該限制鈉（鹽）的攝取量並增加飲食中的鉀。 吃低脂肪食物，包括大量的水果、蔬菜和全穀物也很重要。 DASH（控制高血壓的飲食方法）飲食計劃是有助於降低血壓的飲食計劃的一個例子。
+規律運動：體育活動可以幫助您保持健康的體重並降低血壓。 目標是每週至少2個半小時的中等強度有氧運動，或1小時15分鐘的高強度有氧運動。 有氧運動（例如快走）涉及任何會提高心率並需要比平常更多氧氣的活動。
+維持健康的體重：超重或肥胖會增加高血壓的風險。 保持健康的體重可以幫助您控制高血壓並降低其他健康問題的風險。
+限制飲酒：過量飲酒會導致血壓升高。 它還會增加額外的卡路里，從而導致體重增加。 男性每天飲酒不應超過兩杯，女性每天飲酒不應超過一杯。
+不要吸菸：吸菸會導致血壓升高，並增加心臟病和中風的風險。 如果您不吸煙，就不要開始吸煙。 如果您吸煙，請向您的醫療保健提供者尋求幫助，找到最佳的戒菸方法。
+管理壓力：學習如何放鬆和管理壓力可以改善您的情緒和身體健康並降低高血壓。 壓力管理技巧包括運動、聽音樂、專注於平靜或平和的活動以及冥想。</string>
+    <string name="info_6_q">什麼是妊娠高血壓？</string>
+    <string name="info_6">妊娠高血壓是指妊娠期間發生的血壓升高。 它通常在懷孕 20 週後開始。 您通常不會出現任何其他症狀。 在許多情況下，它不會傷害您或您的寶寶，並且會在產後 12 週內消退。 然而，它確實會增加您未來患高血壓的風險。 有時，它可能很嚴重，並可能導致低出生體重或早產。 有些患有妊娠高血壓的女性確實可能會患上子癇前症。
+慢性高血壓是指妊娠20週之前或之前出現的高血壓。 有些女性可能在懷孕前很久就患有這種情況，但只有在產前血壓檢查時才發現。 有時，慢性高血壓也會導致子癇前症。
+子癇前症的特徵是懷孕20週後血壓突然升高。 它通常發生在懷孕的最後三個月。 在極少數情況下，症狀可能直到分娩後才會出現，稱為產後子癇前症。 子癇前症還包括器官損傷的跡象，例如肝臟或腎臟受累。 這些症狀可能包括尿液中存在蛋白質和高血壓。 子癇前症對您和您的寶寶來說可能非常嚴重，甚至危及生命。</string>
+    <string name="info_7_q">誰有子癇前症的風險？</string>
+    <string name="info_7">如果您有以下情況，您就有患子癇前症的風險：
+
+- 懷孕前已有慢性高血壓或慢性腎臟病
+- 之前懷孕期間有高血壓或子癇前症
+- 肥胖
+- 40歲以上
+- 期待多胎（雙胞胎、三胞胎等）
+- 非裔美國人
+- 子癇前症家族史
+- 某些健康狀況，例如糖尿病、紅斑性狼瘡或血栓形成傾向（一種增加血栓風險的疾病）
+- 正在進行體外受精、卵子捐贈或捐贈者授精</string>
+    <string name="info_8_q">子癇前症會導致什麼問題？</string>
+    <string name="info_8">子癇前症可導致各種併發症，包括：
+
+- 胎盤早期剝離：分娩前胎盤與子宮壁分離
+- 胎兒生長受限：胎兒營養和氧氣供應不足，導致生長不良
+- 早產：懷孕37週前分娩
+- 低出生體重嬰兒：嬰兒出生時的體重低於預期胎齡
+- 死產：嬰兒出生前死亡
+- 器官和血液系統受損，包括腎臟、肝臟、大腦和其他器官
+- 母親罹患心臟病的風險增加
+- 子癇：子癇前症影響大腦時可能發生的嚴重病症，導致癲癇發作或昏迷
+- HELLP 症候群：一種罕見但嚴重的疾病，涉及子癇前症或子癇症女性的肝臟和血球損傷</string>
+    <string name="info_9_q">子癇前症有哪些症狀？</string>
+    <string name="info_9">子癇前症可能會出現以下症狀：
+
+- 高血壓
+- 尿液中蛋白質過多（稱為蛋白尿）
+- 臉部和手部腫脹。 腳部也可能出現腫脹，但這在許多懷孕期間都很常見，並不一定表示有問題。
+- 持續頭痛
+- 視力障礙，例如視力模糊或看到斑點
+- 右上腹部疼痛
+- 呼吸短促</string>
+    <string name="info_10_q">如何診斷子癇前症？</string>
+    <string name="info_10">您的醫療保健提供者將在每次產前檢查期間檢查您的血壓和尿液。 如果您的血壓讀數很高（140/90 或更高），特別是在懷孕第 20 週之後，您的提供者可能需要進一步的檢查。 這些測試可能包括血液檢查和其他實驗室檢查，以查找尿液中蛋白質過多和其他症狀。</string>
+    <string name="info_11_q">子癇前症的治療方案</string>
+    <string name="info_11">分娩通常可以治癒子癇前症。 在做出治療決定時，您的提供者會考慮幾個因素，包括病情的嚴重程度、您懷孕的時間以及對您和您的寶寶的潛在風險：
+
+1. 如果您懷孕超過 37 週，您的提供者可能會考慮引產或進行剖腹產。
+
+2. 如果您懷孕不到 37 週，您的醫療保健提供者將密切監測您和您的寶寶。 這可能涉及對您進行血液和尿液檢查。 嬰兒的監測通常包括超音波檢查、胎心率監測和評估嬰兒的生長情況。 您可能需要藥物來控制血壓並預防癲癇發作。 有些女性可能會接受類固醇注射，以幫助嬰兒的肺部更快成熟。 如果子癇前症很嚴重，您的提供者可能會建議提早分娩。
+
+在大多數情況下，這些症狀通常會在分娩後六週內消失。 在極少數情況下，症狀可能不會消失或可能在分娩後出現（產後子癇前症）。 這可能非常嚴重，需要立即治療。</string>
+    <string name="info_12_q">DASH 飲食計畫</string>
+    <string name="info_12">DASH 代表預防高血壓的飲食方法。 這是一項基於國家心肺血液研究所 (NHLBI) 贊助的研究的飲食計劃。 研究表明，DASH 可以降低高血壓並改善膽固醇水平，從而降低心臟病的風險。
+
+DASH 飲食計劃包括以下原則：
+
+1. 強調蔬菜、水果和全穀類。
+2. 包括低脂或脫脂乳製品、魚、家禽、豆類、堅果和植物油。
+3.限制飽和脂肪含量高的食物。 這些食物包括肥肉、全脂乳製品和熱帶油，如椰子油、棕櫚仁油和棕櫚油。
+4.限制含糖飲料和甜食。
+
+除了遵循 DASH 飲食之外，其他生活方式的改變也有助於降低血壓。 其中包括保持健康的體重、定期運動和避免吸煙。</string>
+    <string name="source">來源</string>
+    <string name="choose_your_language">選擇您的語言</string>
+    <string name="guide_tips">點擊此處記錄您的血壓</string>
+    <string name="rate_us_5_star">給我們評分 5 顆星</string>
+    <string name="rate_desc">給 5 顆星支持並寫下您的評論</string>
+    <string name="rate_now">立即評分</string>
+    <string name="set_alarm">設定鬧鐘</string>
+    <string name="plz_set_alarm">請設定鬧鐘</string>
+    <string name="sure_to_del">您確定要刪除嗎？</string>
+    <string name="change_alarm">更改鬧鐘</string>
+    <string name="language">語言</string>
+    <string name="no">否</string>
+    <string name="read_article">閱讀文章</string>
+    <string name="record_now">立即錄製</string>
+    <string name="record_1">照顧好自己：記得測量血壓。</string>
+    <string name="record_2">健康提示：定期記錄血壓，預防心血管疾病。</string>
+    <string name="record_3">血壓監測至關重要； 不要忽視它。</string>
+    <string name="record_4">每天記錄您的血壓，讓生活更健康。</string>
+    <string name="record_5">測量血壓可保障心臟健康。</string>
+    <string name="record_6">記錄血壓是照顧自己的一種方式； 不要忘記測量。</string>
+    <string name="record_7">定期記錄血壓，預防心血管疾病。</string>
+    <string name="article_1">推薦閱讀：血壓管理小知識，快來看看。</string>
+    <string name="article_2">今日推薦：高血壓病人的飲食建議，不要錯過。</string>
+    <string name="article_3">了解記錄血壓如何改善整體健康。</string>
+    <string name="article_4">今天的文章：高血壓患者的飲食建議。</string>
+    <string name="article_5">提供更長的電池壽命，點擊優化電池。</string>
+    <string name="article_6">了解更多血壓管理，點選查看。</string>
+</resources>

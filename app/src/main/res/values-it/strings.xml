@@ -1,6 +1,4 @@
 <resources>
-    <string name="mmhg" translatable="false">/mmHg</string>
-    <string name="_mmhg" translatable="false">mmHg</string>
     <string name="record">Registra</string>
     <string name="info">Informazioni</string>
     <string name="set">Impostazioni</string>

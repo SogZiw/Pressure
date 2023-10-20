@@ -1,6 +1,4 @@
 <resources>
-    <string name="mmhg" translatable="false">/mmHg</string>
-    <string name="_mmhg" translatable="false">mmHg</string>
     <string name="record">녹음</string>
     <string name="info">정보</string>
     <string name="set">설정</string>

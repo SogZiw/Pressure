@@ -14,7 +14,7 @@ sealed class LocalState {
 
     object Traditional : LocalState() {
         override val localName: String get() = "繁體中文"
-        override val languageCode: String get() = Locale.TRADITIONAL_CHINESE.language
+        override val languageCode: String get() = Locale.CHINESE.language
     }
 
     object Japanese : LocalState() {

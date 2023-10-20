@@ -1,6 +1,4 @@
 <resources>
-    <string name='mmhg' translatable='false'>/mmHg</string>
-    <string name="_mmhg" translatable="false">mmHg</string>
     <string name="record">Kayıt</string>
     <string name="info">Bilgi</string>
     <string name="set">Ayarlar</string>

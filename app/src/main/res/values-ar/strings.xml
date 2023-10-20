@@ -1,6 +1,4 @@
 <resources>
-    <string name="mmhg" translatable="false">/mmHg</string>
-    <string name="_mmhg" translatable="false">ملم زئبقي</string>
     <string name="record">السجل</string>
     <string name="info">المعلومات</string>
     <string name="set">الإعدادات</string>
