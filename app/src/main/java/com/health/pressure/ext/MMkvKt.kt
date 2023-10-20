@@ -82,22 +82,22 @@ var defLang: String
     }
 
 var timeConf: ClockTimeAmount
-    get() = mmkv.decodeParcelable("timeConf", null) ?: ClockTimeAmount()
+    get() = mmkv.decodeParcelable("timeConf", ClockTimeAmount::class.java) ?: ClockTimeAmount()
     set(value) {
         mmkv.encode("timeConf", value)
     }
 var screenConf: ClockTimeAmount
-    get() = mmkv.decodeParcelable("screenConf", null) ?: ClockTimeAmount()
+    get() = mmkv.decodeParcelable("screenConf", ClockTimeAmount::class.java) ?: ClockTimeAmount()
     set(value) {
         mmkv.encode("screenConf", value)
     }
 var charConf: ClockTimeAmount
-    get() = mmkv.decodeParcelable("charConf", null) ?: ClockTimeAmount()
+    get() = mmkv.decodeParcelable("charConf", ClockTimeAmount::class.java) ?: ClockTimeAmount()
     set(value) {
         mmkv.encode("charConf", value)
     }
 var uniConf: ClockTimeAmount
-    get() = mmkv.decodeParcelable("uniConf", null) ?: ClockTimeAmount()
+    get() = mmkv.decodeParcelable("uniConf", ClockTimeAmount::class.java) ?: ClockTimeAmount()
     set(value) {
         mmkv.encode("uniConf", value)
     }
