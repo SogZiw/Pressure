@@ -30,6 +30,7 @@ data class ClockItem(
 
 sealed class ClockType {
 
+    abstract val nameAlias: String
     abstract val item: ClockItem?
     abstract val isOverMax: Boolean
     abstract fun addMax()
@@ -39,6 +40,7 @@ sealed class ClockType {
     }
 
     object TimeClock : ClockType() {
+        override val nameAlias: String get() = "time"
         override val item: ClockItem? get() = ClockManager.timeClock
         override val isOverMax: Boolean
             get() {
@@ -56,6 +58,7 @@ sealed class ClockType {
     }
 
     object ScreenClock : ClockType() {
+        override val nameAlias: String get() = "screen"
         override val item: ClockItem? get() = ClockManager.screenClock
         override val isOverMax: Boolean
             get() {
@@ -73,6 +76,7 @@ sealed class ClockType {
     }
 
     object CharClock : ClockType() {
+        override val nameAlias: String get() = "char"
         override val item: ClockItem? get() = ClockManager.charClock
         override val isOverMax: Boolean
             get() {
@@ -90,6 +94,7 @@ sealed class ClockType {
     }
 
     object UniClock : ClockType() {
+        override val nameAlias: String get() = "uni"
         override val item: ClockItem? get() = ClockManager.uniClock
         override val isOverMax: Boolean
             get() {

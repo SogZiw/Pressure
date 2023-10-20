@@ -21,6 +21,10 @@ object ClockManager {
     var charClock: ClockItem? = null
     var uniClock: ClockItem? = null
 
+    fun ClockType.showIfCan() {
+        if (canAlarm()) ClockUpper.show(this)
+    }
+
     fun ClockType.canAlarm(): Boolean {
         if (AppLife.foreground()) return false
         if (mApp.isInteractive().not()) return false
@@ -46,7 +50,7 @@ object ClockManager {
 
     private val fbSet by lazy { hashSetOf("fb4a", "facebook") }
     private val bySet by lazy { hashSetOf("bytedance", "%7B%22", "fb4a", "facebook", "gclid", "not%20set", "youtubeads") }
-    private val recordSet by lazy {
+    val recordSet by lazy {
         hashSetOf(
             R.string.record_1.stringValue,
             R.string.record_2.stringValue,
@@ -57,7 +61,7 @@ object ClockManager {
             R.string.record_7.stringValue
         )
     }
-    private val articleSet by lazy {
+    val articleSet by lazy {
         hashSetOf(
             R.string.article_1.stringValue,
             R.string.article_2.stringValue,
