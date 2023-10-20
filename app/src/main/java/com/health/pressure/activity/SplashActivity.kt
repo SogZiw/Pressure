@@ -1,8 +1,12 @@
 package com.health.pressure.activity
 
+import android.Manifest
 import android.annotation.SuppressLint
+import android.os.Build
 import android.text.method.LinkMovementMethod
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.isVisible
 import com.health.pressure.R
 import com.health.pressure.activity.model.SplashVM
@@ -20,6 +24,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SplashVM>()
     private val jumpType by lazy { intent?.getIntExtra("JumpType", -1) ?: -1 }
+    private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {}
 
     override fun initView() {
         viewModel.progress.observe(this) {
@@ -56,6 +61,10 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.agreement.text = buildAgreement()
             binding.first.isVisible = true
             binding.reload.isVisible = false
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(this).areNotificationsEnabled().not()) {
+                nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
         } else {
             when (jumpType) {
                 0 -> goNextPage<RecordActivity>(true)
