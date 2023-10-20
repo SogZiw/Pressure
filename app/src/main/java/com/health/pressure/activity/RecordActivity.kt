@@ -7,6 +7,7 @@ import com.health.pressure.R
 import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.widget.wheel.WheelView
 import com.health.pressure.dao.DataManager
 import com.health.pressure.dao.Pressure
@@ -117,7 +118,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
 
     private fun showAdAndFinish() {
         lifecycleScope.launch(Dispatchers.Main) {
-            AdInstance.saveAd.showFullScreenAd(activity) { onBackPressed() }
+            AdInstance.saveAd.showFullScreenAd(activity) { autoNext() }
         }
     }
 
@@ -158,8 +159,12 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         changeState(data?.state ?: PressureState.Normal)
     }
 
-    override fun onBackPressed() {
+    private fun autoNext() {
         if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 1) }
+    }
+
+    override fun onBackPressed() {
+        if (ClockManager.judgeState()) AdInstance.saveAd.showFullScreenAd(activity) { autoNext() } else autoNext()
     }
 
 }
