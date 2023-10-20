@@ -53,7 +53,7 @@ object ClockUpper {
                     .setCustomHeadsUpContentView(largeView)
             }
             NotificationManagerCompat.from(mApp).notify(18852, builder.build())
-            clockType.item?.lastShow = System.currentTimeMillis()
+            clockType.updateShowTime()
             clockType.addMax()
         }
     }
