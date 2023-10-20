@@ -11,6 +11,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.health.pressure.R
 import com.health.pressure.activity.SplashActivity
 import com.health.pressure.basic.bean.ClockType
+import com.health.pressure.ext.logcat
 import com.health.pressure.ext.stringValue
 import com.health.pressure.mApp
 import kotlin.random.Random
@@ -55,6 +56,7 @@ object ClockUpper {
             NotificationManagerCompat.from(mApp).notify(18852, builder.build())
             clockType.updateShowTime()
             clockType.addMax()
+            "${clockType.nameAlias} showed".logcat()
         }
     }
 
