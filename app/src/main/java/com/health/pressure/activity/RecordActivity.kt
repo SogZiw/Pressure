@@ -7,7 +7,9 @@ import com.health.pressure.R
 import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.basic.widget.wheel.WheelView
 import com.health.pressure.dao.DataManager
 import com.health.pressure.dao.Pressure
@@ -157,6 +159,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         binding.sysWheel.currentItem = (data?.sys ?: 119) - 20
         binding.diaWheel.currentItem = (data?.dia ?: 79) - 20
         changeState(data?.state ?: PressureState.Normal)
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.SAVE.placeName))
     }
 
     private fun autoNext() {

@@ -9,7 +9,9 @@ import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.InfoData
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityInfoDetailBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.stringValue
@@ -34,6 +36,10 @@ class InfoDetailActivity : BaseActivity<ActivityInfoDetailBinding>() {
             }
         }
         AdInstance.saveAd.loadAd(activity)
+    }
+
+    override fun initData() {
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.SAVE.placeName))
     }
 
     private fun autoNext() {

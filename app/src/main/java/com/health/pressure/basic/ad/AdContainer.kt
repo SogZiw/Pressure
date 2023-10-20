@@ -7,6 +7,7 @@ import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.ad.admob.FullScreen
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.mApp
 
 class AdContainer(val loc: AdLocation) {
@@ -56,6 +57,7 @@ class AdContainer(val loc: AdLocation) {
         }
         onAdLoaded = {}
         loadAd(activity)
+        EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to loc.placeName))
     }
 
     fun nativeLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {
@@ -77,6 +79,7 @@ class AdContainer(val loc: AdLocation) {
         }
         onAdLoaded = {}
         loadAd(context)
+        EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to loc.placeName))
     }
 
 }

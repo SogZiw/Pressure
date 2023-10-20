@@ -13,6 +13,7 @@ import com.health.pressure.activity.model.SplashVM
 import com.health.pressure.basic.InfoData
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.clock.ClockUpper
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
@@ -50,6 +51,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         }, onEnd = { goNext() })
         EventPost.session()
         if (arrayOf(0, 1).any { it == jumpType }) ClockUpper.cancel()
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.OPEN.placeName))
     }
 
     private fun loadAd() {
