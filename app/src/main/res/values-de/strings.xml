@@ -1,0 +1,164 @@
+<resources>
+    <string name="record">Datensatz</string>
+    <string name="info">Info</string>
+    <string name="set">Einstellungen</string>
+    <string name="set_datetime">Datum/Uhrzeit festlegen</string>
+    <string name="sure">Sicher</string>
+    <string name="add">Hinzufügen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="new_record">Neuer Datensatz</string>
+    <string name="edit_record">Datensatz bearbeiten</string>
+    <string name="sys">Systolisch</string>
+    <string name="dia">Diastolisch</string>
+    <string name="text_hypotension">Hypotonie</string>
+    <string name="text_hypotension_content">SYS &lt; 90 oder DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Halten Sie ausreichend Flüssigkeit zu sich und treiben Sie regelmäßig Sport</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 und DIA 60–79</string>
+    <string name="text_normal_extra">Behalten Sie einen gesunden Lebensstil bei</string>
+    <string name="text_elevated">Erhöht</string>
+    <string name="text_elevated_content">SYS 120–129 und DIA 60–79</string>
+    <string name="text_elevated_extra">Achten Sie auf Ihre Ernährung, reduzieren Sie den Salzkonsum</string>
+    <string name="text_hypertension_stage_1">Hypertonie-Stadium 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 oder DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Lebensstil verbessern, regelmäßig Sport treiben, Ernährung kontrollieren</string>
+    <string name="text_hypertension_stage_2">Hypertonie-Stadium 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 oder DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Arzt konsultieren, möglicherweise sind Medikamente erforderlich</string>
+    <string name="text_hypertensive">Bluthochdruckkrise</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 oder DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Suchen Sie umgehend ärztlichen Rat ein und entwickeln Sie einen geeigneten Behandlungsplan</string>
+    <string name="error_tips">Systolisch muss größer als Diastolisch sein</string>
+    <string name="error_tips_extra">Die eingegebenen Daten sind möglicherweise falsch. Bitte überprüfen Sie den korrekten Wert und geben Sie ihn erneut ein</string>
+    <string name="save">Speichern</string>
+    <string name="delete">Löschen</string>
+    <string name="range1">Innerhalb von 24 Stunden</string>
+    <string name="range2">Diese Woche</string>
+    <string name="range3">Letzte 7 Tage</string>
+    <string name="range4">Diesen Monat</string>
+    <string name="range5">Letzter Monat</string>
+    <string name="time_range">Zeitbereich</string>
+    <string name="add_new_record">+ Neuer Datensatz</string>
+    <string name="more_history">Mehr Verlauf</string>
+    <string name="privacy_policy">Datenschutzerklärung</string>
+    <string name="user_agreement">Benutzervereinbarung</string>
+    <string name="start">start</string>
+    <string name="next">nächster</string>
+    <string name="start_record">Startdatensatz</string>
+    <string name="first_main_desc">Herzwächter</string>
+    <string name="first_sec_desc">Beginnen Sie Ihre Reise zur Herzgesundheit, indem Sie Ihr Herzwohl mühelos aufzeichnen und schützen.</string>
+    <string name="second_main_desc">Gesundheitsvorhersage</string>
+    <string name="second_sec_desc">Prognostizieren Sie die Zukunft Ihrer Gesundheit, indem Sie Blutdrucktrends durch aufschlussreiches Tracking beherrschen.</string>
+    <string name="third_main_desc">Blutdruckaufzeichnung</string>
+    <string name="third_sec_desc">Erfassen Sie Blutdruckdaten prägnant und gewinnen Sie so ein umfassendes Verständnis Ihres Gesundheitspulses.</string>
+    <string name="skip">überspringen</string>
+    <string name="home">Zuhause</string>
+    <string name="record_blood_pressure">Blutdruck aufzeichnen</string>
+    <string name="monitor_health">Überwachen Sie Ihre Gesundheit ganz einfach</string>
+
+    <string name="info_1_q">Was ist Blutdruck?</string>
+    <string name="info_1">Blutdruck ist die Kraft, mit der das Blut gegen die Wände der Arterien drückt. Mit jedem Herzschlag wird Blut in die Arterien gepumpt. Der Blutdruck ist am höchsten, wenn das Herz schlägt und Blut pumpt, der sogenannte systolische Druck. Wenn Ihr Herz zwischen den Schlägen ruht, sinkt Ihr Blutdruck. Dies wird als diastolischer Druck bezeichnet.
+Ihr Blutdruckwert wird durch diese beiden Zahlen dargestellt. Typischerweise ist der systolische Wert höher oder liegt vor dem diastolischen Wert. Beispielsweise bedeutet 120/80 einen systolischen Druck von 120 und einen diastolischen Druck von 80.</string>
+    <string name="info_2_q">Wie wird Bluthochdruck diagnostiziert?</string>
+    <string name="info_2">Hoher Blutdruck verursacht normalerweise keine Symptome. Daher können Sie nur durch regelmäßige Blutdruckkontrollen durch Ihren Arzt feststellen, ob Sie an dieser Erkrankung leiden. Ihr Arzt verwendet ein Messgerät, ein Stethoskop oder einen elektronischen Sensor und eine Blutdruckmanschette. Bevor er oder sie eine Diagnose stellt, führt er oder sie zwei oder mehr Messungen bei getrennten Terminen durch.</string>
+    <string name="info_3_q">Arten von Bluthochdruck</string>
+    <string name="info_3">Es gibt zwei Haupttypen von Bluthochdruck: primäre (essentielle) Hypertonie und sekundäre Hypertonie.
+Die primäre oder essentielle Hypertonie ist die häufigste Art von Bluthochdruck. Bei den meisten Menschen mit dieser Art von Blutdruck steigt der Blutdruck mit zunehmendem Alter allmählich an.
+Sekundärer Bluthochdruck wird durch eine andere Erkrankung oder die Einnahme bestimmter Medikamente verursacht. In der Regel bessert sich die Erkrankung, nachdem die Grunderkrankung behandelt oder die verursachenden Medikamente abgesetzt wurden.</string>
+    <string name="info_4_q">Warum sollte ich mir wegen Bluthochdruck Sorgen machen?</string>
+    <string name="info_4">Wenn Ihr Blutdruck im Laufe der Zeit konstant hoch bleibt, zwingt dies Ihr Herz dazu, härter zu arbeiten, um Blut zu pumpen,
+    was zu potenziell schwerwiegenden Gesundheitsproblemen wie Herzinfarkten, Schlaganfällen, Herzversagen und Nierenversagen führen kann.</string>
+    <string name="info_5_q">Wie kann ich Bluthochdruck verhindern?</string>
+    <string name="info_5">Gesunde Ernährung: Um den Blutdruck zu kontrollieren, sollten Sie die Aufnahme von Natrium (Salz) begrenzen und Ihren Kaliumspiegel in der Nahrung erhöhen. Es ist auch wichtig, fettarme Lebensmittel zu sich zu nehmen und viel Obst, Gemüse und Vollkornprodukte zu sich zu nehmen. Der DASH-Ernährungsplan (Dietary Approaches to Stop Hypertension) ist ein Beispiel für einen Diätplan, der zur Senkung des Blutdrucks beitragen kann.
+Regelmäßige Bewegung: Körperliche Aktivität kann Ihnen helfen, ein gesundes Gewicht zu halten und den Blutdruck zu senken. Streben Sie mindestens zweieinhalb Stunden Aerobic-Training mittlerer Intensität pro Woche oder 1 Stunde und 15 Minuten Aerobic-Training hoher Intensität an. Aerobic-Übungen, wie z. B. zügiges Gehen, umfassen alle Aktivitäten, die Ihre Herzfrequenz erhöhen und mehr Sauerstoff als gewöhnlich benötigen.
+Halten Sie ein gesundes Gewicht: Übergewicht oder Fettleibigkeit erhöhen das Risiko für Bluthochdruck. Die Aufrechterhaltung eines gesunden Gewichts kann Ihnen helfen, Ihren Bluthochdruck zu kontrollieren und das Risiko anderer Gesundheitsprobleme zu verringern.
+Begrenzen Sie den Alkoholkonsum: Übermäßiger Alkoholkonsum kann zu erhöhtem Blutdruck führen. Außerdem werden dadurch zusätzliche Kalorien zugeführt, was zur Gewichtszunahme beitragen kann. Männer sollten nicht mehr als zwei Getränke pro Tag trinken, Frauen sollten nicht mehr als ein Getränk pro Tag trinken.
+Nicht rauchen: Rauchen erhöht den Blutdruck und erhöht das Risiko für Herzerkrankungen und Schlaganfälle. Wenn Sie nicht rauchen, fangen Sie nicht damit an. Wenn Sie rauchen, wenden Sie sich an Ihren Arzt, um die besten Methoden zum Aufhören zu finden.
+Stress bewältigen: Wenn Sie lernen, sich zu entspannen und mit Stress umzugehen, können Sie Ihr emotionales und körperliches Wohlbefinden verbessern und den Bluthochdruck senken. Zu den Techniken zur Stressbewältigung gehören Bewegung, Musik hören, die Konzentration auf beruhigende oder friedliche Aktivitäten sowie Meditation.</string>
+    <string name="info_6_q">Was ist Schwangerschaftshypertonie?</string>
+    <string name="info_6">Schwangerschaftsbedingte Hypertonie bezieht sich auf erhöhten Blutdruck, der während der Schwangerschaft auftritt. Sie beginnt typischerweise nach der 20. Schwangerschaftswoche. Normalerweise verspüren Sie keine weiteren Symptome. In vielen Fällen schadet es weder Ihnen noch Ihrem Baby und verschwindet innerhalb von 12 Wochen nach der Entbindung. Es erhöht jedoch Ihr Risiko für eine zukünftige Hypertonie. Manchmal kann es schwerwiegend sein und zu einem niedrigen Geburtsgewicht oder einer Frühgeburt führen. Einige Frauen mit schwangerschaftsbedingtem Bluthochdruck können tatsächlich eine Präeklampsie entwickeln.
+Unter chronischer Hypertonie versteht man einen Bluthochdruck, der vor oder vor der 20. Schwangerschaftswoche vorliegt. Manche Frauen litten möglicherweise schon lange vor der Schwangerschaft unter dieser Erkrankung, sie wird jedoch erst bei pränatalen Blutdruckkontrollen entdeckt. Manchmal kann chronischer Bluthochdruck auch zu einer Präeklampsie führen.
+Präeklampsie ist durch einen plötzlichen Blutdruckanstieg nach der 20. Schwangerschaftswoche gekennzeichnet. Sie tritt meist in den letzten drei Monaten der Schwangerschaft auf. In sehr seltenen Fällen können die Symptome erst nach der Entbindung auftreten, was als postpartale Präeklampsie bezeichnet wird. Präeklampsie umfasst auch Anzeichen einer Organschädigung, wie z. B. eine Leber- oder Nierenbeteiligung. Zu diesen Symptomen können das Vorhandensein von Eiweiß im Urin und sehr hoher Blutdruck gehören. Präeklampsie kann für Sie und Ihr Baby sehr ernst und sogar lebensbedrohlich sein.</string>
+    <string name="info_7_q">Wer hat ein Risiko für Präeklampsie?</string>
+    <string name="info_7">Sie haben das Risiko, eine Präeklampsie zu entwickeln, wenn Sie Folgendes haben:
+
+- Vor der Schwangerschaft bestehende chronische Hypertonie oder chronische Nierenerkrankung
+- Hatten in einer früheren Schwangerschaft hohen Blutdruck oder Präeklampsie
+- Fettleibigkeit
+- Über 40 Jahre alt
+- Sie erwarten mehrere Babys (Zwillinge, Drillinge usw.)
+- Afroamerikanische Ethnizität
+- Eine Familiengeschichte von Präeklampsie
+- Bestimmte Gesundheitszustände wie Diabetes, Lupus oder eine Neigung zur Bildung von Blutgerinnseln (ein Zustand, der das Risiko von Blutgerinnseln erhöht)
+- Sich einer In-vitro-Fertilisation, Eizellspende oder Spenderbefruchtung unterziehen</string>
+    <string name="info_8_q">Welche Probleme verursacht Präeklampsie?</string>
+    <string name="info_8">Präeklampsie kann zu verschiedenen Komplikationen führen, darunter:
+
+- Plazentalösung:Trennung der Plazenta von der Gebärmutterwand vor der Entbindung
+- Einschränkung des fetalen Wachstums: Unzureichende Versorgung des Fötus mit Nährstoffen und Sauerstoff, was zu einem schlechten Wachstum führt
+- Frühgeburt: Entbindung des Kindes vor der 37. Schwangerschaftswoche
+- Baby mit niedrigem Geburtsgewicht: Das Baby wird mit einem geringeren Gewicht geboren, als für sein Gestationsalter erwartet
+- Totgeburt: Der Verlust des Babys vor der Geburt
+- Schäden an Organen und Blutsystemen, einschließlich Nieren, Leber, Gehirn und anderen Organen
+- Erhöhtes Risiko einer Herzerkrankung für die Mutter
+- Eklampsie: Eine schwere Erkrankung, die auftreten kann, wenn Präeklampsie das Gehirn beeinträchtigt und zu Krampfanfällen oder Koma führt
+- HELLP-Syndrom: Eine seltene, aber schwerwiegende Erkrankung, die bei Frauen mit Präeklampsie oder Eklampsie zu einer Schädigung der Leber und der Blutzellen führt.</string>
+    <string name="info_9_q">Was sind die Symptome einer Präeklampsie?</string>
+    <string name="info_9">Präeklampsie kann sich mit folgenden Symptomen manifestieren:
+
+- Bluthochdruck
+- Übermäßiger Proteingehalt im Urin (bekannt als Proteinurie)
+- Schwellung von Gesicht und Händen. Schwellungen an den Füßen können ebenfalls auftreten, kommen aber bei vielen Schwangerschaften häufig vor und müssen nicht unbedingt auf ein Problem hinweisen.
+- Anhaltende Kopfschmerzen
+- Sehstörungen wie verschwommenes Sehen oder Sehflecken
+- Schmerzen im rechten Oberbauch
+- Kurzatmigkeit</string>
+    <string name="info_10_q">Wie wird Präeklampsie diagnostiziert?</string>
+    <string name="info_10">Ihr Arzt wird bei jedem vorgeburtlichen Besuch Ihren Blutdruck und Urin überprüfen. Wenn Ihr Blutdruck hoch ist (140/90 oder höher), insbesondere nach der 20. Schwangerschaftswoche, möchte Ihr Arzt möglicherweise weitere Tests durchführen. Zu diesen Tests können Blutuntersuchungen und andere Laboruntersuchungen gehören, um festzustellen, ob Ihr Urin übermäßig viel Protein enthält und ob andere Symptome vorliegen.</string>
+    <string name="info_11_q">Behandlungsoptionen für Präeklampsie</string>
+    <string name="info_11">Eine Entbindung kann in der Regel Präeklampsie heilen. Bei Behandlungsentscheidungen berücksichtigt Ihr Arzt mehrere Faktoren, darunter die Schwere der Erkrankung, den Stand Ihrer Schwangerschaft und die potenziellen Risiken für Sie und Ihr Baby:
+
+1. Wenn Ihre Schwangerschaft älter als 37 Wochen ist, kann Ihr Arzt die Einleitung der Wehen oder die Durchführung eines Kaiserschnitts in Erwägung ziehen.
+
+2. Wenn Sie weniger als 37 Wochen schwanger sind, wird Ihr Arzt Sie und Ihr Baby engmaschig überwachen. Hierzu können bei Ihnen Blut- und Urinuntersuchungen gehören. Die Überwachung des Babys umfasst häufig Ultraschalluntersuchungen, die Überwachung der fetalen Herzfrequenz und die Beurteilung des Wachstums des Babys. Möglicherweise benötigen Sie Medikamente, um Ihren Blutdruck zu kontrollieren und Anfällen vorzubeugen. Manche Frauen erhalten möglicherweise Steroidinjektionen, um die Lungenreifung des Babys zu beschleunigen. Wenn die Präeklampsie schwerwiegend ist, empfiehlt Ihr Arzt möglicherweise eine frühere Entbindung des Kindes.
+
+In den meisten Fällen klingen diese Symptome innerhalb von sechs Wochen nach der Entbindung ab. In seltenen Fällen verschwinden die Symptome möglicherweise nicht oder treten erst nach der Entbindung auf (postpartale Präeklampsie). Dies kann sehr schwerwiegend sein und erfordert eine sofortige Behandlung.</string>
+    <string name="info_12_q">DASH-Diätplan</string>
+    <string name="info_12">DASH steht für Dietary Approaches to Stop Hypertension. Es handelt sich um einen Diätplan, der auf einer vom National Heart, Lung, and Blood Institute (NHLBI) geförderten Forschung basiert. Die Studien deuten darauf hin, dass DASH Bluthochdruck senken und den Cholesterinspiegel verbessern kann, wodurch das Risiko von Herzerkrankungen verringert wird.
+
+Der DASH-Diätplan beinhaltet die folgenden Grundsätze:
+
+1. Betonen Sie Gemüse, Obst und Vollkornprodukte.
+2. Fügen Sie fettarme oder fettfreie Milchprodukte, Fisch, Geflügel, Hülsenfrüchte, Nüsse und Pflanzenöle hinzu.
+3. Begrenzen Sie Lebensmittel mit hohem Gehalt an gesättigten Fettsäuren. Zu diesen Lebensmitteln gehören fetthaltiges Fleisch, vollfette Milchprodukte und tropische Öle wie Kokosnussöl, Palmkernöl und Palmöl.
+4. Beschränken Sie zuckerhaltige Getränke und Süßigkeiten.
+
+Zusätzlich zur DASH-Diät können auch andere Änderungen des Lebensstils zur Senkung des Blutdrucks beitragen. Dazu gehören die Aufrechterhaltung eines gesunden Gewichts, regelmäßige Bewegung und die Vermeidung des Rauchens.</string>
+    <string name="source">Quelle</string>
+    <string name="choose_your_language">Wählen Sie Ihre Sprache</string>
+    <string name="guide_tips">Klicken Sie hier, um Ihren Blutdruck aufzuzeichnen</string>
+    <string name="rate_us_5_star">Bewerten Sie uns mit 5 Sternen</string>
+    <string name="rate_desc">Unterstützen Sie uns, indem Sie 5 Sterne vergeben und Ihre Bewertung schreiben</string>
+    <string name="rate_now">Jetzt bewerten</string>
+    <string name="set_alarm">Alarm einstellen</string>
+    <string name="plz_set_alarm">Bitte stellen Sie den Alarm ein</string>
+    <string name="sure_to_del">Sind Sie sicher, dass Sie löschen möchten?</string>
+    <string name="change_alarm">Alarm ändern</string>
+    <string name="language">Sprache</string>
+    <string name="no">Nein</string>
+    <string name="read_article">Artikel lesen</string>
+    <string name="record_now">Jetzt aufnehmen</string>
+    <string name="record_1">Sorgen Sie für sich selbst: Denken Sie daran, Ihren Blutdruck zu messen.</string>
+    <string name="record_2">Gesundheitstipp:Messen Sie regelmäßig Ihren Blutdruck, um Herz-Kreislauf-Erkrankungen vorzubeugen.</string>
+    <string name="record_3">Die Überwachung des Blutdrucks ist von entscheidender Bedeutung. Übersehen Sie es nicht.</string>
+    <string name="record_4">Erfassen Sie jeden Tag Ihren Blutdruck für ein gesünderes Leben.</string>
+    <string name="record_5">Die Messung des Blutdrucks schützt die Herzgesundheit.</string>
+    <string name="record_6">Das Aufzeichnen des Blutdrucks ist eine Möglichkeit, für sich selbst zu sorgen. Vergessen Sie nicht zu messen.</string>
+    <string name="record_7">Erfassen Sie regelmäßig Ihren Blutdruck, um Herz-Kreislauf-Erkrankungen vorzubeugen.</string>
+    <string name="article_1">Empfohlene Lektüre: Tipps zur Blutdruckkontrolle, schauen Sie sich das an.</string>
+    <string name="article_2">Heutige Empfehlung: Ernährungsratschläge für Bluthochdruckpatienten, das sollten Sie sich nicht entgehen lassen.</string>
+    <string name="article_3">Erfahren Sie, wie die Aufzeichnung des Blutdrucks die allgemeine Gesundheit verbessern kann.</string>
+    <string name="article_4">Heutiger Artikel: Ernährungstipps für Bluthochdruckpatienten.</string>
+    <string name="article_5">Bieten Sie eine längere Akkulaufzeit. Klicken Sie, um den Akku zu optimieren.</string>
+    <string name="article_6">Erfahren Sie mehr über das Blutdruckmanagement, klicken Sie hier, um es anzuzeigen.</string>
+</resources>
