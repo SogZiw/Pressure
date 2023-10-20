@@ -1,0 +1,165 @@
+<resources>
+    <string name="mmhg" translatable="false">/mmHg</string>
+    <string name="_mmhg" translatable="false">mmHg</string>
+    <string name="record">Registra</string>
+    <string name="info">Informazioni</string>
+    <string name="set">Impostazioni</string>
+    <string name="set_datetime">Imposta data e ora</string>
+    <string name="sure">Certo</string>
+    <string name="add">Aggiungi</string>
+    <string name="cancel">Annulla</string>
+    <string name="new_record">Nuovo record</string>
+    <string name="edit_record">Modifica record</string>
+    <string name="sys">Sistolica</string>
+    <string name="dia">Diastolica</string>
+    <string name="text_hypotension">Ipotensione</string>
+    <string name="text_hypotension_content">SYS &lt; 90 o DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Rimani idratato, fai esercizio regolarmente</string>
+    <string name="text_normal">Normale</string>
+    <string name="text_normal_content">SYS 90–119 e DIA 60–79</string>
+    <string name="text_normal_extra">Mantieni uno stile di vita sano</string>
+    <string name="text_elevated">Elevato</string>
+    <string name="text_elevated_content">SYS 120–129 e DIA 60–79</string>
+    <string name="text_elevated_extra">Osserva la tua dieta, riduci l\'assunzione di sale</string>
+    <string name="text_hypertension_stage_1">Ipertensione-stadio 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 o DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Migliorare lo stile di vita, fare esercizio regolarmente, controllare la dieta</string>
+    <string name="text_hypertension_stage_2">Ipertensione-stadio 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 o DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Consulta il medico, potrebbero essere necessari farmaci</string>
+    <string name="text_hypertensive">Crisi ipertensiva</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 o DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Richiedi tempestivamente un consiglio medico, sviluppa un piano di trattamento appropriato</string>
+    <string name="error_tips">La pressione sistolica deve essere maggiore della diastolica</string>
+    <string name="error_tips_extra">I dati inseriti potrebbero essere errati, controlla e inserisci nuovamente il valore corretto</string>
+    <string name="save">Salva</string>
+    <string name="delete">Elimina</string>
+    <string name="range1">Entro 24 ore</string>
+    <string name="range2">Questa settimana</string>
+    <string name="range3">Ultimi 7 giorni</string>
+    <string name="range4">Questo mese</string>
+    <string name="range5">Il mese scorso</string>
+    <string name="time_range">Intervallo di tempo</string>
+    <string name="add_new_record">+ Nuovo record</string>
+    <string name="more_history">Altra cronologia</string>
+    <string name="privacy_policy">Informativa sulla privacy</string>
+    <string name="user_agreement">Contratto utente</string>
+    <string name="start">inizio</string>
+    <string name="next">successivo</string>
+    <string name="start_record">inizia il record</string>
+    <string name="first_main_desc">Guardiano del cuore</string>
+    <string name="first_sec_desc">Inizia il tuo viaggio verso la salute del cuore registrando e salvaguardando senza sforzo il tuo benessere cardiaco.</string>
+    <string name="second_main_desc">Previsione della salute</string>
+    <string name="second_sec_desc">Anticipa il futuro della tua salute controllando le tendenze della pressione sanguigna attraverso un monitoraggio approfondito.</string>
+    <string name="third_main_desc">Registrazione della pressione sanguigna</string>
+    <string name="third_sec_desc">Cattura i dati sulla pressione sanguigna in modo conciso, acquisendo una comprensione completa del tuo battito cardiaco.</string>
+    <string name="skip">salta</string>
+    <string name="home">Casa</string>
+    <string name="record_blood_pressure">Registra la pressione sanguigna</string>
+    <string name="monitor_health">Monitora la tua salute con facilità</string>
+
+    <string name="info_1_q">Cos\'è la pressione sanguigna?</string>
+    <string name="info_1">La pressione sanguigna è la forza del sangue che spinge contro le pareti delle arterie. Ad ogni battito cardiaco, il sangue viene pompato nelle arterie. La pressione sanguigna è più alta quando il cuore batte e pompa il sangue, noto come pressione sistolica. Quando il tuo cuore è a riposo tra un battito e l\'altro, la pressione sanguigna diminuisce. Questa è chiamata pressione diastolica.
+La lettura della tua pressione sanguigna è rappresentata da questi due numeri. Tipicamente, il valore sistolico è superiore o precede il valore diastolico. Ad esempio, 120/80 significa una pressione sistolica di 120 e una pressione diastolica di 80.</string>
+    <string name="info_2_q">Come viene diagnosticata l\'ipertensione?</string>
+    <string name="info_2">La pressione alta solitamente non presenta sintomi. Pertanto, l’unico modo per determinare se si dispone di questa condizione è sottoporsi a controlli regolari della pressione sanguigna dal proprio medico. Il tuo fornitore utilizzerà un manometro, uno stetoscopio o un sensore elettronico e un bracciale per la pressione sanguigna. Prima di fare una diagnosi, farà due o più letture in appuntamenti separati.</string>
+    <string name="info_3_q">Tipi di ipertensione</string>
+    <string name="info_3">Esistono due tipi principali di pressione alta: ipertensione primaria (essenziale) e ipertensione secondaria.
+L’ipertensione primaria o essenziale è il tipo più comune di ipertensione arteriosa. Per la maggior parte delle persone con questo tipo di pressione sanguigna, questa aumenta gradualmente con l’avanzare dell’età.
+L’ipertensione secondaria è causata da un’altra condizione medica o dall’uso di determinati farmaci. Di solito migliora dopo aver trattato la condizione di base o sospendendo i farmaci che la causano.</string>
+    <string name="info_4_q">Perché dovrei preoccuparmi dell\'ipertensione?</string>
+    <string name="info_4">Quando la pressione sanguigna rimane costantemente elevata nel tempo, costringe il cuore a lavorare di più per pompare il sangue, portando a potenziali problemi di salute gravi come infarti, ictus, insufficienza cardiaca e insufficienza renale.</string>
+    <string name="info_5_q">Come posso prevenire l\'ipertensione?</string>
+    <string name="info_5">Dieta sana: per aiutare a controllare la pressione sanguigna, dovresti limitare l\'assunzione di sodio (sale) e aumentare l\'apporto di potassio nella dieta. È anche importante mangiare cibi a basso contenuto di grassi e includere molta frutta, verdura e cereali integrali. Il piano alimentare DASH (Dietary Approaches to Stop Hypertension) è un esempio di programma dietetico che può aiutare ad abbassare la pressione sanguigna.
+Esercizio fisico regolare: l’attività fisica può aiutarti a mantenere un peso sano e ad abbassare la pressione sanguigna. Obiettivo per almeno 2 ore e mezza di esercizio aerobico di moderata intensità a settimana, o 1 ora e 15 minuti di esercizio aerobico ad alta intensità. Gli esercizi aerobici, come la camminata veloce, coinvolgono qualsiasi attività che aumenti la frequenza cardiaca e richieda più ossigeno del solito.
+Mantenere un peso sano: essere sovrappeso o obesi aumenta il rischio di ipertensione. Mantenere un peso sano può aiutarti a controllare l’ipertensione e ridurre il rischio di altri problemi di salute.
+Limitare l’assunzione di alcol: il consumo eccessivo di alcol può portare ad un aumento della pressione sanguigna. Aggiunge anche calorie extra, che possono contribuire all’aumento di peso. Gli uomini non dovrebbero superare i due drink al giorno e le donne non dovrebbero superare un drink al giorno.
+Non fumare: il fumo aumenta la pressione sanguigna e aumenta il rischio di malattie cardiache e ictus. Se non fumi, non iniziare. Se fumi, chiedi aiuto al tuo medico per trovare i metodi migliori per smettere.
+Gestire lo stress: imparare a rilassarsi e gestire lo stress può migliorare il benessere emotivo e fisico e abbassare la pressione alta. Le tecniche di gestione dello stress includono esercizio fisico, ascolto di musica, concentrazione su attività calmanti o pacifiche e meditazione.</string>
+    <string name="info_6_q">Cos\'è l\'ipertensione gestazionale?</string>
+    <string name="info_6">L\'ipertensione indotta dalla gravidanza si riferisce all\'elevata pressione sanguigna che si verifica durante la gravidanza. Inizia in genere dopo la 20a settimana di gravidanza. Di solito non si verificano altri sintomi. In molti casi, il problema non danneggerà te o il tuo bambino e si risolverà entro 12 settimane dal parto. Tuttavia, aumenta il rischio di futura ipertensione. A volte può essere grave e portare a un basso peso alla nascita o a un parto pretermine. Alcune donne con ipertensione indotta dalla gravidanza possono infatti sviluppare preeclampsia.
+L’ipertensione cronica si riferisce alla pressione alta presente prima o prima della 20a settimana di gravidanza. Alcune donne potrebbero aver avuto questa condizione molto prima della gravidanza, ma viene scoperta solo durante i controlli della pressione sanguigna prenatale. A volte, l’ipertensione cronica può anche portare alla preeclampsia.
+La preeclampsia è caratterizzata da un improvviso aumento della pressione sanguigna dopo la 20a settimana di gravidanza. Di solito si verifica negli ultimi tre mesi di gravidanza. In casi molto rari, i sintomi potrebbero non comparire fino a dopo il parto, fenomeno noto come preeclampsia postpartum. La preeclampsia comprende anche segni di danno d\'organo, come il coinvolgimento del fegato o dei reni. Questi sintomi possono includere la presenza di proteine nelle urine e una pressione sanguigna molto elevata. La preeclampsia può essere molto seria sia per te che per il tuo bambino, addirittura pericolosa per la vita.</string>
+    <string name="info_7_q">Chi è a rischio di preeclampsia?</string>
+    <string name="info_7">Sei a rischio di sviluppare la preeclampsia se hai:
+
+- Ipertensione cronica preesistente o malattia renale cronica prima della gravidanza
+- Ha avuto pressione alta o preeclampsia in una precedente gravidanza
+- Obesità
+- Età superiore ai 40 anni
+- In attesa di più bambini (gemelli, terzine, ecc.)
+- Etnia afroamericana
+- Una storia familiare di preeclampsia
+- Alcune condizioni di salute, come diabete, lupus o tendenza alla formazione di coaguli di sangue (una condizione che aumenta il rischio di coaguli di sangue)
+- Sottoporsi a fecondazione in vitro, donazione di ovuli o inseminazione da donatrice</string>
+    <string name="info_8_q">Quali problemi causa la preeclampsia?</string>
+    <string name="info_8">La preeclampsia può portare a varie complicazioni, tra cui:
+
+- Distacco della placenta:Separazione della placenta dalla parete uterina prima del parto
+- Limitazione della crescita fetale: apporto inadeguato di nutrienti e ossigeno al feto, con conseguente scarsa crescita
+- Parto prematuro: partorire il bambino prima delle 37 settimane di gravidanza
+- Bambino con basso peso alla nascita: il bambino nasce con un peso inferiore a quello previsto per la sua età gestazionale
+- Nascita morta: la perdita del bambino prima della nascita
+- Danni agli organi e al sistema sanguigno, inclusi reni, fegato, cervello e altri organi
+- Aumento del rischio di malattie cardiache per la madre
+- Eclampsia: una condizione grave che può verificarsi quando la preeclampsia colpisce il cervello, portando a convulsioni o coma
+- Sindrome HELLP: una condizione rara ma grave che comporta danni al fegato e alle cellule del sangue nelle donne con preeclampsia o eclampsia</string>
+    <string name="info_9_q">Quali sono i sintomi della preeclampsia?</string>
+    <string name="info_9">La preeclampsia può manifestarsi con i seguenti sintomi:
+
+- Ipertensione
+- Eccesso di proteine nelle urine (noto come proteinuria)
+- Gonfiore del viso e delle mani. Potrebbe verificarsi anche gonfiore ai piedi, ma è comune in molte gravidanze e potrebbe non indicare necessariamente un problema.
+- Mal di testa persistente
+- Disturbi della vista, come visione offuscata o macchie visive
+- Dolore all\'addome in alto a destra
+- Mancanza di respiro</string>
+    <string name="info_10_q">Come viene diagnosticata la preeclampsia?</string>
+    <string name="info_10">Il tuo medico controllerà la tua pressione sanguigna e le tue urine durante ogni visita prenatale. Se il valore della tua pressione sanguigna è alto (140/90 o superiore), soprattutto dopo la 20a settimana di gravidanza, il tuo medico potrebbe voler condurre ulteriori test. Questi test potrebbero includere esami del sangue e altri esami di laboratorio per cercare un eccesso di proteine nelle urine e altri sintomi.</string>
+    <string name="info_11_q">Opzioni di trattamento per la preeclampsia</string>
+    <string name="info_11">Il parto in genere può curare la preeclampsia. Quando prendi decisioni terapeutiche, il tuo medico considera diversi fattori, tra cui la gravità della condizione, a che punto sei della gravidanza e i potenziali rischi per te e il tuo bambino:
+
+1. Se hai superato la 37a settimana di gravidanza, il tuo medico potrebbe prendere in considerazione l\'induzione del travaglio o l\'esecuzione di un taglio cesareo.
+
+2. Se sei incinta da meno di 37 settimane, il tuo medico monitorerà attentamente te e il tuo bambino. Ciò potrebbe comportare esami del sangue e delle urine per te. Il monitoraggio del bambino spesso include ecografie, monitoraggio della frequenza cardiaca fetale e valutazione della crescita del bambino. Potrebbero essere necessari farmaci per controllare la pressione sanguigna e prevenire le convulsioni. Alcune donne potrebbero ricevere iniezioni di steroidi per aiutare i polmoni del bambino a maturare più rapidamente. Se la preeclampsia è grave, il medico potrebbe consigliare di far nascere il bambino prima.
+
+Nella maggior parte dei casi, questi sintomi si risolvono generalmente entro sei settimane dal parto. In rari casi, i sintomi potrebbero non risolversi o potrebbero comparire dopo il parto (preeclampsia postpartum). Questo può essere molto serio e richiede un trattamento immediato.</string>
+    <string name="info_12_q">Piano dietetico DASH</string>
+    <string name="info_12">DASH sta per Dietary Approaches to Stop Hypertension. È un programma dietetico basato sulla ricerca sponsorizzata dal National Heart, Lung, and Blood Institute (NHLBI). Gli studi indicano che il DASH può abbassare la pressione alta e migliorare i livelli di colesterolo, riducendo così il rischio di malattie cardiache.
+
+Il programma di dieta DASH include i seguenti principi:
+
+1. Dai risalto a verdure, frutta e cereali integrali.
+2. Includere latticini a basso contenuto di grassi o senza grassi, pesce, pollame, legumi, noci e oli vegetali.
+3. Limitare gli alimenti ricchi di grassi saturi. Questi alimenti includono carni grasse, latticini ricchi di grassi e oli tropicali come olio di cocco, olio di palmisti e olio di palma.
+4. Limitare le bevande zuccherate e i dolci.
+
+Oltre a seguire la dieta DASH, anche altri cambiamenti nello stile di vita possono aiutare ad abbassare la pressione sanguigna. Questi includono il mantenimento di un peso sano, l\'esercizio fisico regolare e l\'evitare il fumo.</string>
+    <string name="source">fonte</string>
+    <string name="choose_your_language">Scegli la tua lingua</string>
+    <string name="guide_tips">Clicca qui per registrare la tua pressione sanguigna</string>
+    <string name="rate_us_5_star">Dacci una valutazione a 5 stelle</string>
+    <string name="rate_desc">Sostienici dando 5 stelle e scrivi la tua recensione</string>
+    <string name="rate_now">Vota adesso</string>
+    <string name="set_alarm">Imposta sveglia</string>
+    <string name="plz_set_alarm">Imposta la sveglia</string>
+    <string name="sure_to_del">Sei sicuro di voler eliminare?</string>
+    <string name="change_alarm">Cambia sveglia</string>
+    <string name="language">Lingua</string>
+    <string name="no">No</string>
+    <string name="read_article">Leggi articolo</string>
+    <string name="record_now">Registra ora</string>
+    <string name="record_1">Prenditi cura di te stesso: ricordati di misurare la tua pressione sanguigna.</string>
+    <string name="record_2">Suggerimento per la salute:Registra regolarmente la tua pressione sanguigna per prevenire malattie cardiovascolari.</string>
+    <string name="record_3">Il monitoraggio della pressione sanguigna è fondamentale; non trascurarlo.</string>
+    <string name="record_4">Registra la tua pressione sanguigna ogni giorno per una vita più sana.</string>
+    <string name="record_5">Misurare la pressione sanguigna salvaguarda la salute del cuore.</string>
+    <string name="record_6">Registrare la pressione sanguigna è un modo per prenderti cura di te stesso; non dimenticare di misurare.</string>
+    <string name="record_7">Registra regolarmente la tua pressione sanguigna per prevenire malattie cardiovascolari.</string>
+    <string name="article_1">Lettura consigliata: suggerimenti per la gestione della pressione sanguigna, dai un\'occhiata.</string>
+    <string name="article_2">Raccomandazione di oggi: consigli dietetici per i pazienti ipertesi, da non perdere.</string>
+    <string name="article_3">Scopri come registrare la pressione sanguigna può migliorare la salute generale.</string>
+    <string name="article_4">Articolo di oggi: Consigli dietetici per pazienti ipertesi.</string>
+    <string name="article_5">Fornisci una maggiore durata della batteria, fai clic per ottimizzare la batteria.</string>
+    <string name="article_6">Scopri di più sulla gestione della pressione sanguigna, fai clic per visualizzare.</string>
+</resources>
