@@ -81,7 +81,7 @@ object ClockManager {
     private fun startTimer() {
         clockScope.launch {
             createFlow(10000L, 35000L)
-                .onEach { EventPost.firebaseEvent("bp_ss_start_b") }
+                .onEach { EventPost.event("bp_ss_start_b") }
                 .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) && it.isOpen } }
                 .flowOn(Dispatchers.IO)
                 .collect {

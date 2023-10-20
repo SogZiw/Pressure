@@ -25,7 +25,7 @@ object EventPost : BaseHttp() {
         }
     }
 
-    fun event(key: String, params: HashMap<String, Any?>) {
+    fun event(key: String, params: HashMap<String, Any?> = hashMapOf()) {
         httpScope.launch {
             val jsonObj = buildCommonBody().apply {
                 put("ghana", key)
