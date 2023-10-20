@@ -79,7 +79,7 @@ object ClockManager {
 
     private fun startTimer() {
         clockScope.launch {
-            createFlow(30000L, 30000L)
+            createFlow(10000L, 40000L)
                 .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) && it.isOpen } }
                 .flowOn(Dispatchers.IO)
                 .collect {
