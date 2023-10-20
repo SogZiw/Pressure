@@ -1,9 +1,14 @@
 package com.health.pressure.basic.http
 
+import android.os.Bundle
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.health.pressure.mApp
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
 object EventPost : BaseHttp() {
+
+    private val firebaseAnalytics by lazy { FirebaseAnalytics.getInstance(mApp) }
 
     fun session() {
         httpScope.launch {
@@ -28,6 +33,16 @@ object EventPost : BaseHttp() {
             }
             request(jsonObj, "e-v-e-n-t".replace("-", ""))
         }
+    }
+
+    fun firebaseEvent(key: String, params: HashMap<String, Any?> = hashMapOf()) {
+        runCatching {
+            if (params.isEmpty()) firebaseAnalytics.logEvent(key, null)
+            else firebaseAnalytics.logEvent(key, Bundle().apply {
+                params.onEach { putString(it.key, it.value.toString()) }
+            })
+        }
+        event(key, params)
     }
 
 }
