@@ -147,4 +147,20 @@ In addition to following the DASH diet, other lifestyle changes can also help lo
     <string name="sure_to_del">Are you sure you want to delete?</string>
     <string name="change_alarm">Change alarm</string>
     <string name="language">Language</string>
+    <string name="no">No</string>
+    <string name="read_article">Read Article</string>
+    <string name="record_now">Record Now</string>
+    <string name="record_1">Caring for yourself: Remember to measure your blood pressure.</string>
+    <string name="record_2">Health tip: Regularly record your blood pressure to prevent cardiovascular diseases.</string>
+    <string name="record_3">Blood pressure monitoring is crucial; do not overlook it.</string>
+    <string name="record_4">Record your blood pressure every day for a healthier life.</string>
+    <string name="record_5">Measuring blood pressure safeguards heart health.</string>
+    <string name="record_6">Recording blood pressure is a way to care for yourself; don\'t forget to measure.</string>
+    <string name="record_7">Regularly record your blood pressure to prevent cardiovascular diseases.</string>
+    <string name="article_1">Recommended reading: Blood pressure management tips, check it out.</string>
+    <string name="article_2">Today\'s recommendation: Dietary advice for hypertensive patients, don\'t miss it.</string>
+    <string name="article_3">Learn how recording blood pressure can improve overall health.</string>
+    <string name="article_4">Today\'s article: Dietary advice for hypertensive patients.</string>
+    <string name="article_5">Provide a longer battery life, click to optimize the battery.</string>
+    <string name="article_6">Learn more about blood pressure management, click to view.</string>
 </resources>
