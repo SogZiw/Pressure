@@ -26,7 +26,7 @@ open class BaseHttp {
     private val client by lazy { OkHttpClient.Builder().build() }
     private val baseUrl = "https://test-triple.bloodpressurepro.net/helmsman/phillip/credo"
     private val baseCurl = "https://bovine.bloodpressurepro.net/denture/limerick"
-    val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, _ -> }) }
+    val httpScope by lazy { CoroutineScope(Dispatchers.IO + SupervisorJob() + CoroutineExceptionHandler { _, e -> "${e.message}".logcat("HttpLog") }) }
     private var adTrackEnable = adTracker
     private var gaidStr = gaid
     var referrerDataStr = referrerData
@@ -52,7 +52,10 @@ open class BaseHttp {
             return if (200 == response.code) {
                 "success -- $tag -- ${response.body?.string()}".logcat("HttpLog")
                 true
-            } else false
+            } else {
+                "failed -- $tag -- ${response.code}".logcat("HttpLog")
+                false
+            }
         }.onFailure {
             "failed -- $tag -- ${it.message}".logcat("HttpLog")
         }

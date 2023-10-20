@@ -23,7 +23,7 @@ sealed class BaseAd(val loc: AdLocation, val adItem: AdItem, private val loadTim
             it.put("fungal", adItem.id)
             it.put("dawn", loc.placeName)
             it.put("gizmo", adItem.getTypeFormat())
-            it.put("diagonal", adValue.precisionType)
+            it.put("diagonal", adValue.precisionType.toString())
         }
     }
 
