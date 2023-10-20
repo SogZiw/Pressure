@@ -12,6 +12,7 @@ import com.health.pressure.R
 import com.health.pressure.activity.model.SplashVM
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.clock.ClockUpper
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
@@ -48,6 +49,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             }
         }, onEnd = { goNext() })
         EventPost.session()
+        if (arrayOf(0, 1).any { it == jumpType }) ClockUpper.cancel()
     }
 
     private fun loadAd() {

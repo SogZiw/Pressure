@@ -56,6 +56,12 @@ object ClockUpper {
         }
     }
 
+    fun cancel() {
+        kotlin.runCatching {
+            NotificationManagerCompat.from(mApp).cancel(18852)
+        }
+    }
+
     private fun buildChannel() {
         NotificationManagerCompat.from(mApp).createNotificationChannel(NotificationChannelCompat.Builder(channelId, NotificationManager.IMPORTANCE_HIGH)
             .setName(channelName)
