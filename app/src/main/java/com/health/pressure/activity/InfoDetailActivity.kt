@@ -5,6 +5,7 @@ import android.graphics.Paint
 import android.text.method.ScrollingMovementMethod
 import com.health.pressure.Constants
 import com.health.pressure.R
+import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.InfoData
 import com.health.pressure.basic.ad.AdInstance
@@ -35,8 +36,12 @@ class InfoDetailActivity : BaseActivity<ActivityInfoDetailBinding>() {
         AdInstance.saveAd.loadAd(activity)
     }
 
+    private fun autoNext() {
+        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 2) }
+    }
+
     override fun onBackPressed() {
-        if (ClockManager.judgeState()) AdInstance.saveAd.showFullScreenAd(activity) { finish() } else finish()
+        if (ClockManager.judgeState()) AdInstance.saveAd.showFullScreenAd(activity) { autoNext() } else autoNext()
     }
 
 }

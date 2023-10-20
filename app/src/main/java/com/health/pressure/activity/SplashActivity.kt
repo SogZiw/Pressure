@@ -10,6 +10,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.isVisible
 import com.health.pressure.R
 import com.health.pressure.activity.model.SplashVM
+import com.health.pressure.basic.InfoData
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.clock.ClockUpper
@@ -69,7 +70,11 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         } else {
             when (jumpType) {
                 0 -> goNextPage<RecordActivity>(true)
-                1 -> goNextPage<MainActivity>(true) { putExtra("ChangeTab", 2) }
+                1 -> {
+                    InfoData.values().random().let {
+                        goNextPage<InfoDetailActivity>(true) { putExtra("InfoData", it) }
+                    }
+                }
                 else -> goNextPage<MainActivity>(true)
             }
         }
