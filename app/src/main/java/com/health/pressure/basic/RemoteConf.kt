@@ -23,6 +23,7 @@ class RemoteConf {
     fun init() {
         if (isDebug) {
             AdInstance.init()
+            initDefaultPop()
             return
         }
         conf()
@@ -67,5 +68,15 @@ class RemoteConf {
         }
     }
 
+    private fun initDefaultPop() {
+        ClockManager.run {
+            toggle = true
+            referrerCode = 0
+            timeClock = ClockItem(true, 0, 100, 1)
+            screenClock = ClockItem(true, 0, 100, 1)
+            charClock = ClockItem(true, 0, 100, 1)
+            uniClock = ClockItem(true, 0, 100, 1)
+        }
+    }
 
 }
