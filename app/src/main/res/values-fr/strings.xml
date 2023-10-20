@@ -1,0 +1,163 @@
+<resources>
+    <string name="record">Enregistrer</string>
+    <string name="info">Informations</string>
+    <string name="set">Paramètres</string>
+    <string name="set_datetime">Définir la date et l\'heure</string>
+    <string name="sure">Bien sûr</string>
+    <string name="add">Ajouter</string>
+    <string name="cancel">Annuler</string>
+    <string name="new_record">Nouvel enregistrement</string>
+    <string name="edit_record">Modifier l\'enregistrement</string>
+    <string name="sys">Systolique</string>
+    <string name="dia">Diastolique</string>
+    <string name="text_hypotension">Hypotension</string>
+    <string name="text_hypotension_content">SYS &lt; 90 ou DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Restez hydraté, faites de l\'exercice régulièrement</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 et DIA 60–79</string>
+    <string name="text_normal_extra">Maintenir un mode de vie sain</string>
+    <string name="text_elevated">Élevé</string>
+    <string name="text_elevated_content">SYS 120–129 et DIA 60–79</string>
+    <string name="text_elevated_extra">Surveillez votre alimentation, réduisez votre consommation de sel</string>
+    <string name="text_hypertension_stage_1">Hypertension de stade 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 ou DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Améliorez votre style de vie, faites de l\'exercice régulièrement, contrôlez votre alimentation</string>
+    <string name="text_hypertension_stage_2">Hypertension de stade 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 ou DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Consulter un médecin, des médicaments peuvent être nécessaires</string>
+    <string name="text_hypertensive">Crise hypertensive</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 ou DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Demander rapidement un avis médical, élaborer un plan de traitement approprié</string>
+    <string name="error_tips">La systolique doit être supérieure à la diastolique</string>
+    <string name="error_tips_extra">Les données saisies peuvent être incorrectes, veuillez vérifier et ressaisir la valeur correcte</string>
+    <string name="save">Enregistrer</string>
+    <string name="delete">Supprimer</string>
+    <string name="range1">Dans les 24 heures</string>
+    <string name="range2">Cette semaine</string>
+    <string name="range3">7 derniers jours</string>
+    <string name="range4">Ce mois-ci</string>
+    <string name="range5">Le mois dernier</string>
+    <string name="time_range">Plage de temps</string>
+    <string name="add_new_record">+ Nouvel enregistrement</string>
+    <string name="more_history">Plus d\'historique</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="user_agreement">Contrat d\'utilisation</string>
+    <string name="start">début</string>
+    <string name="next">suivant</string>
+    <string name="start_record">démarrer l\'enregistrement</string>
+    <string name="first_main_desc">Gardien du cœur</string>
+    <string name="first_sec_desc">Commencez votre voyage vers la santé cardiaque en enregistrant et en protégeant sans effort votre bien-être cardiaque.</string>
+    <string name="second_main_desc">Prévision de la santé</string>
+    <string name="second_sec_desc">Anticipez l\'avenir de votre santé en maîtrisant les tendances de la tension artérielle grâce à un suivi perspicace.</string>
+    <string name="third_main_desc">Enregistrement de la tension artérielle</string>
+    <string name="third_sec_desc">Capturez succinctement les données de tension artérielle et obtenez une compréhension globale de votre pouls de santé.</string>
+    <string name="skip">ignorer</string>
+    <string name="home">Accueil</string>
+    <string name="record_blood_pressure">Enregistrer la tension artérielle</string>
+    <string name="monitor_health">Surveillez votre santé en toute simplicité</string>
+
+    <string name="info_1_q">Qu\'est-ce que la tension artérielle?</string>
+    <string name="info_1">La pression artérielle est la force du sang qui pousse contre les parois des artères. À chaque battement de coeur, le sang est pompé dans les artères. La pression artérielle est la plus élevée lorsque le cœur bat et pompe le sang, ce qu’on appelle la pression systolique. Lorsque votre cœur est au repos entre les battements, votre tension artérielle diminue. C\'est ce qu\'on appelle la pression diastolique.
+Votre lecture de tension artérielle est représentée par ces deux chiffres. En règle générale, la valeur systolique est supérieure ou antérieure à la valeur diastolique. Par exemple, 120/80 signifie une pression systolique de 120 et une pression diastolique de 80.</string>
+    <string name="info_2_q">Comment diagnostique-t-on l\'hypertension artérielle?</string>
+    <string name="info_2">L\'hypertension artérielle ne présente généralement aucun symptôme. Par conséquent, la seule façon de déterminer si vous souffrez de cette maladie est de faire vérifier régulièrement votre tension artérielle par votre médecin. Votre prestataire utilisera une jauge, un stéthoscope ou un capteur électronique et un brassard de tensiomètre. Avant de poser un diagnostic, il effectuera deux ou plusieurs lectures lors de rendez-vous séparés..</string>
+    <string name="info_3_q">Types d\'hypertension</string>
+    <string name="info_3">Il existe deux principaux types d\'hypertension artérielle: l\'hypertension primaire (essentielle) et l\'hypertension secondaire.
+L’hypertension primaire ou essentielle est le type d’hypertension artérielle le plus courant. Pour la plupart des personnes souffrant de ce type de tension artérielle, celle-ci augmente progressivement avec l’âge.
+L\'hypertension secondaire est causée par une autre condition médicale ou par l\'utilisation de certains médicaments. Elle s\'améliore généralement après avoir traité la maladie sous-jacente ou après avoir arrêté les médicaments qui la provoquent.</string>
+    <string name="info_4_q">Pourquoi devrais-je m\'inquiéter de l\'hypertension?</string>
+    <string name="info_4">Lorsque votre tension artérielle reste constamment élevée au fil du temps, elle oblige votre cœur à travailler plus fort pour pomper le sang, ce qui entraîne de potentiels problèmes de santé graves tels que des crises cardiaques, des accidents vasculaires cérébraux, une insuffisance cardiaque et une insuffisance rénale.</string>
+    <string name="info_5_q">Comment puis-je prévenir l\'hypertension?</string>
+    <string name="info_5">Alimentation saine: Pour aider à contrôler la tension artérielle, vous devez limiter votre consommation de sodium (sel) et augmenter votre potassium alimentaire. Il est également important de manger des aliments faibles en gras et de consommer beaucoup de fruits, de légumes et de grains entiers. Le régime alimentaire DASH (Dietary Approaches to Stop Hypertension) est un exemple de régime alimentaire qui peut aider à abaisser la tension artérielle.
+Exercice régulier: L’activité physique peut vous aider à maintenir un poids santé et à abaisser votre tension artérielle. Visez au moins 2 heures et demie d’exercice aérobique d’intensité modérée par semaine, ou 1 heure et 15 minutes d’exercice aérobique de haute intensité. Les exercices aérobiques, comme la marche rapide, impliquent toute activité qui augmente votre fréquence cardiaque et nécessite plus d\'oxygène que d\'habitude.
+Maintenir un poids santé : Le surpoids ou l’obésité augmente le risque d’hypertension artérielle. Maintenir un poids santé peut vous aider à contrôler l’hypertension et à réduire le risque d’autres problèmes de santé.
+Limiter la consommation d’alcool : Une consommation excessive d’alcool peut entraîner une hypertension artérielle. Cela ajoute également des calories supplémentaires, ce qui peut contribuer à la prise de poids. Les hommes ne devraient pas dépasser deux verres par jour et les femmes ne devraient pas dépasser un verre par jour.
+Ne fumez pas:Fumer augmente la tension artérielle et augmente le risque de maladie cardiaque et d\'accident vasculaire cérébral. Si vous ne fumez pas, ne commencez pas. Si vous fumez, demandez l’aide de votre médecin pour trouver les meilleures méthodes pour arrêter.
+Gérer le stress : Apprendre à se détendre et à gérer le stress peut améliorer votre bien-être émotionnel et physique et réduire l’hypertension artérielle. Les techniques de gestion du stress comprennent l\'exercice, l\'écoute de musique, la concentration sur des activités apaisantes ou paisibles et la méditation.</string>
+    <string name="info_6_q">Qu\'est-ce que l\'hypertension gestationnelle?</string>
+    <string name="info_6">L\'hypertension induite par la grossesse fait référence à une pression artérielle élevée qui survient pendant la grossesse. Cela commence généralement après 20 semaines de grossesse. Vous ne ressentez généralement aucun autre symptôme. Dans de nombreux cas, cela ne fera aucun mal à vous ou à votre bébé et disparaîtra dans les 12 semaines suivant l\'accouchement. Cependant, cela augmente votre risque d’hypertension future. Parfois, cela peut être grave et entraîner un faible poids à la naissance ou une naissance prématurée. Certaines femmes souffrant d’hypertension gravidique peuvent en effet développer une prééclampsie.
+L\'hypertension chronique fait référence à une pression artérielle élevée présente avant ou avant la 20e semaine de grossesse. Certaines femmes peuvent avoir souffert de cette maladie bien avant la grossesse, mais elle n\'est découverte que lors de contrôles prénatals de la tension artérielle. Parfois, l’hypertension chronique peut également entraîner une prééclampsie.
+La prééclampsie se caractérise par une augmentation soudaine de la tension artérielle après 20 semaines de grossesse. Elle survient généralement au cours des trois derniers mois de la grossesse. Dans de très rares cas, les symptômes peuvent n’apparaître qu’après l’accouchement, ce qu’on appelle la prééclampsie post-partum. La prééclampsie comprend également des signes de lésions organiques, telles qu\'une atteinte hépatique ou rénale. Ces symptômes peuvent inclure la présence de protéines dans l’urine et une pression artérielle très élevée. La prééclampsie peut être très grave pour vous et votre bébé, voire mettre la vie en danger.</string>
+    <string name="info_7_q">Qui est à risque de pré-éclampsie?</string>
+    <string name="info_7">Vous risquez de développer une prééclampsie si vous souffrez:
+
+- Hypertension chronique préexistante ou maladie rénale chronique avant la grossesse
+- avez eu une hypertension artérielle ou une prééclampsie lors d\'une grossesse précédente
+- Obésité
+- Âgé de plus de 40 ans
+- Vous attendez plusieurs bébés (jumeaux, triplés, etc.)
+- ethnie afro-américaine
+- Une histoire familiale de prééclampsie
+- Certains problèmes de santé, comme le diabète, le lupus ou une tendance à la formation de caillots sanguins (une condition qui augmente le risque de caillots sanguins)
+- En cours de fécondation in vitro, de don d\'ovules ou d\'insémination par donneur</string>
+    <string name="info_8_q">Quels problèmes la pré-éclampsie provoque-t-elle?</string>
+    <string name="info_8">La prééclampsie peut entraîner diverses complications, notamment:
+
+- Rupture du placenta:Séparation du placenta de la paroi utérine avant l\'accouchement
+- Retard de croissance fœtale: apport insuffisant de nutriments et d\'oxygène au fœtus, entraînant une mauvaise croissance
+- Naissance prématurée : Accoucher avant 37 semaines de grossesse
+- Bébé de faible poids à la naissance: le bébé naît avec un poids inférieur à celui prévu pour son âge gestationnel.
+- Mortinaissance : La perte du bébé avant la naissance
+- Dommages aux organes et au système sanguin, notamment les reins, le foie, le cerveau et d\'autres organes
+- Risque accru de maladie cardiaque pour la mère
+- Éclampsie:une maladie grave qui peut survenir lorsque la prééclampsie affecte le cerveau, entraînant des convulsions ou un coma.
+- Syndrome HELLP: maladie rare mais grave impliquant des lésions du foie et des cellules sanguines chez les femmes atteintes de prééclampsie ou d\'éclampsie</string>
+    <string name="info_9_q">Quels sont les symptômes de la pré-éclampsie?</string>
+    <string name="info_9">La prééclampsie peut se manifester par les symptômes suivants:
+
+- Hypertension artérielle
+- Excès de protéines dans l\'urine (appelé protéinurie)
+- Gonflement du visage et des mains. Un gonflement des pieds peut également survenir, mais il est courant dans de nombreuses grossesses et n\'indique pas nécessairement un problème.
+- Maux de tête persistants
+- Troubles de la vision, tels qu\'une vision floue ou des taches
+- Douleur dans l\'abdomen supérieur droit
+- Essoufflement</string>
+    <string name="info_10_q">Comment diagnostique-t-on la pré-éclampsie?</string>
+    <string name="info_10">Votre professionnel de la santé vérifiera votre tension artérielle et votre urine lors de chaque visite prénatale. Si votre tension artérielle est élevée (140/90 ou plus), surtout après la 20e semaine de grossesse, votre prestataire souhaitera peut-être effectuer des tests supplémentaires. Ces tests peuvent inclure des analyses de sang et d\'autres examens de laboratoire pour rechercher un excès de protéines dans votre urine et d\'autres symptômes.</string>
+    <string name="info_11_q">Options de traitement pour la pré-éclampsie</string>
+    <string name="info_11">L\'accouchement peut généralement guérir la prééclampsie. Lorsqu\'il prend des décisions de traitement, votre prestataire prend en compte plusieurs facteurs, notamment la gravité de la maladie, l\'état d\'avancement de votre grossesse et les risques potentiels pour vous et votre bébé:
+
+1. Si vous êtes enceinte de plus de 37 semaines, votre prestataire peut envisager de déclencher le travail ou de pratiquer une césarienne.
+
+2. Si vous êtes enceinte de moins de 37 semaines, votre professionnel de la santé vous surveillera de près, vous et votre bébé. Cela peut impliquer des analyses de sang et d’urine pour vous. La surveillance du bébé comprend souvent des échographies, la surveillance de la fréquence cardiaque fœtale et l\'évaluation de la croissance du bébé. Vous pourriez avoir besoin de médicaments pour contrôler votre tension artérielle et prévenir les convulsions. Certaines femmes peuvent recevoir des injections de stéroïdes pour aider les poumons du bébé à mûrir plus rapidement. Si la prééclampsie est grave, votre prestataire peut vous recommander d\'accoucher plus tôt.
+
+Dans la plupart des cas, ces symptômes disparaissent généralement dans les six semaines suivant l’accouchement. Dans de rares cas, les symptômes peuvent ne pas disparaître ou apparaître après l\'accouchement (prééclampsie post-partum). Cela peut être très grave et nécessiter un traitement immédiat.</string>
+    <string name="info_12_q">Plan de régime DASH</string>
+    <string name="info_12">DASH signifie Dietary Approaches to Stop Hypertension. Il s\'agit d\'un régime alimentaire basé sur des recherches parrainées par le National Heart, Lung, and Blood Institute (NHLBI). Les études indiquent que DASH peut abaisser la tension artérielle et améliorer le taux de cholestérol, réduisant ainsi le risque de maladie cardiaque.
+
+Le plan de régime DASH comprend les principes suivants:
+
+1. Mettez l’accent sur les légumes, les fruits et les grains entiers.
+2. Incluez des produits laitiers faibles en gras ou sans gras, du poisson, de la volaille, des légumineuses, des noix et des huiles végétales.
+3. Limitez les aliments riches en graisses saturées. Ces aliments comprennent les viandes grasses, les produits laitiers entiers et les huiles tropicales comme l’huile de coco, l’huile de palmiste et l’huile de palme.
+4. Limitez les boissons sucrées et les sucreries.
+
+En plus de suivre le régime DASH, d’autres changements de mode de vie peuvent également contribuer à abaisser la tension artérielle. Il s\'agit notamment de maintenir un poids santé, de faire de l\'exercice régulièrement et d\'éviter de fumer.</string>
+    <string name="source">source</string>
+    <string name="choose_your_language">Choisissez votre langue</string>
+    <string name="guide_tips">Cliquez ici pour enregistrer votre tension artérielle</string>
+    <string name="rate_us_5_star">Notez-nous 5 étoiles</string>
+    <string name="rate_desc">Soutenez-nous en donnant 5 étoiles et rédigez votre avis</string>
+    <string name="rate_now">Notez maintenant</string>
+    <string name="set_alarm">Définir une alarme</string>
+    <string name="plz_set_alarm">Veuillez régler l\'alarme</string>
+    <string name="sure_to_del">Êtes-vous sûr de vouloir supprimer?</string>
+    <string name="change_alarm">Modifier l\'alarme</string>
+    <string name="language">Langue</string>
+    <string name="no">Non</string>
+    <string name="read_article">Lire l\'article</string>
+    <string name="record_now">Enregistrer maintenant</string>
+    <string name="record_1">Prendre soin de vous: n\'oubliez pas de mesurer votre tension artérielle.</string>
+    <string name="record_2">Conseil santé:Enregistrez régulièrement votre tension artérielle pour prévenir les maladies cardiovasculaires.</string>
+    <string name="record_3">La surveillance de la pression artérielle est cruciale; ne le négligez pas.</string>
+    <string name="record_4">Enregistrez votre tension artérielle chaque jour pour une vie plus saine.</string>
+    <string name="record_5">Mesurer la tension artérielle protège la santé cardiaque.</string>
+    <string name="record_6">Enregistrer la tension artérielle est une façon de prendre soin de vous; n\'oubliez pas de mesurer.</string>
+    <string name="record_7">Enregistrez régulièrement votre tension artérielle pour prévenir les maladies cardiovasculaires.</string>
+    <string name="article_1">Lecture recommandée:Conseils de gestion de la tension artérielle, consultez-le.</string>
+    <string name="article_2">Recommandation du jour: conseils diététiques pour les patients hypertendus, ne les manquez pas.</string>
+    <string name="article_3">Découvrez comment l\'enregistrement de la tension artérielle peut améliorer la santé globale.</string>
+    <string name="article_4">Article du jour: Conseils diététiques pour les patients hypertendus.</string>
+    <string name="article_5">Fournir une durée de vie plus longue de la batterie, cliquez pour optimiser la batterie.</string>
+    <string name="article_6">En savoir plus sur la gestion de la tension artérielle, cliquez pour voir.</string>
+</resources>
