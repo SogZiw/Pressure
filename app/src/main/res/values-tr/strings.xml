@@ -1,0 +1,165 @@
+<resources>
+    <string name='mmhg' translatable='false'>/mmHg</string>
+    <string name="_mmhg" translatable="false">mmHg</string>
+    <string name="record">Kayıt</string>
+    <string name="info">Bilgi</string>
+    <string name="set">Ayarlar</string>
+    <string name="set_datetime">Tarihsaati ayarla</string>
+    <string name="sure">Elbette</string>
+    <string name="add">Ekle</string>
+    <string name="cancel">İptal</string>
+    <string name="new_record">Yeni kayıt</string>
+    <string name="edit_record">Kaydı düzenle</string>
+    <string name="sys">Sistolik</string>
+    <string name="dia">Diyastolik</string>
+    <string name="text_hypotension">Düşük tansiyon</string>
+    <string name="text_hypotension_content">SYS &lt; 90 veya DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Susuz kalmayın, düzenli egzersiz yapın</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 ve DIA 60–79</string>
+    <string name="text_normal_extra">Sağlıklı bir yaşam tarzı sürdürün</string>
+    <string name="text_elevated">Yükseltilmiş</string>
+    <string name="text_elevated_content">SYS 120–129 ve DIA 60–79</string>
+    <string name="text_elevated_extra">Diyetinize dikkat edin, tuz alımını azaltın</string>
+    <string name="text_hypertension_stage_1">Hipertansiyon-evre 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 veya DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Yaşam tarzınızı iyileştirin, düzenli egzersiz yapın, diyetinizi kontrol edin</string>
+    <string name="text_hypertension_stage_2">Hipertansiyon-evre 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 veya DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Doktora danışın, ilaç gerekebilir</string>
+    <string name="text_hypertensive">Hipertansif kriz</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 veya DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Derhal tıbbi yardım alın, uygun bir tedavi planı geliştirin</string>
+    <string name="error_tips">Sistol, Diyastolik\'ten daha büyük olmalıdır</string>
+    <string name="error_tips_extra">Girilen veriler hatalı olabilir, lütfen kontrol edip doğru değeri yeniden girin</string>
+    <string name="save">Kaydet</string>
+    <string name="delete">Sil</string>
+    <string name="range1">24 saat içinde</string>
+    <string name="range2">Bu hafta</string>
+    <string name="range3">Son 7 gün</string>
+    <string name="range4">Bu ay</string>
+    <string name="range5">Geçen ay</string>
+    <string name="time_range">Zaman aralığı</string>
+    <string name="add_new_record">+ Yeni Kayıt</string>
+    <string name="more_history">Daha Fazla Geçmiş</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="user_agreement">Kullanıcı Sözleşmesi</string>
+    <string name="start">başlat</string>
+    <string name="next">sonraki</string>
+    <string name="start_record">kaydı başlat</string>
+    <string name="first_main_desc">Kalp koruyucusu</string>
+    <string name="first_sec_desc">Kalp sağlığı yolculuğunuza, kalp sağlığınızı zahmetsizce kaydedip koruyarak başlayın.</string>
+    <string name="second_main_desc">Durum tahmini</string>
+    <string name="second_sec_desc">Anlaşılır takip yoluyla kan basıncı trendlerini öğrenerek sağlığınızın geleceğini öngörün.</string>
+    <string name="third_main_desc">Kan basıncı kaydı</string>
+    <string name="third_sec_desc">Kan basıncı verilerini kısa ve öz bir şekilde yakalayarak sağlık nabzınız hakkında kapsamlı bir anlayış elde edin.</string>
+    <string name="skip">atla</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="record_blood_pressure">Kan Basıncını Kaydedin</string>
+    <string name="monitor_health">Sağlığınızı kolaylıkla izleyin</string>
+
+    <string name="info_1_q">Tansiyon nedir?</string>
+    <string name="info_1">Kan basıncı, kanın atardamar duvarlarına doğru ittiği kuvvettir. Her kalp atışında kan, atardamarlara pompalanır. Kan basıncı, kalp attığında ve sistolik basınç olarak bilinen kan pompaladığında en yüksek seviyeye ulaşır. Kalbiniz atışlar arasında dinlenme halindeyken kan basıncınız düşer. Buna diyastolik basınç denir.
+Kan basıncınız bu iki sayıyla temsil edilir. Tipik olarak sistolik değer diyastolik değerden daha yüksektir veya ondan önce gelir. Örneğin 120/80, sistolik basıncın 120, diyastolik basıncın ise 80 olduğu anlamına gelir.</string>
+    <string name="info_2_q">Yüksek tansiyon nasıl teşhis edilir?</string>
+    <string name="info_2">Yüksek tansiyonun genellikle hiçbir belirtisi yoktur. Bu nedenle bu rahatsızlığa sahip olup olmadığınızı belirlemenin tek yolu sağlık uzmanınızdan düzenli tansiyon kontrolleri yaptırmanızdır. Sağlayıcınız bir ölçüm cihazı, bir stetoskop veya elektronik sensör ve bir tansiyon manşonu kullanacaktır. Teşhis koymadan önce, ayrı randevularda iki veya daha fazla ölçüm yapacaktır..</string>
+    <string name="info_3_q">Hipertansiyon Türleri</string>
+    <string name="info_3">İki ana yüksek tansiyon türü vardır: birincil (esansiyel) hipertansiyon ve ikincil hipertansiyon.
+Birincil veya esansiyel hipertansiyon, yüksek tansiyonun en yaygın türüdür. Bu tür kan basıncına sahip çoğu insanda yaşlandıkça yavaş yavaş artar.
+İkincil hipertansiyon başka bir tıbbi durumdan veya bazı ilaçların kullanımından kaynaklanır. Genellikle altta yatan hastalığın tedavi edilmesinden veya buna neden olan ilaçların kesilmesinden sonra iyileşir.</string>
+    <string name="info_4_q">Hipertansiyon Konusunda Neden Endişelenmeliyim?</string>
+    <string name="info_4">Kan basıncınız zaman içinde sürekli olarak yüksek kaldığında, kalbiniz kan pompalamak için daha fazla çalışmaya zorlanır ve bu da kalp krizi, felç, kalp yetmezliği ve böbrek yetmezliği gibi olası ciddi sağlık sorunlarına yol açar.</string>
+    <string name="info_5_q">Hipertansiyonu Nasıl Önleyebilirim?</string>
+    <string name="info_5">Sağlıklı Beslenme: Kan basıncını kontrol etmeye yardımcı olmak için sodyum (tuz) alımınızı sınırlamalı ve diyetteki potasyum miktarını artırmalısınız. Az yağlı yiyecekler yemek ve bol miktarda meyve, sebze ve tam tahıl tüketmek de önemlidir. DASH (Hipertansiyonu Durdurmak için Diyet Yaklaşımları) yeme planı, kan basıncını düşürmeye yardımcı olabilecek bir diyet planı örneğidir.
+Düzenli Egzersiz: Fiziksel aktivite, sağlıklı kilonuzu korumanıza ve kan basıncınızı düşürmenize yardımcı olabilir. Haftada en az 2 buçuk saat orta yoğunlukta aerobik egzersizi veya 1 saat 15 dakika yüksek yoğunlukta aerobik egzersizi hedefleyin. Hızlı yürüyüş gibi aerobik egzersizler, kalp atış hızınızı artıran ve normalden daha fazla oksijen gerektiren herhangi bir aktiviteyi içerir.
+Sağlıklı Kilonuzu Koruyun: Aşırı kilolu veya obez olmak, yüksek tansiyon riskini artırır. Sağlıklı bir kiloyu korumak, hipertansiyonu kontrol etmenize ve diğer sağlık sorunları riskini azaltmanıza yardımcı olabilir.
+Alkol Alımını Sınırlayın: Aşırı alkol tüketimi kan basıncının yükselmesine neden olabilir. Ayrıca kilo alımına katkıda bulunabilecek ekstra kaloriler de ekler. Erkekler günde iki içkiyi, kadınlar ise günde bir içkiyi geçmemelidir.
+Sigara İçmeyin: Sigara içmek kan basıncını yükseltir, kalp hastalığı ve felç riskini artırır. Sigara içmiyorsanız başlamayın. Sigara içiyorsanız, bırakmanın en iyi yöntemlerini bulmak için sağlık uzmanınızdan yardım isteyin.
+Stresi Yönetin: Nasıl rahatlayacağınızı ve stresi nasıl yöneteceğinizi öğrenmek, duygusal ve fiziksel sağlığınızı iyileştirebilir ve yüksek tansiyonu düşürebilir. Stres yönetimi teknikleri arasında egzersiz yapmak, müzik dinlemek, sakinleştirici veya huzurlu aktivitelere odaklanmak ve meditasyon yer alır.</string>
+    <string name="info_6_q">Gestasyonel Hipertansiyon Nedir?</string>
+    <string name="info_6">Gebeliğin neden olduğu hipertansiyon, hamilelik sırasında ortaya çıkan yüksek kan basıncı anlamına gelir. Genellikle hamileliğin 20. haftasından sonra başlar. Genellikle başka belirtilerle karşılaşmazsınız. Çoğu durumda size veya bebeğinize zarar vermez ve doğumdan sonraki 12 hafta içinde düzelir. Ancak gelecekte hipertansiyona yakalanma riskinizi artırır. Bazen şiddetli olabilir ve düşük doğum ağırlığına veya erken doğuma yol açabilir. Gebeliğin neden olduğu hipertansiyonu olan bazı kadınlarda gerçekten de preeklampsi gelişebilir.
+Kronik hipertansiyon, hamileliğin 20. haftasından önce veya öncesinde mevcut olan yüksek tansiyonu ifade eder. Bazı kadınlar bu durumu hamilelikten çok önce yaşamış olabilir, ancak bu durum yalnızca doğum öncesi kan basıncı kontrolleri sırasında keşfedilir. Bazen kronik hipertansiyon da preeklampsiye yol açabilir.
+Preeklampsi, hamileliğin 20. haftasından sonra kan basıncında ani bir artışla karakterizedir. Genellikle hamileliğin son üç ayında ortaya çıkar. Çok nadir durumlarda, doğum sonrası preeklampsi olarak bilinen doğum sonrasına kadar semptomlar ortaya çıkmayabilir. Preeklampsi ayrıca karaciğer veya böbrek tutulumu gibi organ hasarı belirtilerini de içerir. Bu semptomlar idrarda protein varlığını ve çok yüksek tansiyonu içerebilir. Preeklampsi hem sizin hem de bebeğiniz için çok ciddi olabilir, hatta yaşamı tehdit edebilir.</string>
+    <string name="info_7_q">Kimler Preeklampsi Riski Altındadır?</string>
+    <string name="info_7">Aşağıdaki durumlarda preeklampsi gelişme riski vardır:
+
+- Hamilelikten önce mevcut kronik hipertansiyon veya kronik böbrek hastalığı
+- Önceki hamilelikte yüksek tansiyon veya preeklampsi geçirmişseniz
+- Obezite
+- 40 yaş üstü
+- Birden fazla bebek beklemek (ikiz, üçüz vb.)
+- Afro-Amerikan etnik köken
+- Ailede preeklampsi öyküsü
+- Diyabet, lupus veya kan pıhtısı oluşumuna yatkınlık (kan pıhtılaşması riskini artıran bir durum) gibi belirli sağlık sorunları
+- İn vitro fertilizasyon, yumurta bağışı veya donör tohumlaması yapılıyor</string>
+    <string name="info_8_q">Preeklampsi Hangi Sorunlara Neden Olur?</string>
+    <string name="info_8">Preeklampsi aşağıdakiler de dahil olmak üzere çeşitli komplikasyonlara yol açabilir:
+
+- Plasentanın ayrılması:Doğumdan önce plasentanın rahim duvarından ayrılması
+- Fetal büyüme kısıtlaması: Fetüse yetersiz besin ve oksijen sağlanması, bunun sonucunda zayıf büyüme meydana gelir.
+- Erken doğum: Bebeğin 37. gebelik haftasından önce doğması
+- Düşük doğum ağırlıklı bebek: Bebek, gebelik yaşına göre beklenenden daha düşük bir ağırlıkla doğar.
+- Ölü doğum: Bebeğin doğumdan önce kaybedilmesi
+- Böbrekler, karaciğer, beyin ve diğer organlar da dahil olmak üzere organlarda ve kan sistemlerinde hasar
+- Annede kalp hastalığı riskinin artması
+- Eklampsi: Preeklampsi beyni etkileyerek nöbetlere veya komaya neden olduğunda ortaya çıkabilen ciddi bir durumdur.
+- HELLP sendromu: Preeklampsi veya eklampsisi olan kadınlarda karaciğer ve kan hücrelerinin hasar görmesini içeren nadir fakat ciddi bir durum</string>
+    <string name="info_9_q">Preeklampsinin Belirtileri Nelerdir?</string>
+    <string name="info_9">Preeklampsi aşağıdaki belirtilerle ortaya çıkabilir:
+
+- Yüksek tansiyon
+- İdrarda aşırı protein (proteinüri olarak bilinir)
+- Yüz ve ellerin şişmesi. Ayaklarda şişme de meydana gelebilir, ancak bu durum birçok hamilelikte yaygındır ve mutlaka bir soruna işaret etmeyebilir.
+- Kalıcı baş ağrısı
+- Bulanık görme veya noktalar görme gibi görme bozuklukları
+- Karnın sağ üst kısmında ağrı
+- Nefes darlığı</string>
+    <string name="info_10_q">Preeklampsi Teşhisi Nasıl Konur?</string>
+    <string name="info_10">Sağlık uzmanınız her doğum öncesi ziyaretinizde kan basıncınızı ve idrarınızı kontrol edecektir. Özellikle hamileliğinizin 20. haftasından sonra kan basıncınız yüksekse (140/90 veya daha yüksek), doktorunuz daha ileri testler yapmak isteyebilir. Bu testler, idrarınızda aşırı protein olup olmadığına ve diğer semptomlara bakmak için kan testlerini ve diğer laboratuvar incelemelerini içerebilir.</string>
+    <string name="info_11_q">Preeklampsi için Tedavi Seçenekleri</string>
+    <string name="info_11">Doğum genellikle preeklampsiyi tedavi edebilir. Tedavi kararlarını verirken doktorunuz, durumun ciddiyeti, hamileliğinizin ne kadar ilerlediği ve siz ve bebeğiniz için potansiyel riskler gibi çeşitli faktörleri göz önünde bulundurur:
+
+1. Hamileliğinizde 37. haftanın üzerindeyseniz, sağlayıcınız doğumu başlatmayı veya sezaryen yapmayı düşünebilir.
+
+2. Hamileliğiniz 37 haftadan küçükse sağlık uzmanınız hem sizi hem de bebeğinizi yakından takip edecektir. Bu sizin için kan ve idrar testlerini içerebilir. Bebeğin izlenmesi genellikle ultrasonları, fetal kalp atış hızının izlenmesini ve bebeğin büyümesinin değerlendirilmesini içerir. Kan basıncınızı kontrol etmek ve nöbetleri önlemek için ilaçlara ihtiyacınız olabilir. Bazı kadınlara bebeğin akciğerlerinin daha hızlı olgunlaşmasına yardımcı olmak için steroid enjeksiyonu yapılabilir. Preeklampsi şiddetliyse doktorunuz bebeği daha erken doğurtmayı önerebilir.
+
+Çoğu durumda, bu belirtiler genellikle doğumdan sonraki altı hafta içinde düzelir. Nadir durumlarda semptomlar düzelmeyebilir veya doğumdan sonra ortaya çıkabilir (doğum sonrası preeklampsi). Bu çok ciddi olabilir ve acil tedavi gerektirir.</string>
+    <string name="info_12_q">DASH Diyet Planı</string>
+    <string name="info_12">DASH, Hipertansiyonu Durdurmak İçin Diyet Yaklaşımları anlamına gelir. Ulusal Kalp, Akciğer ve Kan Enstitüsü (NHLBI) tarafından desteklenen araştırmaya dayanan bir diyet planıdır. Araştırmalar DASH\'in yüksek tansiyonu düşürebildiğini ve kolesterol seviyelerini iyileştirebildiğini, dolayısıyla kalp hastalığı riskini azaltabildiğini gösteriyor.
+
+DASH diyet planı aşağıdaki ilkeleri içerir:
+
+1. Sebzeleri, meyveleri ve tam tahılları vurgulayın.
+2. Az yağlı veya yağsız süt ürünleri, balık, kümes hayvanları, baklagiller, kuruyemişler ve bitkisel yağları dahil edin.
+3. Doymuş yağ oranı yüksek gıdaları sınırlayın. Bu yiyecekler arasında yağlı etler, tam yağlı süt ürünleri ve hindistancevizi yağı, hurma çekirdeği yağı ve hurma yağı gibi tropikal yağlar bulunur.
+4. Şekerli içecekleri ve tatlıları kısıtlayın.
+
+DASH diyetini takip etmenin yanı sıra diğer yaşam tarzı değişiklikleri de kan basıncını düşürmeye yardımcı olabilir. Bunlar arasında sağlıklı bir kiloyu korumak, düzenli egzersiz yapmak ve sigaradan kaçınmak yer alır.</string>
+    <string name="source">kaynak</string>
+    <string name="choose_your_language">Dilinizi seçin</string>
+    <string name="guide_tips">Tansiyonunuzu kaydetmek için burayı tıklayın</string>
+    <string name="rate_us_5_star">Bize 5 yıldız verin</string>
+    <string name="rate_desc">5 yıldız vererek ve yorumunuzu yazarak bize destek olun</string>
+    <string name="rate_now">Şimdi puan verin</string>
+    <string name="set_alarm">Alarmı ayarla</string>
+    <string name="plz_set_alarm">Lütfen alarmı ayarlayın</string>
+    <string name="sure_to_del">Silmek istediğinizden emin misiniz?</string>
+    <string name="change_alarm">Alarmı değiştir</string>
+    <string name="language">Dil</string>
+    <string name="no">Hayır</string>
+    <string name="read_article">Makaleyi Oku</string>
+    <string name="record_now">Şimdi Kaydet</string>
+    <string name="record_1">Kendinize iyi bakın: Tansiyonunuzu ölçmeyi unutmayın.</string>
+    <string name="record_2">Sağlık ipucu:Kardiyovasküler hastalıkları önlemek için kan basıncınızı düzenli olarak kaydedin.</string>
+    <string name="record_3">Kan basıncının izlenmesi çok önemlidir; bunu gözden kaçırmayın.</string>
+    <string name="record_4">Daha sağlıklı bir yaşam için kan basıncınızı her gün kaydedin.</string>
+    <string name="record_5">Tansiyonun ölçülmesi kalp sağlığını korur.</string>
+    <string name="record_6">Tansiyonu kaydetmek kendinize bakmanın bir yoludur; ölçmeyi unutmayın.</string>
+    <string name="record_7">Kardiyovasküler hastalıkları önlemek için kan basıncınızı düzenli olarak kaydedin.</string>
+    <string name="article_1">Önerilen okumalar: Kan basıncı yönetimi ipuçları, göz atın.</string>
+    <string name="article_2">Bugünün önerisi: Hipertansif hastalar için diyet tavsiyesi, kaçırmayın.</string>
+    <string name="article_3">Kan basıncını kaydetmenin genel sağlığı nasıl iyileştirebileceğini öğrenin.</string>
+    <string name="article_4">Bugünün makalesi: Hipertansif hastalar için diyet tavsiyeleri.</string>
+    <string name="article_5">Daha uzun pil ömrü sağlayın, pili optimize etmek için tıklayın.</string>
+    <string name="article_6">Tansiyon yönetimi hakkında daha fazla bilgi edinin, görüntülemek için tıklayın.</string>
+</resources>
