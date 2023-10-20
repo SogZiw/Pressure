@@ -1,0 +1,167 @@
+<resources>
+    <string name="mmhg" translatable="false">/mmHg</string>
+    <string name="_mmhg" translatable="false">mmHg</string>
+    <string name="record">Registro</string>
+    <string name="info">Información</string>
+    <string name="set">Configuración</string>
+    <string name="set_datetime">Establecer fecha y hora</string>
+    <string name="sure">Claro</string>
+    <string name="add">Agregar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="new_record">Nuevo registro</string>
+    <string name="edit_record">Editar registro</string>
+    <string name="sys">Sistólica</string>
+    <string name="dia">Diastólica</string>
+    <string name="text_hypotension">Hipotensión</string>
+    <string name="text_hypotension_content">SYS &lt; 90 o DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Manténgase hidratado, haga ejercicio con regularidad</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 y DIA 60–79</string>
+    <string name="text_normal_extra">Mantener un estilo de vida saludable</string>
+    <string name="text_elevated">Elevado</string>
+    <string name="text_elevated_content">SYS 120–129 y DIA 60–79</string>
+    <string name="text_elevated_extra">Cuida tu dieta, reduce el consumo de sal</string>
+    <string name="text_hypertension_stage_1">Hipertensión-etapa 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 o DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Mejorar el estilo de vida, hacer ejercicio regularmente, controlar la dieta</string>
+    <string name="text_hypertension_stage_2">Hipertensión-etapa 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 o DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Consulte al médico, es posible que necesite medicamentos</string>
+    <string name="text_hypertensive">Crisis hipertensiva</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 o DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Buscar consejo médico lo antes posible, desarrollar un plan de tratamiento adecuado</string>
+    <string name="error_tips">La sistólica debe ser mayor que la diastólica</string>
+    <string name="error_tips_extra">Los datos ingresados pueden ser incorrectos, verifique y vuelva a ingresar el valor correcto</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="range1">Dentro de 24 horas</string>
+    <string name="range2">Esta semana</string>
+    <string name="range3">Últimos 7 días</string>
+    <string name="range4">Este mes</string>
+    <string name="range5">Último mes</string>
+    <string name="time_range">Rango de tiempo</string>
+    <string name="add_new_record">+ Nuevo registro</string>
+    <string name="more_history">Más historial</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="user_agreement">Acuerdo de usuario</string>
+    <string name="start">inicio</string>
+    <string name="next">siguiente</string>
+    <string name="start_record">iniciar registro</string>
+    <string name="first_main_desc">Guardián del corazón</string>
+    <string name="first_sec_desc">Comience su viaje hacia la salud cardíaca registrando y salvaguardando sin esfuerzo su bienestar cardíaco.</string>
+    <string name="second_main_desc">Predicción de salud</string>
+    <string name="second_sec_desc">Anticipe el futuro de su salud dominando las tendencias de la presión arterial a través de un seguimiento detallado.</string>
+    <string name="third_main_desc">Registro de presión arterial</string>
+    <string name="third_sec_desc">Capture datos de presión arterial de manera sucinta, obteniendo una comprensión integral de su pulso de salud.</string>
+    <string name="skip">saltar</string>
+    <string name="home">Casa</string>
+    <string name="record_blood_pressure">Registrar la presión arterial</string>
+    <string name="monitor_health">Controle su salud con facilidad</string>
+
+    <string name="info_1_q">¿Qué es la presión arterial?</string>
+    <string name="info_1">La presión arterial es la fuerza de la sangre que empuja contra las paredes de las arterias. Con cada latido del corazón, se bombea sangre hacia las arterias. La presión arterial es más alta cuando el corazón late y bombea sangre, lo que se conoce como presión sistólica. Cuando su corazón está en reposo entre latidos, su presión arterial disminuye. Esto se llama presión diastólica.
+La lectura de su presión arterial está representada por estos dos números. Normalmente, el valor sistólico es superior o anterior al valor diastólico. Por ejemplo, 120/80 significa una presión sistólica de 120 y una presión diastólica de 80.</string>
+    <string name="info_2_q">¿Cómo se diagnostica la presión arterial alta?</string>
+    <string name="info_2">La presión arterial alta generalmente no presenta síntomas. Por lo tanto, la única forma de determinar si tiene esta afección es mediante controles periódicos de la presión arterial por parte de su proveedor de atención médica. Su proveedor utilizará un manómetro, un estetoscopio o sensor electrónico y un manguito de presión arterial. Antes de hacer un diagnóstico, tomará dos o más lecturas en citas separadas..</string>
+    <string name="info_3_q">Tipos de hipertensión</string>
+    <string name="info_3">Hay dos tipos principales de presión arterial alta: hipertensión primaria (esencial) e hipertensión secundaria.
+La hipertensión primaria o esencial es el tipo más común de presión arterial alta. Para la mayoría de las personas con este tipo de presión arterial, aumenta gradualmente a medida que envejecen.
+La hipertensión secundaria es causada por otra afección médica o por el uso de ciertos medicamentos. Por lo general, mejora después de tratar la afección subyacente o suspender los medicamentos que la causan.</string>
+    <string name="info_4_q">¿Por qué debería preocuparme por la hipertensión?</string>
+    <string name="info_4">Cuando su presión arterial se mantiene constantemente alta a lo largo del tiempo, obliga a su corazón a trabajar más para
+    bombear sangre, lo que genera posibles problemas de salud graves, como ataques cardíacos, accidentes cerebrovasculares, insuficiencia cardíaca e
+    insuficiencia renal.</string>
+    <string name="info_5_q">¿Cómo puedo prevenir la hipertensión?</string>
+    <string name="info_5">Dieta saludable: para ayudar a controlar la presión arterial, debe limitar su consumo de sodio (sal) y aumentar el potasio en su dieta. También es importante comer alimentos bajos en grasas e incluir muchas frutas, verduras y cereales integrales. El plan de alimentación DASH (Dietary Approaches to Stop Hypertension) es un ejemplo de un plan de dieta que puede ayudar a reducir la presión arterial.
+Ejercicio regular: la actividad física puede ayudarle a mantener un peso saludable y reducir la presión arterial. Trate de realizar al menos 2 horas y media de ejercicio aeróbico de intensidad moderada por semana, o 1 hora y 15 minutos de ejercicio aeróbico de alta intensidad. Los ejercicios aeróbicos, como caminar a paso ligero, implican cualquier actividad que aumente el ritmo cardíaco y requiera más oxígeno de lo habitual.
+Mantenga un peso saludable: el sobrepeso o la obesidad aumentan el riesgo de hipertensión arterial. Mantener un peso saludable puede ayudarle a controlar la hipertensión y reducir el riesgo de otros problemas de salud.
+Limite el consumo de alcohol: el consumo excesivo de alcohol puede provocar una presión arterial elevada. También agrega calorías adicionales, lo que puede contribuir al aumento de peso. Los hombres no deben exceder de dos bebidas por día y las mujeres no deben exceder una bebida por día.
+No fume: Fumar eleva la presión arterial y aumenta el riesgo de enfermedades cardíacas y accidentes cerebrovasculares. Si no fumas, no empieces. Si fuma, busque ayuda de su proveedor de atención médica para encontrar los mejores métodos para dejar de fumar.
+Controle el estrés: aprender a relajarse y controlar el estrés puede mejorar su bienestar físico y emocional y reducir la presión arterial alta. Las técnicas de manejo del estrés incluyen ejercicio, escuchar música, concentrarse en actividades relajantes o pacíficas y meditación.</string>
+    <string name="info_6_q">¿Qué es la hipertensión gestacional?</string>
+    <string name="info_6">La hipertensión inducida por el embarazo se refiere a la presión arterial elevada que ocurre durante el embarazo. Por lo general comienza después de las 20 semanas de embarazo. Por lo general, no experimenta ningún otro síntoma. En muchos casos, no le hará daño a usted ni a su bebé y se resolverá dentro de las 12 semanas posteriores al parto. Sin embargo, aumenta el riesgo de hipertensión en el futuro. A veces, puede ser grave y provocar bajo peso al nacer o parto prematuro. Algunas mujeres con hipertensión inducida por el embarazo pueden desarrollar preeclampsia.
+La hipertensión crónica se refiere a la presión arterial alta que está presente antes o antes de la semana 20 de embarazo. Es posible que algunas mujeres hayan tenido esta afección mucho antes del embarazo, pero solo se descubre durante los controles prenatales de la presión arterial. A veces, la hipertensión crónica también puede provocar preeclampsia.
+La preeclampsia se caracteriza por un aumento repentino de la presión arterial después de las 20 semanas de embarazo. Suele ocurrir en los últimos tres meses del embarazo. En casos muy raros, es posible que los síntomas no aparezcan hasta después del parto, lo que se conoce como preeclampsia posparto. La preeclampsia también incluye signos de daño a órganos, como afectación del hígado o los riñones. Estos síntomas pueden incluir la presencia de proteínas en la orina y presión arterial muy alta. La preeclampsia puede ser muy grave tanto para usted como para su bebé, e incluso poner en peligro su vida.</string>
+    <string name="info_7_q">¿Quién está en riesgo de padecer preeclampsia?</string>
+    <string name="info_7">Estás en riesgo de desarrollar preeclampsia si tienes:
+
+- Hipertensión crónica preexistente o enfermedad renal crónica antes del embarazo.
+- Tuvo presión arterial alta o preeclampsia en un embarazo anterior.
+- Obesidad
+- Mayores de 40 años
+- Esperar varios bebés (gemelos, trillizos, etc.)
+- Etnia afroamericana
+- Antecedentes familiares de preeclampsia.
+- Ciertas condiciones de salud, como diabetes, lupus o tendencia a la formación de coágulos sanguíneos (una condición que aumenta el riesgo de coágulos sanguíneos)
+- Someterse a fertilización in vitro, donación de óvulos o inseminación con donante</string>
+    <string name="info_8_q">¿Qué problemas causa la preeclampsia?</string>
+    <string name="info_8">La preeclampsia puede provocar diversas complicaciones, entre ellas:
+
+- Desprendimiento de la placenta:Separación de la placenta de la pared uterina antes del parto.
+- Restricción del crecimiento fetal: suministro inadecuado de nutrientes y oxígeno al feto, lo que resulta en un crecimiento deficiente
+- Parto prematuro: Dar a luz al bebé antes de las 37 semanas de embarazo.
+- Bebé con bajo peso al nacer: El bebé nace con un peso inferior al esperado para su edad gestacional
+- Mortinato: La pérdida del bebé antes del nacimiento.
+- Daños a órganos y sistemas sanguíneos, incluidos los riñones, el hígado, el cerebro y otros órganos.
+- Mayor riesgo de enfermedad cardíaca para la madre.
+- Eclampsia: una afección grave que puede ocurrir cuando la preeclampsia afecta el cerebro y provoca convulsiones o coma.
+- Síndrome HELLP: una afección rara pero grave que implica daño al hígado y a las células sanguíneas en mujeres con preeclampsia o eclampsia</string>
+    <string name="info_9_q">¿Cuáles son los síntomas de la preeclampsia?</string>
+    <string name="info_9">La preeclampsia puede manifestarse con los siguientes síntomas:
+
+- Hipertensión
+- Exceso de proteínas en la orina (conocido como proteinuria)
+- Hinchazón de la cara y las manos. También puede ocurrir hinchazón en los pies, pero es común en muchos embarazos y no necesariamente indica un problema.
+- Dolor de cabeza persistente
+- Alteraciones de la visión, como visión borrosa o ver manchas
+- Dolor en la parte superior derecha del abdomen.
+- Dificultad para respirar</string>
+    <string name="info_10_q">¿Cómo se diagnostica la preeclampsia?</string>
+    <string name="info_10">Su proveedor de atención médica controlará su presión arterial y orina durante cada visita prenatal. Si la lectura de su presión arterial es alta (140/90 o más), especialmente después de la semana 20 de embarazo, es posible que su proveedor quiera realizar más pruebas. Estas pruebas pueden incluir análisis de sangre y otros exámenes de laboratorio para detectar un exceso de proteínas en la orina y otros síntomas.</string>
+    <string name="info_11_q">Opciones de tratamiento para la preeclampsia</string>
+    <string name="info_11">El parto normalmente puede curar la preeclampsia. Al tomar decisiones de tratamiento, su proveedor considera varios factores, incluida la gravedad de la afección, el avance del embarazo y los riesgos potenciales para usted y su bebé:
+
+1. Si tiene más de 37 semanas de embarazo, su proveedor puede considerar inducir el parto o realizar una cesárea.
+
+2. Si tiene menos de 37 semanas de embarazo, su proveedor de atención médica los controlará de cerca tanto a usted como a su bebé. Esto puede implicar que le realicen análisis de sangre y orina. El seguimiento del bebé a menudo incluye ecografías, monitorización de la frecuencia cardíaca fetal y evaluación del crecimiento del bebé. Es posible que necesite medicamentos para controlar su presión arterial y prevenir convulsiones. Algunas mujeres pueden recibir inyecciones de esteroides para ayudar a que los pulmones del bebé maduren más rápidamente. Si la preeclampsia es grave, su proveedor podría recomendarle que dé a luz antes.
+
+En la mayoría de los casos, estos síntomas suelen desaparecer dentro de las seis semanas posteriores al parto. En casos raros, es posible que los síntomas no se resuelvan o aparezcan después del parto (preeclampsia posparto). Esto puede ser muy grave y requiere tratamiento inmediato.</string>
+    <string name="info_12_q">Plan de dieta DASH</string>
+    <string name="info_12">DASH significa Enfoques dietéticos para detener la hipertensión. Es un plan de dieta basado en una investigación patrocinada por el Instituto Nacional del Corazón, los Pulmones y la Sangre (NHLBI). Los estudios indican que DASH puede reducir la presión arterial alta y mejorar los niveles de colesterol, reduciendo así el riesgo de enfermedad cardíaca.
+
+El plan de dieta DASH incluye los siguientes principios:
+
+1. Haga hincapié en las verduras, las frutas y los cereales integrales.
+2. Incluya productos lácteos bajos en grasa o sin grasa, pescado, aves, legumbres, nueces y aceites vegetales.
+3. Limite los alimentos con alto contenido de grasas saturadas. Estos alimentos incluyen carnes grasas, productos lácteos enteros y aceites tropicales como aceite de coco, aceite de palmiste y aceite de palma.
+4. Restrinja las bebidas azucaradas y los dulces.
+
+Además de seguir la dieta DASH, otros cambios en el estilo de vida también pueden ayudar a reducir la presión arterial. Estos incluyen mantener un peso saludable, hacer ejercicio regularmente y evitar fumar.</string>
+    <string name="source">fuente</string>
+    <string name="choose_your_language">Elige tu idioma</string>
+    <string name="guide_tips">Haga clic aquí para registrar su presión arterial</string>
+    <string name="rate_us_5_star">Califícanos con 5 estrellas</string>
+    <string name="rate_desc">Apóyanos dando 5 estrellas y escribe tu reseña</string>
+    <string name="rate_now">Califica ahora</string>
+    <string name="set_alarm">Establecer alarma</string>
+    <string name="plz_set_alarm">Por favor configure la alarma</string>
+    <string name="sure_to_del">¿Estás seguro de que deseas eliminar?</string>
+    <string name="change_alarm">Cambiar alarma</string>
+    <string name="language">Idioma</string>
+    <string name="no">No</string>
+    <string name="read_article">Leer artículo</string>
+    <string name="record_now">Grabar ahora</string>
+    <string name="record_1">Cuidarse: recuerde medir su presión arterial.</string>
+    <string name="record_2">Consejo de salud:Registre periódicamente su presión arterial para prevenir enfermedades cardiovasculares.</string>
+    <string name="record_3">El control de la presión arterial es crucial; no lo pases por alto.</string>
+    <string name="record_4">Registra tu presión arterial todos los días para tener una vida más saludable.</string>
+    <string name="record_5">Medir la presión arterial protege la salud del corazón.</string>
+    <string name="record_6">Registrar la presión arterial es una forma de cuidarse; no olvides medir.</string>
+    <string name="record_7">Registre periódicamente su presión arterial para prevenir enfermedades cardiovasculares.</string>
+    <string name="article_1">Lectura recomendada: Consejos para el control de la presión arterial, compruébalo.</string>
+    <string name="article_2">Recomendación de hoy: Consejos dietéticos para pacientes hipertensos, no te los pierdas.</string>
+    <string name="article_3">Aprenda cómo registrar la presión arterial puede mejorar la salud general.</string>
+    <string name="article_4">Artículo de hoy: Consejos dietéticos para pacientes hipertensos.</string>
+    <string name="article_5">Proporciona una mayor duración de la batería, haz clic para optimizar la batería.</string>
+    <string name="article_6">Obtenga más información sobre el control de la presión arterial, haga clic para ver.</string>
+</resources>
