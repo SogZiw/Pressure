@@ -1,87 +1,86 @@
 <resources>
-     <string name="app_name">血圧</string>
-     <string name="mmhg" translatable="false">/mmHg</string>
-     <string name="_mmhg" translatable="false">mmHg</string>
-     <string name="record">レコード</string>
-     <string name="info">情報</string>
-     <string name="set">設定</string>
-     <string name="set_datetime">日時を設定する</string>
-     <string name="sure">確かに</string>
-     <string name="add">追加</string>
-     <string name="cancel">キャンセル</string>
-     <string name="new_record">新しいレコード</string>
-     <string name="edit_record">レコードを編集</string>
-     <string name="sys">収縮期</string>
-     <string name="dia">拡張期</string>
-     <string name="text_hypotension">低血圧</string>
-     <string name="text_hypotension_extra">水分を補給し、定期的に運動する</string>
-     <string name="text_normal">通常</string>
-     <string name="text_normal_content">SYS 90 ～ 119 および DIA 60 ～ 79</string>
-     <string name="text_normal_extra">健康的なライフスタイルを維持する</string>
-     <string name="text_elevated">昇格</string>
-     <string name="text_elevated_content">SYS 120 ～ 129 および DIA 60 ～ 79</string>
-     <string name="text_elevated_extra">食事に気を付け、塩分の摂取量を減らしてください</string>
-     <string name="text_hypertension_stage_1">高血圧ステージ 1</string>
-     <string name="text_hypertension_stage_1_content">SYS 130–139 または DIA 80–89</string>
-     <string name="text_hypertension_stage_1_extra">ライフスタイルを改善し、定期的に運動し、食事をコントロールする</string>
-     <string name="text_hypertension_stage_2">高血圧ステージ 2</string>
-     <string name="text_hypertension_stage_2_content">SYS 140 ～ 180 または DIA 90 ～ 120</string>
-     <string name="text_hypertension_stage_2_extra">医師に相談してください。薬が必要な場合があります</string>
-     <string name="text_hypertensive">高血圧危機</string>
-     <string name="text_hypertensive_content">SYS &gt; 180 または DIA > 120</string>
-     <string name="text_hypertensive_extra">速やかに医師のアドバイスを受け、適切な治療計画を立ててください</string>
-     <string name="error_tips">収縮期は拡張期より大きくなければなりません</string>
-     <string name="error_tips_extra">入力されたデータが間違っている可能性があります。確認して正しい値を再入力してください。</string>
-     <string name="save">保存</string>
-     <string name="delete">削除</string>
-     <string name="range1">24 時間以内</string>
-     <string name="range2">今週</string>
-     <string name="range3">過去 7 日間</string>
-     <string name="range4">今月</string>
-     <string name="range5">先月</string>
-     <string name="time_range">時間範囲</string>
-     <string name="add_new_record">+ 新しいレコード</string>
-     <string name="more_history">その他の履歴</string>
-     <string name="privacy_policy">プライバシー ポリシー</string>
-     <string name="user_agreement">ユーザー同意</string>
-     <string name="start">開始</string>
-     <string name="next">次</string>
-     <string name="start_record">レコードの開始</string>
-     <string name="first_main_desc">ハートガーディアン</string>
-     <string name="first_sec_desc">心臓の健康状態を簡単に記録して保護することで、心臓の健康への旅を始めましょう。</string>
-     <string name="second_main_desc">健康状態の予測</string>
-     <string name="second_sec_desc">洞察力に富んだ追跡を通じて血圧の傾向を把握し、健康の将来を予測します。</string>
-     <string name="third_main_desc">血圧記録</string>
-     <string name="third_sec_desc">血圧データを簡潔に取得し、健康状態の脈拍を包括的に理解します。</string>
-     <string name="skip">スキップ</string>
-     <string name="home">ホーム</string>
-     <string name="record_blood_pressure">血圧を記録する</string>
-     <string name="monitor_health">健康状態を簡単に監視</string>
+    <string name="mmhg" translatable="false">/mmHg</string>
+    <string name="_mmhg" translatable="false">mmHg</string>
+    <string name="record">レコード</string>
+    <string name="info">情報</string>
+    <string name="set">設定</string>
+    <string name="set_datetime">日時を設定する</string>
+    <string name="sure">確かに</string>
+    <string name="add">追加</string>
+    <string name="cancel">キャンセル</string>
+    <string name="new_record">新しいレコード</string>
+    <string name="edit_record">レコードを編集</string>
+    <string name="sys">収縮期</string>
+    <string name="dia">拡張期</string>
+    <string name="text_hypotension">低血圧</string>
+    <string name="text_hypotension_extra">水分を補給し、定期的に運動する</string>
+    <string name="text_normal">通常</string>
+    <string name="text_normal_content">SYS 90 ～ 119 および DIA 60 ～ 79</string>
+    <string name="text_normal_extra">健康的なライフスタイルを維持する</string>
+    <string name="text_elevated">昇格</string>
+    <string name="text_elevated_content">SYS 120 ～ 129 および DIA 60 ～ 79</string>
+    <string name="text_elevated_extra">食事に気を付け、塩分の摂取量を減らしてください</string>
+    <string name="text_hypertension_stage_1">高血圧ステージ 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 または DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">ライフスタイルを改善し、定期的に運動し、食事をコントロールする</string>
+    <string name="text_hypertension_stage_2">高血圧ステージ 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140 ～ 180 または DIA 90 ～ 120</string>
+    <string name="text_hypertension_stage_2_extra">医師に相談してください。薬が必要な場合があります</string>
+    <string name="text_hypertensive">高血圧危機</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 または DIA > 120</string>
+    <string name="text_hypertensive_extra">速やかに医師のアドバイスを受け、適切な治療計画を立ててください</string>
+    <string name="error_tips">収縮期は拡張期より大きくなければなりません</string>
+    <string name="error_tips_extra">入力されたデータが間違っている可能性があります。確認して正しい値を再入力してください。</string>
+    <string name="save">保存</string>
+    <string name="delete">削除</string>
+    <string name="range1">24 時間以内</string>
+    <string name="range2">今週</string>
+    <string name="range3">過去 7 日間</string>
+    <string name="range4">今月</string>
+    <string name="range5">先月</string>
+    <string name="time_range">時間範囲</string>
+    <string name="add_new_record">+ 新しいレコード</string>
+    <string name="more_history">その他の履歴</string>
+    <string name="privacy_policy">プライバシー ポリシー</string>
+    <string name="user_agreement">ユーザー同意</string>
+    <string name="start">開始</string>
+    <string name="next">次</string>
+    <string name="start_record">レコードの開始</string>
+    <string name="first_main_desc">ハートガーディアン</string>
+    <string name="first_sec_desc">心臓の健康状態を簡単に記録して保護することで、心臓の健康への旅を始めましょう。</string>
+    <string name="second_main_desc">健康状態の予測</string>
+    <string name="second_sec_desc">洞察力に富んだ追跡を通じて血圧の傾向を把握し、健康の将来を予測します。</string>
+    <string name="third_main_desc">血圧記録</string>
+    <string name="third_sec_desc">血圧データを簡潔に取得し、健康状態の脈拍を包括的に理解します。</string>
+    <string name="skip">スキップ</string>
+    <string name="home">ホーム</string>
+    <string name="record_blood_pressure">血圧を記録する</string>
+    <string name="monitor_health">健康状態を簡単に監視</string>
 
-     <string name="info_1_q">血圧とは何ですか?</string>
-     <string name="info_1">血圧は、動脈壁を押す血液の力です。 心拍ごとに、血液が動脈に送り出されます。 血圧は、心臓が鼓動して血液を送り出すときに最高となり、収縮期血圧として知られます。 心臓が拍動の間に休んでいると、血圧は低下します。 これを拡張期血圧といいます。
+    <string name="info_1_q">血圧とは何ですか?</string>
+    <string name="info_1">血圧は、動脈壁を押す血液の力です。 心拍ごとに、血液が動脈に送り出されます。 血圧は、心臓が鼓動して血液を送り出すときに最高となり、収縮期血圧として知られます。 心臓が拍動の間に休んでいると、血圧は低下します。 これを拡張期血圧といいます。
 血圧の測定値は、これら 2 つの数値で表されます。 通常、収縮期値は拡張期値よりも高いか、拡張期値よりも前になります。 たとえば、120/80 は、最高血圧 120 と最低血圧 80 を意味します。</string>
-     <string name="info_2_q">高血圧はどのように診断されますか?</string>
-     <string name="info_2">高血圧は通常、症状がありません。 したがって、自分がこの状態にあるかどうかを判断する唯一の方法は、医療提供者から定期的に血圧検査を受けることです。 医療提供者は、ゲージ、聴診器または電子センサー、および血圧測定用カフを使用します。 診断を下す前に、医師は別々の予約で 2 回以上の測定を行います。.</string>
-     <string name="info_3_q">高血圧の種類</string>
-     <string name="info_3">高血圧には、一次性 (本態性) 高血圧と二次性高血圧の 2 つの主なタイプがあります。
+    <string name="info_2_q">高血圧はどのように診断されますか?</string>
+    <string name="info_2">高血圧は通常、症状がありません。 したがって、自分がこの状態にあるかどうかを判断する唯一の方法は、医療提供者から定期的に血圧検査を受けることです。 医療提供者は、ゲージ、聴診器または電子センサー、および血圧測定用カフを使用します。 診断を下す前に、医師は別々の予約で 2 回以上の測定を行います。.</string>
+    <string name="info_3_q">高血圧の種類</string>
+    <string name="info_3">高血圧には、一次性 (本態性) 高血圧と二次性高血圧の 2 つの主なタイプがあります。
 原発性または本態性高血圧は、最も一般的なタイプの高血圧です。 このタイプの血圧を持つほとんどの人は、加齢とともに血圧が徐々に上昇します。
 二次性高血圧は、別の病状または特定の薬剤の使用によって引き起こされます。 通常、基礎疾患を治療するか、原因となっている薬剤を中止すると改善します。</string>
-     <string name="info_4_q">高血圧を心配する必要があるのはなぜですか?</string>
-     <string name="info_4">血圧が長期間にわたって一貫して高い状態が続くと、血液を送り出すために心臓がより激しく働くことになり、心臓発作、脳卒中、心不全、腎不全などの深刻な健康上の問題を引き起こす可能性があります。</string>
-     <string name="info_5_q">高血圧を予防するにはどうすればよいですか?</string>
-     <string name="info_5">健康的な食事: 血圧をコントロールするには、ナトリウム (塩分) の摂取を制限し、食事からのカリウムを増やす必要があります。 低脂肪食品を食べ、果物、野菜、全粒穀物を豊富に摂取することも重要です。 DASH (高血圧を阻止するための食事療法) 食事計画は、血圧を下げるのに役立つ食事計画の一例です。
+    <string name="info_4_q">高血圧を心配する必要があるのはなぜですか?</string>
+    <string name="info_4">血圧が長期間にわたって一貫して高い状態が続くと、血液を送り出すために心臓がより激しく働くことになり、心臓発作、脳卒中、心不全、腎不全などの深刻な健康上の問題を引き起こす可能性があります。</string>
+    <string name="info_5_q">高血圧を予防するにはどうすればよいですか?</string>
+    <string name="info_5">健康的な食事: 血圧をコントロールするには、ナトリウム (塩分) の摂取を制限し、食事からのカリウムを増やす必要があります。 低脂肪食品を食べ、果物、野菜、全粒穀物を豊富に摂取することも重要です。 DASH (高血圧を阻止するための食事療法) 食事計画は、血圧を下げるのに役立つ食事計画の一例です。
 定期的な運動: 身体活動は、健康的な体重を維持し、血圧を下げるのに役立ちます。 中強度の有酸素運動を週に少なくとも 2 時間半、または高強度の有酸素運動を 1 時間 15 分行うことを目指してください。 早歩きなどの有酸素運動には、心拍数が上昇し、通常よりも多くの酸素が必要な活動が含まれます。
 健康的な体重を維持する: 過体重または肥満は高血圧のリスクを高めます。 健康的な体重を維持することは、高血圧を制御し、他の健康上の問題のリスクを軽減するのに役立ちます。
 アルコール摂取量を制限する: 過度のアルコール摂取は血圧上昇を引き起こす可能性があります。 また、余分なカロリーが追加されるため、体重増加につながる可能性があります。 男性は1日あたり2ドリンクを超えてはならず、女性は1日あたり1ドリンクを超えてはいけません。
 喫煙しないでください: 喫煙は血圧を上昇させ、心臓病や脳卒中のリスクを高めます。 喫煙しない場合は、始めないでください。 喫煙している場合は、禁煙に最適な方法を見つけるために医療提供者の助けを求めてください。
 ストレスを管理する: リラックスしてストレスを管理する方法を学ぶと、感情的および肉体的な健康が改善され、高血圧が低下します。 ストレス管理手法には、運動、音楽を聴く、心を落ち着かせる活動や平和的な活動に集中する、瞑想などがあります。</string>
-     <string name="info_6_q">妊娠高血圧症とは何ですか?</string>
-     <string name="info_6">妊娠誘発性高血圧とは、妊娠中に発生する血圧の上昇を指します。 通常、妊娠 20 週以降に始まります。 通常、他の症状は発生しません。 多くの場合、お母さんや赤ちゃんに害はなく、出産後 12 週間以内に解決します。 ただし、将来の高血圧のリスクは高まります。 場合によっては重度の場合があり、低出生体重児や早産につながる可能性があります。 妊娠高血圧症候群の女性の中には、実際に子癇前症を発症する人もいます。
+    <string name="info_6_q">妊娠高血圧症とは何ですか?</string>
+    <string name="info_6">妊娠誘発性高血圧とは、妊娠中に発生する血圧の上昇を指します。 通常、妊娠 20 週以降に始まります。 通常、他の症状は発生しません。 多くの場合、お母さんや赤ちゃんに害はなく、出産後 12 週間以内に解決します。 ただし、将来の高血圧のリスクは高まります。 場合によっては重度の場合があり、低出生体重児や早産につながる可能性があります。 妊娠高血圧症候群の女性の中には、実際に子癇前症を発症する人もいます。
 慢性高血圧とは、妊娠 20 週目以前に存在する高血圧を指します。 一部の女性は妊娠のかなり前からこの症状を患っていた可能性がありますが、出生前の血圧検査でのみ発見されます。 場合によっては、慢性高血圧が子癇前症を引き起こすこともあります。
 子癇前症は、妊娠 20 週以降に急激に血圧が上昇するのが特徴です。 通常、妊娠の最後の 3 か月に発生します。 非常にまれに、出産後まで症状が現れない場合があり、これは産後子癇として知られています。 子癇前症には、肝臓や腎臓の関与などの臓器障害の兆候も含まれます。 これらの症状には、尿中のタンパク質の存在や非常に高い血圧が含まれる場合があります。 子癇前症は、お母さんと赤ちゃんの両方にとって非常に深刻な場合があり、命を脅かす場合もあります。</string>
-     <string name="info_7_q">子癇前症のリスクがあるのは誰ですか?</string>
-     <string name="info_7">次の症状がある場合は、子癇前症を発症するリスクがあります。
+    <string name="info_7_q">子癇前症のリスクがあるのは誰ですか?</string>
+    <string name="info_7">次の症状がある場合は、子癇前症を発症するリスクがあります。
 
 - 妊娠前から慢性高血圧症または慢性腎臓病を患っている
 - 以前の妊娠中に高血圧または子癇前症を患っていた
@@ -92,8 +91,8 @@
 - 子癇前症の家族歴がある
 - 糖尿病、狼瘡、血栓形成傾向（血栓のリスクを高める症状）などの特定の健康状態
 - 体外受精、卵子提供、またはドナー授精を受けている</string>
-     <string name="info_8_q">子癇前症はどのような問題を引き起こしますか?</string>
-     <string name="info_8">子癇前症は、次のようなさまざまな合併症を引き起こす可能性があります。
+    <string name="info_8_q">子癇前症はどのような問題を引き起こしますか?</string>
+    <string name="info_8">子癇前症は、次のようなさまざまな合併症を引き起こす可能性があります。
 
 - 胎盤早期剥離:出産前に胎盤が子宮壁から分離されること
 - 胎児の発育制限：胎児への栄養や酸素の供給が不十分となり、発育が低下する。
@@ -104,8 +103,8 @@
 - 母親の心臓病のリスク増加
 - 子癇: 子癇前症が脳に影響を及ぼし、発作や昏睡に至る場合に発生する可能性のある重篤な状態です。
 - HELLP 症候群: 子癇前症または子癇の女性における肝臓と血球の損傷を伴う、まれではあるが重篤な状態</string>
-     <string name="info_9_q">子癇前症の症状は何ですか?</string>
-     <string name="info_9">子癇前症は次の症状として現れることがあります。
+    <string name="info_9_q">子癇前症の症状は何ですか?</string>
+    <string name="info_9">子癇前症は次の症状として現れることがあります。
 
 - 高血圧
 - 尿中の過剰なタンパク質（タンパク尿として知られる）
@@ -114,18 +113,18 @@
 - かすみ目や斑点が見えるなどの視覚障害
 - 右上腹部の痛み
 - 息切れ</string>
-     <string name="info_10_q">子癇前症はどのように診断されますか?</string>
-     <string name="info_10">医療従事者は、出生前診察のたびに血圧と尿を検査します。 血圧の測定値が高い（140/90 以上）場合、特に妊娠 20 週以降は、医療提供者がさらなる検査の実施を希望する場合があります。 これらの検査には、尿中の過剰なタンパク質やその他の症状を調べるための血液検査やその他の臨床検査が含まれる場合があります。</string>
-     <string name="info_11_q">子癇前症の治療オプション</string>
-     <string name="info_11">通常、分娩により子癇前症は治癒します。 治療法を決定する際、医療提供者は、症状の重症度、妊娠の進行状況、あなたと赤ちゃんに対する潜在的なリスクなど、いくつかの要素を考慮します。
+    <string name="info_10_q">子癇前症はどのように診断されますか?</string>
+    <string name="info_10">医療従事者は、出生前診察のたびに血圧と尿を検査します。 血圧の測定値が高い（140/90 以上）場合、特に妊娠 20 週以降は、医療提供者がさらなる検査の実施を希望する場合があります。 これらの検査には、尿中の過剰なタンパク質やその他の症状を調べるための血液検査やその他の臨床検査が含まれる場合があります。</string>
+    <string name="info_11_q">子癇前症の治療オプション</string>
+    <string name="info_11">通常、分娩により子癇前症は治癒します。 治療法を決定する際、医療提供者は、症状の重症度、妊娠の進行状況、あなたと赤ちゃんに対する潜在的なリスクなど、いくつかの要素を考慮します。
 
 1. 妊娠 37 週を超えている場合、担当医は誘発分娩または帝王切開の実施を検討する場合があります。
 
 2. 妊娠 37 週未満の場合、医療提供者はあなたと赤ちゃんの両方を注意深く監視します。 これには、血液検査や尿検査が含まれる場合があります。 赤ちゃんのモニタリングには、多くの場合、超音波検査、胎児心拍数のモニタリング、赤ちゃんの成長の評価などが含まれます。 血圧をコントロールし、発作を予防するために薬が必要になる場合があります。 赤ちゃんの肺がより早く成熟するのを助けるためにステロイド注射を受ける女性もいます。 子癇前症が重度の場合、医療提供者は早めの出産を推奨する場合があります。
 
 ほとんどの場合、これらの症状は通常、出産後 6 週間以内に解消されます。 まれに、症状が解消されなかったり、出産後に症状が現れたりすることがあります (産後子癇前症)。 これは非常に深刻な場合があり、直ちに治療が必要です。</string>
-     <string name="info_12_q">DASH ダイエット プラン</string>
-     <string name="info_12">DASH は、高血圧を阻止するための食事療法の略です。 これは、国立心肺血液研究所 (NHLBI) が後援した研究に基づいたダイエット プランです。 これらの研究は、DASH が高血圧を低下させ、コレステロール値を改善し、それによって心臓病のリスクを軽減する可能性があることを示しています。
+    <string name="info_12_q">DASH ダイエット プラン</string>
+    <string name="info_12">DASH は、高血圧を阻止するための食事療法の略です。 これは、国立心肺血液研究所 (NHLBI) が後援した研究に基づいたダイエット プランです。 これらの研究は、DASH が高血圧を低下させ、コレステロール値を改善し、それによって心臓病のリスクを軽減する可能性があることを示しています。
 
 DASH ダイエット プランには次の原則が含まれています。
 
@@ -135,31 +134,31 @@ DASH ダイエット プランには次の原則が含まれています。
 4. 甘い飲み物やお菓子を制限します。
 
 DASH ダイエットに従うことに加えて、他のライフスタイルの変更も血圧を下げるのに役立ちます。 これには、健康的な体重の維持、定期的な運動、喫煙の回避などが含まれます。</string>
-     <string name="source">ソース</string>
-     <string name="choose_your_language">言語を選択してください</string>
-     <string name="guide_tips">血圧を記録するにはここをクリックしてください</string>
-     <string name="rate_us_5_star">5 つ星と評価してください</string>
-     <string name="rate_desc">5 つ星を付けてレビューを書いてサポートしてください</string>
-     <string name="rate_now">今すぐ評価</string>
-     <string name="set_alarm">アラームを設定</string>
-     <string name="plz_set_alarm">アラームを設定してください</string>
-     <string name="sure_to_del">削除してもよろしいですか?</string>
-     <string name="change_alarm">アラームの変更</string>
-     <string name="language">語言</string>
-     <string name="no">いいえ</string>
-     <string name="read_article">記事を読む</string>
-     <string name="record_now">今すぐ録音</string>
-     <string name="record_1">自分自身のケア: 血圧を測定することを忘れないでください。</string>
-     <string name="record_2">健康に関するヒント:心血管疾患を予防するために、血圧を定期的に記録してください。</string>
-     <string name="record_3">血圧モニタリングは非常に重要です。 見落とさないでください。</string>
-     <string name="record_4">健康的な生活のために毎日血圧を記録してください。</string>
-     <string name="record_5">血圧を測定することで心臓の健康を守ります。</string>
-     <string name="record_6">血圧を記録することは、自分自身をケアする方法です。 測定することを忘れないでください。</string>
-     <string name="record_7">心血管疾患を予防するために、血圧を定期的に記録してください。</string>
-     <string name="article_1">推奨書籍: 血圧管理のヒント、ぜひご覧ください。</string>
-     <string name="article_2">今日のおすすめ: 高血圧患者のための食事に関するアドバイス、お見逃しなく。</string>
-     <string name="article_3">血圧を記録することで全体的な健康状態がどのように改善されるかを学びましょう。</string>
-     <string name="article_4">今日の記事: 高血圧患者のための食事アドバイス。</string>
-     <string name="article_5">バッテリー寿命を延ばします。クリックしてバッテリーを最適化します。</string>
-     <string name="article_6">血圧管理の詳細については、クリックしてご覧ください。</string>
+    <string name="source">ソース</string>
+    <string name="choose_your_language">言語を選択してください</string>
+    <string name="guide_tips">血圧を記録するにはここをクリックしてください</string>
+    <string name="rate_us_5_star">5 つ星と評価してください</string>
+    <string name="rate_desc">5 つ星を付けてレビューを書いてサポートしてください</string>
+    <string name="rate_now">今すぐ評価</string>
+    <string name="set_alarm">アラームを設定</string>
+    <string name="plz_set_alarm">アラームを設定してください</string>
+    <string name="sure_to_del">削除してもよろしいですか?</string>
+    <string name="change_alarm">アラームの変更</string>
+    <string name="language">語言</string>
+    <string name="no">いいえ</string>
+    <string name="read_article">記事を読む</string>
+    <string name="record_now">今すぐ録音</string>
+    <string name="record_1">自分自身のケア: 血圧を測定することを忘れないでください。</string>
+    <string name="record_2">健康に関するヒント:心血管疾患を予防するために、血圧を定期的に記録してください。</string>
+    <string name="record_3">血圧モニタリングは非常に重要です。 見落とさないでください。</string>
+    <string name="record_4">健康的な生活のために毎日血圧を記録してください。</string>
+    <string name="record_5">血圧を測定することで心臓の健康を守ります。</string>
+    <string name="record_6">血圧を記録することは、自分自身をケアする方法です。 測定することを忘れないでください。</string>
+    <string name="record_7">心血管疾患を予防するために、血圧を定期的に記録してください。</string>
+    <string name="article_1">推奨書籍: 血圧管理のヒント、ぜひご覧ください。</string>
+    <string name="article_2">今日のおすすめ: 高血圧患者のための食事に関するアドバイス、お見逃しなく。</string>
+    <string name="article_3">血圧を記録することで全体的な健康状態がどのように改善されるかを学びましょう。</string>
+    <string name="article_4">今日の記事: 高血圧患者のための食事アドバイス。</string>
+    <string name="article_5">バッテリー寿命を延ばします。クリックしてバッテリーを最適化します。</string>
+    <string name="article_6">血圧管理の詳細については、クリックしてご覧ください。</string>
 </resources>
