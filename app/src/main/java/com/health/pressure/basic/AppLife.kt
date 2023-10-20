@@ -12,7 +12,7 @@ import kotlinx.coroutines.*
 
 object AppLife : ActivityLifecycleCallbacks {
 
-    private val activitys = mutableListOf<Activity>()
+    val activitys = mutableListOf<Activity>()
     private var activityJob: Job? = null
     private var startAmounts = 0
     private var hotStart = false

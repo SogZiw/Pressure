@@ -4,6 +4,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
+import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.widget.wheel.WheelView
@@ -13,6 +14,7 @@ import com.health.pressure.dao.PressureState
 import com.health.pressure.databinding.ActivityRecordBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.formatTime
+import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.stringValue
 import com.health.pressure.ext.toast
 import com.health.pressure.wheelData
@@ -115,7 +117,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
 
     private fun showAdAndFinish() {
         lifecycleScope.launch(Dispatchers.Main) {
-            AdInstance.saveAd.showFullScreenAd(activity) { finish() }
+            AdInstance.saveAd.showFullScreenAd(activity) { onBackPressed() }
         }
     }
 
@@ -154,6 +156,10 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         binding.sysWheel.currentItem = (data?.sys ?: 119) - 20
         binding.diaWheel.currentItem = (data?.dia ?: 79) - 20
         changeState(data?.state ?: PressureState.Normal)
+    }
+
+    override fun onBackPressed() {
+        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 1) }
     }
 
 }

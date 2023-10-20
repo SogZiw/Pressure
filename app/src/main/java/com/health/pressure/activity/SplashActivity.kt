@@ -19,6 +19,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SplashVM>()
+    private val jumpType by lazy { intent?.getIntExtra("JumpType", -1) ?: -1 }
 
     override fun initView() {
         viewModel.progress.observe(this) {
@@ -55,6 +56,12 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.agreement.text = buildAgreement()
             binding.first.isVisible = true
             binding.reload.isVisible = false
-        } else goNextPage<MainActivity>(true)
+        } else {
+            when (jumpType) {
+                0 -> goNextPage<RecordActivity>(true)
+                1 -> goNextPage<MainActivity>(true) { putExtra("ChangeTab", 2) }
+                else -> goNextPage<MainActivity>(true)
+            }
+        }
     }
 }

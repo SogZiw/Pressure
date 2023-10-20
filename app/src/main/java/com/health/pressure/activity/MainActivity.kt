@@ -15,11 +15,14 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
 
     private val viewModel by viewModels<MainVM>()
     override val layoutId: Int get() = R.layout.activity_main
+    private val changeTab by lazy { intent?.getIntExtra("ChangeTab", -1) ?: -1 }
 
     override fun initView() {
         viewModel.changeTab.observe(this) {
-            binding.bottomBar.menu.getItem(it).isChecked = true
-            binding.viewPager.setCurrentItem(it, false)
+            runCatching {
+                binding.bottomBar.menu.getItem(it).isChecked = true
+                binding.viewPager.setCurrentItem(it, false)
+            }
         }
 
         fun iniViewPager() {
@@ -47,6 +50,10 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
                 return@setOnItemSelectedListener true
             }
         }
+    }
+
+    override fun initData() {
+        if (-1 != changeTab) viewModel.changeTab.postValue(changeTab)
     }
 
 }
