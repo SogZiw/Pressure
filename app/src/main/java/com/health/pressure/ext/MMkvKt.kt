@@ -7,6 +7,7 @@ import android.telephony.TelephonyManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.health.pressure.basic.bean.AlarmItem
+import com.health.pressure.basic.bean.ClockTimeAmount
 import com.health.pressure.basic.bean.LocalState
 import com.health.pressure.mApp
 import com.tencent.mmkv.MMKV
@@ -78,6 +79,27 @@ var defLang: String
     get() = mmkv.decodeString(DEFAULT_LOCAL_LANG, null) ?: LocalState.English.languageCode
     set(value) {
         mmkv.encode(DEFAULT_LOCAL_LANG, value)
+    }
+
+var timeConf: ClockTimeAmount
+    get() = mmkv.decodeParcelable("timeConf", null) ?: ClockTimeAmount()
+    set(value) {
+        mmkv.encode("timeConf", value)
+    }
+var screenConf: ClockTimeAmount
+    get() = mmkv.decodeParcelable("screenConf", null) ?: ClockTimeAmount()
+    set(value) {
+        mmkv.encode("screenConf", value)
+    }
+var charConf: ClockTimeAmount
+    get() = mmkv.decodeParcelable("charConf", null) ?: ClockTimeAmount()
+    set(value) {
+        mmkv.encode("charConf", value)
+    }
+var uniConf: ClockTimeAmount
+    get() = mmkv.decodeParcelable("uniConf", null) ?: ClockTimeAmount()
+    set(value) {
+        mmkv.encode("uniConf", value)
     }
 
 var alarmInfo: MutableList<AlarmItem>

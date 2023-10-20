@@ -24,8 +24,10 @@ object ClockManager {
         if (mApp.isInteractive().not()) return false
         if (toggle.not()) return false
         if (judgeState().not()) return false
-        if (null == this.item) return false
-        if (System.currentTimeMillis() - mApp.firstInstallTime < (this.item?.first ?: 0) * 60000L) return false
+        if (null == item) return false
+        if (System.currentTimeMillis() - mApp.firstInstallTime < (item?.first ?: 0) * 60000L) return false
+        if (System.currentTimeMillis() - (item?.lastShow ?: 0L) < (item?.interval ?: 0) * 60000L) return false
+        if (isOverMax) return false
         return true
     }
 
