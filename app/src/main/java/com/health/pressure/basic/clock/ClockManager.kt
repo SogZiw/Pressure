@@ -105,7 +105,7 @@ object ClockManager {
         return true
     }
 
-    private fun judgeState(): Boolean {
+    fun judgeState(): Boolean {
         if (isCkEnable.not()) return false
         return when (referrerCode) {
             0 -> true
