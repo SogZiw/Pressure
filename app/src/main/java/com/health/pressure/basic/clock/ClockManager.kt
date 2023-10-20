@@ -25,7 +25,7 @@ object ClockManager {
         if (canAlarm()) ClockUpper.show(this)
     }
 
-    fun ClockType.canAlarm(): Boolean {
+    private fun ClockType.canAlarm(): Boolean {
         if (AppLife.foreground()) return false
         if (mApp.isInteractive().not()) return false
         if (toggle.not()) return false
@@ -37,7 +37,7 @@ object ClockManager {
         return true
     }
 
-    fun judgeState(): Boolean {
+    private fun judgeState(): Boolean {
         if (isCkEnable.not()) return false
         return when (referrerCode) {
             0 -> true
