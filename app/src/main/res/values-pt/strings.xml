@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Pressão arterial</string>
     <string name="mmhg" traduzable="false">/mmHg</string>
     <string name="_mmhg" traduzable="false">mmHg</string>
     <string name="record">Registro</string>
