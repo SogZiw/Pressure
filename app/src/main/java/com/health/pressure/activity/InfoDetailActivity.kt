@@ -7,6 +7,8 @@ import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.InfoData
+import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.databinding.ActivityInfoDetailBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.stringValue
@@ -30,6 +32,11 @@ class InfoDetailActivity : BaseActivity<ActivityInfoDetailBinding>() {
                 goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, info.source) }
             }
         }
+        AdInstance.saveAd.loadAd(activity)
+    }
+
+    override fun onBackPressed() {
+        if (ClockManager.judgeState()) AdInstance.saveAd.showFullScreenAd(activity) { finish() } else finish()
     }
 
 }
