@@ -44,6 +44,7 @@ sealed class ClockType {
         override val item: ClockItem? get() = ClockManager.timeClock
         override val isOverMax: Boolean
             get() {
+                if (0 == item?.max) return false
                 val entity = timeConf
                 return if (entity.time.isToday) entity.amounts >= (item?.max ?: 0) else false
             }
@@ -62,6 +63,7 @@ sealed class ClockType {
         override val item: ClockItem? get() = ClockManager.screenClock
         override val isOverMax: Boolean
             get() {
+                if (0 == item?.max) return false
                 val entity = screenConf
                 return if (entity.time.isToday) entity.amounts >= (item?.max ?: 0) else false
             }
@@ -80,6 +82,7 @@ sealed class ClockType {
         override val item: ClockItem? get() = ClockManager.charClock
         override val isOverMax: Boolean
             get() {
+                if (0 == item?.max) return false
                 val entity = charConf
                 return if (entity.time.isToday) entity.amounts >= (item?.max ?: 0) else false
             }
@@ -98,6 +101,7 @@ sealed class ClockType {
         override val item: ClockItem? get() = ClockManager.uniClock
         override val isOverMax: Boolean
             get() {
+                if (0 == item?.max) return false
                 val entity = uniConf
                 return if (entity.time.isToday) entity.amounts >= (item?.max ?: 0) else false
             }
