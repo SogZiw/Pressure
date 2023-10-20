@@ -1,6 +1,7 @@
 package com.health.pressure.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import com.health.pressure.R
 import com.health.pressure.adapter.SelectLocalAdapter
 import com.health.pressure.basic.BaseActivity
@@ -36,7 +37,8 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
     override fun initView() {
         binding.btnSure.setOnClickListener {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
-            if (fromSet) onBackPressedDispatcher.onBackPressed() else goNextPage<GuideActivity>(true)
+            if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+            else goNextPage<GuideActivity>(true)
         }
     }
 
