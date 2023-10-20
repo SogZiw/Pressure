@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BloodPressure</string>
+    <string name="app_name" translatable="false">BloodPressure</string>
     <string name="mmhg" translatable="false">/mmHg</string>
     <string name="_mmhg" translatable="false">mmHg</string>
     <string name="record">Record</string>
@@ -14,7 +14,7 @@
     <string name="sys">Systolic</string>
     <string name="dia">Diastolic</string>
     <string name="text_hypotension">Hypotension</string>
-    <string name="text_hypotension_content" translatable="false">SYS &lt; 90 or DIA &lt; 60</string>
+    <string name="text_hypotension_content">SYS &lt; 90 or DIA &lt; 60</string>
     <string name="text_hypotension_extra">Stay hydrated, exercise regularly</string>
     <string name="text_normal">Normal</string>
     <string name="text_normal_content">SYS 90–119 and DIA 60–79</string>

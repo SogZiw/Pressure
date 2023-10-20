@@ -13,6 +13,7 @@
     <string name="sys">収縮期</string>
     <string name="dia">拡張期</string>
     <string name="text_hypotension">低血圧</string>
+    <string name="text_hypotension_content">SYS &lt; 90 または DIA &lt; 60</string>
     <string name="text_hypotension_extra">水分を補給し、定期的に運動する</string>
     <string name="text_normal">通常</string>
     <string name="text_normal_content">SYS 90 ～ 119 および DIA 60 ～ 79</string>
@@ -27,7 +28,7 @@
     <string name="text_hypertension_stage_2_content">SYS 140 ～ 180 または DIA 90 ～ 120</string>
     <string name="text_hypertension_stage_2_extra">医師に相談してください。薬が必要な場合があります</string>
     <string name="text_hypertensive">高血圧危機</string>
-    <string name="text_hypertensive_content">SYS &gt; 180 または DIA > 120</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 または DIA &gt; 120</string>
     <string name="text_hypertensive_extra">速やかに医師のアドバイスを受け、適切な治療計画を立ててください</string>
     <string name="error_tips">収縮期は拡張期より大きくなければなりません</string>
     <string name="error_tips_extra">入力されたデータが間違っている可能性があります。確認して正しい値を再入力してください。</string>
