@@ -80,7 +80,7 @@ object ClockManager {
     private fun startTimer() {
         clockScope.launch {
             createFlow(30000L, 60000L)
-                .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) } }
+                .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) && it.isOpen } }
                 .flowOn(Dispatchers.IO)
                 .collect {
                     ClockType.TimeClock.showIfCan()
