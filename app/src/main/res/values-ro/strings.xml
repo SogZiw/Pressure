@@ -1,0 +1,163 @@
+<resources>
+    <string name="record">Înregistrare</string>
+    <string name="info">Informații</string>
+    <string name="set">Setări</string>
+    <string name="set_datetime">Setați data și ora</string>
+    <string name="sure">Sigur</string>
+    <string name="add">Adăugați</string>
+    <string name="cancel">Anulați</string>
+    <string name="new_record">Înregistrare nouă</string>
+    <string name="edit_record">Editați înregistrarea</string>
+    <string name="sys">Sistolic</string>
+    <string name="dia">Diastolică</string>
+    <string name="text_hypotension">Hipotensiune arterială</string>
+    <string name="text_hypotension_content">SYS &lt; 90 sau DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Rămâneți hidratat, faceți exerciții regulate</string>
+    <string name="text_normal">Normal</string>
+    <string name="text_normal_content">SYS 90–119 și DIA 60–79</string>
+    <string name="text_normal_extra">Păstrați un stil de viață sănătos</string>
+    <string name="text_elevated">Ridicat</string>
+    <string name="text_elevated_content">SYS 120–129 și DIA 60–79</string>
+    <string name="text_elevated_extra">Urmăriți-vă dieta, reduceți consumul de sare</string>
+    <string name="text_hypertension_stage_1">Hipertensiune-etapa 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 sau DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Îmbunătățiți stilul de viață, faceți exerciții regulate, controlați dieta</string>
+    <string name="text_hypertension_stage_2">Hipertensiune-etapa 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 sau DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Consultați medicul, poate fi nevoie de medicamente</string>
+    <string name="text_hypertensive">Criza hipertensivă</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 sau DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Căutați prompt sfatul medicului, dezvoltați un plan de tratament adecvat</string>
+    <string name="error_tips">Sistolic trebuie să fie mai mare decât Diastolic</string>
+    <string name="error_tips_extra">Datele introduse pot fi incorecte, verificați și reintroduceți valoarea corectă</string>
+    <string name="save">Salvați</string>
+    <string name="delete">Șterge</string>
+    <string name="range1">În 24 de ore</string>
+    <string name="range2">Săptămâna aceasta</string>
+    <string name="range3">Ultimele 7 zile</string>
+    <string name="range4">Luna aceasta</string>
+    <string name="range5">Luna trecută</string>
+    <string name="time_range">Interval de timp</string>
+    <string name="add_new_record">+ Înregistrare nouă</string>
+    <string name="more_history">Mai mult istoric</string>
+    <string name="privacy_policy">Politica de confidențialitate</string>
+    <string name="user_agreement">Acord de utilizare</string>
+    <string name="start">porniți</string>
+    <string name="next">next</string>
+    <string name="start_record">începe înregistrarea</string>
+    <string name="first_main_desc">Găznicul inimii</string>
+    <string name="first_sec_desc">Începeți călătoria către sănătatea inimii prin înregistrarea și protejarea fără efort a bunăstării cardiace.</string>
+    <string name="second_main_desc">Predicție de sănătate</string>
+    <string name="second_sec_desc">Anticipați viitorul sănătății dvs. stăpânind tendințele tensiunii arteriale printr-o urmărire perspicace.</string>
+    <string name="third_main_desc">Registrul tensiunii arteriale</string>
+    <string name="third_sec_desc">Captați succint datele despre tensiunea arterială, obținând o înțelegere cuprinzătoare a pulsului dvs. de sănătate.</string>
+    <string name="skip">omite</string>
+    <string name="home">Acasă</string>
+    <string name="record_blood_pressure">Înregistrați tensiunea arterială</string>
+    <string name="monitor_health">Monitorizați-vă sănătatea cu ușurință</string>
+
+    <string name="info_1_q">Ce este tensiunea arterială?</string>
+    <string name="info_1">Tensiunea arterială este forța sângelui care împinge pereții arterelor. Cu fiecare bătaie a inimii, sângele este pompat în artere. Tensiunea arterială este cea mai mare atunci când inima bate și pompează sângele, cunoscută sub numele de presiune sistolica. Când inima ta este în repaus între bătăi, tensiunea arterială scade. Aceasta se numește presiune diastolică.
+Citirea tensiunii arteriale este reprezentată de aceste două numere. De obicei, valoarea sistolice este mai mare decât sau este înaintea valorii diastolice. De exemplu, 120/80 înseamnă o presiune sistolică de 120 și o presiune diastolică de 80.</string>
+    <string name="info_2_q">Cum este diagnosticată hipertensiunea arterială?</string>
+    <string name="info_2">Hipertensiunea arterială, de obicei, nu are simptome. Prin urmare, singura modalitate de a determina dacă aveți această afecțiune este prin a efectua controale regulate ale tensiunii arteriale de la furnizorul dumneavoastră de asistență medicală. Furnizorul dumneavoastră va folosi un manometru, un stetoscop sau un senzor electronic și o manșetă pentru tensiunea arterială. Înainte de a pune un diagnostic, el sau ea va face două sau mai multe citiri la întâlniri separate.</string>
+    <string name="info_3_q">Tipuri de hipertensiune arterială</string>
+    <string name="info_3">Există două tipuri principale de hipertensiune arterială: hipertensiune arterială primară (esențială) și hipertensiune arterială secundară.
+Hipertensiunea arterială primară sau esențială este cel mai frecvent tip de hipertensiune arterială. Pentru majoritatea persoanelor cu acest tip de tensiune arterială, aceasta crește treptat pe măsură ce îmbătrânesc.
+Hipertensiunea arterială secundară este cauzată de o altă afecțiune medicală sau de utilizarea anumitor medicamente. De obicei, se îmbunătățește după tratarea afecțiunii de bază sau după întreruperea medicamentelor care o cauzează.</string>
+    <string name="info_4_q">De ce ar trebui să fiu îngrijorat de hipertensiune arterială?</string>
+    <string name="info_4">Atunci când tensiunea arterială rămâne constant ridicată în timp, forțează inima să muncească mai mult pentru a pompa sânge, ceea ce duce la potențiale probleme grave de sănătate, cum ar fi atacuri de cord, accident vascular cerebral, insuficiență cardiacă și insuficiență renală.</string>
+    <string name="info_5_q">Cum pot preveni hipertensiunea arterială?</string>
+    <string name="info_5">Dietă sănătoasă: pentru a ajuta la controlul tensiunii arteriale, ar trebui să limitați aportul de sodiu (sare) și să creșteți potasiul din dietă. Este important să consumi alimente cu conținut scăzut de grăsimi și să includă multe fructe, legume și cereale integrale. Planul de alimentație DASH (Dietary Approaches to Stop Hypertension) este un exemplu de plan de dietă care poate ajuta la scăderea tensiunii arteriale.
+Exerciții fizice regulate: Activitatea fizică vă poate ajuta să vă mențineți o greutate sănătoasă și să reduceți tensiunea arterială. Urmărește cel puțin 2 ore și jumătate de exerciții aerobice de intensitate moderată pe săptămână sau 1 oră și 15 minute de exerciții aerobice de mare intensitate. Exercițiile aerobe, cum ar fi mersul rapid, implică orice activitate care crește ritmul cardiac și necesită mai mult oxigen decât de obicei.
+Menține o greutate sănătoasă: a fi supraponderal sau obez crește riscul de hipertensiune arterială. Menținerea unei greutăți sănătoase vă poate ajuta să controlați hipertensiunea arterială și să reduceți riscul altor probleme de sănătate.
+Limitați consumul de alcool: consumul excesiv de alcool poate duce la creșterea tensiunii arteriale. De asemenea, adaugă calorii suplimentare, care pot contribui la creșterea în greutate. Bărbații nu trebuie să depășească două pahare pe zi, iar femeile nu trebuie să depășească un pau pe zi.
+Nu fumați: fumatul crește tensiunea arterială și crește riscul de boli de inimă și accident vascular cerebral. Dacă nu fumezi, nu începe. Dacă fumați, cereți ajutor de la furnizorul dumneavoastră de asistență medicală pentru a găsi cele mai bune metode de a renunța.
+Gestionați stresul: a învăța cum să vă relaxați și să gestionați stresul vă poate îmbunătăți bunăstarea emoțională și fizică și scădea hipertensiunea arterială. Tehnicile de gestionare a stresului includ exerciții fizice, ascultarea muzicii, concentrarea pe activități calmante sau pașnice și meditație.</string>
+    <string name="info_6_q">Ce este hipertensiunea gestațională?</string>
+    <string name="info_6">Hipertensiunea indusă de sarcină se referă la creșterea tensiunii arteriale care apare în timpul sarcinii. De obicei, începe după 20 de săptămâni de sarcină. De obicei, nu aveți alte simptome. În multe cazuri, nu vă va face rău dumneavoastră sau copilului dumneavoastră și se va rezolva în 12 săptămâni de la naștere. Cu toate acestea, crește riscul de hipertensiune arterială viitoare. Uneori, poate fi severă și poate duce la o greutate mică la naștere sau la naștere prematură. Unele femei cu hipertensiune arterială indusă de sarcină pot dezvolta într-adevăr preeclampsie.
+Hipertensiunea cronică se referă la hipertensiunea arterială care este prezentă înainte sau înainte de a 20-a săptămână de sarcină. Este posibil ca unele femei să fi avut această afecțiune cu mult înainte de sarcină, dar ea este descoperită doar în timpul controalelor prenatale ale tensiunii arteriale. Uneori, hipertensiunea cronică poate duce și la preeclampsie.
+Preeclampsia se caracterizează printr-o creștere bruscă a tensiunii arteriale după 20 de săptămâni de sarcină. Apare de obicei în ultimele trei luni de sarcină. În cazuri foarte rare, simptomele pot să nu apară decât după naștere, care este cunoscută sub numele de preeclampsie postpartum. Preeclampsia include, de asemenea, semne de afectare a organelor, cum ar fi afectarea ficatului sau a rinichilor. Aceste simptome pot include prezența proteinelor în urină și hipertensiune arterială. Preeclampsia poate fi foarte gravă atât pentru tine, cât și pentru copilul tău, chiar și poate pune viața în pericol.</string>
+    <string name="info_7_q">Cine este expus riscului de preeclampsie?</string>
+    <string name="info_7">Sunteți în pericol de a dezvolta preeclampsie dacă aveți:
+
+- Hipertensiune arterială cronică preexistentă sau boală cronică de rinichi înainte de sarcină
+- a avut hipertensiune arterială sau preeclampsie într-o sarcină anterioară
+- Obezitate
+- Peste 40 de ani
+- Așteptați mai mulți copii (gemeni, tripleți etc.)
+- Etnie afro-americană
+- antecedente familiale de preeclampsie
+- Anumite afecțiuni de sănătate, cum ar fi diabetul, lupusul sau tendința de a forma cheaguri de sânge (o afecțiune care crește riscul de formare a cheagurilor de sânge)
+- În curs de fertilizare in vitro, donare de ovule sau inseminare de la donator</string>
+    <string name="info_8_q">Ce probleme provoacă preeclampsia?</string>
+    <string name="info_8">Preeclampsia poate duce la diverse complicații, inclusiv:
+
+- abrupție placentară:Separarea placentei de peretele uterin înainte de naștere
+- Restricția creșterii fetale: aprovizionarea inadecvată cu nutrienți și oxigen către făt, ceea ce duce la o creștere slabă
+- Nașterea prematură: Nașterea copilului înainte de 37 de săptămâni de sarcină
+- Bebeluș cu greutate mică la naștere: Copilul se naște cu o greutate mai mică decât cea așteptată pentru vârsta gestațională
+- Nașterea mortii: pierderea copilului înainte de naștere
+- Leziuni ale organelor și sistemelor sanguine, inclusiv rinichii, ficatul, creierul și alte organe
+- Risc crescut de boli de inima pentru mama
+- Eclampsie: o afecțiune gravă care poate apărea atunci când preeclampsia afectează creierul, ducând la convulsii sau comă
+- Sindromul HELLP: o afecțiune rară, dar gravă, care implică afectarea ficatului și a celulelor sanguine la femeile cu preeclampsie sau eclampsie</string>
+    <string name="info_9_q">Care sunt simptomele preeclampsiei?</string>
+    <string name="info_9">Preeclampsia se poate manifesta cu următoarele simptome:
+
+- Tensiune arterială crescută
+- Exces de proteine în urină (cunoscută sub numele de proteinurie)
+- Umflarea feței și a mâinilor. Ar putea apărea și umflarea picioarelor, dar este comună în multe sarcini și ar putea să nu indice neapărat o problemă.
+- Dureri de cap persistente
+- Tulburări de vedere, cum ar fi vederea încețoșată sau punctele de vedere
+- Durere în abdomenul din dreapta sus
+- Dificultăți de respirație</string>
+    <string name="info_10_q">Cum este diagnosticată preeclampsia?</string>
+    <string name="info_10">Furnizorul dumneavoastră de asistență medicală vă va verifica tensiunea arterială și urina în timpul fiecărei vizite prenatale. Dacă valoarea tensiunii arteriale este ridicată (140/90 sau mai mare), mai ales după a 20-a săptămână de sarcină, medicul dumneavoastră poate dori să efectueze teste suplimentare. Aceste teste pot include analize de sânge și alte examinări de laborator pentru a căuta proteine excesive în urină și alte simptome.</string>
+    <string name="info_11_q">Opțiuni de tratament pentru preeclampsie</string>
+    <string name="info_11">De obicei, livrarea poate vindeca preeclampsia. Atunci când ia decizii de tratament, furnizorul dumneavoastră ia în considerare mai mulți factori, inclusiv severitatea afecțiunii, cât de departe sunteți în sarcină și riscurile potențiale pentru dumneavoastră și copilul dumneavoastră:
+
+1. Dacă aveți peste 37 de săptămâni de sarcină, medicul dumneavoastră poate lua în considerare inducerea travaliului sau efectuarea unei operații cezariane.
+
+2. Dacă sunteți însărcinată în mai puțin de 37 de săptămâni, furnizorul dumneavoastră de asistență medicală vă va monitoriza îndeaproape atât pe dumneavoastră, cât și pe copilul dumneavoastră. Acest lucru poate implica analize de sânge și urină pentru dvs. Monitorizarea copilului include adesea ecografii, monitorizarea ritmului cardiac fetal și evaluarea creșterii copilului. Este posibil să aveți nevoie de medicamente pentru a vă controla tensiunea arterială și pentru a preveni convulsii. Unele femei pot primi injecții cu steroizi pentru a ajuta plămânii copilului să se maturizeze mai repede. Dacă preeclampsia este severă, medicul dumneavoastră vă poate recomanda nașterea mai devreme.
+
+În cele mai multe cazuri, aceste simptome se vor rezolva de obicei în șase săptămâni de la naștere. În cazuri rare, simptomele pot să nu se rezolve sau să apară după naștere (preeclampsie postpartum). Acest lucru poate fi foarte grav și necesită tratament imediat.</string>
+    <string name="info_12_q">Planul de dietă DASH</string>
+    <string name="info_12">DASH înseamnă Dietary Approaches to Stop Hypertension. Este un plan de dietă bazat pe cercetări sponsorizate de Institutul Național pentru Inimă, Plămân și Sânge (NHLBI). Studiile indică faptul că DASH poate scădea hipertensiunea arterială și poate îmbunătăți nivelul de colesterol, reducând astfel riscul de boli de inimă.
+
+Planul de dietă DASH include următoarele principii:
+
+1. Subliniați legumele, fructele și cerealele integrale.
+2. Includeți produse lactate cu conținut scăzut de grăsimi sau fără grăsimi, pește, carne de pasăre, leguminoase, nuci și uleiuri vegetale.
+3. Limitați alimentele bogate în grăsimi saturate. Aceste alimente includ carne grasă, produse lactate bogate în grăsimi și uleiuri tropicale precum uleiul de cocos, uleiul de sâmburi de palmier și uleiul de palmier.
+4. Limitați băuturile dulci și dulciurile.
+
+Pe lângă respectarea dietei DASH, alte modificări ale stilului de viață pot ajuta și la scăderea tensiunii arteriale. Acestea includ menținerea unei greutăți sănătoase, angajarea în exerciții fizice regulate și evitarea fumatului.</string>
+    <string name="source">sursă</string>
+    <string name="choose_your_language">Alegeți limba</string>
+    <string name="guide_tips">Faceți clic aici pentru a vă înregistra tensiunea arterială</string>
+    <string name="rate_us_5_star">Evaluează-ne 5 stele</string>
+    <string name="rate_desc">Sprijină-ne acordându-ne 5 stele și scrie-ți recenzia</string>
+    <string name="rate_now">Evaluați acum</string>
+    <string name="set_alarm">Setați alarma</string>
+    <string name="plz_set_alarm">Setați alarma</string>
+    <string name="sure_to_del">Sunteți sigur că doriți să ștergeți?</string>
+    <string name="change_alarm">Schimbați alarma</string>
+    <string name="language">Limba</string>
+    <string name="no">Nu</string>
+    <string name="read_article">Citiți articolul</string>
+    <string name="record_now">Înregistrați acum</string>
+    <string name="record_1">Ai grijă de tine: nu uitați să vă măsurați tensiunea arterială.</string>
+    <string name="record_2">Sfat pentru sănătate:Înregistrați-vă regulat tensiunea arterială pentru a preveni bolile cardiovasculare.</string>
+    <string name="record_3">Monitorizarea tensiunii arteriale este crucială; nu-l trece cu vederea.</string>
+    <string name="record_4">Înregistrați-vă tensiunea arterială în fiecare zi pentru o viață mai sănătoasă.</string>
+    <string name="record_5">Măsurarea tensiunii arteriale protejează sănătatea inimii.</string>
+    <string name="record_6">Înregistrarea tensiunii arteriale este o modalitate de a avea grijă de tine; nu uitați să măsurați.</string>
+    <string name="record_7">Înregistrați regulat tensiunea arterială pentru a preveni bolile cardiovasculare.</string>
+    <string name="article_1">Lectură recomandată: sfaturi pentru gestionarea tensiunii arteriale, verificați.</string>
+    <string name="article_2">Recomandarea de astăzi: sfaturi alimentare pentru pacienții hipertensivi, nu le ratați.</string>
+    <string name="article_3">Aflați cum înregistrarea tensiunii arteriale poate îmbunătăți sănătatea generală.</string>
+    <string name="article_4">Articolul de astăzi: Sfaturi alimentare pentru pacienții hipertensivi.</string>
+    <string name="article_5">Oferiți o durată de viață mai lungă a bateriei, faceți clic pentru a optimiza bateria.</string>
+    <string name="article_6">Aflați mai multe despre gestionarea tensiunii arteriale, faceți clic pentru a vedea.</string>
+</resources>

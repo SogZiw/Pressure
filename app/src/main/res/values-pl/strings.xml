@@ -1,0 +1,163 @@
+<resources>
+    <string name="record">Nagraj</string>
+    <string name="info">Informacje</string>
+    <string name="set">Ustawienia</string>
+    <string name="set_datetime">Ustaw datę i godzinę</string>
+    <string name="sure">Jasne</string>
+    <string name="add">Dodaj</string>
+    <string name="cancel">Anuluj</string>
+    <string name="new_record">Nowy rekord</string>
+    <string name="edit_record">Edytuj rekord</string>
+    <string name="sys">Skurcz</string>
+    <string name="dia">Rozkurczowe</string>
+    <string name="text_hypotension">Niedociśnienie</string>
+    <string name="text_hypotension_content">SYS &lt; 90 lub DIA &lt; 60</string>
+    <string name="text_hypotension_extra">Utrzymuj nawodnienie, regularnie ćwicz</string>
+    <string name="text_normal">Normalny</string>
+    <string name="text_normal_content">SYS 90–119 i DIA 60–79</string>
+    <string name="text_normal_extra">Prowadź zdrowy styl życia</string>
+    <string name="text_elevated">Podwyższone</string>
+    <string name="text_elevated_content">SYS 120–129 i DIA 60–79</string>
+    <string name="text_elevated_extra">Przestrzegaj swojej diety, zmniejsz spożycie soli</string>
+    <string name="text_hypertension_stage_1">Nadciśnienie - etap 1</string>
+    <string name="text_hypertension_stage_1_content">SYS 130–139 lub DIA 80–89</string>
+    <string name="text_hypertension_stage_1_extra">Popraw styl życia, regularnie ćwicz, kontroluj dietę</string>
+    <string name="text_hypertension_stage_2">Nadciśnienie - etap 2</string>
+    <string name="text_hypertension_stage_2_content">SYS 140–180 lub DIA 90–120</string>
+    <string name="text_hypertension_stage_2_extra">Skonsultuj się z lekarzem, mogą być potrzebne leki</string>
+    <string name="text_hypertensive">Kryzys nadciśnieniowy</string>
+    <string name="text_hypertensive_content">SYS &gt; 180 lub DIA &gt; 120</string>
+    <string name="text_hypertensive_extra">Niezwłocznie zasięgnij porady lekarza i opracuj odpowiedni plan leczenia</string>
+    <string name="error_tips">Skurcz musi być większy niż rozkurcz</string>
+    <string name="error_tips_extra">Wprowadzone dane mogą być nieprawidłowe, sprawdź i wprowadź ponownie poprawną wartość</string>
+    <string name="save">Zapisz</string>
+    <string name="delete">Usuń</string>
+    <string name="range1">W ciągu 24 godzin</string>
+    <string name="range2">W tym tygodniu</string>
+    <string name="range3">Ostatnie 7 dni</string>
+    <string name="range4">W tym miesiącu</string>
+    <string name="range5">Ostatni miesiąc</string>
+    <string name="time_range">Zakres czasu</string>
+    <string name="add_new_record">+ Nowy rekord</string>
+    <string name="more_history">Więcej historii</string>
+    <string name="privacy_policy">Polityka prywatności</string>
+    <string name="user_agreement">Umowa użytkownika</string>
+    <string name="start">start</string>
+    <string name="next">dalej</string>
+    <string name="start_record">rozpocznij nagrywanie</string>
+    <string name="first_main_desc">Strażnik serca</string>
+    <string name="first_sec_desc">Rozpocznij swoją podróż do zdrowia serca od łatwego rejestrowania i zabezpieczania stanu swojego serca.</string>
+    <string name="second_main_desc">Przewidywanie stanu zdrowia</string>
+    <string name="second_sec_desc">Przewiduj przyszłość swojego zdrowia, kontrolując trendy ciśnienia krwi poprzez wnikliwe śledzenie.</string>
+    <string name="third_main_desc">Zapis ciśnienia krwi</string>
+    <string name="third_sec_desc">Zwięźle rejestruj dane dotyczące ciśnienia krwi, uzyskując kompleksowy obraz swojego tętna zdrowotnego.</string>
+    <string name="skip">pomiń</string>
+    <string name="home">Strona główna</string>
+    <string name="record_blood_pressure">Zanotuj ciśnienie krwi</string>
+    <string name="monitor_health">Z łatwością monitoruj swoje zdrowie</string>
+
+    <string name="info_1_q">Co to jest ciśnienie krwi?</string>
+    <string name="info_1">Ciśnienie krwi to siła nacisku krwi na ściany tętnic. Z każdym uderzeniem serca krew pompowana jest do tętnic. Ciśnienie krwi jest najwyższe, gdy serce bije i pompuje krew, co nazywa się ciśnieniem skurczowym. Kiedy serce odpoczywa pomiędzy uderzeniami, ciśnienie krwi spada. Nazywa się to ciśnieniem rozkurczowym.
+Odczyt ciśnienia krwi jest reprezentowany przez te dwie liczby. Zazwyczaj wartość skurczowa jest wyższa lub poprzedza wartość rozkurczową. Na przykład 120/80 oznacza ciśnienie skurczowe 120 i ciśnienie rozkurczowe 80.</string>
+    <string name="info_2_q">Jak diagnozuje się wysokie ciśnienie krwi?</string>
+    <string name="info_2">Wysokie ciśnienie krwi zwykle nie daje żadnych objawów. Dlatego jedynym sposobem ustalenia, czy cierpisz na tę chorobę, jest regularne sprawdzanie ciśnienia krwi u lekarza. Twój usługodawca użyje miernika, stetoskopu lub czujnika elektronicznego i mankietu do pomiaru ciśnienia krwi. Przed postawieniem diagnozy przeprowadza dwa lub więcej odczytów podczas odrębnych wizyt.</string>
+    <string name="info_3_q">Rodzaje nadciśnienia</string>
+    <string name="info_3">Istnieją dwa główne typy wysokiego ciśnienia krwi: nadciśnienie pierwotne (samoistne) i nadciśnienie wtórne.
+Nadciśnienie pierwotne lub samoistne jest najczęstszym rodzajem nadciśnienia tętniczego. U większości osób z tym typem ciśnienia krwi wzrasta ono stopniowo wraz z wiekiem.
+Nadciśnienie wtórne jest spowodowane inną chorobą lub stosowaniem niektórych leków. Zwykle poprawia się po leczeniu choroby podstawowej lub odstawieniu leków, które ją powodują.</string>
+    <string name="info_4_q">Dlaczego powinienem martwić się nadciśnieniem?</string>
+    <string name="info_4">Gdy ciśnienie krwi utrzymuje się stale wysokie przez dłuższy czas, zmusza serce do cięższej pracy przy pompowaniu krwi, co prowadzi do potencjalnych poważnych problemów zdrowotnych, takich jak zawały serca, udary, niewydolność serca i niewydolność nerek.</string>
+    <string name="info_5_q">Jak zapobiegać nadciśnieniu?</string>
+    <string name="info_5">Zdrowa dieta: Aby pomóc kontrolować ciśnienie krwi, należy ograniczyć spożycie sodu (soli) i zwiększyć w diecie potas. Ważne jest również spożywanie pokarmów o niskiej zawartości tłuszczu i dużej ilości owoców, warzyw i produktów pełnoziarnistych. Plan żywieniowy DASH (Dietary Approaches to Stop Hypertension) jest przykładem planu diety, który może pomóc obniżyć ciśnienie krwi.
+Regularne ćwiczenia: Aktywność fizyczna może pomóc w utrzymaniu prawidłowej wagi i obniżeniu ciśnienia krwi. Staraj się wykonywać co najmniej 2 i pół godziny ćwiczeń aerobowych o umiarkowanej intensywności tygodniowo lub 1 godzinę i 15 minut ćwiczeń aerobowych o wysokiej intensywności. Ćwiczenia aerobowe, takie jak szybki marsz, obejmują każdą aktywność, która podnosi tętno i wymaga więcej tlenu niż zwykle.
+Utrzymuj zdrową wagę: Nadwaga lub otyłość zwiększa ryzyko wysokiego ciśnienia krwi. Utrzymanie prawidłowej wagi może pomóc w kontrolowaniu nadciśnienia i zmniejszeniu ryzyka innych problemów zdrowotnych.
+Ogranicz spożycie alkoholu: Nadmierne spożycie alkoholu może prowadzić do podwyższonego ciśnienia krwi. Dodaje również dodatkowe kalorie, które mogą przyczyniać się do przyrostu masy ciała. Mężczyźni nie powinni przekraczać dwóch drinków dziennie, a kobiety nie powinny przekraczać jednego drinka dziennie.
+Nie pal: Palenie podnosi ciśnienie krwi i zwiększa ryzyko chorób serca i udaru mózgu. Jeśli nie palisz, nie zaczynaj. Jeśli palisz, zwróć się o pomoc do swojego lekarza, aby znaleźć najlepsze metody rzucenia palenia.
+Radź sobie ze stresem: Nauka relaksowania się i radzenia sobie ze stresem może poprawić samopoczucie emocjonalne i fizyczne oraz obniżyć wysokie ciśnienie krwi. Techniki radzenia sobie ze stresem obejmują ćwiczenia, słuchanie muzyki, skupianie się na uspokajających lub spokojnych czynnościach oraz medytację.</string>
+    <string name="info_6_q">Co to jest nadciśnienie ciążowe?</string>
+    <string name="info_6">Nadciśnienie indukowane ciążą oznacza podwyższone ciśnienie krwi występujące podczas ciąży. Zwykle rozpoczyna się po 20 tygodniu ciąży. Zwykle nie występują żadne inne objawy. W wielu przypadkach nie zaszkodzi to ani Tobie, ani Twojemu dziecku i ustąpi w ciągu 12 tygodni po porodzie. Zwiększa to jednak ryzyko wystąpienia nadciśnienia w przyszłości. Czasami może mieć ciężki przebieg i prowadzić do niskiej masy urodzeniowej lub porodu przedwczesnego. U niektórych kobiet z nadciśnieniem indukowanym ciążą może rzeczywiście rozwinąć się stan przedrzucawkowy.
+Nadciśnienie przewlekłe odnosi się do wysokiego ciśnienia krwi, które występuje przed lub przed 20. tygodniem ciąży. Niektóre kobiety mogły cierpieć na tę przypadłość na długo przed zajściem w ciążę, ale można ją wykryć dopiero podczas prenatalnych badań ciśnienia krwi. Czasami przewlekłe nadciśnienie może również prowadzić do stanu przedrzucawkowego.
+Stan przedrzucawkowy charakteryzuje się nagłym wzrostem ciśnienia krwi po 20 tygodniu ciąży. Zwykle występuje w ostatnich trzech miesiącach ciąży. W bardzo rzadkich przypadkach objawy mogą pojawić się dopiero po porodzie, co nazywa się stanem przedrzucawkowym poporodowym. Stan przedrzucawkowy obejmuje również objawy uszkodzenia narządów, takie jak zajęcie wątroby lub nerek. Objawy te mogą obejmować obecność białka w moczu i bardzo wysokie ciśnienie krwi. Stan przedrzucawkowy może być bardzo poważny zarówno dla Ciebie, jak i Twojego dziecka, a nawet zagrażać życiu.</string>
+    <string name="info_7_q">Kto jest narażony na ryzyko stanu przedrzucawkowego?</string>
+    <string name="info_7">Jesteś narażona na ryzyko wystąpienia stanu przedrzucawkowego, jeśli:
+
+- Istniejące wcześniej przewlekłe nadciśnienie lub przewlekła choroba nerek przed ciążą
+- Miała wysokie ciśnienie krwi lub stan przedrzucawkowy w poprzedniej ciąży
+- Otyłość
+- Wiek powyżej 40 lat
+- Spodziewasz się wielu dzieci (bliźniaków, trojaczków itp.)
+- Pochodzenie etniczne Afroamerykanów
+- Występowanie stanu przedrzucawkowego w rodzinie
+- Niektóre schorzenia, takie jak cukrzyca, toczeń lub skłonność do tworzenia zakrzepów krwi (stan zwiększający ryzyko powstawania zakrzepów krwi)
+- Poddawanie się zapłodnieniu in vitro, oddaniu komórek jajowych lub inseminacji od dawcy</string>
+    <string name="info_8_q">Jakie problemy powoduje stan przedrzucawkowy?</string>
+    <string name="info_8">Stan przedrzucawkowy może prowadzić do różnych powikłań, w tym:
+
+- Odklejenie łożyska:Oddzielenie łożyska od ściany macicy przed porodem
+- Ograniczenie wzrostu płodu: Niedostateczne zaopatrzenie płodu w składniki odżywcze i tlen, co skutkuje słabym wzrostem
+- Poród przedwczesny: poród dziecka przed 37 tygodniem ciąży
+- Dziecko z niską masą urodzeniową: Dziecko rodzi się z mniejszą masą ciała niż oczekiwana dla jego wieku ciążowego
+- Poród martwego dziecka: utrata dziecka przed urodzeniem
+- Uszkodzenie narządów i układów krwionośnych, w tym nerek, wątroby, mózgu i innych narządów
+- Zwiększone ryzyko chorób serca u matki
+- Rzucawka: ciężki stan, który może wystąpić, gdy stan przedrzucawkowy wpływa na mózg i prowadzi do drgawek lub śpiączki
+- Zespół HELLP: rzadki, ale poważny stan obejmujący uszkodzenie wątroby i komórek krwi u kobiet ze stanem przedrzucawkowym lub rzucawką</string>
+    <string name="info_9_q">Jakie są objawy stanu przedrzucawkowego?</string>
+    <string name="info_9">Stan przedrzucawkowy może objawiać się następującymi objawami:
+
+- Wysokie ciśnienie krwi
+- Nadmiar białka w moczu (tzw. białkomocz).
+- Obrzęk twarzy i dłoni. Może również wystąpić obrzęk stóp, ale jest to częste zjawisko w wielu ciążach i niekoniecznie musi wskazywać na problem.
+- Uporczywy ból głowy
+- Zaburzenia widzenia, takie jak niewyraźne widzenie lub plamy widzenia
+- Ból w prawej górnej części brzucha
+- Duszność</string>
+    <string name="info_10_q">Jak diagnozuje się stan przedrzucawkowy?</string>
+    <string name="info_10">Twój lekarz będzie sprawdzał Twoje ciśnienie krwi i mocz podczas każdej wizyty prenatalnej. Jeśli odczyt ciśnienia krwi jest wysoki (140/90 lub więcej), zwłaszcza po 20. tygodniu ciąży, lekarz może chcieć przeprowadzić dalsze badania. Badania te mogą obejmować badania krwi i inne badania laboratoryjne w celu wykrycia nadmiernej ilości białka w moczu i innych objawów.</string>
+    <string name="info_11_q">Możliwości leczenia stanu przedrzucawkowego</string>
+    <string name="info_11">Poród zwykle leczy stan przedrzucawkowy. Podejmując decyzje dotyczące leczenia, Twój lekarz bierze pod uwagę kilka czynników, w tym ciężkość stanu, zaawansowany etap ciąży oraz potencjalne ryzyko dla Ciebie i Twojego dziecka:
+
+1. Jeśli jesteś już po 37 tygodniu ciąży, Twój lekarz może rozważyć wywołanie porodu lub wykonanie cięcia cesarskiego.
+
+2. Jeśli jesteś w ciąży przed 37 tygodniem, Twój lekarz będzie uważnie monitorował zarówno Ciebie, jak i Twoje dziecko. Może to obejmować badania krwi i moczu. Monitorowanie dziecka często obejmuje badanie ultrasonograficzne, monitorowanie tętna płodu i ocenę wzrostu dziecka. Możesz potrzebować leków kontrolujących ciśnienie krwi i zapobiegających napadom. Niektóre kobiety mogą otrzymywać zastrzyki steroidowe, aby przyspieszyć dojrzewanie płuc dziecka. Jeśli stan przedrzucawkowy jest ciężki, Twój lekarz może zalecić wcześniejszy poród.
+
+W większości przypadków objawy te zwykle ustępują w ciągu sześciu tygodni po porodzie. W rzadkich przypadkach objawy mogą nie ustąpić lub mogą pojawić się po porodzie (stan przedrzucawkowy poporodowy). Może to być bardzo poważne i wymaga natychmiastowego leczenia.</string>
+    <string name="info_12_q">Plan diety DASH</string>
+    <string name="info_12">DASH oznacza podejście dietetyczne do zatrzymania nadciśnienia. Jest to plan diety oparty na badaniach sponsorowanych przez Narodowy Instytut Serca, Płuc i Krwi (NHLBI). Badania wskazują, że DASH może obniżyć wysokie ciśnienie krwi i poprawić poziom cholesterolu, zmniejszając w ten sposób ryzyko chorób serca.
+
+Plan diety DASH obejmuje następujące zasady:
+
+1. Koncentruj się na warzywach, owocach i produktach pełnoziarnistych.
+2. Uwzględnij niskotłuszczowe lub beztłuszczowe produkty mleczne, ryby, drób, rośliny strączkowe, orzechy i oleje roślinne.
+3. Ogranicz żywność bogatą w tłuszcze nasycone. Do tych produktów zaliczają się tłuste mięsa, pełnotłuste produkty mleczne i oleje tropikalne, takie jak olej kokosowy, olej z ziaren palmowych i olej palmowy.
+4. Ogranicz spożycie słodkich napojów i słodyczy.
+
+Oprócz przestrzegania diety DASH inne zmiany stylu życia mogą również pomóc w obniżeniu ciśnienia krwi. Należą do nich utrzymanie prawidłowej wagi, regularne ćwiczenia i unikanie palenia.</string>
+    <string name="source">źródło</string>
+    <string name="choose_your_language">Wybierz swój język</string>
+    <string name="guide_tips">Kliknij tutaj, aby zapisać swoje ciśnienie krwi</string>
+    <string name="rate_us_5_star">Oceń nas na 5 gwiazdek</string>
+    <string name="rate_desc">Wspomóż nas, daj 5 gwiazdek i napisz swoją opinię</string>
+    <string name="rate_now">Oceń teraz</string>
+    <string name="set_alarm">Ustaw alarm</string>
+    <string name="plz_set_alarm">Ustaw alarm</string>
+    <string name="sure_to_del">Czy na pewno chcesz usunąć?</string>
+    <string name="change_alarm">Zmień alarm</string>
+    <string name="language">Język</string>
+    <string name="no">Nie</string>
+    <string name="read_article">Przeczytaj artykuł</string>
+    <string name="record_now">Nagraj teraz</string>
+    <string name="record_1">Dbaj o siebie: pamiętaj o pomiarze ciśnienia krwi.</string>
+    <string name="record_2">Wskazówka zdrowotna:Regularnie zapisuj swoje ciśnienie krwi, aby zapobiegać chorobom sercowo-naczyniowym.</string>
+    <string name="record_3">Monitorowanie ciśnienia krwi jest kluczowe; nie przeocz tego.</string>
+    <string name="record_4">Zapisuj codziennie swoje ciśnienie krwi, aby żyć zdrowiej.</string>
+    <string name="record_5">Pomiar ciśnienia krwi chroni zdrowie serca.</string>
+    <string name="record_6">Rejestracja ciśnienia krwi to sposób na zadbanie o siebie; nie zapomnij zmierzyć.</string>
+    <string name="record_7">Regularnie zapisuj swoje ciśnienie krwi, aby zapobiegać chorobom sercowo-naczyniowym.</string>
+    <string name="article_1">Zalecana lektura: Wskazówki dotyczące zarządzania ciśnieniem krwi, sprawdź.</string>
+    <string name="article_2">Dzisiejsza rekomendacja: Porady dietetyczne dla pacjentów z nadciśnieniem, nie przegap tego.</string>
+    <string name="article_3">Dowiedz się, jak rejestrowanie ciśnienia krwi może poprawić ogólny stan zdrowia.</string>
+    <string name="article_4">Dzisiejszy artykuł: Porady dietetyczne dla pacjentów z nadciśnieniem.</string>
+    <string name="article_5">Zapewnij dłuższą żywotność baterii, kliknij, aby zoptymalizować baterię.</string>
+    <string name="article_6">Dowiedz się więcej o zarządzaniu ciśnieniem krwi, kliknij, aby wyświetlić.</string>
+</resources>
