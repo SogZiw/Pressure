@@ -10,12 +10,10 @@ import com.health.pressure.basic.AppLife
 import com.health.pressure.basic.bean.ClockItem
 import com.health.pressure.basic.bean.ClockType
 import com.health.pressure.basic.http.EventPost
-import com.health.pressure.ext.createFlow
-import com.health.pressure.ext.firstInstallTime
-import com.health.pressure.ext.isCkEnable
-import com.health.pressure.ext.stringValue
+import com.health.pressure.ext.*
 import com.health.pressure.mApp
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flowOn
 
 object ClockManager {
@@ -82,6 +80,7 @@ object ClockManager {
     private fun startTimer() {
         clockScope.launch {
             createFlow(30000L, 60000L)
+                .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) } }
                 .flowOn(Dispatchers.IO)
                 .collect {
                     ClockType.TimeClock.showIfCan()
@@ -99,6 +98,7 @@ object ClockManager {
         if (toggle.not()) return false
         if (judgeState().not()) return false
         if (null == item) return false
+        if (false == item?.switch) return false
         if (System.currentTimeMillis() - mApp.firstInstallTime < (item?.first ?: 0) * 60000L) return false
         if (System.currentTimeMillis() - (item?.lastShow ?: 0L) < (item?.interval ?: 0) * 60000L) return false
         if (isOverMax) return false

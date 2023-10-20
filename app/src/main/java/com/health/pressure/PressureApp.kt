@@ -20,6 +20,6 @@ class PressureApp : Application() {
         RemoteConf().init()
         registerActivityLifecycleCallbacks(AppLife)
         EventPost.startGetter()
-        ClockManager.startClock()
+        ClockManager.startClock(this)
     }
 }
