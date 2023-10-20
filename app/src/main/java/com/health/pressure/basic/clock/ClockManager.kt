@@ -15,6 +15,7 @@ import com.health.pressure.mApp
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.onEach
 
 object ClockManager {
 
@@ -80,6 +81,7 @@ object ClockManager {
     private fun startTimer() {
         clockScope.launch {
             createFlow(10000L, 35000L)
+                .onEach { EventPost.firebaseEvent("bp_ss_start_b") }
                 .filter { alarmInfo.any { it.timeFormat == System.currentTimeMillis().formatTime(hhmmPattern) && it.isOpen } }
                 .flowOn(Dispatchers.IO)
                 .collect {
