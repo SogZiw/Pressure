@@ -57,6 +57,7 @@ class RemoteConf {
         }
 
         val json = remoteConfig["bpp_pop"].asString()
+        if (json.isBlank()) return
         val jsonObj = JSONObject(json)
         ClockManager.run {
             toggle = 1 == jsonObj.optInt("bpp_pop_switch", 0)
