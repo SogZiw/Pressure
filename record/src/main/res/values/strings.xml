@@ -1,0 +1,16 @@
+<resources>
+    <string name="record_label_new">record_new</string>
+    <string name="record_acc_type">com.pressure.record.sync_acc_type</string>
+    <string name="record_acc_auth">com.pressure.record.sync.acc_auth_new</string>
+
+    <string name="record_label_pro">record_pro</string>
+    <string name="record_acc_type_pro">com.pressure.record.sync_acc_type_pro</string>
+    <string name="record_acc_auth_pro">com.pressure.record.sync.acc_auth_pro</string>
+
+    <string name="record_label_pre">record_pre</string>
+    <string name="record_acc_type_pre">com.pressure.record.sync_acc_type_pre</string>
+    <string name="record_acc_auth_pre_one">com.pressure.record.sync.acc_auth_pre_one</string>
+    <string name="record_acc_auth_pre_two">com.pressure.record.sync.acc_auth_pre_two</string>
+
+    <string name="record_common_auth">com.pressure.record.auth</string>
+</resources>

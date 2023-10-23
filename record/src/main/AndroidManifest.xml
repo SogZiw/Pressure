@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pressure.record">
+
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application>
+
+        <provider
+            android:name=".pro.RecordContentProvider"
+            android:authorities="@string/record_acc_auth"
+            android:exported="true"
+            android:syncable="true" />
+
+        <service
+            android:name=".base.RecordImlService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/record_adapter_new" />
+        </service>
+        <service
+            android:name=".base.ExtraRecordService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/record_auth_new" />
+        </service>
+        <service
+            android:name=".base.RecordAuthService"
+            android:exported="true"
+            android:process=":pro">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/record_auth_pro" />
+        </service>
+        <service
+            android:name=".base.RecordBindAdapter"
+            android:exported="true"
+            android:process=":pro">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/record_adaper_pro" />
+        </service>
+
+        <provider
+            android:name=".pro.RecordExtraProvider"
+            android:authorities="@string/record_acc_auth_pro"
+            android:exported="true"
+            android:process=":pro"
+            android:syncable="true" />
+
+        <service
+            android:name=".base.RecordAuthExtraService"
+            android:exported="true"
+            android:process=":pre">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/record_auth_pre" />
+        </service>
+        <service
+            android:name=".pre.RecordSub2Service"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pre">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/record_adapter_pro_one" />
+        </service>
+        <service
+            android:name=".base.RecordSync2Service"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pre">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/record_adapter_pro_two" />
+        </service>
+
+        <provider
+            android:name=".pro.RecordProvider"
+            android:authorities="@string/record_acc_auth_pre_one"
+            android:exported="true"
+            android:process=":pre"
+            android:syncable="true" />
+
+        <service
+            android:name=".server.RecordJobService2"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService3"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService4"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService1"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService5"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService6"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+        <service
+            android:name=".server.RecordJobService7"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pro" />
+
+        <service android:name=".acc.RecordService1" />
+        <service
+            android:name=".acc.RecordService2"
+            android:process=":pro" />
+        <service
+            android:name=".acc.RecordService3"
+            android:process=":pre" />
+
+        <provider
+            android:name=".pro.RecordProviderNew"
+            android:authorities="@string/record_common_auth"
+            android:enabled="true"
+            android:exported="true"
+            android:syncable="true">
+            <meta-data
+                android:name="android.content.ContactDirectory"
+                android:value="true" />
+        </provider>
+
+
+        <receiver
+            android:name=".base.RecordJobReceiver"
+            android:directBootAware="true"
+            android:exported="true"
+            android:process=":pro">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

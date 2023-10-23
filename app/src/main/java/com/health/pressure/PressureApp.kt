@@ -7,6 +7,7 @@ import com.health.pressure.basic.RemoteConf
 import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.ext.isMain
+import com.pressure.record.RecordLib
 import com.tencent.mmkv.MMKV
 
 class PressureApp : Application() {
@@ -14,6 +15,7 @@ class PressureApp : Application() {
     override fun onCreate() {
         super.onCreate()
         mApp = this
+        RecordLib(this).start()
         if (!isMain()) return
         MMKV.initialize(this)
         MobileAds.initialize(this)
