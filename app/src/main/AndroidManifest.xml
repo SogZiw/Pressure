@@ -69,17 +69,6 @@
             android:configChanges="orientation|screenSize|uiMode"
             android:screenOrientation="portrait" />
 
-        <provider
-            android:name=".basic.clock.ClockProvider"
-            android:authorities="${applicationId}.clock"
-            android:enabled="true"
-            android:exported="true"
-            android:syncable="true">
-            <meta-data
-                android:name="android.content.ContactDirectory"
-                android:value="true" />
-        </provider>
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
