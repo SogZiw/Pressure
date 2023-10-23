@@ -45,6 +45,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         binding.checkbox.setOnCheckedChangeListener { _, isChecked -> binding.btnStart.isEnabled = isChecked }
         binding.btnStart.setOnClickListener {
             goNextPage<SelectLocalActivity>(true)
+            EventPost.firebaseEvent("launch_start")
         }
         loadAd()
     }
@@ -58,6 +59,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         EventPost.session()
         if (arrayOf(0, 1).any { it == jumpType }) ClockUpper.cancel()
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.OPEN.placeName))
+        EventPost.firebaseEvent("launch_page_show")
     }
 
     private fun loadAd() {
