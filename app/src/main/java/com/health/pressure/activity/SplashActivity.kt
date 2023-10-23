@@ -31,6 +31,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SplashVM>()
     private val jumpType by lazy { intent?.getIntExtra("JumpType", -1) ?: -1 }
+    private val clockEvent by lazy { intent?.getStringExtra("ClockTypeEvent") }
     private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
         EventPost.firebaseEvent("bbp_POST_click", hashMapOf("success" to if (it) "yes" else "no"))
     }
@@ -61,6 +62,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             ClockUpper.cancel()
             EventPost.firebaseEvent("bbppop_all_click")
         }
+        clockEvent?.let { EventPost.firebaseEvent("${it}_click") }
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.OPEN.placeName))
         EventPost.firebaseEvent("launch_page_show")
     }

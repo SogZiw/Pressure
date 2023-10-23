@@ -94,6 +94,7 @@ object ClockManager {
         if (canAlarm()) {
             ClockUpper.show(this)
             EventPost.firebaseEvent("bbppop_all_trigger")
+            EventPost.firebaseEvent("${this.eventTag}_trigger")
         }
     }
 

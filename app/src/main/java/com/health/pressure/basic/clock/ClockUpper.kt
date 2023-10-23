@@ -98,7 +98,7 @@ object ClockUpper {
 
     private fun clickIntent(clockType: ClockType, jumpType: Int): PendingIntent {
         val intent = Intent(mApp, SplashActivity::class.java).apply {
-            putExtra("ClockType", clockType.nameAlias)
+            putExtra("ClockTypeEvent", clockType.eventTag)
             putExtra("JumpType", jumpType)
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
