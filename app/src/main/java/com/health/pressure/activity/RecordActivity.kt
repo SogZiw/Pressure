@@ -160,6 +160,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         binding.diaWheel.currentItem = (data?.dia ?: 79) - 20
         changeState(data?.state ?: PressureState.Normal)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.SAVE.placeName))
+        EventPost.firebaseEvent("record_page")
     }
 
     private fun autoNext() {

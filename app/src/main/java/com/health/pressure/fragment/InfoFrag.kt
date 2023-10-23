@@ -5,6 +5,7 @@ import com.health.pressure.activity.InfoDetailActivity
 import com.health.pressure.adapter.InfoAdapter
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.InfoData
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.FragInfoBinding
 import com.health.pressure.ext.goNextPage
 
@@ -17,9 +18,15 @@ class InfoFrag : BaseFrag<FragInfoBinding>() {
             activity.goNextPage<InfoDetailActivity> {
                 putExtra("InfoData", it)
             }
+            EventPost.firebaseEvent("article_click")
         }
         binding.list.itemAnimator = null
         binding.list.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        EventPost.firebaseEvent("article_page")
     }
 
 }

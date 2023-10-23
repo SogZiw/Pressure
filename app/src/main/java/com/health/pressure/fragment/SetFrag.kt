@@ -6,6 +6,7 @@ import com.health.pressure.activity.AlarmActivity
 import com.health.pressure.activity.SelectLocalActivity
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.BaseFrag
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.FragSetBinding
 import com.health.pressure.ext.goNextPage
 
@@ -28,6 +29,11 @@ class SetFrag : BaseFrag<FragSetBinding>() {
         binding.btnAlarm.setOnClickListener {
             activity.goNextPage<AlarmActivity>()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        EventPost.firebaseEvent("setting")
     }
 
 }

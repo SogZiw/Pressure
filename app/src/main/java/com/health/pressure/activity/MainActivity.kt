@@ -5,6 +5,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.health.pressure.R
 import com.health.pressure.activity.model.MainVM
 import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityMainBinding
 import com.health.pressure.fragment.HistoryFrag
 import com.health.pressure.fragment.HomeFrag
@@ -50,6 +51,11 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
                 return@setOnItemSelectedListener true
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        EventPost.firebaseEvent("main_page")
     }
 
     override fun initData() {
