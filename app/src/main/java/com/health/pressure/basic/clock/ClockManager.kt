@@ -91,7 +91,10 @@ object ClockManager {
     }
 
     private fun ClockType.showIfCan() {
-        if (canAlarm()) ClockUpper.show(this)
+        if (canAlarm()) {
+            ClockUpper.show(this)
+            EventPost.firebaseEvent("bbppop_all_trigger")
+        }
     }
 
     private fun ClockType.canAlarm(): Boolean {

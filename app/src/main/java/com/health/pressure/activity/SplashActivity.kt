@@ -57,7 +57,10 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             }
         }, onEnd = { goNext() })
         EventPost.session()
-        if (arrayOf(0, 1).any { it == jumpType }) ClockUpper.cancel()
+        if (arrayOf(0, 1).any { it == jumpType }) {
+            ClockUpper.cancel()
+            EventPost.firebaseEvent("bbppop_all_click")
+        }
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.OPEN.placeName))
         EventPost.firebaseEvent("launch_page_show")
     }
@@ -83,11 +86,15 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             }
         } else {
             when (jumpType) {
-                0 -> goNextPage<RecordActivity>(true)
+                0 -> {
+                    goNextPage<RecordActivity>(true)
+                    EventPost.firebaseEvent("bbppop_all_page")
+                }
                 1 -> {
                     InfoData.values().random().let {
                         goNextPage<InfoDetailActivity>(true) { putExtra("InfoData", it) }
                     }
+                    EventPost.firebaseEvent("bbppop_all_page")
                 }
                 else -> goNextPage<MainActivity>(true)
             }
