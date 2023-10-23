@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
 import com.health.pressure.activity.model.SplashVM
 import com.health.pressure.basic.InfoData
@@ -20,6 +21,9 @@ import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : LifeActivity<ActivitySplashBinding>() {
@@ -66,8 +70,11 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.first.isVisible = true
             binding.reload.isVisible = false
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(this).areNotificationsEnabled().not()) {
-                nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            lifecycleScope.launch(Dispatchers.Main) {
+                delay(500L)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
+                    nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                }
             }
         } else {
             when (jumpType) {
