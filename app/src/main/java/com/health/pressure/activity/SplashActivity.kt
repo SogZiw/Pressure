@@ -31,7 +31,9 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     override val layoutId: Int get() = R.layout.activity_splash
     private val viewModel by viewModels<SplashVM>()
     private val jumpType by lazy { intent?.getIntExtra("JumpType", -1) ?: -1 }
-    private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {}
+    private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+        EventPost.firebaseEvent("bbp_POST_click", hashMapOf("success" to if (it) "yes" else "no"))
+    }
 
     override fun initView() {
         viewModel.progress.observe(this) {
@@ -74,6 +76,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
                 delay(500L)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
                     nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                    EventPost.firebaseEvent("bbp_POST")
                 }
             }
         } else {

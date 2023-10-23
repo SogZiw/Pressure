@@ -96,6 +96,7 @@ open class BaseHttp {
         ckJob = httpScope.launch {
             createFlow(500, 10000L)
                 .onEach { "startCkGetter".logcat("HttpLog") }
+                .onEach { EventPost.event("cloak_start") }
                 .flowOn(Dispatchers.IO)
                 .collect {
                     getCkData()
@@ -123,9 +124,11 @@ open class BaseHttp {
                 "success -- $tag -- $bodyStr".logcat("HttpLog")
                 isCkEnable = "sunburn" != bodyStr
                 ckJob?.cancel()
-            }
+                EventPost.event("cloak_get", hashMapOf("getsuccess" to true, "source" to if (isCkEnable) "normal" else "cloak"))
+            } else EventPost.event("cloak_get", hashMapOf("getsuccess" to false))
         }.onFailure {
             "failed -- $tag -- ${it.message}".logcat("HttpLog")
+            EventPost.event("cloak_get", hashMapOf("getsuccess" to false))
         }
     }
 
