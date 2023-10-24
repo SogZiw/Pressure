@@ -25,10 +25,13 @@ object ClockUpper {
     private val tinyRecordImg by lazy { listOf(R.drawable.ic_notice_record_1_tiny, R.drawable.ic_notice_record_2_tiny) }
     private val tinyArtImg by lazy { listOf(R.drawable.ic_notice_art_1_tiny, R.drawable.ic_notice_art_2_tiny) }
 
-    fun show(clockType: ClockType) {
+    fun show(clockType: ClockType, jump: Int? = null) {
         buildChannel()
         runCatching {
-            val jumpType = Random.nextInt(0, 2)
+            var jumpType = jump
+            if (jumpType == null) {
+                jumpType = Random.nextInt(0, 2)
+            }
             val click = clickIntent(clockType, jumpType)
             val content = if (0 == jumpType) ClockManager.recordSet.random() else ClockManager.articleSet.random()
             val imgRandom = Random.nextInt(0, 2)
