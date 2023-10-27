@@ -22,6 +22,8 @@
 
 -keep class com.loper7.** { *; }
 -keep class com.google.android.gms.ads.** { *; }
+-keep class com.tencent.mmkv.** {*;}
+-dontwarn com.tencent.mmkv.**
 # 混淆的压缩比例，0-7
 -optimizationpasses 5
 # 指定不去忽略非公共的库的类的成员
