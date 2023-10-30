@@ -23,25 +23,13 @@ public final class JobRunner {
         try {
             JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
             if (jobScheduler != null) {
-                jobScheduler.cancel(811);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(822);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(833);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(844);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(845);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(846);
-            }
-            if (jobScheduler != null) {
-                jobScheduler.cancel(899);
+                jobScheduler.cancel(621);
+                jobScheduler.cancel(622);
+                jobScheduler.cancel(623);
+                jobScheduler.cancel(624);
+                jobScheduler.cancel(625);
+                jobScheduler.cancel(626);
+                jobScheduler.cancel(627);
             }
         } catch (Throwable ignored) {
 
@@ -52,23 +40,23 @@ public final class JobRunner {
         try {
             JobInfo.Builder builder = new JobInfo.Builder(jobId, new ComponentName(context.getPackageName(), serviceName));
             long j = 180000;
-            if (jobId == 811) {
+            if (jobId == 621) {
                 builder.setPeriodic(j);
 
-            } else if (jobId == 822) {
+            } else if (jobId == 622) {
                 builder.setMinimumLatency(j);
                 builder.setRequiresCharging(true);
-            } else if (jobId != 833) {
+            } else if (jobId != 623) {
                 switch (jobId) {
-                    case 844:
+                    case 624:
                         builder.setMinimumLatency(j);
                         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED);
                         break;
-                    case 845:
+                    case 625:
                         builder.setMinimumLatency(j);
                         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_NOT_ROAMING);
                         break;
-                    case 846:
+                    case 626:
                         builder.setMinimumLatency(j);
                         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_NONE);
                         break;
@@ -91,20 +79,20 @@ public final class JobRunner {
         JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
         if (jobScheduler != null) {
             String name = RecordJobService2.class.getName();
-            schedule(context, jobScheduler, 811, name);
+            schedule(context, jobScheduler, 621, name);
             String name2 = RecordJobService3.class.getName();
-            schedule(context, jobScheduler, 822, name2);
+            schedule(context, jobScheduler, 622, name2);
             String name3 = RecordJobService4.class.getName();
-            schedule(context, jobScheduler, 833, name3);
+            schedule(context, jobScheduler, 623, name3);
             String name4 = RecordJobService1.class.getName();
-            schedule(context, jobScheduler, 844, name4);
+            schedule(context, jobScheduler, 624, name4);
             String name5 = RecordJobService5.class.getName();
-            schedule(context, jobScheduler, 845, name5);
+            schedule(context, jobScheduler, 625, name5);
             String name6 = RecordJobService6.class.getName();
-            schedule(context, jobScheduler, 846, name6);
+            schedule(context, jobScheduler, 626, name6);
             String name7 = RecordJobService7.class.getName();
             try {
-                JobInfo.Builder builder = new JobInfo.Builder(899, new ComponentName(context.getPackageName(), name7));
+                JobInfo.Builder builder = new JobInfo.Builder(627, new ComponentName(context.getPackageName(), name7));
 
                 builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_NONE)
                         .setRequiresCharging(false)
