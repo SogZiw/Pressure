@@ -2,17 +2,22 @@ package com.health.pressure.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
 import com.health.pressure.adapter.SelectLocalAdapter
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.basic.bean.LocalState
 import com.health.pressure.databinding.ActivitySelectLocalBinding
 import com.health.pressure.ext.defLang
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
-class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
+class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_select_local
     private lateinit var adapter: SelectLocalAdapter
@@ -62,6 +67,29 @@ class SelectLocalActivity : BaseActivity<ActivitySelectLocalBinding>() {
             itemAnimator = null
         }
         binding.list.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showNative()
+    }
+
+    private var nativeAd: BaseAd? = null
+
+    private fun showNative() {
+        AdInstance.hisAd.nativeLoader(this) {
+            if (it) {
+                lifecycleScope.launch {
+                    while (!resumed) delay(220L)
+                    AdInstance.hisAd.showNativeAd(activity, binding.nativeView) { baseAd -> nativeAd = baseAd }
+                }
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        nativeAd?.destroy()
     }
 
 

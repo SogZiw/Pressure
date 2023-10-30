@@ -24,11 +24,13 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="English" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/itemSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="28dp"
+            android:clickable="false"
+            android:focusable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

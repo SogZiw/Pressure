@@ -70,6 +70,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     private fun loadAd() {
         AdInstance.openAd.loadAd(activity)
         AdInstance.saveAd.loadAd(activity)
+        AdInstance.hisAd.loadAd(activity)
     }
 
     private fun goNext() {

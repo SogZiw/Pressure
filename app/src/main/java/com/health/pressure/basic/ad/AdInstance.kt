@@ -11,6 +11,8 @@ object AdInstance {
 
     val openAd = AdContainer(AdLocation.OPEN)
     val saveAd = AdContainer(AdLocation.SAVE)
+    val hisAd = AdContainer(AdLocation.HISTORY)
+    val alarmAd = AdContainer(AdLocation.ALARM)
 
     fun init(json: String = Constants.AD_JSON) {
 
@@ -40,6 +42,8 @@ object AdInstance {
         clickMax = jsonObj.optInt("jakh")
         openAd.initData(formatItem(jsonObj, AdLocation.OPEN.placeName))
         saveAd.initData(formatItem(jsonObj, AdLocation.SAVE.placeName))
+        hisAd.initData(formatItem(jsonObj, AdLocation.HISTORY.placeName))
+        alarmAd.initData(formatItem(jsonObj, AdLocation.ALARM.placeName))
     }
 
     fun addShow() {

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.health.pressure.R
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.databinding.ItemLocalBinding
 
@@ -23,10 +22,7 @@ class SelectLocalAdapter(private val context: Context, private val datas: Mutabl
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = datas[position]
         holder.binding.itemName.text = item.localState.localName
-        if (item.selected) {
-            holder.binding.itemSwitch.isVisible = true
-            holder.binding.itemSwitch.setImageResource(R.drawable.ic_local_toggle)
-        } else holder.binding.itemSwitch.isVisible = false
+        holder.binding.itemSwitch.isChecked = item.selected
         holder.binding.line.isVisible = position != datas.lastIndex
         holder.itemView.setOnClickListener {
             val curPos = holder.adapterPosition
