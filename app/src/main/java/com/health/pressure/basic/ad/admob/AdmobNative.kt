@@ -15,6 +15,7 @@ import com.health.pressure.basic.ad.AdItem
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.onLoaded
 import com.health.pressure.databinding.ViewAdmobNativeBinding
+import com.health.pressure.ext.corner
 import com.health.pressure.ext.logcat
 
 class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item) {
@@ -48,6 +49,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
             iconView = binding.icon.apply { setImageDrawable(native?.icon?.drawable) }
             mediaView = binding.media.apply { mediaContent = native?.mediaContent }
             mediaView?.setImageScaleType(ImageView.ScaleType.CENTER_CROP)
+            mediaView?.corner(8)
             headlineView = binding.appTitle.apply { text = native?.headline ?: "" }
             bodyView = binding.appDesc.apply { text = native?.body ?: "" }
             callToActionView = binding.actionView.apply { text = native?.callToAction ?: "" }
