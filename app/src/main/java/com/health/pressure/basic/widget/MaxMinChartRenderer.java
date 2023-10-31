@@ -16,6 +16,7 @@ import com.health.pressure.basic.widget.data.PressureData;
 import com.health.pressure.basic.widget.data.PressureDataProvider;
 import com.health.pressure.basic.widget.data.PressureEntry;
 import com.health.pressure.basic.widget.data.PressureTransformer;
+import com.health.pressure.ext.ExtraKtKt;
 
 import java.util.List;
 
@@ -149,18 +150,21 @@ public class MaxMinChartRenderer extends LineScatterCandleRadarRenderer {
             float lowValue = e.getLow() * mAnimator.getPhaseY();
             float highValue = e.getHigh() * mAnimator.getPhaseY();
 
+            String lowFormat = ExtraKtKt.getFormatUnit(lowValue, false, false);
+            String highFormat = ExtraKtKt.getFormatUnit(highValue, false, false);
+
             float yOffset = Utils.convertDpToPixel(5f);
             MPPointD pixHigh = mChart.getTransformer(dataSet.getAxisDependency()).getPixelForValues(e.getX(), highValue);
             high.setDraw((float) pixHigh.x, (float) pixHigh.y);
             drawValue(c,
-                    String.valueOf(e.getHigh()),
+                    highFormat,
                     (float) pixHigh.x,
                     (float) pixHigh.y - yOffset,
                     dataSet.getValueTextColor());
 
             MPPointD pixLow = mChart.getTransformer(dataSet.getAxisDependency()).getPixelForValues(e.getX(), lowValue);
             drawValue(c,
-                    String.valueOf(e.getLow()),
+                    lowFormat,
                     (float) pixLow.x,
                     (float) pixLow.y + 2 * yOffset,
                     dataSet.getValueTextColor());

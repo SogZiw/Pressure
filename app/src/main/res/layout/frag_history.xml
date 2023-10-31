@@ -89,6 +89,7 @@
                 tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sysUnit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_mmhg"
@@ -132,6 +133,7 @@
                 tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/diaUnit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_mmhg"

@@ -19,7 +19,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.math.roundToInt
 
 class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
@@ -77,8 +76,10 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                     val sys = datas.map { it.sys }.average()
                     val dia = datas.map { it.dia }.average()
                     withContext(Dispatchers.Main) {
-                        binding.sys.text = if (sys.isNaN()) "0" else "${sys.roundToInt()}"
-                        binding.dia.text = if (dia.isNaN()) "0" else "${dia.roundToInt()}"
+                        binding.sys.text = if (sys.isNaN()) "0" else sys.getFormatUnit()
+                        binding.dia.text = if (dia.isNaN()) "0" else dia.getFormatUnit()
+                        binding.sysUnit.text = getUnit()
+                        binding.diaUnit.text = getUnit()
                     }
                 }
             }
