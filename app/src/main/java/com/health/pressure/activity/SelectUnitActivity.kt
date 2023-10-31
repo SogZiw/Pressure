@@ -19,7 +19,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
     override val layoutId: Int get() = R.layout.activity_select_unit
     private lateinit var adapter: SelectUnitAdapter
     private val fromSet by lazy { intent?.getBooleanExtra("fromSet", false) ?: false }
-    private val unitList by lazy { mutableListOf(UnitItem("mmHg", isHgUnit), UnitItem("kPa", !isHgUnit)) }
+    private val unitList by lazy { mutableListOf(UnitItem("mmHg"), UnitItem("kPa")) }
 
     override fun initView() {
         binding.btnSure.setOnClickListener {
@@ -30,6 +30,10 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
     }
 
     override fun initData() {
+        if (fromSet) {
+            unitList.firstOrNull()?.checked = isHgUnit
+            unitList.getOrNull(1)?.checked = !isHgUnit
+        }
         adapter = SelectUnitAdapter(this, unitList) { binding.btnSure.isEnabled = true }
         adapter.lastPos = if (true == unitList.firstOrNull()?.checked || !fromSet) 0 else 1
         binding.list.run {
