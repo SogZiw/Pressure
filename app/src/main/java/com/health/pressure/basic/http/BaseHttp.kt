@@ -94,7 +94,7 @@ open class BaseHttp {
 
     private fun startCkGetter() {
         ckJob = httpScope.launch {
-            createFlow(500, 10000L)
+            createFlow(1000L, 10000L)
                 .onEach { "startCkGetter".logcat("HttpLog") }
                 .onEach { EventPost.event("cloak_start") }
                 .flowOn(Dispatchers.IO)
