@@ -8,6 +8,7 @@ import com.health.pressure.adapter.GuideAdapter
 import com.health.pressure.basic.BaseActivity
 import com.health.pressure.databinding.ActivityGuideBinding
 import com.health.pressure.ext.goNextPage
+import com.health.pressure.ext.guideStep
 import com.health.pressure.ext.stringValue
 
 class GuideActivity : BaseActivity<ActivityGuideBinding>() {
@@ -17,6 +18,7 @@ class GuideActivity : BaseActivity<ActivityGuideBinding>() {
     private val guideIndex = MutableLiveData<Int>()
 
     override fun initView() {
+        guideStep = 3
         binding.btnNext.setOnClickListener {
             val nextIndex = (guideIndex.value ?: 0) + 1
             if (nextIndex > 2) {

@@ -27,6 +27,7 @@ private const val DEFAULT_LOCAL_LANG = "default_local_lang"
 private const val ALARM_INFO = "alarmInfo"
 private const val INSTALL_ID = "install_id"
 private const val IS_HG_UNIT = "isHgUnit"
+private const val GUIDE_STEP = "guide_step"
 
 var firstGuide: Boolean
     get() = mmkv.decodeBool(FIRST_GUIDE, true)
@@ -162,4 +163,10 @@ var isHgUnit: Boolean
     get() = mmkv.decodeBool(IS_HG_UNIT, true)
     set(value) {
         mmkv.encode(IS_HG_UNIT, value)
+    }
+
+var guideStep: Int
+    get() = mmkv.decodeInt(GUIDE_STEP, -1)
+    set(value) {
+        mmkv.encode(GUIDE_STEP, value)
     }

@@ -2,6 +2,7 @@ package com.health.pressure.basic
 
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.gms.ads.AdActivity
 import com.health.pressure.activity.SplashActivity
@@ -33,7 +34,7 @@ object AppLife : ActivityLifecycleCallbacks {
             startAmounts++
             if (hotStart) {
                 hotStart = false
-                if (activity !is SplashActivity) activity.goNextPage<SplashActivity>()
+                if (activity !is SplashActivity) activity.goNextPage<SplashActivity> { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             }
         }
     }

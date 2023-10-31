@@ -10,10 +10,12 @@ import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.basic.bean.LocalState
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.databinding.ActivitySelectLocalBinding
 import com.health.pressure.ext.defLang
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
+import com.health.pressure.ext.guideStep
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -45,8 +47,11 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             firstLaunch = false
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-            else goNextPage<SelectUnitActivity>(true)
+            else {
+                if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
+            }
         }
+        if (!fromSet) guideStep = 1
     }
 
     @SuppressLint("NotifyDataSetChanged")

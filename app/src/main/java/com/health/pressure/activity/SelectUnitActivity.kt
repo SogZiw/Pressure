@@ -10,6 +10,7 @@ import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.UnitItem
 import com.health.pressure.databinding.ActivitySelectUnitBinding
 import com.health.pressure.ext.goNextPage
+import com.health.pressure.ext.guideStep
 import com.health.pressure.ext.isHgUnit
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -27,6 +28,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             else goNextPage<GuideActivity>(true)
         }
+        if (!fromSet) guideStep = 2
     }
 
     override fun initData() {

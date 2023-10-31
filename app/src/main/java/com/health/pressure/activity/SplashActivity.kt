@@ -15,12 +15,14 @@ import com.health.pressure.basic.InfoData
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.AdLocation
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.clock.ClockUpper
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.buildAgreement
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
+import com.health.pressure.ext.guideStep
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -79,6 +81,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.agreement.text = buildAgreement()
             binding.first.isVisible = true
             binding.reload.isVisible = false
+            guideStep = 0
 
             lifecycleScope.launch(Dispatchers.Main) {
                 delay(500L)
@@ -99,7 +102,14 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
                     }
                     EventPost.firebaseEvent("bbppop_all_page")
                 }
-                else -> goNextPage<MainActivity>(true)
+                else -> {
+                    when (guideStep) {
+                        0 -> goNextPage<SelectLocalActivity>(true)
+                        1 -> if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
+                        2 -> goNextPage<GuideActivity>(true)
+                        else -> goNextPage<MainActivity>(true)
+                    }
+                }
             }
         }
     }
