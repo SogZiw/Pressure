@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.health.pressure.dao.Pressure
 import com.health.pressure.databinding.ItemPressureBinding
+import com.health.pressure.ext.getFormatUnit
 
 class PressureHistoryAdapter(private val context: Context, private val data: MutableList<Pressure>, private val onClick: (Pressure) -> Unit = {}) :
     RecyclerView.Adapter<PressureHistoryAdapter.ViewHolder>() {
@@ -21,8 +22,8 @@ class PressureHistoryAdapter(private val context: Context, private val data: Mut
         val state = item.state
         holder.binding.run {
             itemBeat.setImageResource(state.beatIcon)
-            itemSysValue.text = "${item.sys}"
-            itemDiaValue.text = "${item.dia}"
+            itemSysValue.text = item.sys.getFormatUnit()
+            itemDiaValue.text = item.dia.getFormatUnit()
             itemState.text = state.stateName
             itemTime.text = item.format_time
         }
