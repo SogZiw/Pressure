@@ -19,25 +19,19 @@
             android:orientation="horizontal"
             android:paddingBottom="80dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintTop_toBottomOf="@+id/btnSkip"
             tools:listitem="@layout/item_guide_land" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btnSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="20dp"
             android:padding="10dp"
-            android:text="@string/skip"
-            android:textAllCaps="true"
-            android:textColor="#40000000"
-            android:textSize="15sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_next" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -89,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:lineSpacingMultiplier="1.1"
             android:text="@string/first_sec_desc"
@@ -100,24 +94,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mainDesc" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/btnNext"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:id="@+id/nativeView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:layout_marginBottom="78dp"
-            android:background="@drawable/btn_00c5a8_r12"
-            android:gravity="center"
-            android:paddingHorizontal="38dp"
-            android:paddingVertical="11dp"
-            android:text="@string/next"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,6 +8,7 @@ import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.UnitItem
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.databinding.ActivitySelectUnitBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.guideStep
@@ -26,7 +27,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         binding.btnSure.setOnClickListener {
             isHgUnit = 0 == adapter.lastPos
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-            else goNextPage<GuideActivity>(true)
+            else if (ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
         }
         if (!fromSet) guideStep = 2
     }

@@ -6,8 +6,8 @@ import android.text.method.ScrollingMovementMethod
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.basic.AppLife
-import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.InfoData
+import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.clock.ClockManager
@@ -17,7 +17,7 @@ import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.stringValue
 
 @Suppress("DEPRECATION")
-class InfoDetailActivity : BaseActivity<ActivityInfoDetailBinding>() {
+class InfoDetailActivity : LifeActivity<ActivityInfoDetailBinding>() {
 
     private val infoData by lazy { intent?.getSerializableExtra("InfoData") as? InfoData }
     override val layoutId: Int get() = R.layout.activity_info_detail
