@@ -14,22 +14,16 @@
     <string name="sys">Systolic</string>
     <string name="dia">Diastolic</string>
     <string name="text_hypotension">Hypotension</string>
-    <string name="text_hypotension_content" translatable="false">SYS &lt; 90 or DIA &lt; 60</string>
     <string name="text_hypotension_extra">Stay hydrated, exercise regularly</string>
     <string name="text_normal">Normal</string>
-    <string name="text_normal_content" translatable="false">SYS 90–119 and DIA 60–79</string>
     <string name="text_normal_extra">Maintain a healthy lifestyle</string>
     <string name="text_elevated">Elevated</string>
-    <string name="text_elevated_content" translatable="false">SYS 120–129 and DIA 60–79</string>
     <string name="text_elevated_extra">Watch your diet, reduce salt intake</string>
     <string name="text_hypertension_stage_1">Hypertension-stage 1</string>
-    <string name="text_hypertension_stage_1_content" translatable="false">SYS 130–139 or DIA 80–89</string>
     <string name="text_hypertension_stage_1_extra">Improve lifestyle, exercise regularly, control diet</string>
     <string name="text_hypertension_stage_2">Hypertension-stage 2</string>
-    <string name="text_hypertension_stage_2_content" translatable="false">SYS 140–180 or DIA 90–120</string>
     <string name="text_hypertension_stage_2_extra">Consult doctor, medication may be needed</string>
     <string name="text_hypertensive">Hypertensive crisis</string>
-    <string name="text_hypertensive_content" translatable="false">SYS &gt; 180 or DIA &gt; 120</string>
     <string name="text_hypertensive_extra">Seek medical advice promptly, develop an appropriate treatment plan</string>
     <string name="error_tips">Systolic must be larger than Diastolic</string>
     <string name="error_tips_extra">The entered data may be incorrect, please check and re-enter the correct value</string>
@@ -163,4 +157,5 @@ In addition to following the DASH diet, other lifestyle changes can also help lo
     <string name="article_4">Today\'s article: Dietary advice for hypertensive patients.</string>
     <string name="article_5">Provide a longer battery life, click to optimize the battery.</string>
     <string name="article_6">Learn more about blood pressure management, click to view.</string>
+    <string name="unit">Unit</string>
 </resources>

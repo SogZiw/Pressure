@@ -4,6 +4,7 @@ import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.AlarmActivity
 import com.health.pressure.activity.SelectLocalActivity
+import com.health.pressure.activity.SelectUnitActivity
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.http.EventPost
@@ -16,9 +17,10 @@ class SetFrag : BaseFrag<FragSetBinding>() {
 
     override fun initView() {
         binding.btnLang.setOnClickListener {
-            activity.goNextPage<SelectLocalActivity> {
-                putExtra("fromSet", true)
-            }
+            activity.goNextPage<SelectLocalActivity> { putExtra("fromSet", true) }
+        }
+        binding.btnUnit.setOnClickListener {
+            activity.goNextPage<SelectUnitActivity> { putExtra("fromSet", true) }
         }
         binding.btnPrivacy.setOnClickListener {
             activity.goNextPage<WebviewActivity> { putExtra(Constants.WEBVIEW_URL, Constants.PRIVACY_POLICY) }

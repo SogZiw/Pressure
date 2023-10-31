@@ -45,7 +45,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             firstLaunch = false
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-            else goNextPage<GuideActivity>(true)
+            else goNextPage<SelectUnitActivity>(true)
         }
     }
 
