@@ -26,6 +26,7 @@ private const val AD_CLICK_COUNT = "adClickCount"
 private const val DEFAULT_LOCAL_LANG = "default_local_lang"
 private const val ALARM_INFO = "alarmInfo"
 private const val INSTALL_ID = "install_id"
+private const val IS_HG_UNIT = "isHgUnit"
 
 var firstGuide: Boolean
     get() = mmkv.decodeBool(FIRST_GUIDE, true)
@@ -156,3 +157,9 @@ val androidId: String
 val timeZone: Int get() = TimeZone.getDefault().rawOffset / 3600000
 
 val netOperator: String get() = (mApp.getSystemService(Context.TELEPHONY_SERVICE) as? TelephonyManager)?.networkOperator ?: ""
+
+var isHgUnit: Boolean
+    get() = mmkv.decodeBool(IS_HG_UNIT, true)
+    set(value) {
+        mmkv.encode(IS_HG_UNIT, value)
+    }

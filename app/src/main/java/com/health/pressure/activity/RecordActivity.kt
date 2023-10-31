@@ -16,10 +16,7 @@ import com.health.pressure.dao.Pressure
 import com.health.pressure.dao.PressureState
 import com.health.pressure.databinding.ActivityRecordBinding
 import com.health.pressure.datas
-import com.health.pressure.ext.formatTime
-import com.health.pressure.ext.goNextPage
-import com.health.pressure.ext.stringValue
-import com.health.pressure.ext.toast
+import com.health.pressure.ext.*
 import com.health.pressure.wheelData
 import com.loper7.date_time_picker.DateTimeConfig
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
@@ -104,13 +101,15 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
                 .setOnCancel(text = getString(R.string.cancel))
                 .build().show()
         }
+        binding.sysUnit.text = getUnit(true)
+        binding.diaUnit.text = getUnit(true)
         binding.sysWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
-            override fun getItem(position: Int): String = wheelData[position].toString()
+            override fun getItem(position: Int): String = wheelData[position].getFormatUnit()
         }
         binding.diaWheel.adapter = object : WheelView.Adapter() {
             override fun getItemCount(): Int = wheelData.size
-            override fun getItem(position: Int): String = wheelData[position].toString()
+            override fun getItem(position: Int): String = wheelData[position].getFormatUnit()
         }
         binding.sysWheel.addOnItemSelectedListener { _, _ -> formatState() }
         binding.diaWheel.addOnItemSelectedListener { _, _ -> formatState() }

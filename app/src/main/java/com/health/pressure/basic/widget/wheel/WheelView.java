@@ -110,22 +110,22 @@ public final class WheelView extends ViewGroup {
 
     @Override
     public void addView(View child, int index, LayoutParams params) {
-        throw new UnsupportedOperationException("addView(View...) is not supported in WheelView");
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void removeView(View child) {
-        throw new UnsupportedOperationException("removeView(View) is not supported in WheelView");
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void removeViewAt(int index) {
-        throw new UnsupportedOperationException("removeViewAt(int) is not supported in WheelView");
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void removeAllViews() {
-        throw new UnsupportedOperationException("removeAllViews() is not supported in WheelView");
+        throw new UnsupportedOperationException();
     }
 
     @Override
