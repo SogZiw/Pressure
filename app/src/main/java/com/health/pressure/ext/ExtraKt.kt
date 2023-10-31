@@ -7,6 +7,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import java.math.BigDecimal
 import java.math.RoundingMode
+import kotlin.math.roundToInt
 
 fun View.corner(dp: Int) {
     clipToOutline = true
@@ -31,7 +32,7 @@ fun Int.getFormatUnit(withUnit: Boolean = false, withSeparator: Boolean = false)
 }
 
 fun Double.getFormatUnit(withUnit: Boolean = false, withSeparator: Boolean = false): String {
-    return if (isHgUnit) "$this${if (withUnit) getUnit(withSeparator) else ""}"
+    return if (isHgUnit) "${this.roundToInt()}${if (withUnit) getUnit(withSeparator) else ""}"
     else "${(this * 0.1333).round2F()}${if (withUnit) getUnit(withSeparator) else ""}"
 }
 
