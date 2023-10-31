@@ -10,10 +10,7 @@ import com.github.mikephil.charting.renderer.XAxisRenderer
 import com.github.mikephil.charting.renderer.YAxisRenderer
 import com.github.mikephil.charting.utils.Utils
 import com.health.pressure.R
-import com.health.pressure.basic.widget.data.DateXFormatter
-import com.health.pressure.basic.widget.data.PressureData
-import com.health.pressure.basic.widget.data.PressureDataProvider
-import com.health.pressure.basic.widget.data.PressureTransformer
+import com.health.pressure.basic.widget.data.*
 import com.health.pressure.ext.colorValue
 
 class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
@@ -54,6 +51,7 @@ class MaxMinChart : BarLineChartBase<PressureData?>, PressureDataProvider {
         xAxis.gridColor = lineColor
         xAxis.textSize = 10f
         // axisLeft
+        axisLeft.valueFormatter = DataYFormatter()
         axisLeft.textColor = textColor
         axisLeft.setLabelCount(5, true)
         axisLeft.setDrawGridLines(true)

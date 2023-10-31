@@ -36,6 +36,11 @@ fun Double.getFormatUnit(withUnit: Boolean = false, withSeparator: Boolean = fal
     else "${(this * 0.1333).round2F()}${if (withUnit) getUnit(withSeparator) else ""}"
 }
 
+fun Float.getFormatUnit(withUnit: Boolean = false, withSeparator: Boolean = false): String {
+    return if (isHgUnit) "${this.roundToInt()}${if (withUnit) getUnit(withSeparator) else ""}"
+    else "${(this * 0.1333).round2F()}${if (withUnit) getUnit(withSeparator) else ""}"
+}
+
 fun getUnit(withSeparator: Boolean = false): String {
     return if (isHgUnit) "${if (withSeparator) "/" else ""}mmHg"
     else "${if (withSeparator) "/" else ""}kPa"
