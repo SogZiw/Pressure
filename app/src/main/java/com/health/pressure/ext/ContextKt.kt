@@ -137,6 +137,7 @@ fun Activity.createRateDialog(onRate: () -> Unit) {
         .setCancelable(true)
         .create()
     binding.btnRate.setOnClickListener {
+        if (binding.ratingbar.rating <= 0f) return@setOnClickListener
         dialog.dismiss()
         onRate.invoke()
         if (binding.ratingbar.rating < 4f && ClockManager.judgeState()) return@setOnClickListener
