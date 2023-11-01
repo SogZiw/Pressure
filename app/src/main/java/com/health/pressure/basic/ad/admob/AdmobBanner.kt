@@ -37,8 +37,11 @@ class AdmobBanner(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
 
     fun show(parent: ViewGroup) {
         if (null == banner) return
-        parent.removeAllViews()
-        parent.addView(banner)
+        kotlin.runCatching {
+            (banner?.parent as? ViewGroup)?.removeAllViews()
+            parent.removeAllViews()
+            parent.addView(banner)
+        }
         AdInstance.addShow()
         "${adLoc.placeName} ${item.type} - ${item.id} show success".logcat()
     }
