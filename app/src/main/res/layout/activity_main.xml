@@ -28,8 +28,14 @@
             app:itemIconSize="40dp"
             app:itemTextColor="@drawable/selector_menu_color"
             app:labelVisibilityMode="labeled"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bannerView"
             app:menu="@menu/menu_main" />
+
+        <FrameLayout
+            android:id="@+id/bannerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
