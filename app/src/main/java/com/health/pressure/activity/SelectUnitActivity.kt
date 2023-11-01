@@ -9,6 +9,7 @@ import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.UnitItem
 import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySelectUnitBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.guideStep
@@ -26,10 +27,22 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
     override fun initView() {
         binding.btnSure.setOnClickListener {
             isHgUnit = 0 == adapter.lastPos
-            if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-            else if (ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
+            if (fromSet) {
+                if (ClockManager.judgeState()) {
+                    AdInstance.tabAd.showFullScreenAd(this, "int_new_unit") {
+                        goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+                    }
+                } else goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+            } else {
+                if (ClockManager.judgeState()) {
+                    AdInstance.tabAd.showFullScreenAd(this, "int_new_unit") {
+                        goNextPage<GuideEndActivity>(true)
+                    }
+                } else goNextPage<GuideActivity>(true)
+            }
         }
         if (!fromSet) guideStep = 2
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_unit"))
     }
 
     override fun initData() {
@@ -48,13 +61,13 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
 
     override fun onResume() {
         super.onResume()
-        showNative()
+        if (ClockManager.judgeState()) showNative()
     }
 
     private var nativeAd: BaseAd? = null
 
     private fun showNative() {
-        AdInstance.hisAd.nativeLoader(this) {
+        AdInstance.hisAd.keepLoader(this) {
             if (it) {
                 lifecycleScope.launch {
                     while (!resumed) delay(220L)

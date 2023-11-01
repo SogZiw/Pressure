@@ -17,6 +17,7 @@ import com.health.pressure.basic.ad.onLoaded
 import com.health.pressure.databinding.ViewAdmobNativeBinding
 import com.health.pressure.ext.corner
 import com.health.pressure.ext.logcat
+import com.health.pressure.mApp
 
 class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item) {
 
@@ -25,7 +26,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
 
     override fun loadAd(context: Context, onLoaded: onLoaded) {
         "${adLoc.placeName} ${item.type} - ${item.id} start load ad".logcat()
-        AdLoader.Builder(context, item.id).apply {
+        AdLoader.Builder(mApp, item.id).apply {
             forNativeAd { ad ->
                 native = ad
                 ad.setOnPaidEventListener { onAdRevenue(it, ad.responseInfo) }

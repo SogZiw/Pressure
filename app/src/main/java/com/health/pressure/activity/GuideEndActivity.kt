@@ -80,7 +80,7 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
     private var nativeAd: BaseAd? = null
 
     private fun showNative() {
-        AdInstance.hisAd.nativeLoader(this) {
+        AdInstance.hisAd.keepLoader(this) {
             if (it) {
                 lifecycleScope.launch {
                     while (!resumed) delay(220L)

@@ -44,7 +44,7 @@ class AdContainer(val loc: AdLocation) {
 
     fun canShowFullScreenAd(activity: LifeActivity<*>): Boolean = ads.isNotEmpty() && activity.resumed
 
-    fun showFullScreenAd(activity: Activity, onClose: () -> Unit) {
+    fun showFullScreenAd(activity: Activity, posId: String = loc.placeName, onClose: () -> Unit) {
         if (ads.isEmpty()) {
             onClose.invoke()
             return
@@ -58,10 +58,10 @@ class AdContainer(val loc: AdLocation) {
         }
         onAdLoaded = {}
         loadAd(activity)
-        EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to loc.placeName))
+        EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to posId))
     }
 
-    fun nativeLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {
+    fun keepLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {
         if (ads.isNotEmpty()) onLoad.invoke(true)
         else {
             onAdLoaded = onLoad

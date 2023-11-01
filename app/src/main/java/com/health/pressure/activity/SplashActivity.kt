@@ -72,7 +72,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
     private fun loadAd() {
         AdInstance.openAd.loadAd(activity)
         AdInstance.saveAd.loadAd(activity)
-        AdInstance.hisAd.loadAd(activity)
+        AdInstance.tabAd.loadAd(activity)
     }
 
     private fun goNext() {
@@ -83,6 +83,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             binding.reload.isVisible = false
             guideStep = 0
 
+            AdInstance.alarmAd.loadAd(activity)
             lifecycleScope.launch(Dispatchers.Main) {
                 delay(500L)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
