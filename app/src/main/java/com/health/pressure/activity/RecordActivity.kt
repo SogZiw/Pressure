@@ -1,6 +1,10 @@
 package com.health.pressure.activity
 
+import android.Manifest
+import android.os.Build
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
@@ -21,6 +25,7 @@ import com.health.pressure.wheelData
 import com.loper7.date_time_picker.DateTimeConfig
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @Suppress("DEPRECATION")
@@ -30,6 +35,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
     override val layoutId: Int get() = R.layout.activity_record
     private val isAdd by lazy { intent?.getBooleanExtra("isAdd", true) ?: true }
     private val data by lazy { intent?.getParcelableExtra<Pressure>("PressureData") }
+    private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {}
 
     override fun initView() {
         binding.btnSave.setOnClickListener {
@@ -160,6 +166,12 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         changeState(data?.state ?: PressureState.Normal)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.SAVE.placeName))
         EventPost.firebaseEvent("record_page")
+        lifecycleScope.launch(Dispatchers.Main) {
+            delay(500L)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
+                nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
     }
 
     private fun autoNext() {
