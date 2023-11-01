@@ -41,7 +41,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             EventPost.firebaseEvent("record_record_btn")
         }
         binding.btnAdd.setOnClickListener {
-            AdInstance.tabAd.showFullScreenAd(activity) {
+            AdInstance.tabAd.showFullScreenIfCan(activity) {
                 activity.goNextPage<RecordActivity>()
             }
             EventPost.firebaseEvent("record_record_btn")
