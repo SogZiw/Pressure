@@ -1,10 +1,15 @@
 package com.health.pressure.activity
 
 import android.annotation.SuppressLint
+import androidx.lifecycle.lifecycleScope
 import com.health.pressure.R
 import com.health.pressure.adapter.AlarmListAdapter
-import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
+import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.AlarmItem
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityAlarmBinding
 import com.health.pressure.ext.alarmInfo
 import com.health.pressure.ext.createCommonDialog
@@ -12,10 +17,12 @@ import com.health.pressure.ext.formatTime
 import com.health.pressure.ext.hhmmPattern
 import com.loper7.date_time_picker.DateTimeConfig
 import com.loper7.date_time_picker.dialog.CardDatePickerDialog
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AlarmActivity : BaseActivity<ActivityAlarmBinding>() {
+class AlarmActivity : LifeActivity<ActivityAlarmBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_alarm
     private lateinit var adapter: AlarmListAdapter
@@ -39,6 +46,7 @@ class AlarmActivity : BaseActivity<ActivityAlarmBinding>() {
                     adapter.datas.add(AlarmItem(format))
                     adapter.notifyDataSetChanged()
                     alarmInfo = adapter.datas
+                    AdInstance.saveAd.showFullScreenIfCan(this)
                 }
                 .setOnCancel(text = getString(R.string.cancel))
                 .build().show()
@@ -82,6 +90,34 @@ class AlarmActivity : BaseActivity<ActivityAlarmBinding>() {
         })
         binding.list.itemAnimator = null
         binding.list.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showNative()
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
+    }
+
+    private var nativeAd: BaseAd? = null
+
+    private fun showNative() {
+        AdInstance.alarmAd.keepLoader(this) {
+            if (it) {
+                lifecycleScope.launch {
+                    while (!resumed) delay(220L)
+                    AdInstance.alarmAd.showNativeAd(activity, binding.nativeView, true) { baseAd -> nativeAd = baseAd }
+                }
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        nativeAd?.destroy()
+    }
+
+    override fun onBackPressed() {
+        AdInstance.tabAd.showFullScreenIfCan(activity) { finish() }
     }
 
 }

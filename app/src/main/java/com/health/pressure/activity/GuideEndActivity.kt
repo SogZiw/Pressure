@@ -28,11 +28,9 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
     override fun initView() {
         guideStep = 3
         binding.btnSkip.setOnClickListener {
-            if (ClockManager.judgeState()) {
-                AdInstance.saveAd.showFullScreenAd(this, "int_new_guide") {
-                    goNextPage<MainActivity>(true)
-                }
-            } else goNextPage<MainActivity>(true)
+            AdInstance.saveAd.showFullScreenIfCan(this, "int_new_guide") {
+                goNextPage<MainActivity>(true)
+            }
         }
         guideIndex.observe(this) {
             when (it) {

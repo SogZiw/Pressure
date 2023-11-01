@@ -9,7 +9,6 @@ import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.admob.BaseAd
-import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityMainBinding
 import com.health.pressure.fragment.HistoryFrag
@@ -56,7 +55,7 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
                     R.id.tab_info -> binding.viewPager.setCurrentItem(2, false)
                     R.id.tab_set -> binding.viewPager.setCurrentItem(3, false)
                 }
-                if (ClockManager.judgeState()) AdInstance.tabAd.showFullScreenAd(activity)
+                AdInstance.tabAd.showFullScreenIfCan(activity)
                 return@setOnItemSelectedListener true
             }
         }

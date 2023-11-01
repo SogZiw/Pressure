@@ -29,11 +29,9 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         binding.btnSure.setOnClickListener {
             isHgUnit = 0 == adapter.lastPos
             if (fromSet) {
-                if (ClockManager.judgeState()) {
-                    AdInstance.tabAd.showFullScreenAd(this, "int_new_unit") {
-                        goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-                    }
-                } else goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+                AdInstance.tabAd.showFullScreenIfCan(this, "int_new_unit") {
+                    goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+                }
             } else {
                 if (ClockManager.judgeState()) {
                     AdInstance.tabAd.showFullScreenAd(this, "int_new_unit") {

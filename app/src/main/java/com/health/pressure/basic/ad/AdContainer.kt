@@ -8,6 +8,7 @@ import com.health.pressure.basic.ad.admob.AdmobBanner
 import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.ad.admob.FullScreen
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.mApp
 
@@ -59,6 +60,12 @@ class AdContainer(val loc: AdLocation) {
         onAdLoaded = {}
         loadAd(activity)
         EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to posId))
+    }
+
+    fun showFullScreenIfCan(activity: Activity, posId: String = loc.placeName, onClose: () -> Unit = {}) {
+        if (ClockManager.judgeState()) {
+            showFullScreenAd(activity, posId, onClose)
+        } else onClose()
     }
 
     fun keepLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {

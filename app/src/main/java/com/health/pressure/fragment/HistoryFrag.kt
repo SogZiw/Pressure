@@ -8,7 +8,6 @@ import com.health.pressure.activity.HistoryActivity
 import com.health.pressure.activity.RecordActivity
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.ad.AdInstance
-import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.basic.widget.data.PressureData
 import com.health.pressure.basic.widget.data.PressureDataSet
@@ -37,11 +36,9 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             }
         }
         binding.beat.setOnClickListener {
-            if (ClockManager.judgeState()) {
-                AdInstance.tabAd.showFullScreenAd(activity) {
-                    activity.goNextPage<RecordActivity>()
-                }
-            } else activity.goNextPage<RecordActivity>()
+            AdInstance.tabAd.showFullScreenIfCan(activity) {
+                activity.goNextPage<RecordActivity>()
+            }
             EventPost.firebaseEvent("record_record_btn")
         }
         binding.btnAdd.setOnClickListener {
@@ -51,11 +48,9 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             EventPost.firebaseEvent("record_record_btn")
         }
         binding.btnGoHis.setOnClickListener {
-            if (ClockManager.judgeState()) {
-                AdInstance.saveAd.showFullScreenAd(activity) {
-                    activity.goNextPage<HistoryActivity>()
-                }
-            } else activity.goNextPage<HistoryActivity>()
+            AdInstance.saveAd.showFullScreenIfCan(activity) {
+                activity.goNextPage<HistoryActivity>()
+            }
         }
         refreshChart()
     }
