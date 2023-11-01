@@ -87,7 +87,8 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         nativeAd?.destroy()
     }
 
-    override fun onBackPressed() = Unit
-
+    override fun onBackPressed() {
+        if (fromSet || !ClockManager.judgeState()) super.onBackPressed() else Unit
+    }
 
 }
