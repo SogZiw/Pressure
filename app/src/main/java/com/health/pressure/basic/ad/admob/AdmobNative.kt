@@ -61,6 +61,25 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
         "${adLoc.placeName} ${item.type} - ${item.id} show success".logcat()
     }
 
+    fun showSmall(context: Context, parent: ViewGroup) {
+        if (null == native) return
+        val binding = ViewAdmobNativeBinding.inflate(LayoutInflater.from(context), parent, false)
+        binding.nativeAdView.run {
+            iconView = binding.icon.apply { setImageDrawable(native?.icon?.drawable) }
+            mediaView = binding.media.apply { mediaContent = native?.mediaContent }
+            mediaView?.setImageScaleType(ImageView.ScaleType.CENTER_CROP)
+            mediaView?.corner(8)
+            headlineView = binding.appTitle.apply { text = native?.headline ?: "" }
+            bodyView = binding.appDesc.apply { text = native?.body ?: "" }
+            callToActionView = binding.actionView.apply { text = native?.callToAction ?: "" }
+            native?.let { setNativeAd(it) }
+        }
+        parent.removeAllViews()
+        parent.addView(binding.root)
+        AdInstance.addShow()
+        "${adLoc.placeName} ${item.type} - ${item.id} show success".logcat()
+    }
+
     override fun destroy() {
         native?.destroy()
         native = null

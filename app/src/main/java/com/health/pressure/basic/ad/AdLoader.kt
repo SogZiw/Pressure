@@ -1,6 +1,7 @@
 package com.health.pressure.basic.ad
 
 import android.content.Context
+import com.health.pressure.basic.ad.admob.AdmobBanner
 import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.FullScreen
 import com.health.pressure.ext.logcat
@@ -19,6 +20,7 @@ class AdLoader(private val context: Context, private val container: AdContainer)
         val baseAd = when (item.type) {
             "int", "op" -> FullScreen(container.loc, item)
             "nat" -> AdmobNative(container.loc, item)
+            "ban" -> AdmobBanner(container.loc, item)
             else -> null
         }
         if (null == baseAd) {

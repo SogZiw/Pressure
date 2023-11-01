@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.view.ViewGroup
 import com.health.pressure.basic.LifeActivity
+import com.health.pressure.basic.ad.admob.AdmobBanner
 import com.health.pressure.basic.ad.admob.AdmobNative
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.ad.admob.FullScreen
@@ -68,17 +69,30 @@ class AdContainer(val loc: AdLocation) {
         }
     }
 
-    fun showNativeAd(context: Context, parent: ViewGroup, callback: (BaseAd) -> Unit) {
+    fun showNativeAd(context: Context, parent: ViewGroup, showSmall: Boolean = false, callback: (BaseAd) -> Unit) {
         if (ads.isEmpty()) return
         when (val baseAd = ads.removeFirstOrNull()) {
             is AdmobNative -> {
-                baseAd.show(context, parent)
+                if (showSmall) baseAd.showSmall(context, parent) else baseAd.show(context, parent)
                 callback.invoke(baseAd)
             }
             else -> Unit
         }
         onAdLoaded = {}
         loadAd(context)
+        EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to loc.placeName))
+    }
+
+    fun showBanner(context: Context, parent: ViewGroup, callback: (BaseAd) -> Unit) {
+        if (ads.isEmpty()) return
+        when (val baseAd = ads.removeFirstOrNull()) {
+            is AdmobBanner -> {
+                baseAd.show(parent)
+                callback.invoke(baseAd)
+            }
+            else -> Unit
+        }
+        onAdLoaded = {}
         EventPost.firebaseEvent("tk_ad_impression", hashMapOf("ad_pos_id" to loc.placeName))
     }
 

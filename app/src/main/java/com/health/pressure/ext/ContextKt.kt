@@ -16,6 +16,7 @@ import android.text.style.ClickableSpan
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -87,6 +88,9 @@ val Context.lastUpdateTime: Long
     } catch (e: Exception) {
         0L
     }
+
+val Context.screenWidth: Float
+    get() = (this.getSystemService(Context.WINDOW_SERVICE) as WindowManager).defaultDisplay.width / this.resources.displayMetrics.density
 
 inline fun <reified Cls : Activity> Context.goNextPage(autoFinish: Boolean = false, function: Intent.() -> Unit = {}) {
     startActivity(Intent(this, Cls::class.java).apply(function))

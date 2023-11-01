@@ -16,6 +16,7 @@ import com.health.pressure.basic.ad.AdItem
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.onLoaded
 import com.health.pressure.ext.logcat
+import com.health.pressure.mApp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -26,8 +27,8 @@ data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, i
 
     override fun loadAd(context: Context, onLoaded: onLoaded) {
         when (item.type) {
-            "op" -> openLoader(context, onLoaded)
-            "int" -> interstitialLoader(context, onLoaded)
+            "op" -> openLoader(onLoaded)
+            "int" -> interstitialLoader(onLoaded)
             else -> onLoaded.invoke(false, "unknown type")
         }
     }
@@ -77,9 +78,9 @@ data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, i
     }
 
     @Suppress("DEPRECATION")
-    private fun openLoader(context: Context, onLoaded: onLoaded) {
+    private fun openLoader(onLoaded: onLoaded) {
         "${adLoc.placeName} ${item.type} - ${item.id} start load ad".logcat()
-        AppOpenAd.load(context, item.id, adRequest, AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, object : AppOpenAd.AppOpenAdLoadCallback() {
+        AppOpenAd.load(mApp, item.id, adRequest, AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, object : AppOpenAd.AppOpenAdLoadCallback() {
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(openAd: AppOpenAd) = kotlin.run {
                 ad = openAd
@@ -89,9 +90,9 @@ data class FullScreen(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, i
         })
     }
 
-    private fun interstitialLoader(context: Context, onLoaded: onLoaded) {
+    private fun interstitialLoader(onLoaded: onLoaded) {
         "${adLoc.placeName} ${item.type} - ${item.id} start load ad".logcat()
-        InterstitialAd.load(context, item.id, adRequest, object : InterstitialAdLoadCallback() {
+        InterstitialAd.load(mApp, item.id, adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(e: LoadAdError) = onLoaded.invoke(false, e.message)
             override fun onAdLoaded(interstitialAd: InterstitialAd) = kotlin.run {
                 ad = interstitialAd
