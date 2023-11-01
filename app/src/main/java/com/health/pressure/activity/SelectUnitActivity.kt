@@ -27,6 +27,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
 
     override fun initView() {
         binding.btnSure.setOnClickListener {
+            if (adapter.datas.all { it.checked.not() }) return@setOnClickListener
             isHgUnit = 0 == adapter.lastPos
             if (fromSet) {
                 AdInstance.tabAd.showFullScreenIfCan(this, "int_new_unit") {

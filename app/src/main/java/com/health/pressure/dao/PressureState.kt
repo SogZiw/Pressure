@@ -62,7 +62,7 @@ sealed class PressureState {
     object Hypertensive : PressureState() {
         override val stateName: String get() = R.string.text_hypertensive.stringValue
         override val stateColor: Int get() = R.color.color_fd5f55.colorValue
-        override val stateContent: String get() = "SYS > ${{ 180.getFormatUnit() }} or DIA > ${120.getFormatUnit()}"
+        override val stateContent: String get() = "SYS > ${180.getFormatUnit()} or DIA > ${120.getFormatUnit()}"
         override val stateExtra: String get() = R.string.text_hypertensive_extra.stringValue
         override val beatIcon: Int get() = R.drawable.ic_beat_red
         override val sliderBis: Float = 0.94F

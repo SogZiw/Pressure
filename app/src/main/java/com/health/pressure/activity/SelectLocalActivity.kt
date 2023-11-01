@@ -46,6 +46,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
 
     override fun initView() {
         binding.btnSure.setOnClickListener {
+            if (adapter.datas.all { it.selected.not() }) return@setOnClickListener
             firstLaunch = false
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }

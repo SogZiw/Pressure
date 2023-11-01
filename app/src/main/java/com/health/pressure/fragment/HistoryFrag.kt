@@ -25,7 +25,6 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
     private var defaultRangeId = R.id.range1
     override val layoutId: Int get() = R.layout.frag_history
-    private val charData = DataManager.getAllPressures()
 
     override fun initView() {
         binding.timeRange.setOnClickListener {
@@ -52,11 +51,41 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
                 activity.goNextPage<HistoryActivity>()
             }
         }
-        refreshChart()
     }
 
     override fun initData() {
-
+        lifecycleScope.launch(Dispatchers.IO) {
+            DataManager.getAllPressuresFlow().collect { list ->
+                withContext(Dispatchers.Main) {
+                    datas.clear()
+                    datas.addAll(list)
+                    datas.sortBy { it.record_time }
+                    val chartData = mutableListOf<PressureEntry>()
+                    datas.forEachIndexed { index, pressure ->
+                        chartData.add(PressureEntry(index.toFloat(), pressure.sys, pressure.dia, pressure))
+                    }
+                    if (chartData.isEmpty()) {
+                        binding.chart.clear()
+                        return@withContext
+                    }
+                    val dataSet = PressureDataSet(chartData, "Pressure").apply {
+                        axisDependency = YAxis.AxisDependency.LEFT
+                        setDrawValues(true)
+                        valueTextSize = 10f
+                        isHighlightEnabled = true
+                        valueTextColor = R.color.color_34405a.colorValue
+                        highLightColor = Color.TRANSPARENT
+                        setBarSpace(0.2f)
+                    }
+                    binding.chart.isDoubleTapToZoomEnabled = false
+                    binding.chart.isScaleYEnabled = false
+                    binding.chart.data = PressureData(dataSet)
+                    binding.chart.invalidate()
+                    binding.chart.setVisibleXRange(0f, 6f)
+                    binding.chart.moveViewToX(chartData.lastOrNull()?.x ?: 0f)
+                }
+            }
+        }
     }
 
     override fun onResume() {
@@ -101,36 +130,4 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             else -> Unit
         }
     }
-
-    private fun refreshChart() {
-        charData.observe(this) { list ->
-            datas.clear()
-            datas.addAll(list)
-            datas.sortBy { it.record_time }
-            val chartData = mutableListOf<PressureEntry>()
-            datas.forEachIndexed { index, pressure ->
-                chartData.add(PressureEntry(index.toFloat(), pressure.sys, pressure.dia, pressure))
-            }
-            if (chartData.isEmpty()) {
-                binding.chart.clear()
-                return@observe
-            }
-            val dataSet = PressureDataSet(chartData, "Pressure").apply {
-                axisDependency = YAxis.AxisDependency.LEFT
-                setDrawValues(true)
-                valueTextSize = 10f
-                isHighlightEnabled = true
-                valueTextColor = R.color.color_34405a.colorValue
-                highLightColor = Color.TRANSPARENT
-                setBarSpace(0.2f)
-            }
-            binding.chart.isDoubleTapToZoomEnabled = false
-            binding.chart.isScaleYEnabled = false
-            binding.chart.data = PressureData(dataSet)
-            binding.chart.invalidate()
-            binding.chart.setVisibleXRange(0f, 6f)
-            binding.chart.moveViewToX(chartData.lastOrNull()?.x ?: 0f)
-        }
-    }
-
 }

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.health.pressure.basic.bean.UnitItem
 import com.health.pressure.databinding.ItemLocalBinding
 
-class SelectUnitAdapter(private val context: Context, private val datas: MutableList<UnitItem>, private val onClick: () -> Unit = {}) :
+class SelectUnitAdapter(private val context: Context, val datas: MutableList<UnitItem>, private val onClick: () -> Unit = {}) :
     RecyclerView.Adapter<SelectUnitAdapter.ViewHolder>() {
 
     var lastPos = 0

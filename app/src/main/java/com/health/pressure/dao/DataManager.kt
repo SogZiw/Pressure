@@ -25,6 +25,8 @@ object DataManager {
 
     fun getAllPressures() = manageDao.getAllPressures().distinctUntilChanged().asLiveData()
 
+    fun getAllPressuresFlow() = manageDao.getAllPressures().distinctUntilChanged()
+
     fun sameOrNull(time: String) = manageDao.sameOrNull(time)
 
     fun getPressures(start: Long, end: Long) = manageDao.getPressures(start, end)
