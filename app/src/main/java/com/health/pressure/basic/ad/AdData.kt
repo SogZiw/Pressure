@@ -11,6 +11,7 @@ data class AdItem(
         return when (type) {
             "op" -> "open"
             "nat" -> "native"
+            "ban" -> "banner"
             else -> "interstitial"
         }
     }
