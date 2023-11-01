@@ -50,13 +50,15 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             else {
-                AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
-                    if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
-                }
+                if (ClockManager.judgeState()) {
+                    AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
+                        goNextPage<SelectUnitActivity>(true)
+                    }
+                } else goNextPage<GuideActivity>(true)
             }
         }
         if (!fromSet) guideStep = 1
-        AdInstance.saveAd.loadAd(activity)
+        if (ClockManager.judgeState()) AdInstance.saveAd.loadAd(activity)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_language"))
     }
 
