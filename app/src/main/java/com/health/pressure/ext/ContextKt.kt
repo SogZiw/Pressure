@@ -24,6 +24,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.WebviewActivity
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.databinding.DialogRateBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -138,6 +139,7 @@ fun Activity.createRateDialog(onRate: () -> Unit) {
     binding.btnRate.setOnClickListener {
         dialog.dismiss()
         onRate.invoke()
+        if (binding.ratingbar.rating < 4f && ClockManager.judgeState()) return@setOnClickListener
         rate()
     }
     binding.root.corner(20)
