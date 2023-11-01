@@ -1,5 +1,6 @@
 package com.health.pressure.fragment
 
+import androidx.core.view.isVisible
 import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.AlarmActivity
@@ -7,6 +8,7 @@ import com.health.pressure.activity.SelectLocalActivity
 import com.health.pressure.activity.SelectUnitActivity
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.BaseFrag
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.FragSetBinding
 import com.health.pressure.ext.goNextPage
@@ -35,6 +37,7 @@ class SetFrag : BaseFrag<FragSetBinding>() {
 
     override fun onResume() {
         super.onResume()
+        binding.btnUnit.isVisible = ClockManager.judgeState()
         EventPost.firebaseEvent("setting")
     }
 

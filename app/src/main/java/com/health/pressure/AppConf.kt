@@ -51,6 +51,22 @@ object Constants {
               "ashi": 1
             }
           ],
+          "tk_tab_int": [
+            {
+              "lost": "ca-app-pub-3940256099942544/8691691433",
+              "dream": "admob",
+              "todo": "int",
+              "ppaa": 3000,
+              "ashi": 2
+            },
+            {
+              "lost": "ca-app-pub-3940256099942544/1033173712",
+              "dream": "admob",
+              "todo": "int",
+              "ppaa": 3000,
+              "ashi": 1
+            }
+          ],
           "tk_history_nat": [
             {
               "lost": "ca-app-pub-3940256099942544/1044960115",
@@ -81,6 +97,15 @@ object Constants {
               "todo": "nat",
               "ppaa": 3000,
               "ashi": 1
+            }
+          ],
+          "tk_main_ban": [
+            {
+              "lost": "ca-app-pub-3940256099942544/6300978111",
+              "dream": "admob",
+              "todo": "ban",
+              "ppaa": 3000,
+              "ashi": 3
             }
           ]
         }
