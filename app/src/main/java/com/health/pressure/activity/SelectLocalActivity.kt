@@ -106,5 +106,6 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
         nativeAd?.destroy()
     }
 
+    override fun onBackPressed() = Unit
 
 }

@@ -114,4 +114,6 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             }
         }
     }
+
+    override fun onBackPressed() = Unit
 }

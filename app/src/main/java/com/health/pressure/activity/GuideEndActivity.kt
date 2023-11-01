@@ -107,4 +107,6 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
         nativeAd?.destroy()
     }
 
+    override fun onBackPressed() = Unit
+
 }

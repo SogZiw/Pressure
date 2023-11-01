@@ -87,5 +87,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         nativeAd?.destroy()
     }
 
+    override fun onBackPressed() = Unit
+
 
 }
