@@ -6,6 +6,7 @@ import com.health.pressure.R
 import com.health.pressure.adapter.SelectUnitAdapter
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.UnitItem
 import com.health.pressure.basic.clock.ClockManager
@@ -42,6 +43,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
             }
         }
         if (!fromSet) guideStep = 2
+        AdInstance.tabAd.loadAd(activity)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_unit"))
     }
 
@@ -61,17 +63,20 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (ClockManager.judgeState()) showNative()
+        if (ClockManager.judgeState()) {
+            showNative()
+            EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
+        }
     }
 
     private var nativeAd: BaseAd? = null
 
     private fun showNative() {
-        AdInstance.hisAd.keepLoader(this) {
+        AdInstance.alarmAd.keepLoader(this) {
             if (it) {
                 lifecycleScope.launch {
                     while (!resumed) delay(220L)
-                    AdInstance.hisAd.showNativeAd(activity, binding.nativeView) { baseAd -> nativeAd = baseAd }
+                    AdInstance.alarmAd.showNativeAd(activity, binding.nativeView) { baseAd -> nativeAd = baseAd }
                 }
             }
         }

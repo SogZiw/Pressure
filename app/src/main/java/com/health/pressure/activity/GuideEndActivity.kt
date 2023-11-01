@@ -8,7 +8,10 @@ import com.health.pressure.R
 import com.health.pressure.adapter.GuideAdapter
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.admob.BaseAd
+import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityGuideEndBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.guideStep
@@ -25,7 +28,11 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
     override fun initView() {
         guideStep = 3
         binding.btnSkip.setOnClickListener {
-            goNextPage<MainActivity>(true)
+            if (ClockManager.judgeState()) {
+                AdInstance.saveAd.showFullScreenAd(this, "int_new_guide") {
+                    goNextPage<MainActivity>(true)
+                }
+            } else goNextPage<MainActivity>(true)
         }
         guideIndex.observe(this) {
             when (it) {
@@ -52,6 +59,8 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
                 }
             }
         }
+        AdInstance.saveAd.loadAd(activity)
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_guide"))
     }
 
     override fun initData() {
@@ -74,7 +83,10 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
 
     override fun onResume() {
         super.onResume()
-        showNative()
+        if (ClockManager.judgeState()) {
+            showNative()
+            EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.HISTORY.placeName))
+        }
     }
 
     private var nativeAd: BaseAd? = null

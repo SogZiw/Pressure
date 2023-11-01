@@ -7,6 +7,7 @@ import com.health.pressure.R
 import com.health.pressure.adapter.SelectLocalAdapter
 import com.health.pressure.basic.LifeActivity
 import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.bean.LocalSelection
 import com.health.pressure.basic.bean.LocalState
@@ -81,17 +82,20 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (ClockManager.judgeState()) showNative()
+        if (ClockManager.judgeState()) {
+            showNative()
+            EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
+        }
     }
 
     private var nativeAd: BaseAd? = null
 
     private fun showNative() {
-        AdInstance.hisAd.keepLoader(this) {
+        AdInstance.alarmAd.keepLoader(this) {
             if (it) {
                 lifecycleScope.launch {
                     while (!resumed) delay(220L)
-                    AdInstance.hisAd.showNativeAd(activity, binding.nativeView) { baseAd -> nativeAd = baseAd }
+                    AdInstance.alarmAd.showNativeAd(activity, binding.nativeView) { baseAd -> nativeAd = baseAd }
                 }
             }
         }
