@@ -9,6 +9,8 @@ import com.health.pressure.activity.model.MainVM
 import com.health.pressure.adapter.InfoAdapter
 import com.health.pressure.basic.BaseFrag
 import com.health.pressure.basic.InfoData
+import com.health.pressure.basic.ad.AdInstance
+import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.FragHomeBinding
 import com.health.pressure.ext.firstGuide
@@ -23,7 +25,11 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
     override fun initView() {
         binding.viewRecord.root.setOnClickListener {
             viewModel.changeTab.postValue(1)
-            activity.goNextPage<RecordActivity>()
+            if (ClockManager.judgeState()) {
+                AdInstance.tabAd.showFullScreenAd(activity) {
+                    activity.goNextPage<RecordActivity>()
+                }
+            } else activity.goNextPage<RecordActivity>()
             EventPost.firebaseEvent("main_record")
         }
         binding.guideLayout.setOnClickListener {
