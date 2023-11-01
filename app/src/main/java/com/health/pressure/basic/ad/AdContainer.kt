@@ -44,7 +44,7 @@ class AdContainer(val loc: AdLocation) {
 
     fun canShowFullScreenAd(activity: LifeActivity<*>): Boolean = ads.isNotEmpty() && activity.resumed
 
-    fun showFullScreenAd(activity: Activity, posId: String = loc.placeName, onClose: () -> Unit) {
+    fun showFullScreenAd(activity: Activity, posId: String = loc.placeName, onClose: () -> Unit = {}) {
         if (ads.isEmpty()) {
             onClose.invoke()
             return
