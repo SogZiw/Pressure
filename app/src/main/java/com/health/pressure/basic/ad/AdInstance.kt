@@ -13,6 +13,8 @@ object AdInstance {
     val saveAd = AdContainer(AdLocation.SAVE)
     val hisAd = AdContainer(AdLocation.HISTORY)
     val alarmAd = AdContainer(AdLocation.ALARM)
+    val tabAd = AdContainer(AdLocation.TAB)
+    val banAd = AdContainer(AdLocation.BAN)
 
     fun init(json: String = Constants.AD_JSON) {
 
@@ -44,6 +46,8 @@ object AdInstance {
         saveAd.initData(formatItem(jsonObj, AdLocation.SAVE.placeName))
         hisAd.initData(formatItem(jsonObj, AdLocation.HISTORY.placeName))
         alarmAd.initData(formatItem(jsonObj, AdLocation.ALARM.placeName))
+        tabAd.initData(formatItem(jsonObj, AdLocation.TAB.placeName))
+        banAd.initData(formatItem(jsonObj, AdLocation.BAN.placeName))
     }
 
     fun addShow() {

@@ -20,7 +20,9 @@ enum class AdLocation(val placeName: String) {
     OPEN("tk_open"),
     SAVE("tk_save_int"),
     HISTORY("tk_history_nat"),
-    ALARM("tk_alarm_nat")
+    ALARM("tk_alarm_nat"),
+    TAB("tk_tab_int"),
+    BAN("tk_main_ban")
 }
 
 typealias onLoaded = (success: Boolean, msg: String?) -> Unit
