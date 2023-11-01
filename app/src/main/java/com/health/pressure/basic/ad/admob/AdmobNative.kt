@@ -15,6 +15,7 @@ import com.health.pressure.basic.ad.AdItem
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.onLoaded
 import com.health.pressure.databinding.ViewAdmobNativeBinding
+import com.health.pressure.databinding.ViewAdmobNativeSmallBinding
 import com.health.pressure.ext.corner
 import com.health.pressure.ext.logcat
 import com.health.pressure.mApp
@@ -64,7 +65,7 @@ class AdmobNative(val adLoc: AdLocation, val item: AdItem) : BaseAd(adLoc, item)
 
     fun showSmall(context: Context, parent: ViewGroup) {
         if (null == native) return
-        val binding = ViewAdmobNativeBinding.inflate(LayoutInflater.from(context), parent, false)
+        val binding = ViewAdmobNativeSmallBinding.inflate(LayoutInflater.from(context), parent, false)
         binding.nativeAdView.run {
             iconView = binding.icon.apply { setImageDrawable(native?.icon?.drawable) }
             mediaView = binding.media.apply { mediaContent = native?.mediaContent }
