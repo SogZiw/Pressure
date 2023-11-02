@@ -64,12 +64,12 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
 
     override fun initData() {
         if (-1 != changeTab) viewModel.changeTab.postValue(changeTab)
+        showBanner()
     }
 
     override fun onResume() {
         super.onResume()
         EventPost.firebaseEvent("main_page")
-        showBanner()
     }
 
 
