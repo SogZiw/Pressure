@@ -25,6 +25,7 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
 
     private var defaultRangeId = R.id.range1
     override val layoutId: Int get() = R.layout.frag_history
+    private var isFirst = true
 
     override fun initView() {
         binding.timeRange.setOnClickListener {
@@ -95,8 +96,12 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
     }
 
     private fun showRateIfCan() {
+        if (isFirst) {
+            isFirst = false
+            return
+        }
         lifecycleScope.launch(Dispatchers.Main) {
-            delay(1000L)
+            delay(500L)
             if (showRate && !rateShowTime.isDoubleDay) {
                 rateShowTime = System.currentTimeMillis()
                 activity.createRateDialog { showRate = false }
