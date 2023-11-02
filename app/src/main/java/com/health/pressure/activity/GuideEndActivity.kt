@@ -59,6 +59,7 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
         }
         AdInstance.saveAd.loadAd(activity)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_guide"))
+        EventPost.firebaseEvent("bbp_guide_page")
     }
 
     override fun initData() {

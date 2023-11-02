@@ -67,6 +67,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
         clockEvent?.let { EventPost.firebaseEvent("${it}_click") }
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.OPEN.placeName))
         EventPost.firebaseEvent("launch_page_show")
+        if (firstLaunch) EventPost.firebaseEvent("bbp_splash_page")
     }
 
     private fun loadAd() {

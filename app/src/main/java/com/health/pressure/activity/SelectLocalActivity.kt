@@ -61,6 +61,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
         if (!fromSet) guideStep = 1
         if (ClockManager.judgeState()) AdInstance.saveAd.loadAd(activity)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_language"))
+        EventPost.firebaseEvent("bbp_language_page")
     }
 
     @SuppressLint("NotifyDataSetChanged")

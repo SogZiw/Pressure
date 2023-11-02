@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.health.pressure.R
 import com.health.pressure.adapter.GuideAdapter
 import com.health.pressure.basic.BaseActivity
+import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityGuideBinding
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.guideStep
@@ -59,6 +60,7 @@ class GuideActivity : BaseActivity<ActivityGuideBinding>() {
                 }
             }
         }
+        EventPost.firebaseEvent("bbp_guide_page")
     }
 
     override fun initData() {

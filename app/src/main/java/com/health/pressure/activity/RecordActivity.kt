@@ -35,6 +35,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
     override val layoutId: Int get() = R.layout.activity_record
     private val isAdd by lazy { intent?.getBooleanExtra("isAdd", true) ?: true }
     private val data by lazy { intent?.getParcelableExtra<Pressure>("PressureData") }
+    private val isGuide by lazy { intent?.getBooleanExtra("isGuide", false) ?: false }
     private val nfLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {}
 
     override fun initView() {
@@ -167,11 +168,12 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.SAVE.placeName))
         EventPost.firebaseEvent("record_page")
         lifecycleScope.launch(Dispatchers.Main) {
-            delay(500L)
+            delay(300L)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
                 nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
             }
         }
+        EventPost.firebaseEvent("bbp_addrecord", hashMapOf("source" to if (isGuide) "open" else "notifi"))
     }
 
     private fun autoNext() {

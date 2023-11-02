@@ -34,7 +34,13 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
         }
         binding.guideLayout.setOnClickListener {
             binding.guideLayout.isVisible = false
-            binding.viewRecord.root.performClick()
+            viewModel.changeTab.postValue(1)
+            if (ClockManager.judgeState()) {
+                AdInstance.tabAd.showFullScreenAd(activity) {
+                    activity.goNextPage<RecordActivity> { putExtra("isGuide", true) }
+                }
+            } else activity.goNextPage<RecordActivity> { putExtra("isGuide", true) }
+            EventPost.firebaseEvent("main_record")
         }
         if (firstGuide) {
             firstGuide = false
@@ -52,6 +58,7 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
         }
         binding.list.itemAnimator = null
         binding.list.adapter = adapter
+        EventPost.firebaseEvent("bbp_home_page")
     }
 
     override fun onResume() {

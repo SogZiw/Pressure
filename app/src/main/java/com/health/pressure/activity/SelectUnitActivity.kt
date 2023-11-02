@@ -44,6 +44,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         if (!fromSet) guideStep = 2
         AdInstance.tabAd.loadAd(activity)
         EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to "int_new_unit"))
+        EventPost.firebaseEvent("bbp_unit_page")
     }
 
     override fun initData() {
