@@ -26,6 +26,7 @@ class AlarmActivity : LifeActivity<ActivityAlarmBinding>() {
 
     override val layoutId: Int get() = R.layout.activity_alarm
     private lateinit var adapter: AlarmListAdapter
+    private var nativeAd: BaseAd? = null
 
     @SuppressLint("NotifyDataSetChanged")
     override fun initView() {
@@ -55,6 +56,8 @@ class AlarmActivity : LifeActivity<ActivityAlarmBinding>() {
 
     override fun initData() {
         initAdapter()
+        showNative()
+        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -92,19 +95,11 @@ class AlarmActivity : LifeActivity<ActivityAlarmBinding>() {
         binding.list.adapter = adapter
     }
 
-    override fun onResume() {
-        super.onResume()
-        showNative()
-        EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
-    }
-
-    private var nativeAd: BaseAd? = null
-
     private fun showNative() {
         AdInstance.alarmAd.keepLoader(this) {
             if (it) {
                 lifecycleScope.launch {
-                    while (!resumed) delay(220L)
+                    while (!resumed) delay(500L)
                     AdInstance.alarmAd.showNativeAd(activity, binding.nativeView, true) { baseAd -> nativeAd = baseAd }
                 }
             }
