@@ -85,12 +85,13 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
 
             AdInstance.alarmAd.loadAd(activity)
             lifecycleScope.launch(Dispatchers.Main) {
-                delay(500L)
+                delay(300L)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && NotificationManagerCompat.from(activity).areNotificationsEnabled().not()) {
                     nfLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                     EventPost.firebaseEvent("bbp_POST")
                 }
             }
+            EventPost.firebaseEvent("bbp_start_page")
         } else {
             when (jumpType) {
                 0 -> {
