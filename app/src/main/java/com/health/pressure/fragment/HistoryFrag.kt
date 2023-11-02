@@ -36,13 +36,13 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             }
         }
         binding.beat.setOnClickListener {
-            AdInstance.tabAd.showFullScreenIfCan(activity) {
+            AdInstance.tabAd.showFullScreenIfGoodSwitchOn(activity) {
                 activity.goNextPage<RecordActivity>()
             }
             EventPost.firebaseEvent("record_record_btn")
         }
         binding.btnAdd.setOnClickListener {
-            AdInstance.tabAd.showFullScreenIfCan(activity) {
+            AdInstance.tabAd.showFullScreenIfGoodSwitchOn(activity) {
                 activity.goNextPage<RecordActivity>()
             }
             EventPost.firebaseEvent("record_record_btn")

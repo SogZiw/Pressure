@@ -47,7 +47,7 @@ class AlarmActivity : LifeActivity<ActivityAlarmBinding>() {
                     adapter.datas.add(AlarmItem(format))
                     adapter.notifyDataSetChanged()
                     alarmInfo = adapter.datas
-                    AdInstance.saveAd.showFullScreenIfCan(this)
+                    AdInstance.saveAd.showFullScreenIfGoodSwitchOn(this)
                 }
                 .setOnCancel(text = getString(R.string.cancel))
                 .build().show()

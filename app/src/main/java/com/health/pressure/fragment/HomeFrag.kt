@@ -50,7 +50,7 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
 
     override fun initData() {
         val adapter = InfoAdapter(activity, InfoData.values().toMutableList().subList(0, 5)) {
-            AdInstance.saveAd.showFullScreenIfCan(activity) {
+            AdInstance.saveAd.showFullScreenIfGoodSwitchOn(activity) {
                 activity.goNextPage<InfoDetailActivity> {
                     putExtra("InfoData", it)
                 }

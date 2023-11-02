@@ -126,7 +126,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
 
     private fun showAdAndFinish() {
         lifecycleScope.launch(Dispatchers.Main) {
-            AdInstance.saveAd.showFullScreenAd(activity) { autoNext() }
+            if (AdInstance.goodSwitch) AdInstance.saveAd.showFullScreenAd(activity) { autoNext() } else autoNext()
         }
     }
 

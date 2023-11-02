@@ -16,7 +16,7 @@ class InfoFrag : BaseFrag<FragInfoBinding>() {
 
     override fun initView() {
         val adapter = InfoAdapter(activity, InfoData.values().toMutableList()) {
-            AdInstance.saveAd.showFullScreenIfCan(activity) {
+            AdInstance.saveAd.showFullScreenIfGoodSwitchOn(activity) {
                 activity.goNextPage<InfoDetailActivity> {
                     putExtra("InfoData", it)
                 }

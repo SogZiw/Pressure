@@ -55,7 +55,7 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
                     R.id.tab_info -> binding.viewPager.setCurrentItem(2, false)
                     R.id.tab_set -> binding.viewPager.setCurrentItem(3, false)
                 }
-                AdInstance.tabAd.showFullScreenIfCan(activity)
+                AdInstance.tabAd.showFullScreenIfGoodSwitchOn(activity)
                 return@setOnItemSelectedListener true
             }
         }

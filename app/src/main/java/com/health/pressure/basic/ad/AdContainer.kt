@@ -68,6 +68,12 @@ class AdContainer(val loc: AdLocation) {
         } else onClose()
     }
 
+    fun showFullScreenIfGoodSwitchOn(activity: Activity, posId: String = loc.placeName, onClose: () -> Unit = {}) {
+        if (AdInstance.goodSwitch && ClockManager.judgeState()) {
+            showFullScreenAd(activity, posId, onClose)
+        } else onClose()
+    }
+
     fun keepLoader(context: Context, onLoad: (Boolean) -> Unit = {}) {
         if (ads.isNotEmpty()) onLoad.invoke(true)
         else {
