@@ -28,9 +28,11 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
     override fun initView() {
         guideStep = 3
         binding.btnSkip.setOnClickListener {
-            AdInstance.saveAd.showFullScreenIfCan(this, "int_new_guide") {
-                goNextPage<MainActivity>(true)
-            }
+            if (AdInstance.guideSwitch) {
+                AdInstance.saveAd.showFullScreenIfCan(this, "int_new_guide") {
+                    goNextPage<MainActivity>(true)
+                }
+            } else goNextPage<MainActivity>(true)
         }
         guideIndex.observe(this) {
             when (it) {
@@ -82,7 +84,7 @@ class GuideEndActivity : LifeActivity<ActivityGuideEndBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (ClockManager.judgeState()) {
+        if (AdInstance.guideSwitch && ClockManager.judgeState()) {
             showNative()
             EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.HISTORY.placeName))
         }

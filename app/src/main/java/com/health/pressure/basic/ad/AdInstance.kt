@@ -16,6 +16,11 @@ object AdInstance {
     val tabAd = AdContainer(AdLocation.TAB)
     val banAd = AdContainer(AdLocation.BAN)
 
+    var languageSwitch = true
+    var unitSwitch = true
+    var guideSwitch = true
+    var goodSwitch = true
+
     fun init(json: String = Constants.AD_JSON) {
 
         fun formatItem(obj: JSONObject, key: String): MutableList<AdItem> {

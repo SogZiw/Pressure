@@ -51,7 +51,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             else {
-                if (ClockManager.judgeState()) {
+                if (AdInstance.languageSwitch && ClockManager.judgeState()) {
                     AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
                         goNextPage<SelectUnitActivity>(true)
                     }
@@ -86,7 +86,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (ClockManager.judgeState()) {
+        if (AdInstance.languageSwitch && ClockManager.judgeState()) {
             showNative()
             EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
         }

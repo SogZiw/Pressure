@@ -30,13 +30,15 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
             if (adapter.datas.all { it.checked.not() }) return@setOnClickListener
             isHgUnit = 0 == adapter.lastPos
             if (fromSet) {
-                AdInstance.tabAd.showFullScreenIfCan(this, "int_new_unit") {
-                    goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
-                }
+                if (AdInstance.unitSwitch) {
+                    AdInstance.tabAd.showFullScreenIfCan(this, "int_new_unit") {
+                        goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
+                    }
+                } else goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             } else {
-                if (ClockManager.judgeState()) {
+                if (AdInstance.unitSwitch && ClockManager.judgeState()) {
                     AdInstance.tabAd.showFullScreenAd(this, "int_new_unit") {
-                        goNextPage<GuideEndActivity>(true)
+                        if (AdInstance.guideSwitch) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
                     }
                 } else goNextPage<GuideActivity>(true)
             }
@@ -63,7 +65,7 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
 
     override fun onResume() {
         super.onResume()
-        if (ClockManager.judgeState()) {
+        if (AdInstance.unitSwitch && ClockManager.judgeState()) {
             showNative()
             EventPost.firebaseEvent("tk_ad_chance", hashMapOf("ad_pos_id" to AdLocation.ALARM.placeName))
         }

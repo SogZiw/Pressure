@@ -109,7 +109,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
                     when (guideStep) {
                         0 -> goNextPage<SelectLocalActivity>(true)
                         1 -> if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
-                        2 -> if (ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
+                        2 -> if (AdInstance.guideSwitch && ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
                         else -> goNextPage<MainActivity>(true)
                     }
                 }

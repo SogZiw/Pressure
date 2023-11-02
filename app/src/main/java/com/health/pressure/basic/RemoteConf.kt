@@ -33,6 +33,18 @@ class RemoteConf {
     private fun conf() {
         adConf()
         popConf()
+        getExtraAdConf()
+    }
+
+    private fun getExtraAdConf() {
+        kotlin.runCatching {
+            AdInstance.run {
+                languageSwitch = "on" == remoteConfig["language_ad_switch"].asString()
+                unitSwitch = "on" == remoteConfig["unit_ad_switch"].asString()
+                guideSwitch = "on" == remoteConfig["guide_ad_switch"].asString()
+                goodSwitch = "on" == remoteConfig["int_good_switch"].asString()
+            }
+        }
     }
 
     private fun adConf() {
