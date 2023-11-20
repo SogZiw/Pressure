@@ -19,10 +19,7 @@ import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.clock.ClockUpper
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
-import com.health.pressure.ext.buildAgreement
-import com.health.pressure.ext.firstLaunch
-import com.health.pressure.ext.goNextPage
-import com.health.pressure.ext.guideStep
+import com.health.pressure.ext.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -51,6 +48,7 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
             EventPost.firebaseEvent("launch_start")
         }
         loadAd()
+        startForegroundService()
     }
 
     override fun initData() {

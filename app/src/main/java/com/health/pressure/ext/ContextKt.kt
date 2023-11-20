@@ -18,6 +18,7 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -25,6 +26,7 @@ import com.health.pressure.Constants
 import com.health.pressure.R
 import com.health.pressure.activity.WebviewActivity
 import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.basic.clock.ForeClockService
 import com.health.pressure.databinding.DialogRateBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -32,6 +34,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.util.*
+
+fun Context.startForegroundService() {
+    ContextCompat.startForegroundService(this, Intent(this, ForeClockService::class.java))
+}
 
 fun Context.autoDensity() {
     resources.displayMetrics.run {
