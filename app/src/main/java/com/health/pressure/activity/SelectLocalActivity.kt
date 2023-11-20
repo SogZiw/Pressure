@@ -51,10 +51,12 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             else {
-                if (AdInstance.languageSwitch && ClockManager.judgeState()) {
-                    AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
-                        goNextPage<SelectUnitActivity>(true)
-                    }
+                if (ClockManager.judgeState()) {
+                    if (AdInstance.languageSwitch) {
+                        AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
+                            goNextPage<SelectUnitActivity>(true)
+                        }
+                    } else goNextPage<SelectUnitActivity>(true)
                 } else goNextPage<GuideActivity>(true)
             }
         }
