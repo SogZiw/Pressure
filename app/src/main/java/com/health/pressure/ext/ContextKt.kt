@@ -36,6 +36,7 @@ import kotlinx.coroutines.launch
 import java.util.*
 
 fun Context.startForegroundService() {
+    if (this is Application && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) return
     ContextCompat.startForegroundService(this, Intent(this, ForeClockService::class.java))
 }
 
