@@ -1,12 +1,16 @@
 package com.health.pressure.basic.ad.admob
 
 import android.content.Context
+import com.adjust.sdk.Adjust
+import com.adjust.sdk.AdjustAdRevenue
+import com.adjust.sdk.AdjustConfig
 import com.google.android.gms.ads.AdValue
 import com.google.android.gms.ads.ResponseInfo
 import com.health.pressure.basic.ad.AdItem
 import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.onLoaded
 import com.health.pressure.basic.http.EventPost
+
 
 sealed class BaseAd(val loc: AdLocation, val adItem: AdItem, private val loadTime: Long = System.currentTimeMillis()) {
 
@@ -24,6 +28,13 @@ sealed class BaseAd(val loc: AdLocation, val adItem: AdItem, private val loadTim
             it.put("dawn", loc.placeName)
             it.put("gizmo", adItem.getTypeFormat())
             it.put("diagonal", adValue.precisionType.toString())
+        }
+        runCatching {
+            val adRevenue = AdjustAdRevenue(AdjustConfig.AD_REVENUE_ADMOB).apply {
+                setRevenue(adValue.valueMicros / 1000000.0, adValue.currencyCode)
+                setAdRevenueNetwork(responseInfo?.loadedAdapterResponseInfo?.adSourceName)
+            }
+            Adjust.trackAdRevenue(adRevenue)
         }
     }
 
