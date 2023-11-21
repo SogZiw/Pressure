@@ -53,6 +53,8 @@ class SelectUnitActivity : LifeActivity<ActivitySelectUnitBinding>() {
         if (fromSet) {
             unitList.firstOrNull()?.checked = isHgUnit
             unitList.getOrNull(1)?.checked = !isHgUnit
+        } else {
+            unitList.firstOrNull()?.checked = isHgUnit
         }
         adapter = SelectUnitAdapter(this, unitList) { binding.btnSure.isEnabled = true }
         adapter.lastPos = if (true == unitList.firstOrNull()?.checked || !fromSet) 0 else 1

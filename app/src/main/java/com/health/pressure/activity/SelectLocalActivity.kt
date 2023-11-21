@@ -76,7 +76,7 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
                 lastPos = index
                 binding.btnSure.isEnabled = true
             }
-        }
+        } else datas.firstOrNull()?.selected = true
         adapter = SelectLocalAdapter(this, datas) { binding.btnSure.isEnabled = true }
         adapter.lastPos = lastPos
         binding.list.run {
