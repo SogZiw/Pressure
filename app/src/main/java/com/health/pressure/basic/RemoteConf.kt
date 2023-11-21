@@ -94,7 +94,7 @@ class RemoteConf {
     private fun initDefaultPop() {
         ClockManager.run {
             toggle = true
-            referrerCode = 0
+            referrerCode = 2
             timeClock = ClockItem(true, 0, 100, 1)
             screenClock = ClockItem(true, 0, 100, 1)
             charClock = ClockItem(true, 0, 100, 1)

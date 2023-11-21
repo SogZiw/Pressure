@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks
 import android.content.Intent
 import android.os.Bundle
+import com.adjust.sdk.Adjust
 import com.google.android.gms.ads.AdActivity
 import com.health.pressure.activity.SplashActivity
 import com.health.pressure.ext.defLang
@@ -57,9 +58,10 @@ object AppLife : ActivityLifecycleCallbacks {
     override fun onActivityResumed(activity: Activity) {
         activity.updateLocalConf(defLang)
         activity.application.updateLocalConf(defLang)
+        Adjust.onResume()
     }
 
-    override fun onActivityPaused(activity: Activity) = Unit
+    override fun onActivityPaused(activity: Activity) = Adjust.onPause()
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) = Unit
 
 }

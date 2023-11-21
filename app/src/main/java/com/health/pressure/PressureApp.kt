@@ -22,10 +22,10 @@ class PressureApp : Application() {
         if (!isMain()) return
         MMKV.initialize(this)
         startForegroundService()
+        initAdjust()
         MobileAds.initialize(this)
         RemoteConf().init()
         registerActivityLifecycleCallbacks(AppLife)
-        initAdjust()
         EventPost.startGetter()
         ClockManager.startClock(this)
     }
