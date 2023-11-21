@@ -16,7 +16,6 @@ import java.util.*
 private val mmkv by lazy { MMKV.defaultMMKV() }
 
 private const val FIRST_LAUNCH = "firstLaunch"
-private const val FIRST_GUIDE = "firstGuide"
 private const val SHOW_RATE = "showRate"
 private const val AD_SHOW_TIME = "adShowTime"
 private const val RATE_SHOW_TIME = "rateShowTime"
@@ -28,12 +27,6 @@ private const val ALARM_INFO = "alarmInfo"
 private const val INSTALL_ID = "install_id"
 private const val IS_HG_UNIT = "isHgUnit"
 private const val GUIDE_STEP = "guide_step"
-
-var firstGuide: Boolean
-    get() = mmkv.decodeBool(FIRST_GUIDE, true)
-    set(value) {
-        mmkv.encode(FIRST_GUIDE, value)
-    }
 
 var firstLaunch: Boolean
     get() = mmkv.decodeBool(FIRST_LAUNCH, true)
