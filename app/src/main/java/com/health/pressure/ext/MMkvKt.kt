@@ -2,6 +2,7 @@ package com.health.pressure.ext
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Parcelable
 import android.provider.Settings
 import android.telephony.TelephonyManager
 import com.google.gson.Gson
@@ -12,6 +13,7 @@ import com.health.pressure.basic.bean.LocalState
 import com.health.pressure.mApp
 import com.tencent.mmkv.MMKV
 import java.util.*
+import kotlin.reflect.KProperty
 
 private val mmkv by lazy { MMKV.defaultMMKV() }
 
@@ -163,3 +165,33 @@ var guideStep: Int
     set(value) {
         mmkv.encode(GUIDE_STEP, value)
     }
+
+class stringPref(private val defaultValue: String = "") {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): String = mmkv.decodeString(property.name, defaultValue) ?: defaultValue
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) = run { mmkv.encode(property.name, value) }
+}
+
+class longPref(private val defaultValue: Long = 0L) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): Long = mmkv.decodeLong(property.name, defaultValue)
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Long) = run { mmkv.encode(property.name, value) }
+}
+
+class doublePref(private val defaultValue: Double = 0.0) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): Double = mmkv.decodeDouble(property.name, defaultValue)
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Double) = run { mmkv.encode(property.name, value) }
+}
+
+class intPref(private val defaultValue: Int = 0) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): Int = mmkv.decodeInt(property.name, defaultValue)
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Int) = run { mmkv.encode(property.name, value) }
+}
+
+class booleanPref(private val defaultValue: Boolean = false) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): Boolean = mmkv.decodeBool(property.name, defaultValue)
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Boolean) = run { mmkv.encode(property.name, value) }
+}
+
+class parcelablePref<T : Parcelable>(private val type: Class<T>, private val defaultValue: T) {
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): T = mmkv.decodeParcelable(property.name, type) ?: defaultValue
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) = run { mmkv.encode(property.name, value) }
+}
