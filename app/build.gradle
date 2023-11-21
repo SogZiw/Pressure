@@ -109,6 +109,8 @@ dependencies {
     // define any required OkHttp artifacts without version
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
-
+    // adjust
+    implementation 'com.adjust.sdk:adjust-android:4.33.5'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
     //implementation project(':record')
 }

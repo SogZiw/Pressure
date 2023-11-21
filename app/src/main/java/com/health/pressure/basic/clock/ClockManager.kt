@@ -125,7 +125,7 @@ object ClockManager {
     }
 
     private val fbSet by lazy { hashSetOf("fb4a", "facebook") }
-    private val bySet by lazy { hashSetOf("bytedance", "%7B%22", "fb4a", "facebook", "gclid", "not%20set", "youtubeads") }
+    private val bySet by lazy { hashSetOf("bytedance", "%7B%22", "fb4a", "facebook", "gclid", "not%20set", "youtubeads", "adjust") }
     val recordSet by lazy {
         hashSetOf(
             R.string.record_1.stringValue,

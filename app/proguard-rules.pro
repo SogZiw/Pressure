@@ -20,10 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.loper7.** { *; }
--keep class com.google.android.gms.ads.** { *; }
--keep class com.tencent.mmkv.** {*;}
--dontwarn com.tencent.mmkv.**
 # 混淆的压缩比例，0-7
 -optimizationpasses 5
 # 指定不去忽略非公共的库的类的成员
@@ -36,3 +32,21 @@
 -classobfuscationdictionary proguard-feature.txt
 # 指定package模糊字典
 -packageobfuscationdictionary proguard-feature.txt
+
+-keep class com.adjust.sdk.**{ *; }
+-keep class com.google.android.gms.common.ConnectionResult {
+    int SUCCESS;
+}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {
+    com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context);
+}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info {
+    java.lang.String getId();
+    boolean isLimitAdTrackingEnabled();
+}
+-keep public class com.android.installreferrer.**{ *; }
+
+-keep class com.loper7.** { *; }
+-keep class com.google.android.gms.ads.** { *; }
+-keep class com.tencent.mmkv.** {*;}
+-dontwarn com.tencent.mmkv.**
