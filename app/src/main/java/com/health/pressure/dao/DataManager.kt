@@ -7,7 +7,12 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 
 object DataManager {
 
-    private val database by lazy { Room.databaseBuilder(mApp, PressureDatabase::class.java, "pressure_database").allowMainThreadQueries().build() }
+    private val database by lazy {
+        Room.databaseBuilder(mApp, PressureDatabase::class.java, "pressure_database")
+            .addMigrations(PressureDatabase.MIGRATION_1_2)
+            .allowMainThreadQueries()
+            .build()
+    }
 
     private val manageDao by lazy { database.manageDao() }
 
