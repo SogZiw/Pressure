@@ -18,6 +18,7 @@ import com.health.pressure.ext.defLang
 import com.health.pressure.ext.firstLaunch
 import com.health.pressure.ext.goNextPage
 import com.health.pressure.ext.guideStep
+import com.health.pressure.guideShow
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -51,13 +52,15 @@ class SelectLocalActivity : LifeActivity<ActivitySelectLocalBinding>() {
             defLang = locals.getOrNull(adapter.lastPos)?.languageCode ?: LocalState.English.languageCode
             if (fromSet) goNextPage<MainActivity>(true) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) }
             else {
-                if (ClockManager.judgeState()) {
-                    if (AdInstance.languageSwitch) {
-                        AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
-                            goNextPage<SelectUnitActivity>(true)
-                        }
-                    } else goNextPage<SelectUnitActivity>(true)
-                } else goNextPage<GuideActivity>(true)
+                if (guideShow) {
+                    if (ClockManager.judgeState()) {
+                        if (AdInstance.languageSwitch) {
+                            AdInstance.saveAd.showFullScreenAd(this, "int_new_language") {
+                                goNextPage<SelectUnitActivity>(true)
+                            }
+                        } else goNextPage<SelectUnitActivity>(true)
+                    } else goNextPage<GuideActivity>(true)
+                } else goNextPage<MainActivity>(true)
             }
         }
         if (!fromSet) guideStep = 1

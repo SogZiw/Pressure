@@ -7,6 +7,7 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.bean.ClockItem
 import com.health.pressure.basic.clock.ClockManager
+import com.health.pressure.guideShow
 import com.health.pressure.isDebug
 import org.json.JSONObject
 
@@ -34,6 +35,13 @@ class RemoteConf {
         adConf()
         popConf()
         getExtraAdConf()
+        getGuideShow()
+    }
+
+    private fun getGuideShow() {
+        kotlin.runCatching {
+            guideShow = 1 == (remoteConfig["bpp_guide_show"].asString().toIntOrNull() ?: 0)
+        }
     }
 
     private fun getExtraAdConf() {
@@ -48,12 +56,14 @@ class RemoteConf {
     }
 
     private fun adConf() {
-        val json = remoteConfig["tracker_ad_config"].asString()
-        if (json.isBlank()) {
-            AdInstance.init()
-            return
+        kotlin.runCatching {
+            val json = remoteConfig["tracker_ad_config"].asString()
+            if (json.isBlank()) {
+                AdInstance.init()
+                return
+            }
+            AdInstance.init(json)
         }
-        AdInstance.init(json)
     }
 
     private fun popConf() {

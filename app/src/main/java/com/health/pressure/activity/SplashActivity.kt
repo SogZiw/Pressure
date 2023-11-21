@@ -20,6 +20,7 @@ import com.health.pressure.basic.clock.ClockUpper
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivitySplashBinding
 import com.health.pressure.ext.*
+import com.health.pressure.guideShow
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -106,8 +107,16 @@ class SplashActivity : LifeActivity<ActivitySplashBinding>() {
                 else -> {
                     when (guideStep) {
                         0 -> goNextPage<SelectLocalActivity>(true)
-                        1 -> if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
-                        2 -> if (AdInstance.guideSwitch && ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
+                        1 -> {
+                            if (guideShow) {
+                                if (ClockManager.judgeState()) goNextPage<SelectUnitActivity>(true) else goNextPage<GuideActivity>(true)
+                            } else goNextPage<MainActivity>(true)
+                        }
+                        2 -> {
+                            if (guideShow) {
+                                if (AdInstance.guideSwitch && ClockManager.judgeState()) goNextPage<GuideEndActivity>(true) else goNextPage<GuideActivity>(true)
+                            } else goNextPage<MainActivity>(true)
+                        }
                         else -> goNextPage<MainActivity>(true)
                     }
                 }

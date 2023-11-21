@@ -8,6 +8,7 @@ val isDebug by lazy { BuildConfig.DEBUG }
 val wheelData by lazy { (20..300).toMutableList() }
 
 val datas = mutableListOf<Pressure>()
+var guideShow = false
 
 
 object Constants {
