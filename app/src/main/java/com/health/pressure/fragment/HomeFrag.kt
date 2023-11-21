@@ -3,7 +3,6 @@ package com.health.pressure.fragment
 import androidx.fragment.app.activityViewModels
 import com.health.pressure.R
 import com.health.pressure.activity.InfoDetailActivity
-import com.health.pressure.activity.PressureRecordActivity
 import com.health.pressure.activity.RecordActivity
 import com.health.pressure.activity.model.MainVM
 import com.health.pressure.adapter.InfoAdapter
@@ -25,13 +24,9 @@ class HomeFrag : BaseFrag<FragHomeBinding>() {
         binding.viewRecordPressure.setOnClickListener {
             if (ClockManager.judgeState()) {
                 AdInstance.tabAd.showFullScreenAd(activity) {
-                    activity.goNextPage<PressureRecordActivity>()
                     activity.goNextPage<RecordActivity>()
                 }
-            } else {
-                activity.goNextPage<PressureRecordActivity>()
-                activity.goNextPage<RecordActivity>()
-            }
+            } else activity.goNextPage<RecordActivity>()
             EventPost.firebaseEvent("main_record")
         }
     }

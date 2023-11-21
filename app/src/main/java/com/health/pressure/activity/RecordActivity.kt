@@ -177,7 +177,11 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
     }
 
     private fun autoNext() {
-        if (AppLife.activitys.any { it is PressureRecordActivity }) finish() else goNextPage<PressureRecordActivity>(true)
+        if (AppLife.activitys.any { it is PressureRecordActivity }) finish()
+        else {
+            goNextPage<PressureRecordActivity>(true)
+            activity.overridePendingTransition(0, 0)
+        }
     }
 
     override fun onBackPressed() {
