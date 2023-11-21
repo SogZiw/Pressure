@@ -11,7 +11,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 @Entity(tableName = "sugar_table")
 data class Sugar(
-    @PrimaryKey(autoGenerate = true) val uid: Long = 0L,
+    @PrimaryKey(autoGenerate = true) val uid: Int = 0,
     @ColumnInfo var condition: Int,
     @ColumnInfo var value: Int,
     @ColumnInfo var record_time: Long,

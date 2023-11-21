@@ -14,11 +14,11 @@ abstract class PressureDatabase : RoomDatabase() {
         val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("CREATE TABLE IF NOT EXISTS `sugar_table` " +
-                        "(`uid` INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        "`condition` INTEGER, " +
-                        "`value` INTEGER, " +
-                        "`record_time` INTEGER, " +
-                        "`format_time` TEXT)")
+                        "(`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                        "`condition` INTEGER NOT NULL, " +
+                        "`value` INTEGER NOT NULL, " +
+                        "`record_time` INTEGER NOT NULL, " +
+                        "`format_time` TEXT NOT NULL)")
             }
         }
     }
