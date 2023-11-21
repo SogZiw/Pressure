@@ -29,12 +29,16 @@ sealed class BaseAd(val loc: AdLocation, val adItem: AdItem, private val loadTim
             it.put("gizmo", adItem.getTypeFormat())
             it.put("diagonal", adValue.precisionType.toString())
         }
+        val ecpm = adValue.valueMicros / 1000000.0
         runCatching {
             val adRevenue = AdjustAdRevenue(AdjustConfig.AD_REVENUE_ADMOB).apply {
-                setRevenue(adValue.valueMicros / 1000000.0, adValue.currencyCode)
+                setRevenue(ecpm, adValue.currencyCode)
                 setAdRevenueNetwork(responseInfo?.loadedAdapterResponseInfo?.adSourceName)
             }
             Adjust.trackAdRevenue(adRevenue)
+        }
+        runCatching {
+            EventPost.facebookRevenue(ecpm)
         }
     }
 

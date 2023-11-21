@@ -1,14 +1,17 @@
 package com.health.pressure.basic.http
 
 import android.os.Bundle
+import com.facebook.appevents.AppEventsLogger
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.health.pressure.mApp
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import java.util.*
 
 object EventPost : BaseHttp() {
 
     private val firebaseAnalytics by lazy { FirebaseAnalytics.getInstance(mApp) }
+    private val facebookLogger by lazy { AppEventsLogger.newLogger(mApp) }
 
     fun session() {
         httpScope.launch {
@@ -43,6 +46,10 @@ object EventPost : BaseHttp() {
             })
         }
         event(key, params)
+    }
+
+    fun facebookRevenue(value: Double) {
+        facebookLogger.logPurchase(value.toBigDecimal(), Currency.getInstance("USD"))
     }
 
 }
