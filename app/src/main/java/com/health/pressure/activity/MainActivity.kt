@@ -11,7 +11,6 @@ import com.health.pressure.basic.ad.AdLocation
 import com.health.pressure.basic.ad.admob.BaseAd
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.ActivityMainBinding
-import com.health.pressure.fragment.HistoryFrag
 import com.health.pressure.fragment.HomeFrag
 import com.health.pressure.fragment.InfoFrag
 import com.health.pressure.fragment.SetFrag
@@ -35,7 +34,7 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
 
         fun iniViewPager() {
             binding.viewPager.run {
-                val fragments = listOf(HomeFrag(), HistoryFrag(), InfoFrag(), SetFrag())
+                val fragments = listOf(HomeFrag(), InfoFrag(), SetFrag())
                 isUserInputEnabled = false
                 offscreenPageLimit = fragments.size
                 adapter = object : FragmentStateAdapter(supportFragmentManager, lifecycle) {
@@ -51,9 +50,8 @@ class MainActivity : LifeActivity<ActivityMainBinding>() {
             setOnItemSelectedListener {
                 when (it.itemId) {
                     R.id.tab_home -> binding.viewPager.setCurrentItem(0, false)
-                    R.id.tab_history -> binding.viewPager.setCurrentItem(1, false)
-                    R.id.tab_info -> binding.viewPager.setCurrentItem(2, false)
-                    R.id.tab_set -> binding.viewPager.setCurrentItem(3, false)
+                    R.id.tab_info -> binding.viewPager.setCurrentItem(1, false)
+                    R.id.tab_set -> binding.viewPager.setCurrentItem(2, false)
                 }
                 AdInstance.tabAd.showFullScreenIfGoodSwitchOn(activity)
                 return@setOnItemSelectedListener true

@@ -5,10 +5,6 @@
         android:icon="@drawable/tab_daily"
         android:title="@string/home" />
     <item
-        android:id="@+id/tab_history"
-        android:icon="@drawable/tab_history"
-        android:title="@string/record" />
-    <item
         android:id="@+id/tab_info"
         android:icon="@drawable/tab_info"
         android:title="@string/info" />

@@ -31,9 +31,116 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="RtlSymmetry" />
 
-            <include
-                android:id="@+id/viewRecord"
-                layout="@layout/view_record" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewRecordPressure"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/bg_5f5f77_r18">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/recordBIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_bp_pressure" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recordBTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="70dp"
+                    android:text="@string/record_blood_pressure"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recordBIcon"
+                    app:layout_constraintTop_toTopOf="@+id/recordBIcon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="70dp"
+                    android:text="@string/monitor_health"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recordBIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/recordBTitle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_right_white" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewRecordSugar"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_5f5f77_r18">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/recordSIcon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_bp_sugar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recordSTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="70dp"
+                    android:text="@string/record_blood_sugar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recordSIcon"
+                    app:layout_constraintTop_toTopOf="@+id/recordSIcon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="70dp"
+                    android:text="@string/blood_sugar_hint"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/recordSIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/recordSTitle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_right_white" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/line"
@@ -54,72 +161,6 @@
                 tools:listitem="@layout/item_info" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/guideLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#30000000"
-            android:clickable="true"
-            android:elevation="5dp"
-            android:focusable="true"
-            android:visibility="gone">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/guideTop"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/empty"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="23dp"
-                    android:paddingVertical="16dp"
-                    android:paddingStart="18sp"
-                    android:textColor="#112041"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="RtlSymmetry" />
-
-                <include layout="@layout/view_record_f" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <View
-                android:id="@+id/guideline"
-                android:layout_width="2dp"
-                android:layout_height="85dp"
-                android:background="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.65"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guideTop" />
-
-            <View
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:background="@drawable/shape_green_white_corner"
-                app:layout_constraintEnd_toEndOf="@+id/guideline"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/guideline" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:background="@drawable/btn_00c5a8_r12"
-                android:fontFamily="sans-serif-medium"
-                android:padding="18dp"
-                android:text="@string/guide_tips"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/guideline"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/guideline" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

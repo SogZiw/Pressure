@@ -43,7 +43,7 @@ class InfoDetailActivity : LifeActivity<ActivityInfoDetailBinding>() {
     }
 
     private fun autoNext() {
-        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 2) }
+        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 1) }
     }
 
     override fun onBackPressed() {

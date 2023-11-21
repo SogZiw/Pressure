@@ -177,7 +177,7 @@ class RecordActivity : LifeActivity<ActivityRecordBinding>() {
     }
 
     private fun autoNext() {
-        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true) { putExtra("ChangeTab", 1) }
+        if (AppLife.activitys.any { it is PressureRecordActivity }) finish() else goNextPage<PressureRecordActivity>(true)
     }
 
     override fun onBackPressed() {

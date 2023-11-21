@@ -1,19 +1,18 @@
-package com.health.pressure.fragment
+package com.health.pressure.activity
 
 import android.graphics.Color
 import androidx.lifecycle.lifecycleScope
 import com.github.mikephil.charting.components.YAxis
 import com.health.pressure.R
-import com.health.pressure.activity.HistoryActivity
-import com.health.pressure.activity.RecordActivity
-import com.health.pressure.basic.BaseFrag
+import com.health.pressure.basic.AppLife
+import com.health.pressure.basic.BaseActivity
 import com.health.pressure.basic.ad.AdInstance
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.basic.widget.data.PressureData
 import com.health.pressure.basic.widget.data.PressureDataSet
 import com.health.pressure.basic.widget.data.PressureEntry
 import com.health.pressure.dao.DataManager
-import com.health.pressure.databinding.FragHistoryBinding
+import com.health.pressure.databinding.ActivityPressureRecordBinding
 import com.health.pressure.datas
 import com.health.pressure.ext.*
 import kotlinx.coroutines.Dispatchers
@@ -21,10 +20,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class HistoryFrag : BaseFrag<FragHistoryBinding>() {
+class PressureRecordActivity : BaseActivity<ActivityPressureRecordBinding>() {
 
     private var defaultRangeId = R.id.range1
-    override val layoutId: Int get() = R.layout.frag_history
+    override val layoutId: Int get() = R.layout.activity_pressure_record
     private var isFirst = true
 
     override fun initView() {
@@ -135,4 +134,11 @@ class HistoryFrag : BaseFrag<FragHistoryBinding>() {
             else -> Unit
         }
     }
+
+    private fun autoNext() {
+        if (AppLife.activitys.any { it is MainActivity }) finish() else goNextPage<MainActivity>(true)
+    }
+
+    override fun onBackPressed() = autoNext()
+
 }
