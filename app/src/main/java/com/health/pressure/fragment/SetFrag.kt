@@ -12,6 +12,7 @@ import com.health.pressure.basic.clock.ClockManager
 import com.health.pressure.basic.http.EventPost
 import com.health.pressure.databinding.FragSetBinding
 import com.health.pressure.ext.goNextPage
+import com.health.pressure.guideShow
 
 class SetFrag : BaseFrag<FragSetBinding>() {
 
@@ -37,7 +38,7 @@ class SetFrag : BaseFrag<FragSetBinding>() {
 
     override fun onResume() {
         super.onResume()
-        binding.btnUnit.isVisible = ClockManager.judgeState()
+        binding.btnUnit.isVisible = guideShow && ClockManager.judgeState()
         EventPost.firebaseEvent("setting")
     }
 
